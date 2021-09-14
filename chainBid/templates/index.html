@@ -1,0 +1,28 @@
+<!-- Homepage template - Production -->
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+  <!-- CSS bundle made with Webpack (Vue.js app) -->
+  <link href="{% static 'bundle.css' %}"
+        rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+  <!-- Warning: JavaScript content disabled -->
+  <noscript>
+    <p class="container text-center mt-5">
+      <strong>
+        This site uses JavaScript content, if you are seeing this message it has probably been disabled by your browser settings. Please enable JavaScript content if you want to access the site.
+      </strong>
+    </p>
+  </noscript>
+
+  <div id="app"></div>
+{% endblock %}
+
+{% block script %}
+  <!-- Javascript bundle made with Webpack (Vue.js app) -->
+  <script src="{% static 'bundle.js' %}"></script>
+{% endblock %}

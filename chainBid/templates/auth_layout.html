@@ -1,0 +1,55 @@
+<!-- Base template for registration/authentication pages -->
+
+{% extends "base.html" %}
+
+{% block style %}
+  <style>
+    html, body {
+      height: 100%;
+      font-family: 'Titillium Web', sans-serif;
+    }
+
+    .asteriskField {
+        display: none;
+    }
+
+    .btn:focus {
+      box-shadow: none !important;
+    }
+
+    .auth-box {
+      border: 3px solid lightgrey;
+      border-radius: 10px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      width: 550px;
+      margin: auto;
+      background-color: white;
+    }
+
+    .login-form-container {
+      padding-top: 5px;
+      width: 300px;
+      margin: auto;
+    }
+
+    .registration-form-container {
+      padding-top: 5px;
+      width: 300px;
+      margin: auto;
+    }
+
+    .outer-area {
+      margin-top: 75px;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <div class="outer-area">
+    <div class="auth-box text-center">
+      {% block auth %}
+      {% endblock %}
+    </div>
+  </div>
+{% endblock %}

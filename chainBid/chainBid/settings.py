@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 import password
 from pathlib import Path
 
@@ -39,9 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'accounts',
+    'crispy_forms',
+
     'auctions',
     'core',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +61,7 @@ ROOT_URLCONF = 'chainBid.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -110,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Rome'
 
 USE_I18N = True
 
@@ -123,8 +125,30 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static-storage',
+    # BASE_DIR / 'assets',
+    # BASE_DIR / 'front-end' / 'dist',
+]
+STATIC_ROOT = os.path.join(BASE_DIR.parent, 'static-serve')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Custom user settings
+# https://django-registration.readthedocs.io/en/3.2/custom-user.html
+AUTH_USER_MODEL = 'users.CustomUser'
+
+
+# 'django-crispy-forms' app settings
+# https://django-crispy-forms.readthedocs.io/en/latest/
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+# Authentication settings
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
