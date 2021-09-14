@@ -8,11 +8,16 @@ from users.models import CustomUser
 class IndexTemplateViewTestCase(TestCase):
     """
     IndexTemplateView test case.
+
+    :tests
+    - test_entry_point_url_by_name_by_not_authenticated_user(): Access to the homepage by unauthenticated user.
+    - test_entry_point_url_by_name_by_authenticated_user(): Access to the homepage by authenticated user.
     """
+
+    url = reverse('entry-point')
 
     def setUp(self):
         self.user = CustomUser.objects.create_user(username='testcase', password='Change_me_123!')
-        self.url = reverse('entry-point')
 
     def test_entry_point_url_by_name_by_not_authenticated_user(self):
         expected_url = reverse('login') + "?next=" + self.url

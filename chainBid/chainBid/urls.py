@@ -36,6 +36,16 @@ urlpatterns = [
     path('accounts/', include('django_registration.backends.one_step.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 
+    # Browsable API authentication
+    path('api-auth/', include('rest_framework.urls')),
+
+    # Token authentication
+    path('api/rest-auth/', include('rest_auth.urls')),
+    path('api/rest-auth/registration/', include('rest_auth.registration.urls')),
+
+    # # Auctions endpoints
+    # path('api/', include('auctions.api.urls')),
+
     # Homepage
-    re_path(r"^.*$", IndexTemplateView.as_view(), name='entry-point')  # Accept all kind of urls
+    re_path(r"^.*$", IndexTemplateView.as_view(), name='entry-point'),  # Accept all kind of urls
 ]
