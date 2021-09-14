@@ -1,0 +1,21 @@
+<!-- Sign Up page -->
+
+{% extends "auth_layout.html" %}
+{% load crispy_forms_tags %}
+
+{% block auth %}
+    <h2>Create an account</h2>
+    <div class="registration-form-container">
+        <form method="post" novalidate>
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button
+                type="submit"
+                class="btn btn-primary btn-block"
+                >Register
+            </button>
+        </form>
+        <hr>
+        <a href="{% url 'login' %}" class="btn btn-outline-primary btn-block mt-2" >Log In</a>
+    </div>
+{% endblock %}
