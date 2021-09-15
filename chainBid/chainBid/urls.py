@@ -47,6 +47,11 @@ urlpatterns = [
     path('api/', include('users.api.urls')),
 
     # # Auctions endpoints
+    """
+    crud staff or read only
+    create bid
+    
+    """
     # path('api/', include('auctions.api.urls')),
 
     # Homepage
