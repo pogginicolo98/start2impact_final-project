@@ -43,6 +43,9 @@ urlpatterns = [
     path('api/rest-auth/', include('rest_auth.urls')),
     path('api/rest-auth/registration/', include('rest_auth.registration.urls')),
 
+    # Users endpoints
+    path('api/', include('users.api.urls')),
+
     # # Auctions endpoints
     # path('api/', include('auctions.api.urls')),
 
