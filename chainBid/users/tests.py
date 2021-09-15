@@ -2,7 +2,9 @@ import json
 from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
+from rest_framework.authtoken.models import Token
 from rest_framework.test import APITestCase
+from users.api.serializers import UserDisplaySerializer
 from users.models import CustomUser
 
 
@@ -27,7 +29,7 @@ class AccountsTestCase(TestCase):
             'username': 'testcase1',
             'password': 'Change_me_123!',
         }
-        response = self.client.post(self.login_url, data=credentials, follow=True)
+        response = self.client.post(self.login_url, data=credentials, follow=True)  # Ex. URL: http://127.0.0.1/accounts/login/
         self.assertRedirects(
             response=response,
             expected_url=self.homepage_url,
@@ -43,7 +45,7 @@ class AccountsTestCase(TestCase):
             'password1': 'Change_me_123!',
             'password2': 'Change_me_123!'
         }
-        response = self.client.post(self.registration_url, data=credentials, follow=True)
+        response = self.client.post(self.registration_url, data=credentials, follow=True)  # Ex. URL: http://127.0.0.1/accounts/register/
         self.assertRedirects(
             response=response,
             expected_url=self.homepage_url,
@@ -88,3 +90,37 @@ class RESTAuthTestCase(APITestCase):
         }
         response = self.client.post('/api/rest-auth/registration/', data=credentials)
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+
+class CurrentUserAPIViewTestCase(APITestCase):
+    """
+    CurrentUserAPIView test case.
+
+    :tests
+    - test_current_user_retrieve_not_authenticated(): Test 'retrieve()' action by an unauthenticated user
+    - test_current_user_retrieve_authenticated(): Test 'retrieve()' action by an authenticated user.
+    """
+
+    current_user_url = reverse('current-user')
+
+    def setUp(self):
+        # Create new user, get an authentication token and authenticate with it
+        self.user = CustomUser.objects.create_user(username='testcase', password='Change_me_123!')
+        self.token = Token.objects.create(user=self.user)
+        self.api_authentication()
+
+    def api_authentication(self):
+        # Authentication with token
+        self.client.credentials(HTTP_AUTHORIZATION=f'Token {self.token.key}')
+
+    def test_current_user_retrieve_not_authenticated(self):
+        self.client.force_authenticate(user=None)
+        response = self.client.get(self.current_user_url)  # Ex. URL: http://127.0.0.1/api/user/
+        self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+
+    def test_current_user_retrieve_authenticated(self):
+        serializer_data = UserDisplaySerializer(instance=self.user).data
+        response = self.client.get(self.current_user_url)  # Ex. URL: http://127.0.0.1/api/user/
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        json_response = json.loads(response.content)
+        self.assertEqual(json_response, serializer_data)  # Checking the fully rendered response
