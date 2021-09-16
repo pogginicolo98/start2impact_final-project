@@ -14,14 +14,15 @@ class Auction(models.Model):
     closing_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
     opening_date = models.DateTimeField(blank=True, null=True)
     closing_date = models.DateTimeField(blank=True, null=True)
-    status = models.BooleanField(default=False)
-    won_by = models.ForeignKey(CustomUser, on_delete=models.SET_NULL, related_name='auctions_won', blank=True, null=True)
-    created_by = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='auctions_created')
+    enabled = models.BooleanField(default=False)
+    won_by = models.ForeignKey(CustomUser, on_delete=models.SET_NULL, related_name='auctions', blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = 'Auction'
         verbose_name_plural = 'Auctions'
-        ordering = ['-opening_date', 'title']
+        ordering = ['-closing_date', 'title']
 
     def __str__(self):
         return self.title

@@ -46,13 +46,8 @@ urlpatterns = [
     # Users endpoints
     path('api/', include('users.api.urls')),
 
-    # # Auctions endpoints
-    """
-    crud staff or read only
-    create bid
-    
-    """
-    # path('api/', include('auctions.api.urls')),
+    # Auctions endpoints
+    path('api/', include('auctions.api.urls')),
 
     # Homepage
     re_path(r"^.*$", IndexTemplateView.as_view(), name='entry-point'),  # Accept all kind of urls
