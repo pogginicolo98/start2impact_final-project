@@ -1,17 +1,20 @@
-from auctions.api.serializers import AuctionImageSerializer, AuctionScheduleSerializer
+from auctions.api.serializers import AuctionImageSerializer, AuctionScheduleSerializer, AuctionSerializer
 from auctions.models import Auction
 from django.shortcuts import get_object_or_404
-from rest_framework import generics, viewsets
+from rest_framework import generics, mixins, viewsets
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 
 class AuctionScheduleViewSet(viewsets.ModelViewSet):
     """
-    CRUD ViewSet:
-    - Create a new auction instance.
-    - Retrieve a list of all auction instances or a specific one that are not in progress or ended.
-    - Update a specific auction instance that is not in progress or ended.
-    - Delete a specific auction instance that is not in progress or ended.
+    Auction schedule CRUD ViewSet.
+
+    :actions
+    - list
+    - create
+    - retrieve
+    - update
+    - delete
 
     * Only staff users can access to this endpoint.
     """
@@ -23,10 +26,12 @@ class AuctionScheduleViewSet(viewsets.ModelViewSet):
 
 class AuctionImageUpdateAPIView(generics.UpdateAPIView):
     """
-    An APIView that provides 'update()' action.
-    Update 'avatar' field of a 'Profile' instance.
-    * Users can only update their own 'avatar' and must be authenticated.
-    * Authentication via token by REST Auth.
+    Auction image UpdateAPIView.
+
+    :actions
+    - update
+
+    * Only staff users can access to this endpoint.
     """
 
     serializer_class = AuctionImageSerializer
@@ -36,3 +41,33 @@ class AuctionImageUpdateAPIView(generics.UpdateAPIView):
         kwarg_pk = self.kwargs.get('pk')
         auction_object = get_object_or_404(Auction, pk=kwarg_pk)
         return auction_object
+
+
+class AuctionListRetrieveAPIView(mixins.ListModelMixin,
+                                 mixins.RetrieveModelMixin,
+                                 viewsets.GenericViewSet):
+    """
+    Auction ViewSet.
+
+    :actions
+    - list
+    - retrieve
+
+    * Only authenticated users can access to this endpoint.
+    """
+
+    serializer_class = AuctionSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        """
+        Two types of queryset:
+        - List with all auction instances.
+        - Specific auction instance.
+        """
+
+        queryset = Auction.objects.filter(status=True)
+        kwarg_pk = self.kwargs.get('pk', None)
+        if kwarg_pk is not None:
+            queryset = queryset.filter(pk=kwarg_pk)
+        return queryset

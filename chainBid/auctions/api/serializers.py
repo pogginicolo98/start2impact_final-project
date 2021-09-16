@@ -46,10 +46,23 @@ class AuctionSerializer(serializers.ModelSerializer):
     - title
     - description
     - image
-    - opening_price
-    - current_price
+    - initial_price
+    - last_price ???
     - opening_date
-    - duration
+    - remaining_time ???
+
+    * format: JSON.
     """
 
-    pass
+    last_price = serializers.SerializerMethodField(read_only=True)
+    remaining_time = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = Auction
+        fields = ['id', 'title', 'description', 'image', 'initial_price', 'opening_date', 'last_price', 'remaining_time']
+
+    def get_last_price(self, instance):
+        return '???'
+
+    def get_remaining_time(self, instance):
+        return '???'

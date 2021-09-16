@@ -1,5 +1,5 @@
 import json
-from auctions.api.serializers import AuctionScheduleSerializer
+from auctions.api.serializers import AuctionScheduleSerializer, AuctionSerializer
 from auctions.models import Auction
 from django.urls import reverse
 from django.utils import timezone
@@ -19,12 +19,14 @@ class OrderViewSetTestCase(APITestCase):
     - retrieve
     - update
     - delete
+
+    * Only staff users can access to this endpoint.
     """
 
     def setUp(self):
         """
-        Create new user, get an authentication token and authenticate with it.
-        Create an order for tests and setup urls.
+        Create new users, get an authentication token and authenticate the staff user.
+        Create an auction for tests and setup urls.
         """
         self.staff_user = CustomUser.objects.create_user(username='testcase1', password='Change_me_123!', is_staff=True)
         self.common_user = CustomUser.objects.create_user(username='testcase2', password='Change_me_123!')
@@ -135,3 +137,67 @@ class OrderViewSetTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         response = self.client.get(self.detail_url)  # Ex. URL: http://127.0.0.1/api/schedule-auctions/1/
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
+
+
+class AuctionListRetrieveAPIViewTestCase(APITestCase):
+    """
+    AuctionListRetrieveAPIView test case.
+
+    :actions
+    - list
+    - retrieve
+
+    * Only authenticated users can access to this endpoint.
+    """
+
+    def setUp(self):
+        """
+        Create new user, get an authentication token and authenticate with it.
+        Create an auction for tests and setup urls.
+        """
+        self.user = CustomUser.objects.create_user(username='testcase', password='Change_me_123!')
+        self.auction1 = Auction.objects.create(
+            title='Test auction 1',
+            description='some text...',
+            initial_price=10.99,
+            opening_date=timezone.now(),
+            status=True
+        )
+        self.auction2 = Auction.objects.create(
+            title='Test auction 2',
+            description='some text...',
+            initial_price=10.99,
+            opening_date=timezone.now()
+        )
+        self.list_url = reverse('auctions-list')
+        self.detail_url = reverse('auctions-detail', kwargs={'pk': self.auction1.pk})
+        self.token = Token.objects.create(user=self.user)
+        self.api_authentication()
+
+    def api_authentication(self):
+        self.client.credentials(HTTP_AUTHORIZATION=f'Token {self.token.key}')
+
+    def test_list_auctions_not_authenticated(self):
+        self.client.force_authenticate(user=None)
+        response = self.client.get(self.list_url)  # Ex. URL: http://127.0.0.1/api/auctions/
+        self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+
+    def test_list_auctions_authenticated(self):
+        serializer_data = AuctionSerializer(instance=self.auction1).data
+        response = self.client.get(self.list_url)  # Ex. URL: http://127.0.0.1/api/auctions/
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        json_response = json.loads(response.content)
+        self.assertEqual(json_response['count'], 1)  # Checking the fully rendered response
+        self.assertEqual(json_response['results'][0], serializer_data)  # Checking the fully rendered response
+
+    def test_retrieve_auction_not_authenticated(self):
+        self.client.force_authenticate(user=None)
+        response = self.client.get(self.detail_url)  # Ex. URL: http://127.0.0.1/api/auction/1/
+        self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
+
+    def test_retrieve_auction_authenticated(self):
+        serializer_data = AuctionSerializer(instance=self.auction1).data
+        response = self.client.get(self.detail_url)  # Ex. URL: http://127.0.0.1/api/auction/1/
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        json_response = json.loads(response.content)
+        self.assertEqual(json_response, serializer_data)  # Checking the fully rendered response
