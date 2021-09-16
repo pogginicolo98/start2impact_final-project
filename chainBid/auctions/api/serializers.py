@@ -9,13 +9,33 @@ class AuctionScheduleSerializer(serializers.ModelSerializer):
     :fields
     - title
     - description
+    - image
     - initial_price
     - opening_date
+
+    * format: JSON.
+    """
+
+    image = serializers.ImageField(read_only=True)
+
+    class Meta:
+        model = Auction
+        fields = ['id', 'title', 'description', 'image', 'initial_price', 'opening_date']
+
+
+class AuctionImageSerializer(serializers.ModelSerializer):
+    """
+    Auction serializer for AuctionImageUpdateAPIView.
+
+    :fields
+    - image
+
+    * format: DATA.
     """
 
     class Meta:
         model = Auction
-        fields = ['title', 'description', 'initial_price', 'opening_date']
+        fields = ['image']
 
 
 class AuctionSerializer(serializers.ModelSerializer):

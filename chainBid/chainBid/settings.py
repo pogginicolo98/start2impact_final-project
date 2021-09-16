@@ -136,12 +136,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = Path(BASE_DIR).resolve().parent / 'static-serve'
 STATICFILES_DIRS = [
     BASE_DIR / 'static-storage',
     # BASE_DIR / 'assets',
     # BASE_DIR / 'front-end' / 'dist',
 ]
-STATIC_ROOT = os.path.join(BASE_DIR.parent, 'static-serve')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = Path(BASE_DIR).resolve().parent / 'media-serve'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

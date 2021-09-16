@@ -14,6 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from core.views import IndexTemplateView
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path, re_path
 from django_registration.backends.one_step.views import RegistrationView
@@ -23,7 +25,12 @@ from users.forms import CustomUserForm
 # https://django-registration.readthedocs.io/en/3.2/custom-user.html
 # https://django-registration.readthedocs.io/en/3.2/one-step-workflow.html
 
-urlpatterns = [
+urlpatterns = []
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += [
     # Administrator panel
     path('admin/', admin.site.urls),
 
