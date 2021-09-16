@@ -4,13 +4,18 @@ from users.models import CustomUser
 
 class Auction(models.Model):
     """
-    ???
+    Auction model.
+
+    :fields
+    - closing_price: This filed will be populated only at the end of the auction.
+    - enabled: Enable automatic auction opening based on opening_date.
+    - won_by: This filed will be populated only at the end of the auction.
     """
 
     title = models.CharField(max_length=50)
     description = models.TextField(blank=True, null=True)
     image = models.ImageField(blank=True, null=True)
-    opening_price = models.DecimalField(max_digits=11, decimal_places=2)
+    opening_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
     closing_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
     opening_date = models.DateTimeField(blank=True, null=True)
     closing_date = models.DateTimeField(blank=True, null=True)
