@@ -7,19 +7,19 @@ class Auction(models.Model):
     Auction model.
 
     :fields
-    - closing_price: This filed will be populated only at the end of the auction.
-    - enabled: Enable automatic auction opening based on opening_date.
+    - final_price: This filed will be populated only at the end of the auction.
+    - status: False=non active, True=active.
     - won_by: This filed will be populated only at the end of the auction.
     """
 
     title = models.CharField(max_length=50)
     description = models.TextField(blank=True, null=True)
     image = models.ImageField(blank=True, null=True)
-    opening_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
-    closing_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
+    initial_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
+    final_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
     opening_date = models.DateTimeField(blank=True, null=True)
     closing_date = models.DateTimeField(blank=True, null=True)
-    enabled = models.BooleanField(default=False)
+    status = models.BooleanField(default=False)
     won_by = models.ForeignKey(CustomUser, on_delete=models.SET_NULL, related_name='auctions', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -27,7 +27,7 @@ class Auction(models.Model):
     class Meta:
         verbose_name = 'Auction'
         verbose_name_plural = 'Auctions'
-        ordering = ['-closing_date', 'title']
+        ordering = ['-opening_date', 'title']
 
     def __str__(self):
         return self.title

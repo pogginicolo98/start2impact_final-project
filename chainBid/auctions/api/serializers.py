@@ -1,5 +1,4 @@
 from auctions.models import Auction
-from django.utils import timezone
 from rest_framework import serializers
 
 
@@ -10,29 +9,27 @@ class AuctionScheduleSerializer(serializers.ModelSerializer):
     :fields
     - title
     - description
-    - opening_price
+    - initial_price
     - opening_date
-    - closing_date
-    - enabled
     """
 
     class Meta:
         model = Auction
-        exclude = ['image', 'closing_price', 'won_by', 'created_at', 'updated_at']
+        fields = ['title', 'description', 'initial_price', 'opening_date']
 
-    def validate(self, data):
-        now = timezone.now()
 
-        # Check that the opening_date is before the closing_date
-        if data['opening_date'] and data['closing_date']:
-            if data['opening_date'] > data['closing_date']:
-                raise serializers.ValidationError('The opening date must come before the closing date')
+class AuctionSerializer(serializers.ModelSerializer):
+    """
+    Auction serializer for AuctionViewSet.
 
-        if data['enabled']:
-            # Check that both dates are set if auction is enabled
-            if not data['opening_date'] or not data['closing_date']:
-                raise serializers.ValidationError('In order to enable the auction, both the opening date and the closing date must be set')
-            # Check that the opening_date is in the future if the auction is enabled
-            elif data['opening_date'] <= now:
-                raise serializers.ValidationError('You cannot enable an auction that should have already started')
-        return data
+    :fields
+    - title
+    - description
+    - image
+    - opening_price
+    - current_price
+    - opening_date
+    - duration
+    """
+
+    pass

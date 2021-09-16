@@ -31,10 +31,8 @@ class OrderViewSetTestCase(APITestCase):
         self.auction = Auction.objects.create(
             title='Test auction 1',
             description='some text...',
-            opening_price=10.99,
+            initial_price=10.99,
             opening_date=timezone.now(),
-            closing_date=timezone.now(),
-            enabled=False
         )
         self.list_url = reverse('schedule-auctions-list')
         self.detail_url = reverse('schedule-auctions-detail', kwargs={'pk': self.auction.pk})
@@ -59,91 +57,31 @@ class OrderViewSetTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_create_auction_not_authenticated(self):
-        data = {'title': 'Test auction', 'enabled': False}
+        data = {'title': 'Test auction 2'}
         self.client.force_authenticate(user=None)
         response = self.client.post(self.list_url, data=data)  # Ex. URL: http://127.0.0.1/api/schedule-auctions/
         self.assertEqual(response.status_code, status.HTTP_401_UNAUTHORIZED)
 
     def test_create_auction_non_staff(self):
-        data = {'title': 'Test auction', 'enabled': False}
+        data = {'title': 'Test auction 2'}
         self.client.force_authenticate(user=self.common_user)
         response = self.client.post(self.list_url, data=data)  # Ex. URL: http://127.0.0.1/api/schedule-auctions/
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
     def test_create_auction_authenticated(self):
-        opening_date = closing_date = timezone.now()
+        opening_date = timezone.now()
         data = {
             'title': 'Test auction 2',
             'description': 'some text...',
-            'opening_price': 20.99,
-            'opening_date': opening_date,
-            'closing_date': closing_date,
-            'enabled': False
+            'initial_price': 20.99,
+            'opening_date': opening_date
         }
         response = self.client.post(self.list_url, data=data)  # Ex. URL: http://127.0.0.1/api/schedule-auctions/
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         json_response = json.loads(response.content)
         self.assertEqual(json_response['title'], 'Test auction 2')  # Checking the fully rendered response
         self.assertEqual(json_response['description'], 'some text...')  # Checking the fully rendered response
-        self.assertEqual(json_response['opening_price'], '20.99')  # Checking the fully rendered response
-        self.assertEqual(json_response['enabled'], False)  # Checking the fully rendered response
-
-    def test_create_auction_invalid_1(self):
-        opening_date = timezone.now()
-        closing_date = timezone.now()
-        data = {
-            'title': 'Test auction 2',
-            'opening_price': 20.99,
-            'opening_date': closing_date,
-            'closing_date': opening_date,
-        }
-        response = self.client.post(self.list_url, data=data)  # Ex. URL: http://127.0.0.1/api/schedule-auctions/
-        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        json_response = json.loads(response.content)
-        self.assertEqual(json_response['non_field_errors'], ['The opening date must come before the closing date'])  # Checking the fully rendered response
-
-    def test_create_auction_invalid_2(self):
-        opening_date = timezone.now()
-        data = {
-            'title': 'Test auction 2',
-            'opening_price': 20.99,
-            'opening_date': opening_date,
-            'closing_date': '',
-            'enabled': True
-        }
-        response = self.client.post(self.list_url, data=data)  # Ex. URL: http://127.0.0.1/api/schedule-auctions/
-        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        json_response = json.loads(response.content)
-        self.assertEqual(json_response['non_field_errors'], ['In order to enable the auction, both the opening date and the closing date must be set'])  # Checking the fully rendered response
-
-    def test_create_auction_invalid_3(self):
-        closing_date = timezone.now()
-        data = {
-            'title': 'Test auction 2',
-            'opening_price': 20.99,
-            'opening_date': '',
-            'closing_date': closing_date,
-            'enabled': True
-        }
-        response = self.client.post(self.list_url, data=data)  # Ex. URL: http://127.0.0.1/api/schedule-auctions/
-        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        json_response = json.loads(response.content)
-        self.assertEqual(json_response['non_field_errors'], ['In order to enable the auction, both the opening date and the closing date must be set'])  # Checking the fully rendered response
-
-    def test_create_auction_invalid_4(self):
-        opening_date = timezone.now()
-        closing_date = timezone.now()
-        data = {
-            'title': 'Test auction 2',
-            'opening_price': 20.99,
-            'opening_date': opening_date,
-            'closing_date': closing_date,
-            'enabled': True
-        }
-        response = self.client.post(self.list_url, data=data)  # Ex. URL: http://127.0.0.1/api/schedule-auctions/
-        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        json_response = json.loads(response.content)
-        self.assertEqual(json_response['non_field_errors'], ['You cannot enable an auction that should have already started'])  # Checking the fully rendered response
+        self.assertEqual(json_response['initial_price'], '20.99')  # Checking the fully rendered response
 
     def test_retrieve_auction_not_authenticated(self):
         self.client.force_authenticate(user=None)
@@ -175,16 +113,12 @@ class OrderViewSetTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
     def test_update_auction_authenticated(self):
-        data = {
-            'title': 'Test auction updated',
-            'opening_date': '',
-            'closing_date': ''
-        }
+        data = {'title': 'Test auction updated'}
         response = self.client.put(self.detail_url, data=data)  # Ex. URL: http://127.0.0.1/api/schedule-auctions/1/
         json_response = json.loads(response.content)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(json_response['title'], 'Test auction updated')  # Checking the fully rendered response
-        self.assertEqual(json_response['opening_price'], '10.99')  # Checking the fully rendered response
+        self.assertEqual(json_response['initial_price'], '10.99')  # Checking the fully rendered response
 
     def test_delete_auction_not_authenticated(self):
         self.client.force_authenticate(user=None)
