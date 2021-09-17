@@ -32,7 +32,7 @@ class Auction(models.Model):
     def __str__(self):
         return self.title
 
-    def toggle_auction(self):
+    def toggle_status(self):
         if self.status:
             self.status = False
         else:

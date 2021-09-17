@@ -10,5 +10,5 @@ def start_auction_handler(sender, instance, created, **kwargs):
     ???
     """
 
-    if created:
-        start_auction.apply_async((instance,), eta=instance.opening_date)
+    if instance.opening_date and not instance.status:
+        start_auction.apply_async((instance.pk,), eta=instance.opening_date)
