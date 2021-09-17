@@ -32,6 +32,12 @@ class Auction(models.Model):
     def __str__(self):
         return self.title
 
+    def toggle_auction(self):
+        if self.status:
+            self.status = False
+        else:
+            self.status = True
+        self.save()
 
 # class Bid(models.Model):
 #     """

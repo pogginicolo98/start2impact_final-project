@@ -190,3 +190,8 @@ SITE_ID = 1
 # 'django-allauth' app settings
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_EMAIL_REQUIRED = (True)
+
+
+# Celery settings
+CELERY_BROKER_URL = 'redis://localhost:6379'
+CELERY_TIMEZONE = TIME_ZONE
