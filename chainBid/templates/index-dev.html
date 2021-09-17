@@ -1,7 +1,7 @@
 <!-- Homepage template - Development -->
 
 {% extends "base.html" %}
-
+{% load render_bundle from webpack_loader %}
 
 {% block content %}
   <!-- Warning: JavaScript content disabled -->
@@ -15,5 +15,5 @@
 
   <!-- Vue.js application -->
   <div id="app"></div>
-
+  {% render_bundle 'app' %}
 {% endblock %}
