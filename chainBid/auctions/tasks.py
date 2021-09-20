@@ -12,7 +12,3 @@ def start_auction(pk):
 
     auction = get_object_or_404(Auction, pk=pk)
     auction.toggle_status()
-
-# from django.contrib.auth import get_user_model
-# UserModel = get_user_model()
-# user = UserModel.objects.get(pk=user_id)

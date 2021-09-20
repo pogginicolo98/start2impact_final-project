@@ -106,3 +106,12 @@ class AuctionBidSerializer(serializers.Serializer):
         except IndexError:
             return auction.initial_price
         return latest_bid.get('price')
+
+    def validate(self, data):
+        is_last_user = self.get_is_last_user(None)
+        last_price = self.get_last_price(None)
+        if is_last_user:
+            raise serializers.ValidationError('You cannot place another bid')
+        elif data['price'] <= last_price:
+            raise serializers.ValidationError('The price must be larger than the current price')
+        return data
