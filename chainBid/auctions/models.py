@@ -1,5 +1,7 @@
+from django.contrib.auth import get_user_model
 from django.db import models
-from users.models import CustomUser
+
+UserModel = get_user_model()
 
 
 class Auction(models.Model):
@@ -20,7 +22,7 @@ class Auction(models.Model):
     opening_date = models.DateTimeField(blank=True, null=True)
     closing_date = models.DateTimeField(blank=True, null=True)
     status = models.BooleanField(default=False)
-    won_by = models.ForeignKey(CustomUser, on_delete=models.SET_NULL, related_name='auctions', blank=True, null=True)
+    won_by = models.ForeignKey(UserModel, on_delete=models.SET_NULL, related_name='auctions', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -38,12 +40,3 @@ class Auction(models.Model):
         else:
             self.status = True
         self.save()
-
-
-class Bid(models.Model):
-    """
-    ???
-    """
-
-    price = models.DecimalField(max_digits=11, decimal_places=2)
-

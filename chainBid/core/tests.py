@@ -1,8 +1,10 @@
 from django.conf import settings
+from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
-from users.models import CustomUser
+
+UserModel = get_user_model()
 
 
 class IndexTemplateViewTestCase(TestCase):
@@ -17,7 +19,7 @@ class IndexTemplateViewTestCase(TestCase):
     homepage_url = reverse('entry-point')
 
     def setUp(self):
-        self.user = CustomUser.objects.create_user(username='testcase', password='Change_me_123!')
+        self.user = UserModel.objects.create_user(username='testcase', password='Change_me_123!')
 
     def test_entry_point_url_by_name_not_authenticated(self):
         expected_url = reverse('login') + "?next=" + self.homepage_url

@@ -1,11 +1,14 @@
 import json
+
+from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.authtoken.models import Token
 from rest_framework.test import APITestCase
 from users.api.serializers import UserDisplaySerializer
-from users.models import CustomUser
+
+UserModel = get_user_model()
 
 
 class AccountsTestCase(TestCase):
@@ -22,7 +25,7 @@ class AccountsTestCase(TestCase):
     registration_url = reverse('django_registration_register')
 
     def setUp(self):
-        self.user = CustomUser.objects.create_user(username='testcase1', password='Change_me_123!')
+        self.user = UserModel.objects.create_user(username='testcase1', password='Change_me_123!')
 
     def test_login_url_by_name(self):
         credentials = {
@@ -38,7 +41,7 @@ class AccountsTestCase(TestCase):
         )
 
     def test_registration_url_by_name(self):
-        user_count = CustomUser.objects.count()
+        user_count = UserModel.objects.count()
         credentials = {
             'username': 'testcase2',
             'email': 'testcase2@mail.com',
@@ -52,7 +55,7 @@ class AccountsTestCase(TestCase):
             status_code=status.HTTP_302_FOUND,
             target_status_code=status.HTTP_200_OK
         )
-        self.assertEqual(CustomUser.objects.count(), user_count + 1)
+        self.assertEqual(UserModel.objects.count(), user_count + 1)
 
 
 class RESTAuthTestCase(APITestCase):
@@ -67,7 +70,7 @@ class RESTAuthTestCase(APITestCase):
     homepage_url = reverse('entry-point')
 
     def setUp(self):
-        self.user = CustomUser.objects.create_user(username='testcase1', password='Change_me_123!')
+        self.user = UserModel.objects.create_user(username='testcase1', password='Change_me_123!')
 
     def test_authentication(self):
         credentials = {
@@ -105,7 +108,7 @@ class CurrentUserAPIViewTestCase(APITestCase):
 
     def setUp(self):
         # Create new user, get an authentication token and authenticate with it
-        self.user = CustomUser.objects.create_user(username='testcase', password='Change_me_123!')
+        self.user = UserModel.objects.create_user(username='testcase', password='Change_me_123!')
         self.token = Token.objects.create(user=self.user)
         self.api_authentication()
 

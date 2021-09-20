@@ -1,5 +1,7 @@
+from django.contrib.auth import get_user_model
 from django_registration.forms import RegistrationForm
-from users.models import CustomUser
+
+UserModel = get_user_model()
 
 
 class CustomUserForm(RegistrationForm):
@@ -8,4 +10,4 @@ class CustomUserForm(RegistrationForm):
     """
 
     class Meta(RegistrationForm.Meta):
-        model = CustomUser
+        model = UserModel

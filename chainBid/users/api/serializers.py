@@ -1,5 +1,7 @@
+from django.contrib.auth import get_user_model
 from rest_framework import serializers
-from users.models import CustomUser
+
+UserModel = get_user_model()
 
 
 class UserDisplaySerializer(serializers.ModelSerializer):
@@ -8,5 +10,5 @@ class UserDisplaySerializer(serializers.ModelSerializer):
     """
 
     class Meta:
-        model = CustomUser
+        model = UserModel
         fields = ['username']

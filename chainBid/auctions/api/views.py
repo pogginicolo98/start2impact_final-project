@@ -1,12 +1,9 @@
-import json
-
 from auctions.api.serializers import (AuctionBidSerializer,
                                       AuctionImageSerializer,
                                       AuctionScheduleSerializer,
                                       AuctionSerializer)
 from auctions.models import Auction
 from django.shortcuts import get_object_or_404
-from redis import Redis
 from rest_framework import status
 from rest_framework.generics import UpdateAPIView
 from rest_framework.mixins import ListModelMixin, RetrieveModelMixin
@@ -14,7 +11,7 @@ from rest_framework.permissions import IsAdminUser, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import GenericViewSet, ModelViewSet
-from utils.bids import get_latest_bid
+from utils.bids import get_latest_bid, place_new_bid
 
 
 class AuctionScheduleViewSet(ModelViewSet):
@@ -91,6 +88,7 @@ class AuctionBidAPIView(APIView):
 
     :actions
     - create
+    - retrieve
 
     * Only authenticated users can access to this endpoint.
     """
@@ -126,14 +124,11 @@ class AuctionBidAPIView(APIView):
             }
             serializer = self.serializer_class(data=request.data, context=serializer_context)
             if serializer.is_valid():
-                redis_client = Redis('localhost', port=6379)
-                key = f'Auction n.{auction.pk}'
-                bid = {
-                    'user': request.user.username,
-                    'price': float(serializer.data.get('price'))
-                }
-                value = json.dumps(bid)
-                redis_client.lpush(key, value)
+                place_new_bid(
+                    auction=auction,
+                    user=request.user.username,
+                    price=float(serializer.data.get('price'))
+                )
                 return Response(status=status.HTTP_201_CREATED)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         error = {'detail': 'Auction not available'}

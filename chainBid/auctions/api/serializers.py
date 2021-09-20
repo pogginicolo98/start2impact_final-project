@@ -1,6 +1,4 @@
-import json
-from auctions.models import Auction, Bid
-from redis import Redis
+from auctions.models import Auction
 from rest_framework import serializers
 from utils.bids import get_latest_bid
 
@@ -76,7 +74,15 @@ class AuctionSerializer(serializers.ModelSerializer):
 
 class AuctionBidSerializer(serializers.Serializer):
     """
-    ???
+    Bid serializer for AuctionBidAPIView.
+    All bids are recorded on Redis, so Serializer does not use a Model class.
+
+    :fields
+    - price: New price.
+    - is_last_user: Is the current user the last one that placed a bid?
+    - last_price: price of the last bid placed.
+
+    * format: JSON.
     """
 
     price = serializers.DecimalField(max_digits=11, decimal_places=2)
@@ -93,6 +99,7 @@ class AuctionBidSerializer(serializers.Serializer):
         return bool(request_user.username == latest_bid.get('user'))
 
     def get_last_price(self, instance):
+        # If no offers have been placed yet, then return the initial_price
         auction = self.context.get('auction')
         try:
             latest_bid = get_latest_bid(auction=auction)

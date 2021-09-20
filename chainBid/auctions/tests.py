@@ -1,12 +1,15 @@
 import json
+
 from auctions.api.serializers import AuctionScheduleSerializer, AuctionSerializer
 from auctions.models import Auction
+from django.contrib.auth import get_user_model
 from django.urls import reverse
 from django.utils import timezone
 from rest_framework import status
 from rest_framework.authtoken.models import Token
 from rest_framework.test import APITestCase
-from users.models import CustomUser
+
+UserModel = get_user_model()
 
 
 class OrderViewSetTestCase(APITestCase):
@@ -28,8 +31,8 @@ class OrderViewSetTestCase(APITestCase):
         Create new users, get an authentication token and authenticate the staff user.
         Create an auction for tests and setup urls.
         """
-        self.staff_user = CustomUser.objects.create_user(username='testcase1', password='Change_me_123!', is_staff=True)
-        self.common_user = CustomUser.objects.create_user(username='testcase2', password='Change_me_123!')
+        self.staff_user = UserModel.objects.create_user(username='testcase1', password='Change_me_123!', is_staff=True)
+        self.common_user = UserModel.objects.create_user(username='testcase2', password='Change_me_123!')
         self.auction = Auction.objects.create(
             title='Test auction 1',
             description='some text...',
@@ -155,7 +158,7 @@ class AuctionListRetrieveAPIViewTestCase(APITestCase):
         Create new user, get an authentication token and authenticate with it.
         Create an auction for tests and setup urls.
         """
-        self.user = CustomUser.objects.create_user(username='testcase', password='Change_me_123!')
+        self.user = UserModel.objects.create_user(username='testcase', password='Change_me_123!')
         self.auction1 = Auction.objects.create(
             title='Test auction 1',
             description='some text...',

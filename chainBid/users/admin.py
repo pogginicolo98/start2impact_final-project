@@ -1,6 +1,9 @@
 from django.contrib import admin
+from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
-from users.models import CustomUser, Profile
+from users.models import Profile
+
+UserModel = get_user_model()
 
 
 class CustomUserAdmin(UserAdmin):
@@ -11,9 +14,9 @@ class CustomUserAdmin(UserAdmin):
 
     # add_form =
     # form =
-    model = CustomUser
+    model = UserModel
     list_display = ['username', 'email', 'is_staff']
 
 
-admin.site.register(CustomUser, CustomUserAdmin)
+admin.site.register(UserModel, CustomUserAdmin)
 admin.site.register(Profile)
