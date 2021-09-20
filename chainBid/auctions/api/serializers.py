@@ -1,6 +1,8 @@
-from auctions.models import Auction
+import json
+from auctions.models import Auction, Bid
 from redis import Redis
 from rest_framework import serializers
+from utils.bids import get_price_latest_bid_or_initial_price, get_user_latest_bid
 
 
 class AuctionScheduleSerializer(serializers.ModelSerializer):
@@ -47,7 +49,6 @@ class AuctionSerializer(serializers.ModelSerializer):
     - title
     - description
     - image
-    - initial_price
     - last_price ???
     - opening_date
     - remaining_time ???
@@ -60,10 +61,16 @@ class AuctionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Auction
-        fields = ['id', 'title', 'description', 'image', 'initial_price', 'opening_date', 'last_price', 'remaining_time']
+        exclude = ['initial_price', 'final_price', 'closing_date', 'status', 'won_by', 'created_at', 'updated_at']
 
     def get_last_price(self, instance):
-        return '???'
+        redis_client = Redis('localhost', port=6379)
+        key = f'Auction n.{instance.pk}'
+        bids = redis_client.lrange(key, 0, 0)
+        if bids:
+            last_bid = json.loads(bids[0])
+            return last_bid.get('price')
+        return instance.initial_price
 
     def get_remaining_time(self, instance):
         return '???'
@@ -76,14 +83,14 @@ class AuctionBidSerializer(serializers.Serializer):
 
     price = serializers.DecimalField(max_digits=11, decimal_places=2)
     is_last_user = serializers.SerializerMethodField(read_only=True)
+    last_price = serializers.SerializerMethodField(read_only=True)
 
     def get_is_last_user(self, instance):
         request_user = self.context.get('request').user
-        last_user_bid = self.context.get('redisdb ???')
-        return True
+        auction = self.context.get('auction')
+        user_last_bid = get_user_latest_bid(auction=auction)
+        return bool(request_user.username == user_last_bid)
 
-    def create(self, validated_data):
-        redis_client = Redis('localhost', port=6379)
-        key = datetime.now().strftime('%d/%m/%Y')
-        value = f"{datetime.now().strftime('%H:%M:%S')} - {request.user} has retrieved a posts list"
-        redis_client.lpush(key, value)
+    def get_last_price(self, instance):
+        auction = self.context.get('auction')
+        return get_price_latest_bid_or_initial_price(auction=auction)

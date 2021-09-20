@@ -39,20 +39,11 @@ class Auction(models.Model):
             self.status = True
         self.save()
 
-# class Bid(models.Model):
-#     """
-#     ???
-#     """
-#
-#     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='bids')
-#     auction = models.ForeignKey(Auction, on_delete=models.CASCADE, related_name='bids')
-#     price = models.DecimalField(max_digits=11, decimal_places=2)
-#     created_at = models.DateTimeField(auto_now=True)
-#
-#     class Meta:
-#         verbose_name = 'Bid'
-#         verbose_name_plural = 'Bids'
-#         ordering = ['auction', '-created_at']
-#
-#     def __str__(self):
-#         return f'{self.auction} - {self.price}'
+
+class Bid(models.Model):
+    """
+    ???
+    """
+
+    price = models.DecimalField(max_digits=11, decimal_places=2)
+

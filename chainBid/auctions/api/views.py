@@ -1,9 +1,12 @@
+import json
+
 from auctions.api.serializers import (AuctionBidSerializer,
                                       AuctionImageSerializer,
                                       AuctionScheduleSerializer,
                                       AuctionSerializer)
 from auctions.models import Auction
 from django.shortcuts import get_object_or_404
+from redis import Redis
 from rest_framework import status
 from rest_framework.generics import UpdateAPIView
 from rest_framework.mixins import ListModelMixin, RetrieveModelMixin
@@ -94,11 +97,27 @@ class AuctionBidAPIView(APIView):
     serializer_class = AuctionBidSerializer
     permission_classes = [IsAuthenticated]
 
+    def get(self, request, pk):
+        pass
+
     def post(self, request, pk):
         auction = get_object_or_404(Auction, pk=pk)
-        serializer_context = {'request_user': request.user, 'auction': auction}
-        serializer = AuctionBidSerializer(data=request.data, context=serializer_context)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        if auction.status:
+            serializer_context = {
+                'request': request,
+                'auction': auction
+            }
+            serializer = self.serializer_class(data=request.data, context=serializer_context)
+            if serializer.is_valid():
+                redis_client = Redis('localhost', port=6379)
+                key = f'Auction n.{auction.pk}'
+                bid = {
+                    'user': request.user.username,
+                    'price': float(serializer.data.get('price'))
+                }
+                value = json.dumps(bid)
+                redis_client.lpush(key, value)
+                return Response(serializer.data, status=status.HTTP_201_CREATED)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        error = {'detail': 'Auction not available'}
+        return Response(error, status=status.HTTP_400_BAD_REQUEST)
