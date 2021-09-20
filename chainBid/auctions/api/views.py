@@ -14,6 +14,7 @@ from rest_framework.permissions import IsAdminUser, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import GenericViewSet, ModelViewSet
+from utils.bids import get_latest_bid
 
 
 class AuctionScheduleViewSet(ModelViewSet):
@@ -98,7 +99,23 @@ class AuctionBidAPIView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, pk):
-        pass
+        auction = get_object_or_404(Auction, pk=pk)
+        if auction.status:
+            try:
+                latest_bid = get_latest_bid(auction=auction)
+                is_last_user = bool(request.user.username == latest_bid.get('user'))
+                last_price = latest_bid.get('price')
+            except IndexError:
+                is_last_user = False
+                last_price = auction.initial_price
+            response_data = {
+                'is_last_user': is_last_user,
+                'last_price': last_price,
+                'remaining_time': '???'
+            }
+            return Response(response_data, status=status.HTTP_200_OK)
+        error = {'detail': 'Auction not available'}
+        return Response(error, status=status.HTTP_400_BAD_REQUEST)
 
     def post(self, request, pk):
         auction = get_object_or_404(Auction, pk=pk)
@@ -117,7 +134,7 @@ class AuctionBidAPIView(APIView):
                 }
                 value = json.dumps(bid)
                 redis_client.lpush(key, value)
-                return Response(serializer.data, status=status.HTTP_201_CREATED)
+                return Response(status=status.HTTP_201_CREATED)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         error = {'detail': 'Auction not available'}
         return Response(error, status=status.HTTP_400_BAD_REQUEST)
