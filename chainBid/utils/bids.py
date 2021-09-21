@@ -1,7 +1,3 @@
-"""
-Functions for managing bids's data stored on Redis.
-"""
-
 import json
 
 from redis import Redis
@@ -22,7 +18,7 @@ def get_latest_bid(auction):
     """
 
     redis_client = Redis(IP_ADDRESS, port=PORT)
-    key = f'Auction n.{auction.pk}'
+    key = f'Auction n.{auction.pk} - bids'
     try:
         latest_bid_json = redis_client.lrange(key, 0, 0)[0]
     except IndexError:
@@ -42,7 +38,7 @@ def place_new_bid(auction, user, price):
     """
 
     redis_client = Redis(IP_ADDRESS, port=PORT)
-    key = f'Auction n.{auction.pk}'
+    key = f'Auction n.{auction.pk} - bids'
     bid = {
         'user': user,
         'price': price

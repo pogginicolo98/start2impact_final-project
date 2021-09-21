@@ -28,7 +28,7 @@ class AuctionScheduleViewSet(ModelViewSet):
     * Only staff users can access to this endpoint.
     """
 
-    queryset = Auction.objects.filter(closing_date=None).exclude(status=True)
+    queryset = Auction.objects.filter(closed_at=None).exclude(status=True)
     serializer_class = AuctionScheduleSerializer
     permission_classes = [IsAuthenticated, IsAdminUser]
 
