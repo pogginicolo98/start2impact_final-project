@@ -3,6 +3,7 @@ from auctions.api.serializers import (AuctionBidSerializer,
                                       AuctionScheduleSerializer,
                                       AuctionSerializer)
 from auctions.models import Auction
+from auctions.signals import auction_bid_apiview_called
 from django.shortcuts import get_object_or_404
 from rest_framework import status
 from rest_framework.generics import UpdateAPIView
@@ -11,7 +12,6 @@ from rest_framework.permissions import IsAdminUser, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.viewsets import GenericViewSet, ModelViewSet
-from utils.bids import get_latest_bid, place_new_bid
 
 
 class AuctionScheduleViewSet(ModelViewSet):
@@ -99,11 +99,11 @@ class AuctionBidAPIView(APIView):
     def get(self, request, pk):
         auction = get_object_or_404(Auction, pk=pk)
         if auction.status:
-            try:
-                latest_bid = get_latest_bid(auction=auction)
+            latest_bid = auction.get_latest_bid()
+            if latest_bid:
                 is_last_user = bool(request.user.username == latest_bid.get('user'))
                 last_price = latest_bid.get('price')
-            except IndexError:
+            else:
                 is_last_user = False
                 last_price = auction.initial_price
             response_data = {
@@ -124,11 +124,12 @@ class AuctionBidAPIView(APIView):
             }
             serializer = self.serializer_class(data=request.data, context=serializer_context)
             if serializer.is_valid():
-                place_new_bid(
-                    auction=auction,
+                auction.push_new_bid(
                     user=request.user.username,
                     price=float(serializer.data.get('price'))
                 )
+                # Send signal in order to update the auction's remaining time
+                auction_bid_apiview_called.send(sender='auction-bid-api-view', instance=auction)
                 return Response(status=status.HTTP_201_CREATED)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         error = {'detail': 'Auction not available'}
