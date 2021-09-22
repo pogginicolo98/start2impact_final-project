@@ -100,9 +100,9 @@ class AuctionBidAPIView(APIView):
         auction = get_object_or_404(Auction, pk=pk)
         if auction.status:
             latest_bid = auction.get_latest_bid()
-            if latest_bid:
-                is_last_user = bool(request.user.username == latest_bid.get('user'))
-                last_price = latest_bid.get('price')
+            if latest_bid is not None:
+                is_last_user = bool(request.user.username == latest_bid['user'])
+                last_price = latest_bid['price']
             else:
                 is_last_user = False
                 last_price = auction.initial_price

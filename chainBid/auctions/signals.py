@@ -28,7 +28,7 @@ def update_bid_closing_time(sender, instance, **kwargs):
     """
 
     task_id = instance.pop_task_id()
-    if task_id:
+    if task_id is not None:
         app.control.revoke(task_id, terminate=True)
     task_id = close_auction.apply_async((instance.pk,), countdown=15).id
     instance.push_task_id(task_id)

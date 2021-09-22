@@ -42,10 +42,9 @@ class Auction(models.Model):
 
     def open_auction(self):
         """
-        Enable the auction and calculate the maximum closing date.
-
-        :return
-        - max_closing_date: Random DateTime between 20 to 24 hours after the opening
+        Perform the following actions:
+        1) Enable the auction.
+        2) Set the close_auction() task to run on a random date between 20 to 24 hours after the opening.
         """
 
         self.status = not self.status
@@ -57,13 +56,18 @@ class Auction(models.Model):
 
     def close_auction(self):
         """
-        ???
+        Perform the following actions:
+        1) Disable the auction.
+        2) Store the winning bid's data.
+        3) Remove bids data from Redis.
+        4) Make a report.
+        5) Write the report on the Ethereum blockchain.
         """
 
         self.status = not self.status
         self.closed_at = timezone.now()
         latest_bid = self.get_latest_bid()
-        if latest_bid:
+        if latest_bid is not None:
             self.won_by = get_object_or_404(UserModel, username=latest_bid['user'])
             self.final_price = latest_bid['price']
         self.save()
@@ -117,5 +121,7 @@ class Auction(models.Model):
 
         redis_client = Redis(IP_ADDRESS, port=PORT)
         key = f'Auction n.{self.pk} - remaining time'
-        value = json.loads(redis_client.lpop(key))
-        return value
+        value = redis_client.lpop(key)
+        if value is not None:
+            return json.loads(value)
+        return None
