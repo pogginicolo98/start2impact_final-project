@@ -9,10 +9,9 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import os
+
 import password
 from pathlib import Path
-from utils import redis_config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -193,6 +192,11 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_EMAIL_REQUIRED = (True)
 
 
+# Redis server configuration
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+
+
 # Celery settings
-CELERY_BROKER_URL = f'redis://{redis_config.IP_ADDRESS}:{redis_config.PORT}'
+CELERY_BROKER_URL = f'redis://{REDIS_HOST}:{REDIS_PORT}'
 CELERY_TIMEZONE = TIME_ZONE

@@ -6,7 +6,7 @@ from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from redis import Redis
 from utils.randomics import random_date
-from utils.redis_config import IP_ADDRESS, PORT
+from django.conf import settings
 
 UserModel = get_user_model()
 
@@ -82,7 +82,7 @@ class Auction(models.Model):
         - {'user', 'admin', 'price': 9.99}: Sample bid.
         """
 
-        redis_client = Redis(IP_ADDRESS, port=PORT)
+        redis_client = Redis(settings.REDIS_HOST, port=settings.REDIS_PORT)
         key = f'Auction n.{self.pk} - bids'
         try:
             latest_bid_json = redis_client.lrange(key, 0, 0)[0]
@@ -96,7 +96,7 @@ class Auction(models.Model):
         Record a new bid.
         """
 
-        redis_client = Redis(IP_ADDRESS, port=PORT)
+        redis_client = Redis(settings.REDIS_HOST, port=settings.REDIS_PORT)
         key = f'Auction n.{self.pk} - bids'
         bid = {
             'user': user,
@@ -110,7 +110,7 @@ class Auction(models.Model):
         Record the id of the last celery task that is handling the closing of the auction.
         """
 
-        redis_client = Redis(IP_ADDRESS, port=PORT)
+        redis_client = Redis(settings.REDIS_HOST, port=settings.REDIS_PORT)
         key = f'Auction n.{self.pk} - remaining time'
         value = json.dumps(task_id)
         redis_client.lpush(key, value)
@@ -120,7 +120,7 @@ class Auction(models.Model):
         Get the id of the last celery task that is handling the closing of the auction.
         """
 
-        redis_client = Redis(IP_ADDRESS, port=PORT)
+        redis_client = Redis(settings.REDIS_HOST, port=settings.REDIS_PORT)
         key = f'Auction n.{self.pk} - remaining time'
         value = redis_client.lpop(key)
         if value is not None:
@@ -132,7 +132,7 @@ class Auction(models.Model):
         Delete bids and related data from Redis db.
         """
 
-        redis_client = Redis(IP_ADDRESS, port=PORT)
+        redis_client = Redis(settings.REDIS_HOST, port=settings.REDIS_PORT)
         key1 = f'Auction n.{self.pk} - bids'
         key2 = f'Auction n.{self.pk} - remaining time'
         redis_client.delete(key1, key2)
