@@ -71,6 +71,7 @@ class Auction(models.Model):
             self.won_by = get_object_or_404(UserModel, username=latest_bid['user'])
             self.final_price = latest_bid['price']
         self.save()
+        self.clean_db()
 
     def get_latest_bid(self):
         """
@@ -125,3 +126,13 @@ class Auction(models.Model):
         if value is not None:
             return json.loads(value)
         return None
+
+    def clean_db(self):
+        """
+        Delete bids and related data from Redis db.
+        """
+
+        redis_client = Redis(IP_ADDRESS, port=PORT)
+        key1 = f'Auction n.{self.pk} - bids'
+        key2 = f'Auction n.{self.pk} - remaining time'
+        redis_client.delete(key1, key2)

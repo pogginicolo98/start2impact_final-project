@@ -1,6 +1,5 @@
 from auctions.models import Auction
 from rest_framework import serializers
-from utils.bids import get_latest_bid
 
 
 class AuctionScheduleSerializer(serializers.ModelSerializer):
@@ -62,11 +61,10 @@ class AuctionSerializer(serializers.ModelSerializer):
         exclude = ['initial_price', 'status', 'won_by', 'final_price', 'closed_at']
 
     def get_last_price(self, instance):
-        try:
-            latest_bid = get_latest_bid(auction=instance)
-        except IndexError:
-            return instance.initial_price
-        return latest_bid.get('price')
+        latest_bid = instance.get_latest_bid()
+        if latest_bid is not None:
+            return latest_bid['price']
+        return instance.initial_price
 
     def get_remaining_time(self, instance):
         return '???'
@@ -92,20 +90,18 @@ class AuctionBidSerializer(serializers.Serializer):
     def get_is_last_user(self, instance):
         request_user = self.context.get('request').user
         auction = self.context.get('auction')
-        try:
-            latest_bid = get_latest_bid(auction=auction)
-        except IndexError:
-            return False
-        return bool(request_user.username == latest_bid.get('user'))
+        latest_bid = auction.get_latest_bid()
+        if latest_bid is not None:
+            return bool(request_user.username == latest_bid['user'])
+        return False
 
     def get_last_price(self, instance):
         # If no offers have been placed yet, then return the initial_price
         auction = self.context.get('auction')
-        try:
-            latest_bid = get_latest_bid(auction=auction)
-        except IndexError:
-            return auction.initial_price
-        return latest_bid.get('price')
+        latest_bid = auction.get_latest_bid()
+        if latest_bid is not None:
+            return latest_bid['price']
+        return auction.initial_price
 
     def validate(self, data):
         is_last_user = self.get_is_last_user(None)
