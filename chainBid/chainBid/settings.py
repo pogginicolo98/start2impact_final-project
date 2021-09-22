@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import os
+
 import password
 from pathlib import Path
 
@@ -38,8 +38,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     'rest_framework',
+    'rest_framework.authtoken',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    'rest_auth',
+    'rest_auth.registration',
 
     'crispy_forms',
 
@@ -127,12 +136,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = Path(BASE_DIR).resolve().parent / 'static-serve'
 STATICFILES_DIRS = [
     BASE_DIR / 'static-storage',
     # BASE_DIR / 'assets',
     # BASE_DIR / 'front-end' / 'dist',
 ]
-STATIC_ROOT = os.path.join(BASE_DIR.parent, 'static-serve')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = Path(BASE_DIR).resolve().parent / 'media-serve'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -154,3 +167,36 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+
+# 'rest_framework' app settings
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'PAGE_SIZE': 3,
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+}
+
+
+# 'django.contrib.sites' app settings
+SITE_ID = 1
+
+
+# 'django-allauth' app settings
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_EMAIL_REQUIRED = (True)
+
+
+# Redis server configuration
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+
+
+# Celery settings
+CELERY_BROKER_URL = f'redis://{REDIS_HOST}:{REDIS_PORT}'
+CELERY_TIMEZONE = TIME_ZONE
