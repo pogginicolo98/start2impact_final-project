@@ -58,7 +58,7 @@ class AuctionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Auction
-        exclude = ['initial_price', 'status', 'won_by', 'final_price', 'closed_at']
+        fields = ['id', 'title', 'description', 'image', 'opening_date', 'last_price', 'remaining_time']
 
     def get_last_price(self, instance):
         latest_bid = instance.get_latest_bid()

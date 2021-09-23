@@ -1,3 +1,4 @@
+import hashlib
 import json
 import os
 
@@ -7,8 +8,9 @@ from django.db import models
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from redis import Redis
-from utils.randomics import random_date
 from utils.encoders import AuctionEncoder
+from utils.randomics import random_date
+from utils.transactions import write_message_on_chain
 
 
 UserModel = get_user_model()
@@ -40,6 +42,8 @@ class Auction(models.Model):
     won_by = models.ForeignKey(UserModel, on_delete=models.SET_NULL, related_name='auctions', blank=True, null=True)
     final_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
     closed_at = models.DateTimeField(blank=True, null=True)
+    hash = models.CharField(max_length=64, blank=True, null=True)
+    tx_id = models.CharField(max_length=66, blank=True, null=True)
 
     class Meta:
         verbose_name = 'Auction'
@@ -165,3 +169,6 @@ class Auction(models.Model):
             pass  # Already exists
         with open(path, 'w') as f:
             json.dump(report, f, cls=AuctionEncoder)
+        self.hash = hashlib.sha256(json.dumps(report, cls=AuctionEncoder).encode('utf-8')).hexdigest()
+        self.tx_id = write_message_on_chain(self.hash)
+        self.save()
