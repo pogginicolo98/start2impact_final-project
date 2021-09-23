@@ -1,14 +1,15 @@
 import json
 import os
 
+from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.core.serializers.json import DjangoJSONEncoder
 from django.db import models
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from redis import Redis
 from utils.randomics import random_date
-from django.conf import settings
+from utils.encoders import AuctionEncoder
+
 
 UserModel = get_user_model()
 
@@ -163,4 +164,4 @@ class Auction(models.Model):
         except OSError:
             pass  # Already exists
         with open(path, 'w') as f:
-            json.dump(report, f, cls=DjangoJSONEncoder)
+            json.dump(report, f, cls=AuctionEncoder)
