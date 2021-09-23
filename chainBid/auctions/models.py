@@ -1,6 +1,8 @@
 import json
+import os
 
 from django.contrib.auth import get_user_model
+from django.core.serializers.json import DjangoJSONEncoder
 from django.db import models
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
@@ -22,6 +24,12 @@ class Auction(models.Model):
     - won_by: This filed will be populated only at the end of the auction.
     """
 
+    # Generic config
+    REDIS_HOST = settings.REDIS_HOST
+    REDIS_PORT = settings.REDIS_PORT
+    STATIC_DIR = settings.STATICFILES_DIRS[0]
+
+    # Fields
     title = models.CharField(max_length=50)
     description = models.TextField(blank=True, null=True)
     image = models.ImageField(blank=True, null=True)
@@ -49,8 +57,8 @@ class Auction(models.Model):
 
         self.status = not self.status
         self.save()
-        min_duration = self.opening_date + timezone.timedelta(hours=20)
-        max_duration = self.opening_date + timezone.timedelta(hours=24)
+        min_duration = self.opening_date + timezone.timedelta(seconds=20)
+        max_duration = self.opening_date + timezone.timedelta(seconds=24)
         max_closing_date = random_date(start=min_duration, end=max_duration)
         return max_closing_date
 
@@ -60,8 +68,7 @@ class Auction(models.Model):
         1) Disable the auction.
         2) Store the winning bid's data.
         3) Remove bids data from Redis.
-        4) Make a report.
-        5) Write the report on the Ethereum blockchain.
+        4) Make a report and write it on the Ethereum blockchain.
         """
 
         self.status = not self.status
@@ -72,6 +79,7 @@ class Auction(models.Model):
             self.final_price = latest_bid['price']
         self.save()
         self.clean_db()
+        self.make_report()
 
     def get_latest_bid(self):
         """
@@ -82,7 +90,7 @@ class Auction(models.Model):
         - {'user', 'admin', 'price': 9.99}: Sample bid.
         """
 
-        redis_client = Redis(settings.REDIS_HOST, port=settings.REDIS_PORT)
+        redis_client = Redis(self.REDIS_HOST, port=self.REDIS_PORT)
         key = f'Auction n.{self.pk} - bids'
         try:
             latest_bid_json = redis_client.lrange(key, 0, 0)[0]
@@ -96,7 +104,7 @@ class Auction(models.Model):
         Record a new bid.
         """
 
-        redis_client = Redis(settings.REDIS_HOST, port=settings.REDIS_PORT)
+        redis_client = Redis(self.REDIS_HOST, port=self.REDIS_PORT)
         key = f'Auction n.{self.pk} - bids'
         bid = {
             'user': user,
@@ -110,7 +118,7 @@ class Auction(models.Model):
         Record the id of the last celery task that is handling the closing of the auction.
         """
 
-        redis_client = Redis(settings.REDIS_HOST, port=settings.REDIS_PORT)
+        redis_client = Redis(self.REDIS_HOST, port=self.REDIS_PORT)
         key = f'Auction n.{self.pk} - remaining time'
         value = json.dumps(task_id)
         redis_client.lpush(key, value)
@@ -120,7 +128,7 @@ class Auction(models.Model):
         Get the id of the last celery task that is handling the closing of the auction.
         """
 
-        redis_client = Redis(settings.REDIS_HOST, port=settings.REDIS_PORT)
+        redis_client = Redis(self.REDIS_HOST, port=self.REDIS_PORT)
         key = f'Auction n.{self.pk} - remaining time'
         value = redis_client.lpop(key)
         if value is not None:
@@ -132,7 +140,27 @@ class Auction(models.Model):
         Delete bids and related data from Redis db.
         """
 
-        redis_client = Redis(settings.REDIS_HOST, port=settings.REDIS_PORT)
+        redis_client = Redis(self.REDIS_HOST, port=self.REDIS_PORT)
         key1 = f'Auction n.{self.pk} - bids'
         key2 = f'Auction n.{self.pk} - remaining time'
         redis_client.delete(key1, key2)
+
+    def make_report(self):
+        report = {
+            'title': self.title,
+            'description': self.description,
+            'initial price': self.initial_price,
+            'final price': self.final_price,
+            'winner': str(self.won_by),
+            'opening date': self.opening_date,
+            'closing date': self.closed_at
+        }
+        file_name = f'auction {self.pk}.json'
+        destination_dir = os.path.join(self.STATIC_DIR, 'reports')
+        path = os.path.join(destination_dir, file_name)
+        try:
+            os.mkdir(destination_dir)
+        except OSError:
+            pass  # Already exists
+        with open(path, 'w') as f:
+            json.dump(report, f, cls=DjangoJSONEncoder)
