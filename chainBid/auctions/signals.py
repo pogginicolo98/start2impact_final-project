@@ -16,9 +16,9 @@ def open_auction_handler(sender, instance, created, **kwargs):
     """
 
     now = timezone.now()
-    if instance.opening_date and instance.initial_price:
-        if now < instance.opening_date and not instance.status:
-            open_auction.apply_async((instance.pk,), eta=instance.opening_date)
+    if instance.opened_at and instance.initial_price:
+        if now < instance.opened_at and not instance.status:
+            open_auction.apply_async((instance.pk,), eta=instance.opened_at)
 
 
 def update_bid_closing_time(sender, instance, **kwargs):

@@ -11,7 +11,7 @@ class AuctionScheduleSerializer(serializers.ModelSerializer):
     - description
     - image
     - initial_price
-    - opening_date
+    - opened_at
 
     * format: JSON.
     """
@@ -20,7 +20,7 @@ class AuctionScheduleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Auction
-        fields = ['id', 'title', 'description', 'image', 'initial_price', 'opening_date']
+        fields = ['id', 'title', 'description', 'image', 'initial_price', 'opened_at']
 
 
 class AuctionImageSerializer(serializers.ModelSerializer):
@@ -47,7 +47,7 @@ class AuctionSerializer(serializers.ModelSerializer):
     - description
     - image
     - last_price ???
-    - opening_date
+    - opened_at
     - remaining_time ???
 
     * format: JSON.
@@ -58,7 +58,7 @@ class AuctionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Auction
-        fields = ['id', 'title', 'description', 'image', 'opening_date', 'last_price', 'remaining_time']
+        fields = ['id', 'title', 'description', 'image', 'opened_at', 'last_price', 'remaining_time']
 
     def get_last_price(self, instance):
         latest_bid = instance.get_latest_bid()

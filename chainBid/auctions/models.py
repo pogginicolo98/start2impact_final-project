@@ -24,7 +24,7 @@ class Auction(models.Model):
     :fields
     - final_price: This filed will be populated only at the end of the auction.
     - status: False=non active, True=active.
-    - won_by: This filed will be populated only at the end of the auction.
+    - winner: This filed will be populated only at the end of the auction.
     """
 
     # Generic config
@@ -37,18 +37,18 @@ class Auction(models.Model):
     description = models.TextField(blank=True, null=True)
     image = models.ImageField(blank=True, null=True)
     initial_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
-    opening_date = models.DateTimeField(blank=True, null=True)
-    status = models.BooleanField(default=False)
-    won_by = models.ForeignKey(UserModel, on_delete=models.SET_NULL, related_name='auctions', blank=True, null=True)
     final_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
+    opened_at = models.DateTimeField(blank=True, null=True)
     closed_at = models.DateTimeField(blank=True, null=True)
+    winner = models.ForeignKey(UserModel, on_delete=models.SET_NULL, related_name='auctions', blank=True, null=True)
+    status = models.BooleanField(default=False)
     hash = models.CharField(max_length=64, blank=True, null=True)
     tx_id = models.CharField(max_length=66, blank=True, null=True)
 
     class Meta:
         verbose_name = 'Auction'
         verbose_name_plural = 'Auctions'
-        ordering = ['-opening_date', 'title']
+        ordering = ['-opened_at', 'title']
 
     def __str__(self):
         return self.title
@@ -62,8 +62,8 @@ class Auction(models.Model):
 
         self.status = not self.status
         self.save()
-        min_duration = self.opening_date + timezone.timedelta(hours=20)
-        max_duration = self.opening_date + timezone.timedelta(hours=24)
+        min_duration = self.opened_at + timezone.timedelta(hours=20)
+        max_duration = self.opened_at + timezone.timedelta(hours=24)
         max_closing_date = random_date(start=min_duration, end=max_duration)
         return max_closing_date
 
@@ -80,7 +80,7 @@ class Auction(models.Model):
         self.closed_at = timezone.now()
         latest_bid = self.get_latest_bid()
         if latest_bid is not None:
-            self.won_by = get_object_or_404(UserModel, username=latest_bid['user'])
+            self.winner = get_object_or_404(UserModel, username=latest_bid['user'])
             self.final_price = latest_bid['price']
         self.save()
         self.clean_db()
@@ -163,8 +163,8 @@ class Auction(models.Model):
             'description': self.description,
             'initial price': self.initial_price,
             'final price': self.final_price,
-            'winner': str(self.won_by),
-            'opening date': self.opening_date,
+            'winner': str(self.winner),
+            'opening date': self.opened_at,
             'closing date': self.closed_at
         }
         file_name = f'auction {self.pk}.json'
