@@ -62,8 +62,8 @@ class Auction(models.Model):
 
         self.status = not self.status
         self.save()
-        min_duration = self.opening_date + timezone.timedelta(seconds=20)
-        max_duration = self.opening_date + timezone.timedelta(seconds=24)
+        min_duration = self.opening_date + timezone.timedelta(hours=20)
+        max_duration = self.opening_date + timezone.timedelta(hours=24)
         max_closing_date = random_date(start=min_duration, end=max_duration)
         return max_closing_date
 
