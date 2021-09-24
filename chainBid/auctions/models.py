@@ -151,6 +151,13 @@ class Auction(models.Model):
         redis_client.delete(key1, key2)
 
     def make_report(self):
+        """
+        Make a json report and write it on the Ethereum blockchain.
+
+        Json file: 'auction x.json'.
+        Network: Ropsten.
+        """
+
         report = {
             'title': self.title,
             'description': self.description,
