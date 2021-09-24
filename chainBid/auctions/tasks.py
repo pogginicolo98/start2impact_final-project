@@ -27,4 +27,4 @@ def open_auction(pk):
     auction = get_object_or_404(Auction, pk=pk)
     max_closing_date = auction.open_auction()
     task_id = close_auction.apply_async((pk,), eta=max_closing_date).id
-    auction.push_task_id(task_id)
+    auction.push_task(task_id=task_id)

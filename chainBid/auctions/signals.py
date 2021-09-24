@@ -27,11 +27,12 @@ def update_bid_closing_time(sender, instance, **kwargs):
     a new one is created with 15 seconds of countdown.
     """
 
-    task_id = instance.pop_task_id()
-    if task_id is not None:
-        app.control.revoke(task_id, terminate=True, signal='SIGKILL')
-    task_id = close_auction.apply_async((instance.pk,), countdown=15).id
-    instance.push_task_id(task_id)
+    task = instance.pop_task()
+    if task is not None:
+        app.control.revoke(task['task_id'], terminate=True, signal='SIGKILL')
+    eta = timezone.now() + timezone.timedelta(seconds=15)
+    task_id = close_auction.apply_async((instance.pk,), eta=eta).id
+    instance.push_task(task_id=task_id, eta=eta)
 
 
 # Connecting custom signals for views: AuctionBidAPIView

@@ -46,9 +46,9 @@ class AuctionSerializer(serializers.ModelSerializer):
     - title
     - description
     - image
-    - last_price ???
+    - last_price
     - opened_at
-    - remaining_time ???
+    - remaining_time
 
     * format: JSON.
     """
@@ -67,7 +67,7 @@ class AuctionSerializer(serializers.ModelSerializer):
         return instance.initial_price
 
     def get_remaining_time(self, instance):
-        return '???'
+        return instance.get_auction_remaining_time()
 
 
 class AuctionBidSerializer(serializers.Serializer):

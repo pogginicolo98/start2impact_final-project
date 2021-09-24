@@ -109,7 +109,7 @@ class AuctionBidAPIView(APIView):
             response_data = {
                 'is_last_user': is_last_user,
                 'last_price': last_price,
-                'remaining_time': '???'
+                'remaining_time': auction.get_auction_remaining_time()
             }
             return Response(response_data, status=status.HTTP_200_OK)
         error = {'detail': 'Auction not available'}
