@@ -30,12 +30,33 @@
       "name": "favicon.ico",
       "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/favicon.ico",
       "publicPath": "http://0.0.0.0:8080/favicon.ico"
+    },
+    "app.a2ba6b1f45d57397e74c.hot-update.js": {
+      "name": "app.a2ba6b1f45d57397e74c.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.a2ba6b1f45d57397e74c.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.a2ba6b1f45d57397e74c.hot-update.js"
+    },
+    "a2ba6b1f45d57397e74c.hot-update.json": {
+      "name": "a2ba6b1f45d57397e74c.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/a2ba6b1f45d57397e74c.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/a2ba6b1f45d57397e74c.hot-update.json"
+    },
+    "app.6c45026d985b242b9a6c.hot-update.js": {
+      "name": "app.6c45026d985b242b9a6c.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.6c45026d985b242b9a6c.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.6c45026d985b242b9a6c.hot-update.js"
+    },
+    "6c45026d985b242b9a6c.hot-update.json": {
+      "name": "6c45026d985b242b9a6c.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/6c45026d985b242b9a6c.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/6c45026d985b242b9a6c.hot-update.json"
     }
   },
   "chunks": {
     "app": [
       "bundle.css",
-      "bundle.js"
+      "bundle.js",
+      "app.6c45026d985b242b9a6c.hot-update.js"
     ]
   },
   "publicPath": "http://0.0.0.0:8080/"

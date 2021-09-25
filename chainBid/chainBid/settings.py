@@ -207,6 +207,6 @@ CELERY_TIMEZONE = TIME_ZONE
 WEBPACK_LOADER = {
     'DEFAULT': {
         'BUNDLE_DIR_NAME': 'dist/',
-        'STATS_FILE': BASE_DIR / 'frontend' / 'webpack.stats.json',
+        'STATS_FILE': BASE_DIR / 'frontend' / 'webpack-stats.json',
     }
 }
