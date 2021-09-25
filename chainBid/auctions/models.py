@@ -34,7 +34,7 @@ class Auction(models.Model):
     # Fields
     title = models.CharField(max_length=50)
     description = models.TextField(blank=True, null=True)
-    image = models.ImageField(blank=True, null=True)
+    image = models.ImageField(blank=True, null=True, upload_to='auction images')
     initial_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
     final_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
     opened_at = models.DateTimeField(blank=True, null=True)
@@ -177,7 +177,7 @@ class AuctionReport(models.Model):
     """
 
     # Generic config
-    STATIC_DIR = settings.STATICFILES_DIRS[0]
+    MEDIA_DIR = settings.MEDIA_ROOT
 
     # Fields
     auction = models.OneToOneField(Auction, on_delete=models.CASCADE, related_name='report')
@@ -203,7 +203,7 @@ class AuctionReport(models.Model):
             'closing date': self.auction.closed_at
         }
         file_name = f'auction {self.auction.pk}.json'
-        destination_dir = os.path.join(self.STATIC_DIR, 'reports')
+        destination_dir = os.path.join(self.MEDIA_DIR, 'reports')
         path = os.path.join(destination_dir, file_name)
         try:
             os.mkdir(destination_dir)
@@ -211,7 +211,7 @@ class AuctionReport(models.Model):
             pass  # Already exists
         with open(path, 'w') as f:
             json.dump(report, f, cls=AuctionEncoder)
-        self.json_file = path
+        self.json_file = os.path.join('reports', file_name)
         self.hash = hashlib.sha256(json.dumps(report, cls=AuctionEncoder).encode('utf-8')).hexdigest()
         self.tx_id = write_message_on_chain(self.hash)
         self.save()
