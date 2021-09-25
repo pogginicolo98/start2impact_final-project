@@ -1,4 +1,4 @@
-from auctions.models import Auction
+from auctions.models import Auction, AuctionReport
 from auctions.tasks import close_auction, open_auction
 from chainBid.celery import app
 from django.db.models.signals import post_save
@@ -33,6 +33,16 @@ def update_bid_closing_time(sender, instance, **kwargs):
     eta = timezone.now() + timezone.timedelta(seconds=15)
     task_id = close_auction.apply_async((instance.pk,), eta=eta).id
     instance.push_task(task_id=task_id, eta=eta)
+
+
+@receiver(post_save, sender=AuctionReport)
+def open_auction_handler(sender, instance, created, **kwargs):
+    """
+    Make an auction report and write it on the Ethereum blockchain.
+    """
+
+    if created:
+        instance.make_report()
 
 
 # Connecting custom signals for views: AuctionBidAPIView

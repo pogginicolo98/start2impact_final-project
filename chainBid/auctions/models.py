@@ -13,7 +13,6 @@ from utils.encoders import AuctionEncoder
 from utils.randomics import random_date
 from utils.transactions import write_message_on_chain
 
-
 UserModel = get_user_model()
 
 
@@ -31,7 +30,6 @@ class Auction(models.Model):
     # Generic config
     REDIS_HOST = settings.REDIS_HOST
     REDIS_PORT = settings.REDIS_PORT
-    STATIC_DIR = settings.STATICFILES_DIRS[0]
 
     # Fields
     title = models.CharField(max_length=50)
@@ -43,8 +41,6 @@ class Auction(models.Model):
     closed_at = models.DateTimeField(blank=True, null=True)
     winner = models.ForeignKey(UserModel, on_delete=models.SET_NULL, related_name='auctions', blank=True, null=True)
     status = models.BooleanField(default=False)
-    hash = models.CharField(max_length=64, blank=True, null=True)
-    tx_id = models.CharField(max_length=66, blank=True, null=True)
 
     class Meta:
         verbose_name = 'Auction'
@@ -74,7 +70,6 @@ class Auction(models.Model):
         1) Disable the auction.
         2) Store the winning bid's data.
         3) Remove bids data from Redis.
-        4) Make a report and write it on the Ethereum blockchain.
         """
 
         self.status = not self.status
@@ -85,7 +80,6 @@ class Auction(models.Model):
             self.final_price = latest_bid['price']
         self.save()
         self.clean_db()
-        self.make_report()
 
     def get_latest_bid(self):
         """
@@ -93,7 +87,7 @@ class Auction(models.Model):
 
         :return
         - None: If no bid is found.
-        - {'user', 'admin', 'price': 9.99}: Sample bid.
+        - {'task_id', "celery task id", 'eta': "DateTime object"}: Sample task.
         """
 
         redis_client = Redis(self.REDIS_HOST, port=self.REDIS_PORT)
@@ -176,6 +170,21 @@ class Auction(models.Model):
         key2 = f'Auction n.{self.pk} - remaining time'
         redis_client.delete(key1, key2)
 
+
+class AuctionReport(models.Model):
+    """
+    Auction report model.
+    """
+
+    # Generic config
+    STATIC_DIR = settings.STATICFILES_DIRS[0]
+
+    # Fields
+    auction = models.OneToOneField(Auction, on_delete=models.CASCADE, related_name='report')
+    json_file = models.FileField(blank=True, null=True)
+    hash = models.CharField(max_length=64, blank=True, null=True)
+    tx_id = models.CharField(max_length=66, blank=True, null=True)
+
     def make_report(self):
         """
         Make a json report and write it on the Ethereum blockchain.
@@ -185,15 +194,15 @@ class Auction(models.Model):
         """
 
         report = {
-            'title': self.title,
-            'description': self.description,
-            'initial price': self.initial_price,
-            'final price': self.final_price,
-            'winner': str(self.winner),
-            'opening date': self.opened_at,
-            'closing date': self.closed_at
+            'title': self.auction.title,
+            'description': self.auction.description,
+            'initial price': self.auction.initial_price,
+            'final price': self.auction.final_price,
+            'winner': str(self.auction.winner),
+            'opening date': self.auction.opened_at,
+            'closing date': self.auction.closed_at
         }
-        file_name = f'auction {self.pk}.json'
+        file_name = f'auction {self.auction.pk}.json'
         destination_dir = os.path.join(self.STATIC_DIR, 'reports')
         path = os.path.join(destination_dir, file_name)
         try:
@@ -202,6 +211,7 @@ class Auction(models.Model):
             pass  # Already exists
         with open(path, 'w') as f:
             json.dump(report, f, cls=AuctionEncoder)
+        self.json_file = path
         self.hash = hashlib.sha256(json.dumps(report, cls=AuctionEncoder).encode('utf-8')).hexdigest()
         self.tx_id = write_message_on_chain(self.hash)
         self.save()

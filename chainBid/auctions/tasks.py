@@ -1,4 +1,4 @@
-from auctions.models import Auction
+from auctions.models import Auction, AuctionReport
 from chainBid.celery import app
 from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404
@@ -15,6 +15,7 @@ def close_auction(pk):
 
     auction = get_object_or_404(Auction, pk=pk)
     auction.close_auction()
+    AuctionReport.objects.create(auction=auction)
 
 
 @app.task

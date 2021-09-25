@@ -1,6 +1,7 @@
 from auctions.api.serializers import (AuctionBidSerializer,
                                       AuctionImageSerializer,
                                       AuctionInfoSerializer,
+                                      AuctionReportSerializer,
                                       AuctionScheduleSerializer,
                                       AuctionSerializer)
 from auctions.models import Auction
@@ -44,13 +45,9 @@ class AuctionImageUpdateAPIView(UpdateAPIView):
     * Only staff users can access to this endpoint.
     """
 
+    queryset = Auction.objects.filter(closed_at=None).exclude(status=True)
     serializer_class = AuctionImageSerializer
     permission_classes = [IsAuthenticated, IsAdminUser]
-
-    def get_object(self):
-        kwarg_pk = self.kwargs.get('pk')
-        auction_object = get_object_or_404(Auction, pk=kwarg_pk)
-        return auction_object
 
 
 class AuctionListRetrieveAPIView(ListModelMixin,
@@ -66,21 +63,9 @@ class AuctionListRetrieveAPIView(ListModelMixin,
     * Only authenticated users can access to this endpoint.
     """
 
+    queryset = Auction.objects.filter(status=True)
     serializer_class = AuctionSerializer
     permission_classes = [IsAuthenticated]
-
-    def get_queryset(self):
-        """
-        Two types of queryset:
-        - List with all auction instances.
-        - Specific auction instance.
-        """
-
-        queryset = Auction.objects.filter(status=True)
-        kwarg_pk = self.kwargs.get('pk', None)
-        if kwarg_pk is not None:
-            queryset = queryset.filter(pk=kwarg_pk)
-        return queryset
 
 
 class AuctionBidAPIView(APIView):
@@ -89,7 +74,6 @@ class AuctionBidAPIView(APIView):
 
     :actions
     - create
-    - retrieve
 
     * Only authenticated users can access to this endpoint.
     """
@@ -114,7 +98,7 @@ class AuctionBidAPIView(APIView):
                 auction_bid_apiview_called.send(sender='auction-bid-api-view', instance=auction)
                 return Response(status=status.HTTP_201_CREATED)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        error = {'detail': 'Auction not available'}
+        error = {'detail': 'Not found.'}
         return Response(error, status=status.HTTP_400_BAD_REQUEST)
 
 
@@ -125,18 +109,33 @@ class AuctionInfoRetrieveAPIView(RetrieveAPIView):
     :actions
     - retrieve
 
-    * Only authenticated users can access to this endpoint
+    * Only authenticated users can access to this endpoint.
     """
 
+    queryset = Auction.objects.filter(status=True)
     serializer_class = AuctionInfoSerializer
     permission_classes = [IsAuthenticated]
-
-    def get_object(self):
-        kwarg_pk = self.kwargs.get('pk')
-        auction_object = get_object_or_404(Auction, pk=kwarg_pk)
-        return auction_object
 
     def get_serializer_context(self):
         context = super().get_serializer_context()
         context['auction'] = self.get_object()
         return context
+
+
+class AuctionReportRetrieveAPIView(RetrieveAPIView):
+    """
+    Auction report RetrieveAPIView.
+
+    :actions
+    - retrieve
+
+    * Only authenticated users can access to this endpoint.
+    """
+
+    queryset = Auction.objects.filter(status=False).exclude(closed_at=None)
+    serializer_class = AuctionReportSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_object(self):
+        object = super().get_object()
+        return object.report

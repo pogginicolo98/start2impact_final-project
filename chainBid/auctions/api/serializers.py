@@ -1,4 +1,4 @@
-from auctions.models import Auction
+from auctions.models import Auction, AuctionReport
 from rest_framework import serializers
 
 
@@ -92,14 +92,13 @@ class AuctionBidSerializer(serializers.Serializer):
             last_price = auction.initial_price
         if is_last_user:
             raise serializers.ValidationError('You cannot place another bid')
-        elif data['price'] <= last_price:
-            raise serializers.ValidationError('The price must be larger than the current price')
+        if data['price'] <= last_price:
+            raise serializers.ValidationError('Price must be greater than the current price')
         return data
-
 
 class AuctionInfoSerializer(serializers.Serializer):
     """
-    Auction serializer for XXX.
+    Auction serializer for AuctionInfoRetrieveAPIView.
 
     :fields
     - is_last_user: Is the current user the last one that placed a bid?
@@ -131,3 +130,18 @@ class AuctionInfoSerializer(serializers.Serializer):
     def get_remaining_time(self, instance):
         auction = self.context.get('auction')
         return auction.get_auction_remaining_time()
+
+
+class AuctionReportSerializer(serializers.ModelSerializer):
+    """
+    AuctionReport serializer for AuctionReportRetrieveAPIView.
+
+    :fields
+    - json_file
+
+    * format: DATA.
+    """
+
+    class Meta:
+        model = AuctionReport
+        fields = ['json_file']
