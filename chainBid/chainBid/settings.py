@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'rest_auth.registration',
 
     'crispy_forms',
+    'webpack_loader',
 
     'auctions',
     'core',
@@ -139,8 +140,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = Path(BASE_DIR).resolve().parent / 'static-serve'
 STATICFILES_DIRS = [
     BASE_DIR / 'static-storage',
-    # BASE_DIR / 'assets',
-    # BASE_DIR / 'front-end' / 'dist',
+    BASE_DIR / 'assets',
+    BASE_DIR / 'front-end' / 'dist',
 ]
 
 MEDIA_URL = '/media/'
@@ -192,7 +193,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_EMAIL_REQUIRED = (True)
 
 
-# Redis server configuration
+# Redis server settings
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 
@@ -200,3 +201,12 @@ REDIS_PORT = 6379
 # Celery settings
 CELERY_BROKER_URL = f'redis://{REDIS_HOST}:{REDIS_PORT}'
 CELERY_TIMEZONE = TIME_ZONE
+
+
+# Webpack loader settings
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'dist/',
+        'STATS_FILE': BASE_DIR / 'frontend' / 'webpack.stats.json',
+    }
+}

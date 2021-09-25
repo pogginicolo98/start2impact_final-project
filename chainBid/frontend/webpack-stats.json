@@ -1,0 +1,42 @@
+{
+  "status": "done",
+  "assets": {
+    "img/logo.82b9c7a5.png": {
+      "name": "img/logo.82b9c7a5.png",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/img/logo.82b9c7a5.png",
+      "publicPath": "http://0.0.0.0:8080/img/logo.82b9c7a5.png"
+    },
+    "js/about.js": {
+      "name": "js/about.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/js/about.js",
+      "publicPath": "http://0.0.0.0:8080/js/about.js"
+    },
+    "bundle.css": {
+      "name": "bundle.css",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/bundle.css",
+      "publicPath": "http://0.0.0.0:8080/bundle.css"
+    },
+    "bundle.js": {
+      "name": "bundle.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/bundle.js",
+      "publicPath": "http://0.0.0.0:8080/bundle.js"
+    },
+    "index.html": {
+      "name": "index.html",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/index.html",
+      "publicPath": "http://0.0.0.0:8080/index.html"
+    },
+    "favicon.ico": {
+      "name": "favicon.ico",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/favicon.ico",
+      "publicPath": "http://0.0.0.0:8080/favicon.ico"
+    }
+  },
+  "chunks": {
+    "app": [
+      "bundle.css",
+      "bundle.js"
+    ]
+  },
+  "publicPath": "http://0.0.0.0:8080/"
+}

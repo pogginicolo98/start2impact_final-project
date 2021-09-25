@@ -1,4 +1,16 @@
-# Project exclude paths
-/.idea/
-/venv/
-/chainBid/password.py
+# Editor directories and files
+.idea
+
+# Envirnments
+venv
+
+# Secret files
+*password.py
+
+# Vue.js
+.DS_Store
+node_modules
+/dist
+
+# Log files
+npm-debug.log*
