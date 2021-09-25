@@ -1,12 +1,14 @@
 from auctions.api.serializers import (AuctionBidSerializer,
                                       AuctionImageSerializer,
+                                      AuctionInfoSerializer,
+                                      AuctionReportSerializer,
                                       AuctionScheduleSerializer,
                                       AuctionSerializer)
 from auctions.models import Auction
 from auctions.signals import auction_bid_apiview_called
 from django.shortcuts import get_object_or_404
 from rest_framework import status
-from rest_framework.generics import UpdateAPIView
+from rest_framework.generics import RetrieveAPIView, UpdateAPIView
 from rest_framework.mixins import ListModelMixin, RetrieveModelMixin
 from rest_framework.permissions import IsAdminUser, IsAuthenticated
 from rest_framework.response import Response
@@ -43,13 +45,9 @@ class AuctionImageUpdateAPIView(UpdateAPIView):
     * Only staff users can access to this endpoint.
     """
 
+    queryset = Auction.objects.filter(closed_at=None).exclude(status=True)
     serializer_class = AuctionImageSerializer
     permission_classes = [IsAuthenticated, IsAdminUser]
-
-    def get_object(self):
-        kwarg_pk = self.kwargs.get('pk')
-        auction_object = get_object_or_404(Auction, pk=kwarg_pk)
-        return auction_object
 
 
 class AuctionListRetrieveAPIView(ListModelMixin,
@@ -65,21 +63,9 @@ class AuctionListRetrieveAPIView(ListModelMixin,
     * Only authenticated users can access to this endpoint.
     """
 
+    queryset = Auction.objects.filter(status=True)
     serializer_class = AuctionSerializer
     permission_classes = [IsAuthenticated]
-
-    def get_queryset(self):
-        """
-        Two types of queryset:
-        - List with all auction instances.
-        - Specific auction instance.
-        """
-
-        queryset = Auction.objects.filter(status=True)
-        kwarg_pk = self.kwargs.get('pk', None)
-        if kwarg_pk is not None:
-            queryset = queryset.filter(pk=kwarg_pk)
-        return queryset
 
 
 class AuctionBidAPIView(APIView):
@@ -88,32 +74,12 @@ class AuctionBidAPIView(APIView):
 
     :actions
     - create
-    - retrieve
 
     * Only authenticated users can access to this endpoint.
     """
 
     serializer_class = AuctionBidSerializer
     permission_classes = [IsAuthenticated]
-
-    def get(self, request, pk):
-        auction = get_object_or_404(Auction, pk=pk)
-        if auction.status:
-            latest_bid = auction.get_latest_bid()
-            if latest_bid is not None:
-                is_last_user = bool(request.user.username == latest_bid['user'])
-                last_price = latest_bid['price']
-            else:
-                is_last_user = False
-                last_price = auction.initial_price
-            response_data = {
-                'is_last_user': is_last_user,
-                'last_price': last_price,
-                'remaining_time': '???'
-            }
-            return Response(response_data, status=status.HTTP_200_OK)
-        error = {'detail': 'Auction not available'}
-        return Response(error, status=status.HTTP_400_BAD_REQUEST)
 
     def post(self, request, pk):
         auction = get_object_or_404(Auction, pk=pk)
@@ -132,5 +98,44 @@ class AuctionBidAPIView(APIView):
                 auction_bid_apiview_called.send(sender='auction-bid-api-view', instance=auction)
                 return Response(status=status.HTTP_201_CREATED)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        error = {'detail': 'Auction not available'}
+        error = {'detail': 'Not found.'}
         return Response(error, status=status.HTTP_400_BAD_REQUEST)
+
+
+class AuctionInfoRetrieveAPIView(RetrieveAPIView):
+    """
+    Auction info RetrieveAPIView.
+
+    :actions
+    - retrieve
+
+    * Only authenticated users can access to this endpoint.
+    """
+
+    queryset = Auction.objects.filter(status=True)
+    serializer_class = AuctionInfoSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        context['auction'] = self.get_object()
+        return context
+
+
+class AuctionReportRetrieveAPIView(RetrieveAPIView):
+    """
+    Auction report RetrieveAPIView.
+
+    :actions
+    - retrieve
+
+    * Only authenticated users can access to this endpoint.
+    """
+
+    queryset = Auction.objects.filter(status=False).exclude(closed_at=None)
+    serializer_class = AuctionReportSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_object(self):
+        object = super().get_object()
+        return object.report

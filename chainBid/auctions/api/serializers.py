@@ -1,4 +1,4 @@
-from auctions.models import Auction
+from auctions.models import Auction, AuctionReport
 from rest_framework import serializers
 
 
@@ -11,7 +11,7 @@ class AuctionScheduleSerializer(serializers.ModelSerializer):
     - description
     - image
     - initial_price
-    - opening_date
+    - opened_at
 
     * format: JSON.
     """
@@ -20,7 +20,7 @@ class AuctionScheduleSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Auction
-        fields = ['id', 'title', 'description', 'image', 'initial_price', 'opening_date']
+        fields = ['id', 'title', 'description', 'image', 'initial_price', 'opened_at']
 
 
 class AuctionImageSerializer(serializers.ModelSerializer):
@@ -46,9 +46,9 @@ class AuctionSerializer(serializers.ModelSerializer):
     - title
     - description
     - image
-    - last_price ???
-    - opening_date
-    - remaining_time ???
+    - last_price
+    - opened_at
+    - remaining_time
 
     * format: JSON.
     """
@@ -58,7 +58,7 @@ class AuctionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Auction
-        exclude = ['initial_price', 'status', 'won_by', 'final_price', 'closed_at']
+        fields = ['id', 'title', 'description', 'image', 'opened_at', 'last_price', 'remaining_time']
 
     def get_last_price(self, instance):
         latest_bid = instance.get_latest_bid()
@@ -67,25 +67,49 @@ class AuctionSerializer(serializers.ModelSerializer):
         return instance.initial_price
 
     def get_remaining_time(self, instance):
-        return '???'
+        return instance.get_auction_remaining_time()
 
 
 class AuctionBidSerializer(serializers.Serializer):
     """
     Bid serializer for AuctionBidAPIView.
-    All bids are recorded on Redis, so Serializer does not use a Model class.
+    All bids are recorded on Redis, so serializer does not use a Model class.
+
+    * format: JSON.
+    """
+
+    price = serializers.DecimalField(max_digits=11, decimal_places=2)
+
+    def validate(self, data):
+        request_user = self.context.get('request').user
+        auction = self.context.get('auction')
+        latest_bid = auction.get_latest_bid()
+        if latest_bid is not None:
+            is_last_user = bool(request_user.username == latest_bid['user'])
+            last_price = latest_bid['price']
+        else:
+            is_last_user = False
+            last_price = auction.initial_price
+        if is_last_user:
+            raise serializers.ValidationError('You cannot place another bid')
+        if data['price'] <= last_price:
+            raise serializers.ValidationError('Price must be greater than the current price')
+        return data
+
+class AuctionInfoSerializer(serializers.Serializer):
+    """
+    Auction serializer for AuctionInfoRetrieveAPIView.
 
     :fields
-    - price: New price.
     - is_last_user: Is the current user the last one that placed a bid?
     - last_price: price of the last bid placed.
 
     * format: JSON.
     """
 
-    price = serializers.DecimalField(max_digits=11, decimal_places=2)
     is_last_user = serializers.SerializerMethodField(read_only=True)
     last_price = serializers.SerializerMethodField(read_only=True)
+    remaining_time = serializers.SerializerMethodField(read_only=True)
 
     def get_is_last_user(self, instance):
         request_user = self.context.get('request').user
@@ -103,11 +127,21 @@ class AuctionBidSerializer(serializers.Serializer):
             return latest_bid['price']
         return auction.initial_price
 
-    def validate(self, data):
-        is_last_user = self.get_is_last_user(None)
-        last_price = self.get_last_price(None)
-        if is_last_user:
-            raise serializers.ValidationError('You cannot place another bid')
-        elif data['price'] <= last_price:
-            raise serializers.ValidationError('The price must be larger than the current price')
-        return data
+    def get_remaining_time(self, instance):
+        auction = self.context.get('auction')
+        return auction.get_auction_remaining_time()
+
+
+class AuctionReportSerializer(serializers.ModelSerializer):
+    """
+    AuctionReport serializer for AuctionReportRetrieveAPIView.
+
+    :fields
+    - json_file
+
+    * format: DATA.
+    """
+
+    class Meta:
+        model = AuctionReport
+        fields = ['json_file']

@@ -1,4 +1,4 @@
-from auctions.models import Auction
+from auctions.models import Auction, AuctionReport
 from auctions.tasks import close_auction, open_auction
 from chainBid.celery import app
 from django.db.models.signals import post_save
@@ -16,9 +16,9 @@ def open_auction_handler(sender, instance, created, **kwargs):
     """
 
     now = timezone.now()
-    if instance.opening_date:
-        if now < instance.opening_date and not instance.status:
-            open_auction.apply_async((instance.pk,), eta=instance.opening_date)
+    if instance.opened_at and instance.initial_price:
+        if now < instance.opened_at and not instance.status:
+            open_auction.apply_async((instance.pk,), eta=instance.opened_at)
 
 
 def update_bid_closing_time(sender, instance, **kwargs):
@@ -27,11 +27,22 @@ def update_bid_closing_time(sender, instance, **kwargs):
     a new one is created with 15 seconds of countdown.
     """
 
-    task_id = instance.pop_task_id()
-    if task_id is not None:
-        app.control.revoke(task_id, terminate=True)
-    task_id = close_auction.apply_async((instance.pk,), countdown=15).id
-    instance.push_task_id(task_id)
+    task = instance.pop_task()
+    if task is not None:
+        app.control.revoke(task['task_id'], terminate=True, signal='SIGKILL')
+    eta = timezone.now() + timezone.timedelta(seconds=15)
+    task_id = close_auction.apply_async((instance.pk,), eta=eta).id
+    instance.push_task(task_id=task_id, eta=eta)
+
+
+@receiver(post_save, sender=AuctionReport)
+def open_auction_handler(sender, instance, created, **kwargs):
+    """
+    Make an auction report and write it on the Ethereum blockchain.
+    """
+
+    if created:
+        instance.make_report()
 
 
 # Connecting custom signals for views: AuctionBidAPIView
