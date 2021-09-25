@@ -73,19 +73,44 @@ class AuctionSerializer(serializers.ModelSerializer):
 class AuctionBidSerializer(serializers.Serializer):
     """
     Bid serializer for AuctionBidAPIView.
-    All bids are recorded on Redis, so Serializer does not use a Model class.
+    All bids are recorded on Redis, so serializer does not use a Model class.
+
+    * format: JSON.
+    """
+
+    price = serializers.DecimalField(max_digits=11, decimal_places=2)
+
+    def validate(self, data):
+        request_user = self.context.get('request').user
+        auction = self.context.get('auction')
+        latest_bid = auction.get_latest_bid()
+        if latest_bid is not None:
+            is_last_user = bool(request_user.username == latest_bid['user'])
+            last_price = latest_bid['price']
+        else:
+            is_last_user = False
+            last_price = auction.initial_price
+        if is_last_user:
+            raise serializers.ValidationError('You cannot place another bid')
+        elif data['price'] <= last_price:
+            raise serializers.ValidationError('The price must be larger than the current price')
+        return data
+
+
+class AuctionInfoSerializer(serializers.Serializer):
+    """
+    Auction serializer for XXX.
 
     :fields
-    - price: New price.
     - is_last_user: Is the current user the last one that placed a bid?
     - last_price: price of the last bid placed.
 
     * format: JSON.
     """
 
-    price = serializers.DecimalField(max_digits=11, decimal_places=2)
     is_last_user = serializers.SerializerMethodField(read_only=True)
     last_price = serializers.SerializerMethodField(read_only=True)
+    remaining_time = serializers.SerializerMethodField(read_only=True)
 
     def get_is_last_user(self, instance):
         request_user = self.context.get('request').user
@@ -103,11 +128,6 @@ class AuctionBidSerializer(serializers.Serializer):
             return latest_bid['price']
         return auction.initial_price
 
-    def validate(self, data):
-        is_last_user = self.get_is_last_user(None)
-        last_price = self.get_last_price(None)
-        if is_last_user:
-            raise serializers.ValidationError('You cannot place another bid')
-        elif data['price'] <= last_price:
-            raise serializers.ValidationError('The price must be larger than the current price')
-        return data
+    def get_remaining_time(self, instance):
+        auction = self.context.get('auction')
+        return auction.get_auction_remaining_time()
