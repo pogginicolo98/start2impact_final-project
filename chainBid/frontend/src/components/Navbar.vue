@@ -64,7 +64,7 @@
                <ul aria-labelledby="navbarDarkDropdownMenuLink"
                    class="dropdown-menu dropdown-menu-dark">
                    <li><h6 class="dropdown-header"
-                     >Username
+                     >{{ requestUser }}
                    </h6></li>
                    <li><a class="dropdown-item"
                           href="#"
@@ -75,7 +75,7 @@
                           >Change password
                    </a></li>
                    <li><a class="dropdown-item"
-                          href="#">
+                          href="/accounts/logout/">
                           <i class="bi bi-box-arrow-left fs-5 nav-icon"></i>
                    </a></li>
                </ul>
@@ -87,9 +87,29 @@
 </template>
 
 <script>
-export default {
-  name: "NavbarComponent"
-}
+  import { apiService } from "@/common/api.service.js";
+
+  export default {
+    name: "NavbarComponent",
+    data() {
+      return {
+        requestUser: null
+      };
+    },
+    methods: {
+      async setUserInfo() {
+        let endpoint = "/api/user/";
+        await apiService(endpoint)
+                .then(response => {
+                  this.requestUser = response.username;
+                  window.localStorage.setItem("username", this.requestUser);
+                });
+      }
+    },
+    created() {
+      this.setUserInfo();
+    }
+  }
 </script>
 
 <style lang="css" scoped>
@@ -101,15 +121,11 @@ export default {
     color: #ffe169;
   }
 
-  .nav-link {
-    color: #fcede9 !important;
-  }
-
   .nav-link:hover {
-    color: #eea391 !important;
+    color: #f5c8bd !important;
   }
 
   .active {
-    color: #eea391 !important;
+    color: #f5c8bd !important;
   }
 </style>

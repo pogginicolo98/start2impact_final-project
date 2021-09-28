@@ -7,7 +7,6 @@
 
 <script>
   import NavbarComponent from "@/components/Navbar.vue";
-  // import { apiService } from "@/common/api.service.js";
 
   export default {
     name: "App",
@@ -18,4 +17,11 @@
 </script>
 
 <style>
+  body {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .btn:focus {
+    box-shadow: none !important;
+  }
 </style>
