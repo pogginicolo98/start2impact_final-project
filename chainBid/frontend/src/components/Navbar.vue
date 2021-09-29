@@ -81,12 +81,13 @@
                </ul>
              </li>
            </ul>
-      </div>
-    </div>
+      </div> <!-- Navbar elements -->
+    </div> <!-- Container -->
   </nav>
 </template>
 
 <script>
+  // @ is an alias to /src
   import { apiService } from "@/common/api.service.js";
 
   export default {
@@ -98,12 +99,17 @@
     },
     methods: {
       async setUserInfo() {
+        /*
+          Retrieve the username of the request user and
+          store it in the local storage.
+        */
+
         let endpoint = "/api/user/";
         await apiService(endpoint)
-                .then(response => {
-                  this.requestUser = response.username;
-                  window.localStorage.setItem("username", this.requestUser);
-                });
+          .then(response => {
+            this.requestUser = response.username;
+            window.localStorage.setItem("username", this.requestUser);
+          });
       }
     },
     created() {
