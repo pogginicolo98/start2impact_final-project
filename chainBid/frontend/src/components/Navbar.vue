@@ -1,13 +1,13 @@
 <template lang="html">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient sticky-top shadow">
     <div class="container">
       <!-- Brand and logo -->
-      <a class="navbar-brand"
-         href="#">
-         <img alt="logo"
-              class="d-inline-block mb-2"
-              src="../../../static-storage/logo-200x32-orig.png">
-      </a>
+      <router-link class="navbar-brand"
+                   :to="{ name: 'home' }">
+        <img alt="logo"
+             class="d-inline-block mb-2"
+             src="../../../static-storage/logo-200x32-orig.png">
+      </router-link>
 
       <!-- Collapsed menu button -->
       <button aria-controls="navbarSupportedContent"
@@ -26,12 +26,12 @@
            <!-- Links -->
            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
              <li class="nav-item">
-               <!-- aria-current da gestire dinamicamente -->
-               <a aria-current="page"
-                  class="nav-link active"
-                  href="#"
-                  >Live acutions
-                </a>
+<!-- ____________________________________________________________ aria-current da gestire dinamicamente -->
+               <router-link aria-current="page"
+                            class="nav-link active"
+                            :to="{ name: 'home' }"
+                            >Live acutions
+               </router-link>
              </li>
              <li class="nav-item">
                <a class="nav-link"

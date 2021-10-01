@@ -18,7 +18,8 @@
 
 <style>
   body {
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Poppins', sans-serif;
   }
 
   .btn:focus {
