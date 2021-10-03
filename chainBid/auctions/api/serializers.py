@@ -91,9 +91,9 @@ class AuctionBidSerializer(serializers.Serializer):
             is_last_user = False
             last_price = auction.initial_price
         if is_last_user:
-            raise serializers.ValidationError('You cannot place another bid')
+            raise serializers.ValidationError('Your previous bid is still active.')
         if data['price'] <= last_price:
-            raise serializers.ValidationError('Price must be greater than the current price')
+            raise serializers.ValidationError('Amount must be greater than the current price.')
         return data
 
 class AuctionInfoSerializer(serializers.Serializer):

@@ -28,34 +28,50 @@
               <div class="col-auto">
                 <p class="card-text text-muted fs-14px mb-0">Remaining time</p>
                 <template v-if="auctionStarted">
-                  <p class="card-text text-danger fs-5">
-                    <strong>{{ getRemainingTime() }}</strong>
-                  </p>
+                  <p class="card-text text-danger fs-5"><strong>{{ getRemainingTime }}</strong></p>
                 </template>
                 <template v-else>
-                  <p class="card-text text-muted fs-5">Less than 24 hours
-                  </p>
+                  <p class="card-text text-muted fs-5">Less than 24 hours</p>
                 </template>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-5 col-lg-6 col-xl-5 col-xxl-4">
-              <div class="fs-15px">
-                <label for="floatingInput" class="visually-hidden">Amount</label>
-                <input type="text" class="form-control" aria-label="Amount" id="floatingInput" placeholder="Amount">
               </div>
             </div>
 
-            <div class="col-12 col-sm-6 col-md-5 col-lg-6 col-xl-5 col-xxl-4 mt-2 d-grid d-block">
-              <a href="#"
-                 class="btn"
-                 :class="{'btn-danger': isLastUser,
-                          'btn-success': !isLastUser}"
-                 >Place a bid
-              </a>
-            </div>
+            <!-- Form -->
+            <form
+                  @submit.prevent="onSubmit">
+                  <!-- Input -->
+                  <div class="col-12 col-sm-6 col-md-5 col-lg-6 col-xl-5 col-xxl-4">
+                    <div class="fs-15px">
+                      <label class="visually-hidden"
+                             for="floatingInput"
+                             >Amount
+                      </label>
+                      <input aria-label="Amount"
+                             class="form-control"
+                             id="floatingInput"
+                             placeholder="Amount"
+                             step="0.01"
+                             type="number"
+                             v-model="bidAmount"
+                             :disabled="isLastUser">
+                    </div>
+                  </div>
+
+                  <!-- Button -->
+                  <div class="col-12 col-sm-6 col-md-5 col-lg-6 col-xl-5 col-xxl-4 mt-2 d-grid d-block">
+                    <button class="btn btn-success"
+                            type="submit"
+                            :class="{'btn-danger': isLastUser,
+                                     'btn-success': !isLastUser}"
+                            :disabled="isLastUser"
+                            >Place a bid
+                    </button>
+                  </div>
+            </form>
+            <p class="text-danger mt-2">{{ error }}</p>
           </div>
         </div>
-      </div>
+      </div> <!-- Bid -->
     </div> <!-- Row 1 -->
 
     <!-- Description -->
@@ -68,7 +84,7 @@
           <div class="card-body">
             <p class="card-text my-2">{{ auction.description }}</p>
             <p class="card-text text-muted fs-14px mb-0">Initial price: {{ auction.last_price }} €</p>
-            <p class="card-text text-muted fs-14px mb-2">Opened {{ getOpenedAt() }}</p>
+            <p class="card-text text-muted fs-14px mb-2">Opened {{ getOpenedAt }}</p>
           </div>
         </div>
       </div>
@@ -97,12 +113,27 @@
         lastPrice: null,
         remainingTime: null,
         timerInfo: null,
-        timerDisplay: null
+        timerDisplay: null,
+        bidAmount: null
       };
     },
     computed: {
       auctionStarted() {
         return this.remainingTime !== null;
+      },
+      getRemainingTime() {
+        /*
+          Convert remainingTime (seconds as Number) into Time format as string.
+        */
+
+        var minutes = Math.floor(this.remainingTime / 60);
+        var seconds = this.remainingTime - (minutes * 60);
+        if (minutes < 10) {minutes = "0"+minutes;}
+        if (seconds < 10) {seconds = "0"+seconds;}
+        return `${minutes}:${seconds}`;
+      },
+      getOpenedAt() {
+        return moment(this.auction.opened_at).fromNow();
       }
     },
     methods: {
@@ -149,23 +180,29 @@
           clearInterval(this.timerDisplay);
       },
       decrementTimerDisplay() {
-        if (this.remainingTime >= 0) {
+        if (this.remainingTime > 0) {
           this.remainingTime -= 1;
+        } else {
+          clearInterval(this.timerDisplay);
         }
       },
-      getRemainingTime() {
-        /*
-          Convert remainingTime (seconds as Number) into Time format as string.
-        */
-
-        var minutes = Math.floor(this.remainingTime / 60);
-        var seconds = this.remainingTime - (minutes * 60);
-        if (minutes < 10) {minutes = "0"+minutes;}
-        if (seconds < 10) {seconds = "0"+seconds;}
-        return `${minutes}:${seconds}`;
-      },
-      getOpenedAt() {
-        return moment(this.auction.opened_at).fromNow();
+      async onSubmit() {
+        if (!this.bidAmount) {
+          this.error = "Please enter a valid amount.";
+        } else {
+            let endpoint = `/api/auctions/${this.id}/bid/`;
+            let method = "POST";
+            let data = { price: this.bidAmount };
+            await apiService(endpoint, method, data)
+              .then(response => {
+                if (response.detail) {
+                  this.error = response.detail;
+                } else if (response) {
+                  let objKeys = Object.keys(response);
+                  this.error = response[objKeys[0]][0];
+                }
+              });
+        }
       }
     },
     created() {
