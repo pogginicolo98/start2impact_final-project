@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="container mt-3 mt-lg-5">
     <div class="row">
+      <!-- Title for mobile formats -->
       <div class="col-12 d-lg-none mb-2">
         <h1>{{ auction.title }}</h1>
       </div>
@@ -12,8 +13,9 @@
              :src="auction.image">
       </div>
 
-      <!-- Bid -->
+      <!-- New bid -->
       <div class="col-12 col-lg-7 mt-3 mt-lg-0">
+        <!-- Title for desktop formats -->
         <h1 class="d-none d-lg-block">{{ auction.title }}</h1>
         <div class="card">
           <div class="card-body">
@@ -36,42 +38,12 @@
               </div>
             </div>
 
-            <!-- Form -->
-            <form
-                  @submit.prevent="onSubmit">
-                  <!-- Input -->
-                  <div class="col-12 col-sm-6 col-md-5 col-lg-6 col-xl-5 col-xxl-4">
-                    <div class="fs-15px">
-                      <label class="visually-hidden"
-                             for="floatingInput"
-                             >Amount
-                      </label>
-                      <input aria-label="Amount"
-                             class="form-control"
-                             id="floatingInput"
-                             placeholder="Amount"
-                             step="0.01"
-                             type="number"
-                             v-model="bidAmount"
-                             :disabled="isLastUser">
-                    </div>
-                  </div>
-
-                  <!-- Button -->
-                  <div class="col-12 col-sm-6 col-md-5 col-lg-6 col-xl-5 col-xxl-4 mt-2 d-grid d-block">
-                    <button class="btn btn-success"
-                            type="submit"
-                            :class="{'btn-danger': isLastUser,
-                                     'btn-success': !isLastUser}"
-                            :disabled="isLastUser"
-                            >Place a bid
-                    </button>
-                  </div>
-            </form>
-            <p class="text-danger mt-2">{{ error }}</p>
+            <!-- Bid form -->
+            <BidFormComponent :id="id"
+                              :isLastUser="isLastUser"/>
           </div>
         </div>
-      </div> <!-- Bid -->
+      </div> <!-- New bid -->
     </div> <!-- Row 1 -->
 
     <!-- Description -->
@@ -95,6 +67,7 @@
 <script>
   // @ is an alias to /src
   import { apiService } from "@/common/api.service.js";
+  import BidFormComponent from "@/components/BidForm.vue";
   import moment from 'moment';
 
   export default {
@@ -105,25 +78,30 @@
         required: true
       }
     },
+    components: {
+      BidFormComponent
+    },
     data() {
       return {
         auction: {},
-        error: null,
         isLastUser: false,
         lastPrice: null,
         remainingTime: null,
         timerInfo: null,
-        timerDisplay: null,
-        bidAmount: null
+        timerDisplay: null
       };
     },
     computed: {
       auctionStarted() {
+        /*
+          Return true if the auction has already started checking if any bids have been made.
+        */
+
         return this.remainingTime !== null;
       },
       getRemainingTime() {
         /*
-          Convert remainingTime (seconds as Number) into Time format as string.
+          Convert remainingTime (ex. 70) into Time format as string (ex. 01:10).
         */
 
         var minutes = Math.floor(this.remainingTime / 60);
@@ -137,9 +115,6 @@
       }
     },
     methods: {
-      setPageTitle(title) {
-        document.title = title;
-      },
       async getAuctionData() {
         /*
           Retrieve a specific auction's data and set page title.
@@ -150,7 +125,7 @@
           .then(response => {
             this.auction = response;
             this.lastPrice = response.last_price;
-            this.setPageTitle(response.title);
+            document.title = response.title;
           });
       },
       async getAuctionInfo() {
@@ -184,24 +159,6 @@
           this.remainingTime -= 1;
         } else {
           clearInterval(this.timerDisplay);
-        }
-      },
-      async onSubmit() {
-        if (!this.bidAmount) {
-          this.error = "Please enter a valid amount.";
-        } else {
-            let endpoint = `/api/auctions/${this.id}/bid/`;
-            let method = "POST";
-            let data = { price: this.bidAmount };
-            await apiService(endpoint, method, data)
-              .then(response => {
-                if (response.detail) {
-                  this.error = response.detail;
-                } else if (response) {
-                  let objKeys = Object.keys(response);
-                  this.error = response[objKeys[0]][0];
-                }
-              });
         }
       }
     },

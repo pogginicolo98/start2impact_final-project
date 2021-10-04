@@ -26,9 +26,8 @@
            <!-- Links -->
            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
              <li class="nav-item">
-<!-- ____________________________________________________________ aria-current da gestire dinamicamente -->
-               <router-link aria-current="page"
-                            class="nav-link active"
+               <router-link class="nav-link"
+                            exact
                             :to="{ name: 'home' }"
                             >Live acutions
                </router-link>
@@ -38,6 +37,13 @@
                   href="#"
                   >Closed auctions
                </a>
+             </li>
+             <li class="nav-item" v-if="isStaffUser">
+               <router-link class="nav-link"
+                            exact
+                            :to="{ name: 'schedule auctions' }"
+                            >Schedule auctions
+               </router-link>
              </li>
              <li class="nav-item">
                <a class="nav-link"
@@ -94,7 +100,8 @@
     name: "NavbarComponent",
     data() {
       return {
-        requestUser: null
+        requestUser: null,
+        isStaffUser: null
       };
     },
     methods: {
@@ -108,6 +115,7 @@
         await apiService(endpoint)
           .then(response => {
             this.requestUser = response.username;
+            this.isStaffUser = response.is_staff;
             window.localStorage.setItem("username", this.requestUser);
           });
       }
@@ -118,7 +126,7 @@
   }
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
   .nav-icon {
     color: #ffe3b0;
   }
@@ -131,7 +139,7 @@
     color: #f5c8bd !important;
   }
 
-  .active {
+  .router-link-active {
     color: #f5c8bd !important;
   }
 </style>

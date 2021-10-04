@@ -11,4 +11,4 @@ class UserDisplaySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = UserModel
-        fields = ['username']
+        fields = ['username', 'is_staff']

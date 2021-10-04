@@ -19,18 +19,12 @@
                 <div class="card-body text-center">
                   <h4 class="card-title">{{ auction.title }}</h4>
                   <hr>
-                  <p class="card-text text-success">
-                    Current price: <strong>€{{ auction.last_price }}</strong>
-                  </p>
+                  <p class="card-text text-success">Current price: <strong>€{{ auction.last_price }}</strong></p>
                   <template v-if="auction.remaining_time">
-                    <p class="card-text text-danger">
-                      <strong>Started</strong>
-                    </p>
+                    <p class="card-text text-danger"><strong>Started</strong></p>
                   </template>
                   <template v-else>
-                    <p class="card-text text-muted">
-                      <strong>No bids yet</strong>
-                    </p>
+                    <p class="card-text text-muted"><strong>No bids yet</strong></p>
                   </template>
                   <div class="d-grid">
                     <router-link class="btn btn-success"
@@ -38,7 +32,7 @@
                                  >Bid
                     </router-link>
                   </div>
-                </div> <!-- Card body -->
+                </div>
            </div> <!-- Card -->
       </div> <!-- X col, signle auction -->
     </div> <!-- Row -->
@@ -72,7 +66,6 @@
     data() {
       return {
         auctions: [],
-        timer: '',
         next: null,
         loadingAuctions: false
       }
@@ -82,6 +75,7 @@
         /*
           Retrieve active auctions according to pagination.
         */
+
         let endpoint = "/api/auctions/";
         if (this.next) {
           endpoint = this.next;
