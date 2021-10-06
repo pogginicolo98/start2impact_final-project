@@ -9,7 +9,7 @@ async function getJSON(response) {
   return response.json();
 };
 
-function apiService(endpoint, method, data) {
+function apiService(endpoint, method, data, contentType='application/json') {
   /*
     Generic function to make requests to an endpoint and
     process the response received in json format.
@@ -17,11 +17,15 @@ function apiService(endpoint, method, data) {
     * The default method is GET if no method is specified.
   */
 
+  let body = data;
+  if (contentType === 'application/json') {
+    body = data !== undefined ? JSON.stringify(data) : null;
+  }
   const config = {
     method: method || 'GET',
-    body: data !== undefined ? JSON.stringify(data) : null,
+    body: body,
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': contentType,
       'X-CSRFToken': CSRF_TOKEN
     }
   };
@@ -32,4 +36,26 @@ function apiService(endpoint, method, data) {
           });
 };
 
-export { apiService };
+function apiServicev2(endpoint, method, data) {
+  /*
+    Generic function to make requests to an endpoint and
+    process the response received in json format.
+
+    * The default method is GET if no method is specified.
+  */
+
+  const config = {
+    method: method,
+    body: data,
+    headers: {
+      'X-CSRFToken': CSRF_TOKEN
+    }
+  };
+  return fetch(endpoint, config)
+          .then(getJSON)
+          .catch(error => {
+            console.log(error);
+          });
+};
+
+export { apiService, apiServicev2 };
