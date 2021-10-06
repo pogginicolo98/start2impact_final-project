@@ -1,13 +1,25 @@
 <template lang="html">
   <div class="container mt-3 mt-lg-5">
-    hello
-  </div>
+    <div class="card">
+      <div class="auction-image">
+        <img alt="product image"
+             class="card-img-top"
+             :src="auction.image">
+      </div>
+      <div class="card-body">
+        <button class="btn btn-success"
+                type="submit"
+                >Create
+        </button>
+      </div>
+    </div>
+  </div> <!-- Container -->
 </template>
 
 <script>
   // @ is an alias to /src
   import { apiService } from "@/common/api.service.js";
-  // import BidFormComponent from "@/components/BidForm.vue";
+  import moment from 'moment';
 
   export default {
     name: "AuctionEditor",
@@ -17,12 +29,14 @@
         required: true
       }
     },
-    // components:{
-    //   BidFormComponent
-    // },
     data() {
       return {
         auction: {}
+      }
+    },
+    computed: {
+      getOpenedAt() {
+        return moment(this.auction.opened_at).fromNow();
       }
     },
     methods: {
@@ -46,4 +60,15 @@
 </script>
 
 <style lang="css" scoped>
+  .auction-image {
+    /*
+      Fixed width and height, image not stretched and centered.
+    */
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 </style>

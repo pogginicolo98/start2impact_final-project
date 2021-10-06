@@ -33,7 +33,7 @@ class Auction(models.Model):
 
     # Fields
     title = models.CharField(max_length=50)
-    description = models.TextField(blank=True, null=True)
+    description = models.TextField(max_length=240, blank=True, null=True)
     image = models.ImageField(blank=True, null=True, upload_to='auction images')
     initial_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
     final_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)

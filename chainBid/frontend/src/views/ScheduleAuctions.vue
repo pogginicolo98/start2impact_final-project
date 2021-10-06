@@ -2,12 +2,12 @@
   <div class="container mt-3 mt-md-5 ">
     <!-- Bid form -->
     <div class="row justify-content-center">
-      <div class="col-12 col-lg-8">
-        <AuctionFormComponent/>
+      <div class="col-12 col-lg-6">
+        <AuctionFormComponent @refresh-auctions="getAuctions"/>
       </div>
     </div>
 
-    <div class="table-responsive">
+    <div class="table-responsive mt-3">
       <table class="table table-hover caption-top">
         <caption>Scheduled auctions</caption>
         <thead>
@@ -21,8 +21,8 @@
         <tbody>
           <tr v-for="(auction, index) in auctions"
               :key="index">
-              <th scope="row"><router-link :to="{ name: 'auction editor', params: { id: auction.id } }">{{ auction.id }}</router-link></th>
-              <td>{{ auction.title }}</td>
+              <th scope="row">{{ auction.id }}</th>
+              <td><router-link :to="{ name: 'auction editor', params: { id: auction.id } }">{{ auction.title }}</router-link></td>
               <td v-if="auction.initial_price">€{{ auction.initial_price }}</td>
               <td v-else>Not set</td>
               <td v-if="auction.opened_at">{{ getOpeningDate(auction) }}</td>
@@ -71,18 +71,22 @@
       }
     },
     methods: {
-      async getAuctions() {
+      async getAuctions(refresh) {
         /*
           Retrieve active auctions according to pagination.
+          If "refresh" is true re-initialize the auction list.
         */
 
         let endpoint = "/api/schedule-auctions/";
-        if (this.next) {
+        if (this.next && refresh != true) {
           endpoint = this.next;
         }
         this.loadingAuctions = true;
         await apiService(endpoint)
           .then(response => {
+            if (refresh === true) {
+              this.auctions.splice(0, (this.auctions.length));
+            }
             this.auctions.push(...response.results);
             this.loadingAuctions = false;
             if (response.next) {
