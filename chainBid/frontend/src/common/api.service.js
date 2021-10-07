@@ -9,25 +9,25 @@ async function getJSON(response) {
   return response.json();
 };
 
-function apiService(endpoint, method, data, contentType='application/json') {
+function apiService(endpoint, method, data, imageData=false) {
   /*
     Generic function to make requests to an endpoint and
     process the response received in json format.
 
     * The default method is GET if no method is specified.
+    * Set "imageData" true in order to send images.
   */
 
   let body = data;
-  if (contentType === 'application/json') {
+  let headers = { 'X-CSRFToken': CSRF_TOKEN };
+  if (!imageData) {
     body = data !== undefined ? JSON.stringify(data) : null;
+    headers['Content-Type'] = 'application/json';
   }
   const config = {
     method: method || 'GET',
     body: body,
-    headers: {
-      'Content-Type': contentType,
-      'X-CSRFToken': CSRF_TOKEN
-    }
+    headers: headers
   };
   return fetch(endpoint, config)
           .then(getJSON)
@@ -36,26 +36,4 @@ function apiService(endpoint, method, data, contentType='application/json') {
           });
 };
 
-function apiServicev2(endpoint, method, data) {
-  /*
-    Generic function to make requests to an endpoint and
-    process the response received in json format.
-
-    * The default method is GET if no method is specified.
-  */
-
-  const config = {
-    method: method,
-    body: data,
-    headers: {
-      'X-CSRFToken': CSRF_TOKEN
-    }
-  };
-  return fetch(endpoint, config)
-          .then(getJSON)
-          .catch(error => {
-            console.log(error);
-          });
-};
-
-export { apiService, apiServicev2 };
+export { apiService };

@@ -1,25 +1,79 @@
 <template lang="html">
-  <div class="card">
-    <div class="card-body">
-      <h2 class="text-center mb-4">Schedule a new auction</h2>
-      <form novalidate
-            @submit.prevent="onSubmit">
-            <!-- Title form -->
-            <div class="mb-3 row">
-              <label class="col-xxl-3 col-form-label"
-                     for="title"
-                     >Title
-              </label>
-              <div class="col-xxl-9">
-                <input class="form-control"
-                       id="title"
-                       required
-                       type="text"
-                       v-model="title"
-                       :class="{'is-invalid': titleValidation.isInvalid}">
+  <div>
+    <form novalidate
+          @submit.prevent="onSubmit">
+          <!-- Title form -->
+          <div class="mb-3 row">
+            <label class="col-xxl-3 col-form-label"
+                   for="title"
+                   >Title
+            </label>
+            <div class="col-xxl-9">
+              <input class="form-control"
+                     id="title"
+                     required
+                     type="text"
+                     v-model="title"
+                     :class="{'is-invalid': titleValidation.isInvalid}">
+              <div class="invalid-feedback">
+                <ul>
+                  <li v-for="(error, index) in titleValidation.errors"
+                      :key="index"
+                      >{{ error }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description form -->
+          <div class="mb-0 mb-xxl-2 row">
+            <label class="col-xxl-3 col-form-label"
+                   for="description"
+                   >Description
+            </label>
+            <div class="col-xxl-9">
+              <textarea class="form-control"
+                        id="description"
+                        rows="3"
+                        type="text"
+                        v-model="description"
+                        :class="{'is-invalid': descriptionValidation.isInvalid}">
+              </textarea>
+              <p class="text-muted mt-1 text-end small mb-0 mb-xxl-2">{{ countDescriptionChars }}/240</p>
+              <div class="invalid-feedback">
+                <ul>
+                  <li v-for="(error, index) in descriptionValidation.errors"
+                      :key="index"
+                      >{{ error }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Initial price form -->
+          <div class="mb-3 row">
+            <label class="col-xxl-3 col-form-label"
+                   for="initial-price"
+                   >Initial price
+            </label>
+            <div class="col-xxl-9">
+              <div class="input-group has-validation">
+                <span class="input-group-text"
+                      id="euro-symbol"
+                      >€
+                </span>
+                <input aria-describedby="euro-symbol"
+                       class="form-control"
+                       id="initial-price"
+                       step="0.01"
+                       type="number"
+                       v-model="initialPrice"
+                       :class="{'is-invalid': initialPriceValidation.isInvalid}">
                 <div class="invalid-feedback">
                   <ul>
-                    <li v-for="(error, index) in titleValidation.errors"
+                    <li v-for="(error, index) in initialPriceValidation.errors"
                         :key="index"
                         >{{ error }}
                     </li>
@@ -27,98 +81,54 @@
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Description form -->
-            <div class="mb-0 mb-xxl-2 row">
-              <label class="col-xxl-3 col-form-label"
-                     for="description"
-                     >Description
-              </label>
-              <div class="col-xxl-9">
-                <textarea class="form-control"
-                          id="description"
-                          rows="3"
-                          type="text"
-                          v-model="description"
-                          :class="{'is-invalid': descriptionValidation.isInvalid}">
-                </textarea>
-                <p class="text-muted mt-1 text-end small mb-0 mb-xxl-2">{{ countDescriptionChars }}/240</p>
-                <div class="invalid-feedback">
-                  <ul>
-                    <li v-for="(error, index) in descriptionValidation.errors"
-                        :key="index"
-                        >{{ error }}
-                    </li>
-                  </ul>
-                </div>
-              </div>
+          <!-- Opening date form -->
+          <div class="mb-3 row">
+            <label class="col-xxl-3 col-form-label"
+                   for="opening-date"
+                   >Opening date
+            </label>
+            <div class="col-xxl-9">
+              <input class="form-control"
+                     id="opening-date"
+                     type="datetime-local"
+                     v-model="openedAt">
             </div>
+          </div>
 
-            <!-- Initial price form -->
-            <div class="mb-3 row">
-              <label class="col-xxl-3 col-form-label"
-                     for="initial-price"
-                     >Initial price
-              </label>
-              <div class="col-xxl-9">
-                <div class="input-group has-validation">
-                  <span class="input-group-text"
-                        id="euro-symbol"
-                        >€
-                  </span>
-                  <input aria-describedby="euro-symbol"
-                         class="form-control"
-                         id="initial-price"
-                         step="0.01"
-                         type="number"
-                         v-model="initialPrice"
-                         :class="{'is-invalid': initialPriceValidation.isInvalid}">
-                  <div class="invalid-feedback">
-                    <ul>
-                      <li v-for="(error, index) in initialPriceValidation.errors"
-                          :key="index"
-                          >{{ error }}
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Opening date form -->
-            <div class="mb-3 row">
-              <label class="col-xxl-3 col-form-label"
-                     for="opening-date"
-                     >Opening date
-              </label>
-              <div class="col-xxl-9">
-                <input class="form-control"
-                       id="opening-date"
-                       type="datetime-local"
-                       v-model="openedAt">
-              </div>
-            </div>
-
-            <!-- Button -->
-            <div class="col-sm-2 mt-2 ms-auto d-grid d-block">
-              <button class="btn btn-success"
-                      type="submit"
-                      >Create
-              </button>
-            </div>
-      </form>
-      <p class="text-danger mt-2">{{ error }}</p>
-    </div> <!-- Card body -->
-  </div> <!-- Card -->
+          <!-- Button -->
+          <div class="col-sm-2 mt-2 ms-auto d-grid d-block">
+            <button class="btn btn-success"
+                    type="submit"
+                    v-if="isNew"
+                    >Create
+            </button>
+            <button class="btn btn-success"
+                    type="submit"
+                    v-else
+                    >Update
+            </button>
+          </div>
+    </form>
+    <p class="text-danger mt-2">{{ error }}</p>
+  </div>
 </template>
 
 <script>
   // @ is an alias to /src
   import { apiService } from "@/common/api.service.js";
   import { countDecimalPlaces } from "@/common/utility.js";
+  import moment from "moment";
 
   export default {
     name: "AuctionFormComponent",
+    props: {
+      auction: {
+        type: Object,
+        required: false
+      }
+    },
     data() {
       return {
         title: null,
@@ -146,9 +156,23 @@
           return this.description.length;
         }
         return 0;
+      },
+      isNew() {
+        if (this.auction) {
+          return false;
+        }
+        return true;
       }
     },
     methods: {
+      initializeForm() {
+        if (this.auction) {
+          this.title = this.auction.title;
+          this.description = this.auction.description;
+          this.initialPrice = this.auction.initial_price;
+          this.openedAt = moment.utc(this.auction.opened_at, 'YYYY-MM-DDTHH:mm').local().format('YYYY-MM-DDTHH:mm');
+        }
+      },
       validateForm() {
         /*
           Validation schedule auction form fields.
@@ -216,8 +240,12 @@
         */
 
         if (this.validateForm()) {
-          let endpoint = `/api/schedule-auctions/`;
+          let endpoint = "/api/schedule-auctions/";
           let method = "POST";
+          if (this.auction) {
+            endpoint += this.auction.id + "/";
+            method = "PUT";
+          }
           let data = {
             title: this.title,
             description: this.description,
@@ -226,17 +254,25 @@
           };
           await apiService(endpoint, method, data)
             .then(response => {
+              let param = null;
               if (response.detail) {
+                // Da gestire per la pagina "not found"
                 this.error = response.detail;
               }
-              this.title = null;
-              this.description = null;
-              this.initialPrice = null;
-              this.openedAt = null;
-              this.$emit("refresh-auctions", true);
+              if (!this.auction) {
+                param = true;
+                this.title = null;
+                this.description = null;
+                this.initialPrice = null;
+                this.openedAt = null;
+              }
+              this.$emit("refresh-auctions", param);
             });
         }
       }
+    },
+    created() {
+      this.initializeForm();
     }
   }
 </script>
