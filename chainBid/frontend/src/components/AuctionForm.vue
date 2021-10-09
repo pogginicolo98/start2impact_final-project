@@ -1,8 +1,8 @@
 <template lang="html">
-  <div>
+  <div class="auction-form">
     <form novalidate
           @submit.prevent="onSubmit">
-          <!-- Title form -->
+          <!-- Title -->
           <div class="mb-3 row">
             <label class="col-xxl-3 col-form-label"
                    for="title"
@@ -13,11 +13,11 @@
                      id="title"
                      required
                      type="text"
-                     v-model="title"
-                     :class="{'is-invalid': titleValidation.isInvalid}">
+                     v-model="title.value"
+                     :class="{'is-invalid': isTitleInvalid}">
               <div class="invalid-feedback">
                 <ul>
-                  <li v-for="(error, index) in titleValidation.errors"
+                  <li v-for="(error, index) in title.errors"
                       :key="index"
                       >{{ error }}
                   </li>
@@ -26,7 +26,7 @@
             </div>
           </div>
 
-          <!-- Description form -->
+          <!-- Description -->
           <div class="mb-0 mb-xxl-2 row">
             <label class="col-xxl-3 col-form-label"
                    for="description"
@@ -37,13 +37,17 @@
                         id="description"
                         rows="3"
                         type="text"
-                        v-model="description"
-                        :class="{'is-invalid': descriptionValidation.isInvalid}">
+                        v-model="description.value"
+                        :class="{'is-invalid': isDescriptionInvalid}">
               </textarea>
-              <p class="text-muted mt-1 text-end small mb-0 mb-xxl-2">{{ countDescriptionChars }}/240</p>
+              <p class="mt-1 text-end small mb-0 mb-xxl-2"
+                 :class="{'text-muted': descriptionCharsValid,
+                          'text-danger': !descriptionCharsValid}"
+                 >{{ countDescriptionChars }}/240
+              </p>
               <div class="invalid-feedback">
                 <ul>
-                  <li v-for="(error, index) in descriptionValidation.errors"
+                  <li v-for="(error, index) in description.errors"
                       :key="index"
                       >{{ error }}
                   </li>
@@ -52,7 +56,7 @@
             </div>
           </div>
 
-          <!-- Initial price form -->
+          <!-- Initial price -->
           <div class="mb-3 row">
             <label class="col-xxl-3 col-form-label"
                    for="initial-price"
@@ -69,11 +73,11 @@
                        id="initial-price"
                        step="0.01"
                        type="number"
-                       v-model="initialPrice"
-                       :class="{'is-invalid': initialPriceValidation.isInvalid}">
+                       v-model="initialPrice.value"
+                       :class="{'is-invalid': isInitialPriceInvalid}">
                 <div class="invalid-feedback">
                   <ul>
-                    <li v-for="(error, index) in initialPriceValidation.errors"
+                    <li v-for="(error, index) in initialPrice.errors"
                         :key="index"
                         >{{ error }}
                     </li>
@@ -83,7 +87,7 @@
             </div>
           </div>
 
-          <!-- Opening date form -->
+          <!-- Opening date -->
           <div class="mb-3 row">
             <label class="col-xxl-3 col-form-label"
                    for="opening-date"
@@ -93,15 +97,15 @@
               <input class="form-control"
                      id="opening-date"
                      type="datetime-local"
-                     v-model="openedAt">
+                     v-model="openedAt.value">
             </div>
           </div>
 
-          <!-- Button -->
+          <!-- Submit button -->
           <div class="col-sm-2 mt-2 ms-auto d-grid d-block">
             <button class="btn btn-success"
                     type="submit"
-                    v-if="isNew"
+                    v-if="isNewAuction"
                     >Create
             </button>
             <button class="btn btn-success"
@@ -111,7 +115,6 @@
             </button>
           </div>
     </form>
-    <p class="text-danger mt-2">{{ error }}</p>
   </div>
 </template>
 
@@ -131,46 +134,60 @@
     },
     data() {
       return {
-        title: null,
-        description: null,
-        initialPrice: null,
-        openedAt: null,
-        titleValidation: {
-          isInvalid: false,
+        title: {
+          value: null,
           errors: []
         },
-        descriptionValidation: {
-          isInvalid: false,
+        description: {
+          value: null,
           errors: []
         },
-        initialPriceValidation: {
-          isInvalid: false,
+        initialPrice: {
+          value: null,
           errors: []
+        },
+        openedAt: {
+          value: null
         },
         error: null
       };
     },
     computed: {
-      countDescriptionChars() {
-        if (this.description) {
-          return this.description.length;
-        }
-        return 0;
-      },
-      isNew() {
+      isNewAuction() {
         if (this.auction) {
           return false;
         }
         return true;
+      },
+      countDescriptionChars() {
+        if (this.description.value) {
+          return this.description.value.length;
+        }
+        return 0;
+      },
+      descriptionCharsValid() {
+        if (this.description.value) {
+          return this.description.value.length <= 240;
+        }
+        return true;
+      },
+      isTitleInvalid() {
+        return this.title.errors.length != 0;
+      },
+      isDescriptionInvalid() {
+        return this.description.errors.length != 0;
+      },
+      isInitialPriceInvalid() {
+        return this.initialPrice.errors.length != 0;
       }
     },
     methods: {
       initializeForm() {
         if (this.auction) {
-          this.title = this.auction.title;
-          this.description = this.auction.description;
-          this.initialPrice = this.auction.initial_price;
-          this.openedAt = moment.utc(this.auction.opened_at, 'YYYY-MM-DDTHH:mm').local().format('YYYY-MM-DDTHH:mm');
+          this.title.value = this.auction.title;
+          this.description.value = this.auction.description;
+          this.initialPrice.value = this.auction.initial_price;
+          this.openedAt.value = moment.utc(this.auction.opened_at, 'YYYY-MM-DDTHH:mm').local().format('YYYY-MM-DDTHH:mm');
         }
       },
       validateForm() {
@@ -183,56 +200,52 @@
               2) 50 characters maximum.
           - description:
               1) 240 characters maximum.
-          -initialPrice:
-              1) 9999999999.99 maximum value.
+          -initial_price:
+              1) 999999999.99 maximum value.
               2) 2 decimals maximum.
               3) Only positive numbers.
         */
 
+        let formIsValid = true;
+        let maxCharTitle = 50;
+        let maxCharDescription = 240;
         // Title validation
-        this.titleValidation.isInvalid = false;
-        this.titleValidation.errors = [];
-        if (!this.title) {
-          this.titleValidation.errors.push("Please enter a title.");
-          this.titleValidation.isInvalid = true;
-        } else if (this.title.length > 50) {
-          this.titleValidation.errors.push("Maximum number of characters exceeded.");
-          this.titleValidation.isInvalid = true;
+        this.title.errors = [];
+        if (!this.title.value) {
+          this.title.errors.push("Please enter a title.");
+          formIsValid = false;
+        } else if (this.title.value.length > maxCharTitle) {
+          this.title.errors.push(`Maximum number of characters exceeded (${this.title.value.length}/${maxCharTitle}).`);
+          formIsValid = false;
         }
         // Description validation
-        this.descriptionValidation.isInvalid = false;
-        this.descriptionValidation.errors = [];
-        if (this.description) {
-          if (this.description.length > 240) {
-            this.descriptionValidation.errors.push("Maximum number of characters exceeded.");
-            this.descriptionValidation.isInvalid = true;
+        this.description.errors = [];
+        if (this.description.value) {
+          if (this.description.value.length > maxCharDescription) {
+            this.description.errors.push("Maximum number of characters exceeded.");
+            formIsValid = false;
           }
         }
-        // InitialPrice validation
-        this.initialPriceValidation.isInvalid = false;
-        this.initialPriceValidation.errors = [];
-        if (this.initialPrice != null) {
-          let decimals = countDecimalPlaces(this.initialPrice)
-          if (this.initialPrice > 9999999999.99) {
-            this.initialPriceValidation.errors.push("Maximum allowed price: €9999999999.99");
-            this.initialPriceValidation.isInvalid = true;
+        // Initial_price validation
+        this.initialPrice.errors = [];
+        if (this.initialPrice.value != null) {
+          let decimals = countDecimalPlaces(this.initialPrice.value)
+          if (this.initialPrice.value > 999999999.99) {
+            this.initialPrice.errors.push("Maximum allowed price: €9999999999.99");
+            formIsValid = false;
           }
           if (decimals > 2) {
-            this.initialPriceValidation.errors.push("Please enter a price with no more than 2 decimals.");
-            this.initialPriceValidation.isInvalid = true;
+            this.initialPrice.errors.push("Please enter a price with no more than 2 decimals.");
+            formIsValid = false;
           }
-          if (this.initialPrice < 0) {
-            this.initialPriceValidation.errors.push("Please enter a positive price.");
-            this.initialPriceValidation.isInvalid = true;
-          } else if (this.initialPrice == 0) {
-            this.initialPrice = null;
+          if (this.initialPrice.value < 0) {
+            this.initialPrice.errors.push("Please enter a positive price.");
+            formIsValid = false;
+          } else if (this.initialPrice.value == 0) {
+            this.initialPrice.value = null;
           }
         }
-        // Results
-        if (this.titleValidation.isInvalid || this.descriptionValidation.isInvalid || this.initialPriceValidation.isInvalid) {
-          return false;
-        }
-        return true;
+        return formIsValid;
       },
       async onSubmit() {
         /*
@@ -247,10 +260,10 @@
             method = "PUT";
           }
           let data = {
-            title: this.title,
-            description: this.description,
-            initial_price: this.initialPrice,
-            opened_at: this.openedAt
+            title: this.title.value,
+            description: this.description.value,
+            initial_price: this.initialPrice.value,
+            opened_at: this.openedAt.value
           };
           await apiService(endpoint, method, data)
             .then(response => {
@@ -261,10 +274,10 @@
               }
               if (!this.auction) {
                 param = true;
-                this.title = null;
-                this.description = null;
-                this.initialPrice = null;
-                this.openedAt = null;
+                this.title.value = null;
+                this.description.value = null;
+                this.initialPrice.value = null;
+                this.openedAt.value = null;
               }
               this.$emit("refresh-auctions", param);
             });

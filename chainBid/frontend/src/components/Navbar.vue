@@ -40,7 +40,6 @@
              </li>
              <li class="nav-item" v-if="isStaffUser">
                <router-link class="nav-link"
-                            exact
                             :to="{ name: 'schedule auctions' }"
                             >Schedule auctions
                </router-link>

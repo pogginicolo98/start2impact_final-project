@@ -22,6 +22,11 @@ class AuctionScheduleSerializer(serializers.ModelSerializer):
         model = Auction
         fields = ['id', 'title', 'description', 'image', 'initial_price', 'opened_at']
 
+    def validate_initial_price(self, value):
+        if value == 0:
+            return None
+        return value
+
 
 class AuctionImageSerializer(serializers.ModelSerializer):
     """

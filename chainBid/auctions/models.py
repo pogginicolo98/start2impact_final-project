@@ -4,6 +4,7 @@ import os
 
 from django.conf import settings
 from django.contrib.auth import get_user_model
+from django.core.validators import MinValueValidator
 from django.db import models
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
@@ -30,12 +31,13 @@ class Auction(models.Model):
     # Generic config
     REDIS_HOST = settings.REDIS_HOST
     REDIS_PORT = settings.REDIS_PORT
+    IMAGES_DIR = 'auction images'
 
     # Fields
     title = models.CharField(max_length=50)
     description = models.TextField(max_length=240, blank=True, null=True)
-    image = models.ImageField(blank=True, null=True, upload_to='auction images')
-    initial_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
+    image = models.ImageField(blank=True, null=True, upload_to=IMAGES_DIR, default=os.path.join(IMAGES_DIR, 'image_empty.png'))
+    initial_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True, validators=[MinValueValidator(0)])
     final_price = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
     opened_at = models.DateTimeField(blank=True, null=True)
     closed_at = models.DateTimeField(blank=True, null=True)

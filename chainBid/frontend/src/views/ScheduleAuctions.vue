@@ -1,15 +1,28 @@
 <template lang="html">
   <div class="container mt-3 mt-md-5 ">
-    <!-- Bid form -->
+    <!-- New auction -->
     <div class="row justify-content-center">
       <div class="col-12 col-lg-6">
-        <AuctionFormComponent @refresh-auctions="getAuctions"/>
+        <div class="card pb-1"
+             style="width: 100%">
+             <div class="card-header">
+               <i class="bi bi-calendar-plus fs-24px me-2"></i>
+               <span class="fw-bold fs-18px">Create a new auction</span>
+             </div>
+             <div class="card-body card-body-custom">
+               <AuctionFormComponent @refresh-auctions="getAuctions"/>
+             </div>
+        </div>
       </div>
     </div>
 
+    <!-- Scheduled auctions -->
     <div class="table-responsive mt-3">
       <table class="table table-hover caption-top">
-        <caption>Scheduled auctions</caption>
+        <caption>
+          <i class="bi bi-calendar-week fs-20px me-2"></i>
+          <span>Scheduled auctions</span>
+        </caption>
         <thead>
           <tr>
             <th scope="col">Id</th>
@@ -34,22 +47,19 @@
 
     <!-- Load more auction -->
     <div class="mb-5 mt-2 text-center" >
-      <!-- Spinner -->
       <div v-show="loadingAuctions">
         <div class="spinner-border text-success"
              role="status"
              style="width: 3rem; height: 3rem;">
         </div>
       </div>
-
-      <!-- Button -->
       <button class="btn btn-success"
               v-show="next"
               @click="getAuctions"
               >Show more
       </button>
     </div>
-  </div>
+  </div> <!-- Container -->
 </template>
 
 <script>
@@ -101,14 +111,11 @@
       }
     },
     created() {
-      document.title = "Schedule auctions";
+      document.title = "Schedule auctions | ChainBid";
       this.getAuctions();
     }
   }
 </script>
 
 <style lang="css" scoped>
-  a {
-    text-decoration: none;
-  }
 </style>

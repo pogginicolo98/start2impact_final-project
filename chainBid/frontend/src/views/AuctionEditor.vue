@@ -1,49 +1,53 @@
 <template lang="html">
   <div class="container mt-3 mt-lg-5">
-    <!-- Image -->
-    <h2 class="mb-3">{{ auction.title }}</h2>
+    <h2 class="mb-3">{{ modifiedAuction.title }}</h2>
     <div class="row">
+      <!-- Edit image -->
       <div class="col-12 col-lg-5">
-        <div class="card" style="width: 100%">
-          <div class="card-header">
-            <i class="bi bi-pencil-square fs-24px"></i><span class="fw-bold fs-18px"> Edit image</span>
-          </div>
-          <div class="card-body">
-            <img alt="product image"
-                 class="img-fluid"
-                 :src="getImage">
-            <div class="row mt-2 fs-18px">
-              <div class="col-12 col-sm-10 col-md-10 col-lg-12 col-xl-10 col-xxl-10 pe-xl-0 mt-1">
-                <input accept="image/*"
-                       class="form-control"
-                       type="file"
-                       @change="onImageSelected"
-                       :class="{'is-invalid': imageIsInvalid}">
-              </div>
-              <div class="col-12 col-sm-1 col-md-1 col-lg-12 col-xl-1 col-xxl-1 d-grid d-block mt-1">
-                <button class="btn btn-success"
-                        @click="onUpload"
-                        type="submit"
-                        ><i class="bi bi-cloud-upload"></i>
-                </button>
-              </div>
-            </div>
-          </div>
+        <div class="card pb-1"
+             style="width: 100%">
+             <div class="card-header">
+               <i class="bi bi-pencil-square fs-24px me-2"></i>
+               <span class="fw-bold fs-18px">Edit image</span>
+             </div>
+             <div class="card-body card-body-custom">
+               <img alt="product image"
+                    class="img-fluid"
+                    :src="getImage">
+               <div class="col-12 mt-3 fs-18px">
+                 <input accept="image/*"
+                        class="form-control"
+                        type="file"
+                        :class="{'is-invalid': imageIsInvalid}"
+                        @change="onImageSelected">
+                 <div class="invalid-feedback">{{ image.error }}</div>
+               </div>
+               <div class="col-12 col-sm-1 col-md-1 col-lg-12 col-xl-1 col-xxl-1 d-grid d-block mt-2 fs-18px ms-auto">
+                 <button class="btn btn-success"
+                         type="submit"
+                         @click="onUpload"
+                         ><i class="bi bi-cloud-upload"></i>
+                 </button>
+               </div>
+             </div>
         </div>
       </div>
 
+      <!-- Edit data -->
       <div class="col-12 col-lg-7 mt-3 mt-lg-0">
-        <div class="card" style="width: 100%">
-          <div class="card-header">
-            <i class="bi bi-pencil-square fs-24px"></i><span class="fw-bold fs-18px"> Edit Data</span>
-          </div>
-          <div class="card-body">
-            <AuctionFormComponent :auction="auction"
-                                  @refresh-auctions="updateData"/>
-          </div>
+        <div class="card pb-1"
+             style="width: 100%">
+             <div class="card-header">
+               <i class="bi bi-pencil-square fs-24px me-2"></i>
+               <span class="fw-bold fs-18px">Edit Data</span>
+             </div>
+             <div class="card-body card-body-custom">
+               <AuctionFormComponent :auction="modifiedAuction"
+                                     @refresh-auctions="updateData"/>
+             </div>
         </div>
       </div>
-    </div>
+    </div> <!-- Row -->
   </div> <!-- Container -->
 </template>
 
@@ -51,7 +55,6 @@
   // @ is an alias to /src
   import { apiService } from "@/common/api.service.js";
   import AuctionFormComponent from "@/components/AuctionForm.vue";
-  import moment from 'moment';
 
   export default {
     name: "AuctionEditor",
@@ -68,19 +71,11 @@
         required: false
       }
     },
-    data() {
-      return {
-        image: {
-          file: null,
-          url: null,
-          error: null
-        },
-        error: null
-      }
-    },
     async beforeRouteEnter(to, from, next) {
       /*
-        Retrieve a specific auction's data and set page title.
+        Retrieve a specific auction's data before entering in the page,
+        in order to pass auction's data to the component and fill the fields
+        before rendering the page.
       */
 
       let endpoint = `/api/schedule-auctions/${to.params.id}/`;
@@ -90,15 +85,23 @@
         });
       return next();
     },
+    data() {
+      return {
+        modifiedAuction: this.auction,
+        image: {
+          file: null,
+          url: null,
+          error: null
+        },
+        error: null
+      }
+    },
     computed: {
-      getOpenedAt() {
-        return moment(this.auction.opened_at).fromNow();
-      },
       getImage() {
         if (this.image.url) {
           return this.image.url;
         }
-        return this.auction.image;
+        return this.modifiedAuction.image;
       },
       imageIsInvalid(){
         return this.image.error != null;
@@ -153,46 +156,23 @@
           }
         },
         async updateData() {
-          let endpoint = `/api/schedule-auctions/${this.auction.id}/`;
+          /*
+            Update auction's data displayed.
+          */
+
+          let endpoint = `/api/schedule-auctions/${this.modifiedAuction.id}/`;
           await apiService(endpoint)
             .then(response => {
-              this.auction = response;
+              this.modifiedAuction = response;
               document.title = response.title;
             });
         }
     },
     created() {
-      document.title = this.auction.title;
+      document.title = this.modifiedAuction.title;
     },
   }
 </script>
 
 <style lang="css" scoped>
-  .fs-18px {
-    font-size: 18px;
-  }
-
-  .fs-15px {
-    font-size: 15px;
-  }
-
-  .fs-14px {
-    font-size: 14px;
-  }
-
-  .fs-20px {
-    font-size: 20px;
-  }
-
-  .fs-24px {
-    font-size: 24px;
-  }
-
-  .card-header {
-    background-color: white;
-  }
-
-  .card-body {
-    background-color: rgba(0,0,0,.03);
-  }
 </style>
