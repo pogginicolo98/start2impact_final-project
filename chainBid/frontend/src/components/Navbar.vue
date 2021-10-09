@@ -1,13 +1,13 @@
 <template lang="html">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient sticky-top shadow">
     <div class="container">
       <!-- Brand and logo -->
-      <a class="navbar-brand"
-         href="#">
-         <img alt="logo"
-              class="d-inline-block mb-2"
-              src="../../../static-storage/logo-200x32-orig.png">
-      </a>
+      <router-link class="navbar-brand"
+                   :to="{ name: 'home' }">
+        <img alt="logo"
+             class="d-inline-block mb-2"
+             src="../../../static-storage/logo-200x32-orig.png">
+      </router-link>
 
       <!-- Collapsed menu button -->
       <button aria-controls="navbarSupportedContent"
@@ -26,18 +26,23 @@
            <!-- Links -->
            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
              <li class="nav-item">
-               <!-- aria-current da gestire dinamicamente -->
-               <a aria-current="page"
-                  class="nav-link active"
-                  href="#"
-                  >Live acutions
-                </a>
+               <router-link class="nav-link"
+                            exact
+                            :to="{ name: 'home' }"
+                            >Live acutions
+               </router-link>
              </li>
              <li class="nav-item">
                <a class="nav-link"
                   href="#"
                   >Closed auctions
                </a>
+             </li>
+             <li class="nav-item" v-if="isStaffUser">
+               <router-link class="nav-link"
+                            :to="{ name: 'schedule auctions' }"
+                            >Schedule auctions
+               </router-link>
              </li>
              <li class="nav-item">
                <a class="nav-link"
@@ -94,7 +99,8 @@
     name: "NavbarComponent",
     data() {
       return {
-        requestUser: null
+        requestUser: null,
+        isStaffUser: null
       };
     },
     methods: {
@@ -108,6 +114,7 @@
         await apiService(endpoint)
           .then(response => {
             this.requestUser = response.username;
+            this.isStaffUser = response.is_staff;
             window.localStorage.setItem("username", this.requestUser);
           });
       }
@@ -118,7 +125,7 @@
   }
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
   .nav-icon {
     color: #ffe3b0;
   }
@@ -131,7 +138,7 @@
     color: #f5c8bd !important;
   }
 
-  .active {
+  .router-link-active {
     color: #f5c8bd !important;
   }
 </style>

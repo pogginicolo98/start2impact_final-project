@@ -1,60 +1,50 @@
 <template>
-  <div class="container">
+  <div class="container mt-3 mt-md-5">
     <div class="row justify-content-start">
       <!-- X col per signle auction -->
       <div class="col-12 col-md-6 col-lg-4 col-xxl-3"
            v-for="(auction, index) in auctions"
            :key="index">
            <!-- Card -->
-           <div class="card mt-3 mx-auto"
-                style="width: 18rem; height: 22rem;">
-                <!-- Card image -->
-                <div class="auction-image">
-                  <img alt="image"
-                       class="card-img-top"
-                       :src="auction.image">
-                </div>
-
-                <!-- Card body -->
-                <div class="card-body text-center">
-                  <h4 class="card-title">{{ auction.title }}</h4>
-                  <hr>
-                  <p class="card-text text-success">
-                    Current price: <strong>{{ auction.last_price }} €</strong>
-                  </p>
-                  <template v-if="auction.remaining_time">
-                    <p class="card-text text-danger">
-                      <strong>Started</strong>
-                    </p>
-                  </template>
-                  <template v-else>
-                    <p class="card-text text-muted">
-                      <strong>No bids yet</strong>
-                    </p>
-                  </template>
-                  <div class="d-grid">
-                    <router-link class="btn btn-success"
-                                 :to="{ name: 'auction', params: { id: auction.id } }"
-                                 >Bid
-                    </router-link>
+           <router-link :to="{ name: 'auction', params: { id: auction.id } }">
+             <div class="card mb-4 mx-auto"
+                  style="width: 18rem; height: 22rem;">
+                  <!-- Card image -->
+                  <div class="auction-image">
+                    <img alt="product image"
+                         class="card-img-top"
+                         :src="auction.image">
                   </div>
-                </div> <!-- Card body -->
-           </div> <!-- Card -->
+
+                  <!-- Card body -->
+                  <div class="card-body text-center">
+                    <h4 class="card-title">{{ auction.title }}</h4>
+                    <hr>
+                    <p class="card-text text-success">Current price: <strong>€{{ auction.last_price }}</strong></p>
+                    <template v-if="auction.remaining_time">
+                      <p class="card-text text-danger"><strong>Started</strong></p>
+                    </template>
+                    <template v-else>
+                      <p class="card-text text-muted"><strong>No bids yet</strong></p>
+                    </template>
+                  </div>
+             </div> <!-- Card -->
+           </router-link>
       </div> <!-- X col, signle auction -->
     </div> <!-- Row -->
 
     <!-- Load more auction -->
-    <div class="my-4 text-center" >
+    <div class="mb-5 mt-2 text-center" >
       <!-- Spinner -->
       <div v-show="loadingAuctions">
-        <div class="spinner-border text-success mt-3"
+        <div class="spinner-border text-success"
              role="status"
              style="width: 3rem; height: 3rem;">
         </div>
       </div>
 
       <!-- Button -->
-      <button class="btn btn-success mt-4"
+      <button class="btn btn-success"
               v-show="next"
               @click="getAuctions"
               >Show more
@@ -72,7 +62,6 @@
     data() {
       return {
         auctions: [],
-        timer: '',
         next: null,
         loadingAuctions: false
       }
@@ -82,6 +71,7 @@
         /*
           Retrieve active auctions according to pagination.
         */
+
         let endpoint = "/api/auctions/";
         if (this.next) {
           endpoint = this.next;
@@ -118,5 +108,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .card {
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+      border-radius: 0;
+      border: 0;
+      margin-bottom: 1.5em;
+    }
+
+  .card:hover {
+    transform: scale(1.1);
   }
 </style>

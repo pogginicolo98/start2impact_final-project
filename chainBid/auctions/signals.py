@@ -30,7 +30,7 @@ def update_bid_closing_time(sender, instance, **kwargs):
     task = instance.pop_task()
     if task is not None:
         app.control.revoke(task['task_id'], terminate=True, signal='SIGKILL')
-    eta = timezone.now() + timezone.timedelta(seconds=15)
+    eta = timezone.now() + timezone.timedelta(minutes=2)
     task_id = close_auction.apply_async((instance.pk,), eta=eta).id
     instance.push_task(task_id=task_id, eta=eta)
 

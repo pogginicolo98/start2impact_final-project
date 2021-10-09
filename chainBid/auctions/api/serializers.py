@@ -22,6 +22,11 @@ class AuctionScheduleSerializer(serializers.ModelSerializer):
         model = Auction
         fields = ['id', 'title', 'description', 'image', 'initial_price', 'opened_at']
 
+    def validate_initial_price(self, value):
+        if value == 0:
+            return None
+        return value
+
 
 class AuctionImageSerializer(serializers.ModelSerializer):
     """
@@ -58,7 +63,7 @@ class AuctionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Auction
-        fields = ['id', 'title', 'description', 'image', 'opened_at', 'last_price', 'remaining_time']
+        fields = ['id', 'title', 'description', 'image', 'opened_at', 'initial_price', 'last_price', 'remaining_time']
 
     def get_last_price(self, instance):
         latest_bid = instance.get_latest_bid()
@@ -91,10 +96,11 @@ class AuctionBidSerializer(serializers.Serializer):
             is_last_user = False
             last_price = auction.initial_price
         if is_last_user:
-            raise serializers.ValidationError('You cannot place another bid')
+            raise serializers.ValidationError('Your previous bid is still active.')
         if data['price'] <= last_price:
-            raise serializers.ValidationError('Price must be greater than the current price')
+            raise serializers.ValidationError('Price must be higher than the current price.')
         return data
+
 
 class AuctionInfoSerializer(serializers.Serializer):
     """
@@ -145,3 +151,30 @@ class AuctionReportSerializer(serializers.ModelSerializer):
     class Meta:
         model = AuctionReport
         fields = ['json_file']
+
+
+class AuctionClosedSerializer(serializers.ModelSerializer):
+    """
+    Auction serializer for AuctionClosedListRetrieveAPIView.
+
+    :fields
+    - title
+    - description
+    - image
+    - initial_price
+    - final_price
+    - winner
+    - opened_at
+    - closed_at
+
+    * format: JSON.
+    """
+
+    winner = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = Auction
+        fields = ['id', 'title', 'description', 'image', 'initial_price', 'final_price', 'winner', 'opened_at', 'closed_at']
+
+    def get_winner(self, instance):
+        return instance.winner.username

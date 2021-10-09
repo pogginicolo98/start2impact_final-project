@@ -16,53 +16,1280 @@
       "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/bundle.js",
       "publicPath": "http://0.0.0.0:8080/bundle.js"
     },
+    "app.0735a1fa5b12e88ba685.hot-update.js": {
+      "name": "app.0735a1fa5b12e88ba685.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0735a1fa5b12e88ba685.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.0735a1fa5b12e88ba685.hot-update.js"
+    },
+    "0735a1fa5b12e88ba685.hot-update.json": {
+      "name": "0735a1fa5b12e88ba685.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0735a1fa5b12e88ba685.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/0735a1fa5b12e88ba685.hot-update.json"
+    },
     "index.html": {
       "name": "index.html",
       "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/index.html",
       "publicPath": "http://0.0.0.0:8080/index.html"
     },
-    "favicon.ico": {
-      "name": "favicon.ico",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/favicon.ico",
-      "publicPath": "http://0.0.0.0:8080/favicon.ico"
+    "app.365e60e21db3cc4a93ef.hot-update.js": {
+      "name": "app.365e60e21db3cc4a93ef.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.365e60e21db3cc4a93ef.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.365e60e21db3cc4a93ef.hot-update.js"
     },
-    "app.72c4cb43dc12157ee05b.hot-update.js": {
-      "name": "app.72c4cb43dc12157ee05b.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.72c4cb43dc12157ee05b.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.72c4cb43dc12157ee05b.hot-update.js"
+    "365e60e21db3cc4a93ef.hot-update.json": {
+      "name": "365e60e21db3cc4a93ef.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/365e60e21db3cc4a93ef.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/365e60e21db3cc4a93ef.hot-update.json"
     },
-    "72c4cb43dc12157ee05b.hot-update.json": {
-      "name": "72c4cb43dc12157ee05b.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/72c4cb43dc12157ee05b.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/72c4cb43dc12157ee05b.hot-update.json"
+    "app.d3e873c8f768818b4e0e.hot-update.js": {
+      "name": "app.d3e873c8f768818b4e0e.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d3e873c8f768818b4e0e.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.d3e873c8f768818b4e0e.hot-update.js"
     },
-    "app.b7aea4182b0b21c7be21.hot-update.js": {
-      "name": "app.b7aea4182b0b21c7be21.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.b7aea4182b0b21c7be21.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.b7aea4182b0b21c7be21.hot-update.js"
+    "d3e873c8f768818b4e0e.hot-update.json": {
+      "name": "d3e873c8f768818b4e0e.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d3e873c8f768818b4e0e.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/d3e873c8f768818b4e0e.hot-update.json"
     },
-    "b7aea4182b0b21c7be21.hot-update.json": {
-      "name": "b7aea4182b0b21c7be21.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/b7aea4182b0b21c7be21.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/b7aea4182b0b21c7be21.hot-update.json"
+    "app.cdb8a5e341296f0a78d2.hot-update.js": {
+      "name": "app.cdb8a5e341296f0a78d2.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.cdb8a5e341296f0a78d2.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.cdb8a5e341296f0a78d2.hot-update.js"
     },
-    "app.3d4fb2b7f482023b6c5a.hot-update.js": {
-      "name": "app.3d4fb2b7f482023b6c5a.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3d4fb2b7f482023b6c5a.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.3d4fb2b7f482023b6c5a.hot-update.js"
+    "cdb8a5e341296f0a78d2.hot-update.json": {
+      "name": "cdb8a5e341296f0a78d2.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/cdb8a5e341296f0a78d2.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/cdb8a5e341296f0a78d2.hot-update.json"
     },
-    "3d4fb2b7f482023b6c5a.hot-update.json": {
-      "name": "3d4fb2b7f482023b6c5a.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3d4fb2b7f482023b6c5a.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/3d4fb2b7f482023b6c5a.hot-update.json"
+    "app.e6e728ba2ad846173acd.hot-update.js": {
+      "name": "app.e6e728ba2ad846173acd.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.e6e728ba2ad846173acd.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.e6e728ba2ad846173acd.hot-update.js"
+    },
+    "e6e728ba2ad846173acd.hot-update.json": {
+      "name": "e6e728ba2ad846173acd.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/e6e728ba2ad846173acd.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/e6e728ba2ad846173acd.hot-update.json"
+    },
+    "app.e024c9d6b94dd2a0192d.hot-update.js": {
+      "name": "app.e024c9d6b94dd2a0192d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.e024c9d6b94dd2a0192d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.e024c9d6b94dd2a0192d.hot-update.js"
+    },
+    "e024c9d6b94dd2a0192d.hot-update.json": {
+      "name": "e024c9d6b94dd2a0192d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/e024c9d6b94dd2a0192d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/e024c9d6b94dd2a0192d.hot-update.json"
+    },
+    "app.17c370816a553802a707.hot-update.js": {
+      "name": "app.17c370816a553802a707.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.17c370816a553802a707.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.17c370816a553802a707.hot-update.js"
+    },
+    "17c370816a553802a707.hot-update.json": {
+      "name": "17c370816a553802a707.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/17c370816a553802a707.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/17c370816a553802a707.hot-update.json"
+    },
+    "app.27e19df0eb8cbcb543b8.hot-update.js": {
+      "name": "app.27e19df0eb8cbcb543b8.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.27e19df0eb8cbcb543b8.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.27e19df0eb8cbcb543b8.hot-update.js"
+    },
+    "27e19df0eb8cbcb543b8.hot-update.json": {
+      "name": "27e19df0eb8cbcb543b8.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/27e19df0eb8cbcb543b8.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/27e19df0eb8cbcb543b8.hot-update.json"
+    },
+    "app.1c5ce9e0a766b2685ee8.hot-update.js": {
+      "name": "app.1c5ce9e0a766b2685ee8.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.1c5ce9e0a766b2685ee8.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.1c5ce9e0a766b2685ee8.hot-update.js"
+    },
+    "1c5ce9e0a766b2685ee8.hot-update.json": {
+      "name": "1c5ce9e0a766b2685ee8.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/1c5ce9e0a766b2685ee8.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/1c5ce9e0a766b2685ee8.hot-update.json"
+    },
+    "app.a48622650af8c06c5ff2.hot-update.js": {
+      "name": "app.a48622650af8c06c5ff2.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.a48622650af8c06c5ff2.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.a48622650af8c06c5ff2.hot-update.js"
+    },
+    "a48622650af8c06c5ff2.hot-update.json": {
+      "name": "a48622650af8c06c5ff2.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/a48622650af8c06c5ff2.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/a48622650af8c06c5ff2.hot-update.json"
+    },
+    "app.c2af06fcd5cc86e9cbaf.hot-update.js": {
+      "name": "app.c2af06fcd5cc86e9cbaf.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.c2af06fcd5cc86e9cbaf.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.c2af06fcd5cc86e9cbaf.hot-update.js"
+    },
+    "c2af06fcd5cc86e9cbaf.hot-update.json": {
+      "name": "c2af06fcd5cc86e9cbaf.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/c2af06fcd5cc86e9cbaf.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/c2af06fcd5cc86e9cbaf.hot-update.json"
+    },
+    "app.79769ff25e796a6b8fc7.hot-update.js": {
+      "name": "app.79769ff25e796a6b8fc7.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.79769ff25e796a6b8fc7.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.79769ff25e796a6b8fc7.hot-update.js"
+    },
+    "79769ff25e796a6b8fc7.hot-update.json": {
+      "name": "79769ff25e796a6b8fc7.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/79769ff25e796a6b8fc7.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/79769ff25e796a6b8fc7.hot-update.json"
+    },
+    "app.8088911367248a53a116.hot-update.js": {
+      "name": "app.8088911367248a53a116.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.8088911367248a53a116.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.8088911367248a53a116.hot-update.js"
+    },
+    "8088911367248a53a116.hot-update.json": {
+      "name": "8088911367248a53a116.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/8088911367248a53a116.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/8088911367248a53a116.hot-update.json"
+    },
+    "app.bf2f7d75421c46f47458.hot-update.js": {
+      "name": "app.bf2f7d75421c46f47458.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.bf2f7d75421c46f47458.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.bf2f7d75421c46f47458.hot-update.js"
+    },
+    "bf2f7d75421c46f47458.hot-update.json": {
+      "name": "bf2f7d75421c46f47458.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/bf2f7d75421c46f47458.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/bf2f7d75421c46f47458.hot-update.json"
+    },
+    "app.42bef1ce9b7440ea90bc.hot-update.js": {
+      "name": "app.42bef1ce9b7440ea90bc.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.42bef1ce9b7440ea90bc.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.42bef1ce9b7440ea90bc.hot-update.js"
+    },
+    "42bef1ce9b7440ea90bc.hot-update.json": {
+      "name": "42bef1ce9b7440ea90bc.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/42bef1ce9b7440ea90bc.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/42bef1ce9b7440ea90bc.hot-update.json"
+    },
+    "app.6320a61ca59ee719a4a7.hot-update.js": {
+      "name": "app.6320a61ca59ee719a4a7.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.6320a61ca59ee719a4a7.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.6320a61ca59ee719a4a7.hot-update.js"
+    },
+    "6320a61ca59ee719a4a7.hot-update.json": {
+      "name": "6320a61ca59ee719a4a7.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/6320a61ca59ee719a4a7.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/6320a61ca59ee719a4a7.hot-update.json"
+    },
+    "app.42149462da9c79b7b227.hot-update.js": {
+      "name": "app.42149462da9c79b7b227.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.42149462da9c79b7b227.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.42149462da9c79b7b227.hot-update.js"
+    },
+    "42149462da9c79b7b227.hot-update.json": {
+      "name": "42149462da9c79b7b227.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/42149462da9c79b7b227.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/42149462da9c79b7b227.hot-update.json"
+    },
+    "app.ea0a7088fc93616ddb8b.hot-update.js": {
+      "name": "app.ea0a7088fc93616ddb8b.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ea0a7088fc93616ddb8b.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.ea0a7088fc93616ddb8b.hot-update.js"
+    },
+    "ea0a7088fc93616ddb8b.hot-update.json": {
+      "name": "ea0a7088fc93616ddb8b.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ea0a7088fc93616ddb8b.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/ea0a7088fc93616ddb8b.hot-update.json"
+    },
+    "app.0b1a90692ea9c0cf3bf2.hot-update.js": {
+      "name": "app.0b1a90692ea9c0cf3bf2.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0b1a90692ea9c0cf3bf2.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.0b1a90692ea9c0cf3bf2.hot-update.js"
+    },
+    "0b1a90692ea9c0cf3bf2.hot-update.json": {
+      "name": "0b1a90692ea9c0cf3bf2.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0b1a90692ea9c0cf3bf2.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/0b1a90692ea9c0cf3bf2.hot-update.json"
+    },
+    "app.9fb11bffd4ef50d741c0.hot-update.js": {
+      "name": "app.9fb11bffd4ef50d741c0.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9fb11bffd4ef50d741c0.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.9fb11bffd4ef50d741c0.hot-update.js"
+    },
+    "9fb11bffd4ef50d741c0.hot-update.json": {
+      "name": "9fb11bffd4ef50d741c0.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9fb11bffd4ef50d741c0.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/9fb11bffd4ef50d741c0.hot-update.json"
+    },
+    "app.82001d193274d9eb2209.hot-update.js": {
+      "name": "app.82001d193274d9eb2209.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.82001d193274d9eb2209.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.82001d193274d9eb2209.hot-update.js"
+    },
+    "82001d193274d9eb2209.hot-update.json": {
+      "name": "82001d193274d9eb2209.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/82001d193274d9eb2209.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/82001d193274d9eb2209.hot-update.json"
+    },
+    "app.2f97b4b63f0ceb582a0b.hot-update.js": {
+      "name": "app.2f97b4b63f0ceb582a0b.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.2f97b4b63f0ceb582a0b.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.2f97b4b63f0ceb582a0b.hot-update.js"
+    },
+    "2f97b4b63f0ceb582a0b.hot-update.json": {
+      "name": "2f97b4b63f0ceb582a0b.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/2f97b4b63f0ceb582a0b.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/2f97b4b63f0ceb582a0b.hot-update.json"
+    },
+    "app.c57129b9746b0b8a0718.hot-update.js": {
+      "name": "app.c57129b9746b0b8a0718.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.c57129b9746b0b8a0718.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.c57129b9746b0b8a0718.hot-update.js"
+    },
+    "c57129b9746b0b8a0718.hot-update.json": {
+      "name": "c57129b9746b0b8a0718.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/c57129b9746b0b8a0718.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/c57129b9746b0b8a0718.hot-update.json"
+    },
+    "app.59de269838b1732b061d.hot-update.js": {
+      "name": "app.59de269838b1732b061d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.59de269838b1732b061d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.59de269838b1732b061d.hot-update.js"
+    },
+    "59de269838b1732b061d.hot-update.json": {
+      "name": "59de269838b1732b061d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/59de269838b1732b061d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/59de269838b1732b061d.hot-update.json"
+    },
+    "app.84000cf4c8199c4701be.hot-update.js": {
+      "name": "app.84000cf4c8199c4701be.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.84000cf4c8199c4701be.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.84000cf4c8199c4701be.hot-update.js"
+    },
+    "84000cf4c8199c4701be.hot-update.json": {
+      "name": "84000cf4c8199c4701be.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/84000cf4c8199c4701be.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/84000cf4c8199c4701be.hot-update.json"
+    },
+    "app.e0232bc8acd458704db0.hot-update.js": {
+      "name": "app.e0232bc8acd458704db0.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.e0232bc8acd458704db0.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.e0232bc8acd458704db0.hot-update.js"
+    },
+    "e0232bc8acd458704db0.hot-update.json": {
+      "name": "e0232bc8acd458704db0.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/e0232bc8acd458704db0.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/e0232bc8acd458704db0.hot-update.json"
+    },
+    "app.36defd61eedc71c81a9c.hot-update.js": {
+      "name": "app.36defd61eedc71c81a9c.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.36defd61eedc71c81a9c.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.36defd61eedc71c81a9c.hot-update.js"
+    },
+    "36defd61eedc71c81a9c.hot-update.json": {
+      "name": "36defd61eedc71c81a9c.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/36defd61eedc71c81a9c.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/36defd61eedc71c81a9c.hot-update.json"
+    },
+    "app.6b2a9eda3a715b7e06cc.hot-update.js": {
+      "name": "app.6b2a9eda3a715b7e06cc.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.6b2a9eda3a715b7e06cc.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.6b2a9eda3a715b7e06cc.hot-update.js"
+    },
+    "6b2a9eda3a715b7e06cc.hot-update.json": {
+      "name": "6b2a9eda3a715b7e06cc.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/6b2a9eda3a715b7e06cc.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/6b2a9eda3a715b7e06cc.hot-update.json"
+    },
+    "app.72570fbeaf73e4f3e616.hot-update.js": {
+      "name": "app.72570fbeaf73e4f3e616.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.72570fbeaf73e4f3e616.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.72570fbeaf73e4f3e616.hot-update.js"
+    },
+    "72570fbeaf73e4f3e616.hot-update.json": {
+      "name": "72570fbeaf73e4f3e616.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/72570fbeaf73e4f3e616.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/72570fbeaf73e4f3e616.hot-update.json"
+    },
+    "app.ecb82bfbe2b1b4f6300a.hot-update.js": {
+      "name": "app.ecb82bfbe2b1b4f6300a.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ecb82bfbe2b1b4f6300a.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.ecb82bfbe2b1b4f6300a.hot-update.js"
+    },
+    "ecb82bfbe2b1b4f6300a.hot-update.json": {
+      "name": "ecb82bfbe2b1b4f6300a.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ecb82bfbe2b1b4f6300a.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/ecb82bfbe2b1b4f6300a.hot-update.json"
+    },
+    "app.f790afb3be936de670ac.hot-update.js": {
+      "name": "app.f790afb3be936de670ac.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.f790afb3be936de670ac.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.f790afb3be936de670ac.hot-update.js"
+    },
+    "f790afb3be936de670ac.hot-update.json": {
+      "name": "f790afb3be936de670ac.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/f790afb3be936de670ac.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/f790afb3be936de670ac.hot-update.json"
+    },
+    "app.993d28814594c7f2fdbb.hot-update.js": {
+      "name": "app.993d28814594c7f2fdbb.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.993d28814594c7f2fdbb.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.993d28814594c7f2fdbb.hot-update.js"
+    },
+    "993d28814594c7f2fdbb.hot-update.json": {
+      "name": "993d28814594c7f2fdbb.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/993d28814594c7f2fdbb.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/993d28814594c7f2fdbb.hot-update.json"
+    },
+    "app.c8376305295a92c1e114.hot-update.js": {
+      "name": "app.c8376305295a92c1e114.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.c8376305295a92c1e114.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.c8376305295a92c1e114.hot-update.js"
+    },
+    "c8376305295a92c1e114.hot-update.json": {
+      "name": "c8376305295a92c1e114.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/c8376305295a92c1e114.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/c8376305295a92c1e114.hot-update.json"
+    },
+    "app.8916f435f48a9dae5cff.hot-update.js": {
+      "name": "app.8916f435f48a9dae5cff.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.8916f435f48a9dae5cff.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.8916f435f48a9dae5cff.hot-update.js"
+    },
+    "8916f435f48a9dae5cff.hot-update.json": {
+      "name": "8916f435f48a9dae5cff.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/8916f435f48a9dae5cff.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/8916f435f48a9dae5cff.hot-update.json"
+    },
+    "app.6aeffd46beb2f536d603.hot-update.js": {
+      "name": "app.6aeffd46beb2f536d603.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.6aeffd46beb2f536d603.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.6aeffd46beb2f536d603.hot-update.js"
+    },
+    "6aeffd46beb2f536d603.hot-update.json": {
+      "name": "6aeffd46beb2f536d603.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/6aeffd46beb2f536d603.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/6aeffd46beb2f536d603.hot-update.json"
+    },
+    "app.644641222b1679dad695.hot-update.js": {
+      "name": "app.644641222b1679dad695.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.644641222b1679dad695.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.644641222b1679dad695.hot-update.js"
+    },
+    "644641222b1679dad695.hot-update.json": {
+      "name": "644641222b1679dad695.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/644641222b1679dad695.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/644641222b1679dad695.hot-update.json"
+    },
+    "app.e23ec583b950c74556c1.hot-update.js": {
+      "name": "app.e23ec583b950c74556c1.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.e23ec583b950c74556c1.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.e23ec583b950c74556c1.hot-update.js"
+    },
+    "e23ec583b950c74556c1.hot-update.json": {
+      "name": "e23ec583b950c74556c1.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/e23ec583b950c74556c1.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/e23ec583b950c74556c1.hot-update.json"
+    },
+    "app.4f4720439f40bfe8cb4d.hot-update.js": {
+      "name": "app.4f4720439f40bfe8cb4d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.4f4720439f40bfe8cb4d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.4f4720439f40bfe8cb4d.hot-update.js"
+    },
+    "4f4720439f40bfe8cb4d.hot-update.json": {
+      "name": "4f4720439f40bfe8cb4d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/4f4720439f40bfe8cb4d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/4f4720439f40bfe8cb4d.hot-update.json"
+    },
+    "app.1b4789ff2248946aeb55.hot-update.js": {
+      "name": "app.1b4789ff2248946aeb55.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.1b4789ff2248946aeb55.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.1b4789ff2248946aeb55.hot-update.js"
+    },
+    "1b4789ff2248946aeb55.hot-update.json": {
+      "name": "1b4789ff2248946aeb55.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/1b4789ff2248946aeb55.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/1b4789ff2248946aeb55.hot-update.json"
+    },
+    "app.25119face3105d1839ce.hot-update.js": {
+      "name": "app.25119face3105d1839ce.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.25119face3105d1839ce.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.25119face3105d1839ce.hot-update.js"
+    },
+    "25119face3105d1839ce.hot-update.json": {
+      "name": "25119face3105d1839ce.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/25119face3105d1839ce.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/25119face3105d1839ce.hot-update.json"
+    },
+    "app.553207b067495deb5925.hot-update.js": {
+      "name": "app.553207b067495deb5925.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.553207b067495deb5925.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.553207b067495deb5925.hot-update.js"
+    },
+    "553207b067495deb5925.hot-update.json": {
+      "name": "553207b067495deb5925.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/553207b067495deb5925.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/553207b067495deb5925.hot-update.json"
+    },
+    "app.484a37c448fa3b09f6d6.hot-update.js": {
+      "name": "app.484a37c448fa3b09f6d6.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.484a37c448fa3b09f6d6.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.484a37c448fa3b09f6d6.hot-update.js"
+    },
+    "484a37c448fa3b09f6d6.hot-update.json": {
+      "name": "484a37c448fa3b09f6d6.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/484a37c448fa3b09f6d6.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/484a37c448fa3b09f6d6.hot-update.json"
+    },
+    "app.8310c8950c6ad00fdfec.hot-update.js": {
+      "name": "app.8310c8950c6ad00fdfec.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.8310c8950c6ad00fdfec.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.8310c8950c6ad00fdfec.hot-update.js"
+    },
+    "8310c8950c6ad00fdfec.hot-update.json": {
+      "name": "8310c8950c6ad00fdfec.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/8310c8950c6ad00fdfec.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/8310c8950c6ad00fdfec.hot-update.json"
+    },
+    "app.363e9695cb5fa1221990.hot-update.js": {
+      "name": "app.363e9695cb5fa1221990.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.363e9695cb5fa1221990.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.363e9695cb5fa1221990.hot-update.js"
+    },
+    "363e9695cb5fa1221990.hot-update.json": {
+      "name": "363e9695cb5fa1221990.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/363e9695cb5fa1221990.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/363e9695cb5fa1221990.hot-update.json"
+    },
+    "92b179fe900e2ab1eaec.hot-update.json": {
+      "name": "92b179fe900e2ab1eaec.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/92b179fe900e2ab1eaec.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/92b179fe900e2ab1eaec.hot-update.json"
+    },
+    "a66f5f079f6a9934e17e.hot-update.json": {
+      "name": "a66f5f079f6a9934e17e.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/a66f5f079f6a9934e17e.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/a66f5f079f6a9934e17e.hot-update.json"
+    },
+    "app.3cc75d0c943dcdcca0ac.hot-update.js": {
+      "name": "app.3cc75d0c943dcdcca0ac.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3cc75d0c943dcdcca0ac.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.3cc75d0c943dcdcca0ac.hot-update.js"
+    },
+    "3cc75d0c943dcdcca0ac.hot-update.json": {
+      "name": "3cc75d0c943dcdcca0ac.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3cc75d0c943dcdcca0ac.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/3cc75d0c943dcdcca0ac.hot-update.json"
+    },
+    "app.f96cd923eba6d9576fbd.hot-update.js": {
+      "name": "app.f96cd923eba6d9576fbd.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.f96cd923eba6d9576fbd.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.f96cd923eba6d9576fbd.hot-update.js"
+    },
+    "f96cd923eba6d9576fbd.hot-update.json": {
+      "name": "f96cd923eba6d9576fbd.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/f96cd923eba6d9576fbd.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/f96cd923eba6d9576fbd.hot-update.json"
+    },
+    "app.36abcc4bb0eed13afa73.hot-update.js": {
+      "name": "app.36abcc4bb0eed13afa73.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.36abcc4bb0eed13afa73.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.36abcc4bb0eed13afa73.hot-update.js"
+    },
+    "36abcc4bb0eed13afa73.hot-update.json": {
+      "name": "36abcc4bb0eed13afa73.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/36abcc4bb0eed13afa73.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/36abcc4bb0eed13afa73.hot-update.json"
+    },
+    "app.01eae8e7ba2a0e9c9aff.hot-update.js": {
+      "name": "app.01eae8e7ba2a0e9c9aff.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.01eae8e7ba2a0e9c9aff.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.01eae8e7ba2a0e9c9aff.hot-update.js"
+    },
+    "01eae8e7ba2a0e9c9aff.hot-update.json": {
+      "name": "01eae8e7ba2a0e9c9aff.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/01eae8e7ba2a0e9c9aff.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/01eae8e7ba2a0e9c9aff.hot-update.json"
+    },
+    "app.78b3109216ec7cde766d.hot-update.js": {
+      "name": "app.78b3109216ec7cde766d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.78b3109216ec7cde766d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.78b3109216ec7cde766d.hot-update.js"
+    },
+    "78b3109216ec7cde766d.hot-update.json": {
+      "name": "78b3109216ec7cde766d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/78b3109216ec7cde766d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/78b3109216ec7cde766d.hot-update.json"
+    },
+    "app.43675e7d8467e7c3a550.hot-update.js": {
+      "name": "app.43675e7d8467e7c3a550.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.43675e7d8467e7c3a550.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.43675e7d8467e7c3a550.hot-update.js"
+    },
+    "43675e7d8467e7c3a550.hot-update.json": {
+      "name": "43675e7d8467e7c3a550.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/43675e7d8467e7c3a550.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/43675e7d8467e7c3a550.hot-update.json"
+    },
+    "app.6d3a6421820543f0c5ef.hot-update.js": {
+      "name": "app.6d3a6421820543f0c5ef.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.6d3a6421820543f0c5ef.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.6d3a6421820543f0c5ef.hot-update.js"
+    },
+    "6d3a6421820543f0c5ef.hot-update.json": {
+      "name": "6d3a6421820543f0c5ef.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/6d3a6421820543f0c5ef.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/6d3a6421820543f0c5ef.hot-update.json"
+    },
+    "ff03236ccf115e79c35a.hot-update.json": {
+      "name": "ff03236ccf115e79c35a.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ff03236ccf115e79c35a.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/ff03236ccf115e79c35a.hot-update.json"
+    },
+    "app.4be6ec13efac72f26f54.hot-update.js": {
+      "name": "app.4be6ec13efac72f26f54.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.4be6ec13efac72f26f54.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.4be6ec13efac72f26f54.hot-update.js"
+    },
+    "4be6ec13efac72f26f54.hot-update.json": {
+      "name": "4be6ec13efac72f26f54.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/4be6ec13efac72f26f54.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/4be6ec13efac72f26f54.hot-update.json"
+    },
+    "app.3e10245c375e45099d7d.hot-update.js": {
+      "name": "app.3e10245c375e45099d7d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3e10245c375e45099d7d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.3e10245c375e45099d7d.hot-update.js"
+    },
+    "3e10245c375e45099d7d.hot-update.json": {
+      "name": "3e10245c375e45099d7d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3e10245c375e45099d7d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/3e10245c375e45099d7d.hot-update.json"
+    },
+    "app.0918efc9307265c930c7.hot-update.js": {
+      "name": "app.0918efc9307265c930c7.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0918efc9307265c930c7.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.0918efc9307265c930c7.hot-update.js"
+    },
+    "0918efc9307265c930c7.hot-update.json": {
+      "name": "0918efc9307265c930c7.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0918efc9307265c930c7.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/0918efc9307265c930c7.hot-update.json"
+    },
+    "app.12a20536552af2044240.hot-update.js": {
+      "name": "app.12a20536552af2044240.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.12a20536552af2044240.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.12a20536552af2044240.hot-update.js"
+    },
+    "12a20536552af2044240.hot-update.json": {
+      "name": "12a20536552af2044240.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/12a20536552af2044240.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/12a20536552af2044240.hot-update.json"
+    },
+    "app.3b4d17c2b0d1361795ad.hot-update.js": {
+      "name": "app.3b4d17c2b0d1361795ad.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3b4d17c2b0d1361795ad.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.3b4d17c2b0d1361795ad.hot-update.js"
+    },
+    "3b4d17c2b0d1361795ad.hot-update.json": {
+      "name": "3b4d17c2b0d1361795ad.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3b4d17c2b0d1361795ad.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/3b4d17c2b0d1361795ad.hot-update.json"
+    },
+    "app.0d301a51c64f12fd90e6.hot-update.js": {
+      "name": "app.0d301a51c64f12fd90e6.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0d301a51c64f12fd90e6.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.0d301a51c64f12fd90e6.hot-update.js"
+    },
+    "0d301a51c64f12fd90e6.hot-update.json": {
+      "name": "0d301a51c64f12fd90e6.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0d301a51c64f12fd90e6.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/0d301a51c64f12fd90e6.hot-update.json"
+    },
+    "app.644b45a5f5f55992ed0d.hot-update.js": {
+      "name": "app.644b45a5f5f55992ed0d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.644b45a5f5f55992ed0d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.644b45a5f5f55992ed0d.hot-update.js"
+    },
+    "644b45a5f5f55992ed0d.hot-update.json": {
+      "name": "644b45a5f5f55992ed0d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/644b45a5f5f55992ed0d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/644b45a5f5f55992ed0d.hot-update.json"
+    },
+    "app.61d8bac49c730fe20d39.hot-update.js": {
+      "name": "app.61d8bac49c730fe20d39.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.61d8bac49c730fe20d39.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.61d8bac49c730fe20d39.hot-update.js"
+    },
+    "61d8bac49c730fe20d39.hot-update.json": {
+      "name": "61d8bac49c730fe20d39.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/61d8bac49c730fe20d39.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/61d8bac49c730fe20d39.hot-update.json"
+    },
+    "app.107a2c6d4f036bb9a04b.hot-update.js": {
+      "name": "app.107a2c6d4f036bb9a04b.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.107a2c6d4f036bb9a04b.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.107a2c6d4f036bb9a04b.hot-update.js"
+    },
+    "107a2c6d4f036bb9a04b.hot-update.json": {
+      "name": "107a2c6d4f036bb9a04b.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/107a2c6d4f036bb9a04b.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/107a2c6d4f036bb9a04b.hot-update.json"
+    },
+    "app.7d51c696f8b8c8f4e257.hot-update.js": {
+      "name": "app.7d51c696f8b8c8f4e257.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.7d51c696f8b8c8f4e257.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.7d51c696f8b8c8f4e257.hot-update.js"
+    },
+    "7d51c696f8b8c8f4e257.hot-update.json": {
+      "name": "7d51c696f8b8c8f4e257.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/7d51c696f8b8c8f4e257.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/7d51c696f8b8c8f4e257.hot-update.json"
+    },
+    "app.4c8c4bbedbe76283e268.hot-update.js": {
+      "name": "app.4c8c4bbedbe76283e268.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.4c8c4bbedbe76283e268.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.4c8c4bbedbe76283e268.hot-update.js"
+    },
+    "4c8c4bbedbe76283e268.hot-update.json": {
+      "name": "4c8c4bbedbe76283e268.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/4c8c4bbedbe76283e268.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/4c8c4bbedbe76283e268.hot-update.json"
+    },
+    "app.25ca9de6c95eee9203c4.hot-update.js": {
+      "name": "app.25ca9de6c95eee9203c4.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.25ca9de6c95eee9203c4.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.25ca9de6c95eee9203c4.hot-update.js"
+    },
+    "25ca9de6c95eee9203c4.hot-update.json": {
+      "name": "25ca9de6c95eee9203c4.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/25ca9de6c95eee9203c4.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/25ca9de6c95eee9203c4.hot-update.json"
+    },
+    "app.736048eee1b9d819f4dc.hot-update.js": {
+      "name": "app.736048eee1b9d819f4dc.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.736048eee1b9d819f4dc.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.736048eee1b9d819f4dc.hot-update.js"
+    },
+    "736048eee1b9d819f4dc.hot-update.json": {
+      "name": "736048eee1b9d819f4dc.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/736048eee1b9d819f4dc.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/736048eee1b9d819f4dc.hot-update.json"
+    },
+    "app.dc34a6738668be2cd1fe.hot-update.js": {
+      "name": "app.dc34a6738668be2cd1fe.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.dc34a6738668be2cd1fe.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.dc34a6738668be2cd1fe.hot-update.js"
+    },
+    "dc34a6738668be2cd1fe.hot-update.json": {
+      "name": "dc34a6738668be2cd1fe.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/dc34a6738668be2cd1fe.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/dc34a6738668be2cd1fe.hot-update.json"
+    },
+    "app.425190fe3aad1ca6588e.hot-update.js": {
+      "name": "app.425190fe3aad1ca6588e.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.425190fe3aad1ca6588e.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.425190fe3aad1ca6588e.hot-update.js"
+    },
+    "425190fe3aad1ca6588e.hot-update.json": {
+      "name": "425190fe3aad1ca6588e.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/425190fe3aad1ca6588e.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/425190fe3aad1ca6588e.hot-update.json"
+    },
+    "app.c1817afae8bdf863a4c7.hot-update.js": {
+      "name": "app.c1817afae8bdf863a4c7.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.c1817afae8bdf863a4c7.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.c1817afae8bdf863a4c7.hot-update.js"
+    },
+    "c1817afae8bdf863a4c7.hot-update.json": {
+      "name": "c1817afae8bdf863a4c7.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/c1817afae8bdf863a4c7.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/c1817afae8bdf863a4c7.hot-update.json"
+    },
+    "app.fd525019f116a75dd9e7.hot-update.js": {
+      "name": "app.fd525019f116a75dd9e7.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.fd525019f116a75dd9e7.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.fd525019f116a75dd9e7.hot-update.js"
+    },
+    "fd525019f116a75dd9e7.hot-update.json": {
+      "name": "fd525019f116a75dd9e7.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/fd525019f116a75dd9e7.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/fd525019f116a75dd9e7.hot-update.json"
+    },
+    "app.ae2e4733a335b9ffcf01.hot-update.js": {
+      "name": "app.ae2e4733a335b9ffcf01.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ae2e4733a335b9ffcf01.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.ae2e4733a335b9ffcf01.hot-update.js"
+    },
+    "ae2e4733a335b9ffcf01.hot-update.json": {
+      "name": "ae2e4733a335b9ffcf01.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ae2e4733a335b9ffcf01.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/ae2e4733a335b9ffcf01.hot-update.json"
+    },
+    "app.82ea78a2467fd71a5ec1.hot-update.js": {
+      "name": "app.82ea78a2467fd71a5ec1.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.82ea78a2467fd71a5ec1.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.82ea78a2467fd71a5ec1.hot-update.js"
+    },
+    "82ea78a2467fd71a5ec1.hot-update.json": {
+      "name": "82ea78a2467fd71a5ec1.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/82ea78a2467fd71a5ec1.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/82ea78a2467fd71a5ec1.hot-update.json"
+    },
+    "5de26465a32af499aa11.hot-update.json": {
+      "name": "5de26465a32af499aa11.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/5de26465a32af499aa11.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/5de26465a32af499aa11.hot-update.json"
+    },
+    "3039d81861b19315abc3.hot-update.json": {
+      "name": "3039d81861b19315abc3.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3039d81861b19315abc3.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/3039d81861b19315abc3.hot-update.json"
+    },
+    "app.88702673952ef867414b.hot-update.js": {
+      "name": "app.88702673952ef867414b.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.88702673952ef867414b.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.88702673952ef867414b.hot-update.js"
+    },
+    "88702673952ef867414b.hot-update.json": {
+      "name": "88702673952ef867414b.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/88702673952ef867414b.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/88702673952ef867414b.hot-update.json"
+    },
+    "app.1e499aa848144969570f.hot-update.js": {
+      "name": "app.1e499aa848144969570f.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.1e499aa848144969570f.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.1e499aa848144969570f.hot-update.js"
+    },
+    "1e499aa848144969570f.hot-update.json": {
+      "name": "1e499aa848144969570f.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/1e499aa848144969570f.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/1e499aa848144969570f.hot-update.json"
+    },
+    "app.33aac26949ef811b8acf.hot-update.js": {
+      "name": "app.33aac26949ef811b8acf.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.33aac26949ef811b8acf.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.33aac26949ef811b8acf.hot-update.js"
+    },
+    "33aac26949ef811b8acf.hot-update.json": {
+      "name": "33aac26949ef811b8acf.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/33aac26949ef811b8acf.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/33aac26949ef811b8acf.hot-update.json"
+    },
+    "app.456a769749abd0dc7bd8.hot-update.js": {
+      "name": "app.456a769749abd0dc7bd8.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.456a769749abd0dc7bd8.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.456a769749abd0dc7bd8.hot-update.js"
+    },
+    "456a769749abd0dc7bd8.hot-update.json": {
+      "name": "456a769749abd0dc7bd8.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/456a769749abd0dc7bd8.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/456a769749abd0dc7bd8.hot-update.json"
+    },
+    "app.cdd5421d0d4e9bef1da8.hot-update.js": {
+      "name": "app.cdd5421d0d4e9bef1da8.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.cdd5421d0d4e9bef1da8.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.cdd5421d0d4e9bef1da8.hot-update.js"
+    },
+    "cdd5421d0d4e9bef1da8.hot-update.json": {
+      "name": "cdd5421d0d4e9bef1da8.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/cdd5421d0d4e9bef1da8.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/cdd5421d0d4e9bef1da8.hot-update.json"
+    },
+    "app.cef39a91e65ec22a9a2f.hot-update.js": {
+      "name": "app.cef39a91e65ec22a9a2f.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.cef39a91e65ec22a9a2f.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.cef39a91e65ec22a9a2f.hot-update.js"
+    },
+    "cef39a91e65ec22a9a2f.hot-update.json": {
+      "name": "cef39a91e65ec22a9a2f.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/cef39a91e65ec22a9a2f.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/cef39a91e65ec22a9a2f.hot-update.json"
+    },
+    "app.0480727053e135617b66.hot-update.js": {
+      "name": "app.0480727053e135617b66.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0480727053e135617b66.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.0480727053e135617b66.hot-update.js"
+    },
+    "0480727053e135617b66.hot-update.json": {
+      "name": "0480727053e135617b66.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0480727053e135617b66.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/0480727053e135617b66.hot-update.json"
+    },
+    "app.9d5ab2de416a46b725a8.hot-update.js": {
+      "name": "app.9d5ab2de416a46b725a8.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9d5ab2de416a46b725a8.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.9d5ab2de416a46b725a8.hot-update.js"
+    },
+    "9d5ab2de416a46b725a8.hot-update.json": {
+      "name": "9d5ab2de416a46b725a8.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9d5ab2de416a46b725a8.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/9d5ab2de416a46b725a8.hot-update.json"
+    },
+    "app.48f21d48a16aa3510744.hot-update.js": {
+      "name": "app.48f21d48a16aa3510744.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.48f21d48a16aa3510744.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.48f21d48a16aa3510744.hot-update.js"
+    },
+    "48f21d48a16aa3510744.hot-update.json": {
+      "name": "48f21d48a16aa3510744.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/48f21d48a16aa3510744.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/48f21d48a16aa3510744.hot-update.json"
+    },
+    "app.c73b8ff4c2b59ff54aa8.hot-update.js": {
+      "name": "app.c73b8ff4c2b59ff54aa8.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.c73b8ff4c2b59ff54aa8.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.c73b8ff4c2b59ff54aa8.hot-update.js"
+    },
+    "c73b8ff4c2b59ff54aa8.hot-update.json": {
+      "name": "c73b8ff4c2b59ff54aa8.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/c73b8ff4c2b59ff54aa8.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/c73b8ff4c2b59ff54aa8.hot-update.json"
+    },
+    "app.18f633d6f5fc416e0b43.hot-update.js": {
+      "name": "app.18f633d6f5fc416e0b43.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.18f633d6f5fc416e0b43.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.18f633d6f5fc416e0b43.hot-update.js"
+    },
+    "18f633d6f5fc416e0b43.hot-update.json": {
+      "name": "18f633d6f5fc416e0b43.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/18f633d6f5fc416e0b43.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/18f633d6f5fc416e0b43.hot-update.json"
+    },
+    "app.765217a9d8692b9104b0.hot-update.js": {
+      "name": "app.765217a9d8692b9104b0.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.765217a9d8692b9104b0.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.765217a9d8692b9104b0.hot-update.js"
+    },
+    "765217a9d8692b9104b0.hot-update.json": {
+      "name": "765217a9d8692b9104b0.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/765217a9d8692b9104b0.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/765217a9d8692b9104b0.hot-update.json"
+    },
+    "app.d4d1e70e84d961a0009d.hot-update.js": {
+      "name": "app.d4d1e70e84d961a0009d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d4d1e70e84d961a0009d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.d4d1e70e84d961a0009d.hot-update.js"
+    },
+    "d4d1e70e84d961a0009d.hot-update.json": {
+      "name": "d4d1e70e84d961a0009d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d4d1e70e84d961a0009d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/d4d1e70e84d961a0009d.hot-update.json"
+    },
+    "app.939a6bd780a3182bab2f.hot-update.js": {
+      "name": "app.939a6bd780a3182bab2f.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.939a6bd780a3182bab2f.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.939a6bd780a3182bab2f.hot-update.js"
+    },
+    "939a6bd780a3182bab2f.hot-update.json": {
+      "name": "939a6bd780a3182bab2f.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/939a6bd780a3182bab2f.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/939a6bd780a3182bab2f.hot-update.json"
+    },
+    "app.3ea361da554e420d6366.hot-update.js": {
+      "name": "app.3ea361da554e420d6366.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3ea361da554e420d6366.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.3ea361da554e420d6366.hot-update.js"
+    },
+    "3ea361da554e420d6366.hot-update.json": {
+      "name": "3ea361da554e420d6366.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3ea361da554e420d6366.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/3ea361da554e420d6366.hot-update.json"
+    },
+    "app.ab6bad75db5ddd4f8645.hot-update.js": {
+      "name": "app.ab6bad75db5ddd4f8645.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ab6bad75db5ddd4f8645.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.ab6bad75db5ddd4f8645.hot-update.js"
+    },
+    "ab6bad75db5ddd4f8645.hot-update.json": {
+      "name": "ab6bad75db5ddd4f8645.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ab6bad75db5ddd4f8645.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/ab6bad75db5ddd4f8645.hot-update.json"
+    },
+    "app.4a270ce9c0abc7950129.hot-update.js": {
+      "name": "app.4a270ce9c0abc7950129.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.4a270ce9c0abc7950129.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.4a270ce9c0abc7950129.hot-update.js"
+    },
+    "4a270ce9c0abc7950129.hot-update.json": {
+      "name": "4a270ce9c0abc7950129.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/4a270ce9c0abc7950129.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/4a270ce9c0abc7950129.hot-update.json"
+    },
+    "66fdd0c19ccf70294ed3.hot-update.json": {
+      "name": "66fdd0c19ccf70294ed3.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/66fdd0c19ccf70294ed3.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/66fdd0c19ccf70294ed3.hot-update.json"
+    },
+    "app.97d4ce0fe741e0e2eeaa.hot-update.js": {
+      "name": "app.97d4ce0fe741e0e2eeaa.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.97d4ce0fe741e0e2eeaa.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.97d4ce0fe741e0e2eeaa.hot-update.js"
+    },
+    "97d4ce0fe741e0e2eeaa.hot-update.json": {
+      "name": "97d4ce0fe741e0e2eeaa.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/97d4ce0fe741e0e2eeaa.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/97d4ce0fe741e0e2eeaa.hot-update.json"
+    },
+    "app.f74bc212f858a60dcb67.hot-update.js": {
+      "name": "app.f74bc212f858a60dcb67.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.f74bc212f858a60dcb67.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.f74bc212f858a60dcb67.hot-update.js"
+    },
+    "f74bc212f858a60dcb67.hot-update.json": {
+      "name": "f74bc212f858a60dcb67.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/f74bc212f858a60dcb67.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/f74bc212f858a60dcb67.hot-update.json"
+    },
+    "app.b584afc0976c8c1a9780.hot-update.js": {
+      "name": "app.b584afc0976c8c1a9780.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.b584afc0976c8c1a9780.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.b584afc0976c8c1a9780.hot-update.js"
+    },
+    "b584afc0976c8c1a9780.hot-update.json": {
+      "name": "b584afc0976c8c1a9780.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/b584afc0976c8c1a9780.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/b584afc0976c8c1a9780.hot-update.json"
+    },
+    "app.cc2497d185f1331550d0.hot-update.js": {
+      "name": "app.cc2497d185f1331550d0.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.cc2497d185f1331550d0.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.cc2497d185f1331550d0.hot-update.js"
+    },
+    "cc2497d185f1331550d0.hot-update.json": {
+      "name": "cc2497d185f1331550d0.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/cc2497d185f1331550d0.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/cc2497d185f1331550d0.hot-update.json"
+    },
+    "app.91f6eea2eb98762ce990.hot-update.js": {
+      "name": "app.91f6eea2eb98762ce990.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.91f6eea2eb98762ce990.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.91f6eea2eb98762ce990.hot-update.js"
+    },
+    "91f6eea2eb98762ce990.hot-update.json": {
+      "name": "91f6eea2eb98762ce990.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/91f6eea2eb98762ce990.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/91f6eea2eb98762ce990.hot-update.json"
+    },
+    "app.7285db7cc886f3940f5c.hot-update.js": {
+      "name": "app.7285db7cc886f3940f5c.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.7285db7cc886f3940f5c.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.7285db7cc886f3940f5c.hot-update.js"
+    },
+    "7285db7cc886f3940f5c.hot-update.json": {
+      "name": "7285db7cc886f3940f5c.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/7285db7cc886f3940f5c.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/7285db7cc886f3940f5c.hot-update.json"
+    },
+    "app.cdd16654299072d62753.hot-update.js": {
+      "name": "app.cdd16654299072d62753.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.cdd16654299072d62753.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.cdd16654299072d62753.hot-update.js"
+    },
+    "cdd16654299072d62753.hot-update.json": {
+      "name": "cdd16654299072d62753.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/cdd16654299072d62753.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/cdd16654299072d62753.hot-update.json"
+    },
+    "app.89405d3f52692ca7345a.hot-update.js": {
+      "name": "app.89405d3f52692ca7345a.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.89405d3f52692ca7345a.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.89405d3f52692ca7345a.hot-update.js"
+    },
+    "89405d3f52692ca7345a.hot-update.json": {
+      "name": "89405d3f52692ca7345a.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/89405d3f52692ca7345a.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/89405d3f52692ca7345a.hot-update.json"
+    },
+    "app.da5eff1b3a2a1275027d.hot-update.js": {
+      "name": "app.da5eff1b3a2a1275027d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.da5eff1b3a2a1275027d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.da5eff1b3a2a1275027d.hot-update.js"
+    },
+    "da5eff1b3a2a1275027d.hot-update.json": {
+      "name": "da5eff1b3a2a1275027d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/da5eff1b3a2a1275027d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/da5eff1b3a2a1275027d.hot-update.json"
+    },
+    "app.3f7b6ea2a11e791cbdf0.hot-update.js": {
+      "name": "app.3f7b6ea2a11e791cbdf0.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3f7b6ea2a11e791cbdf0.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.3f7b6ea2a11e791cbdf0.hot-update.js"
+    },
+    "3f7b6ea2a11e791cbdf0.hot-update.json": {
+      "name": "3f7b6ea2a11e791cbdf0.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3f7b6ea2a11e791cbdf0.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/3f7b6ea2a11e791cbdf0.hot-update.json"
+    },
+    "app.b10f3836969730f5949e.hot-update.js": {
+      "name": "app.b10f3836969730f5949e.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.b10f3836969730f5949e.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.b10f3836969730f5949e.hot-update.js"
+    },
+    "b10f3836969730f5949e.hot-update.json": {
+      "name": "b10f3836969730f5949e.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/b10f3836969730f5949e.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/b10f3836969730f5949e.hot-update.json"
+    },
+    "app.43168f3a72117bc8b73c.hot-update.js": {
+      "name": "app.43168f3a72117bc8b73c.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.43168f3a72117bc8b73c.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.43168f3a72117bc8b73c.hot-update.js"
+    },
+    "43168f3a72117bc8b73c.hot-update.json": {
+      "name": "43168f3a72117bc8b73c.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/43168f3a72117bc8b73c.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/43168f3a72117bc8b73c.hot-update.json"
+    },
+    "app.f9e88526d4afdb28f8fd.hot-update.js": {
+      "name": "app.f9e88526d4afdb28f8fd.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.f9e88526d4afdb28f8fd.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.f9e88526d4afdb28f8fd.hot-update.js"
+    },
+    "f9e88526d4afdb28f8fd.hot-update.json": {
+      "name": "f9e88526d4afdb28f8fd.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/f9e88526d4afdb28f8fd.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/f9e88526d4afdb28f8fd.hot-update.json"
+    },
+    "app.1754b554d6d2423516e3.hot-update.js": {
+      "name": "app.1754b554d6d2423516e3.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.1754b554d6d2423516e3.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.1754b554d6d2423516e3.hot-update.js"
+    },
+    "1754b554d6d2423516e3.hot-update.json": {
+      "name": "1754b554d6d2423516e3.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/1754b554d6d2423516e3.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/1754b554d6d2423516e3.hot-update.json"
+    },
+    "app.00b88da730ec9be55bdd.hot-update.js": {
+      "name": "app.00b88da730ec9be55bdd.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.00b88da730ec9be55bdd.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.00b88da730ec9be55bdd.hot-update.js"
+    },
+    "00b88da730ec9be55bdd.hot-update.json": {
+      "name": "00b88da730ec9be55bdd.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/00b88da730ec9be55bdd.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/00b88da730ec9be55bdd.hot-update.json"
+    },
+    "app.d3882f5ed5d8ca22651d.hot-update.js": {
+      "name": "app.d3882f5ed5d8ca22651d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d3882f5ed5d8ca22651d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.d3882f5ed5d8ca22651d.hot-update.js"
+    },
+    "d3882f5ed5d8ca22651d.hot-update.json": {
+      "name": "d3882f5ed5d8ca22651d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d3882f5ed5d8ca22651d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/d3882f5ed5d8ca22651d.hot-update.json"
+    },
+    "app.41fd518a07bf77950a6c.hot-update.js": {
+      "name": "app.41fd518a07bf77950a6c.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.41fd518a07bf77950a6c.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.41fd518a07bf77950a6c.hot-update.js"
+    },
+    "41fd518a07bf77950a6c.hot-update.json": {
+      "name": "41fd518a07bf77950a6c.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/41fd518a07bf77950a6c.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/41fd518a07bf77950a6c.hot-update.json"
+    },
+    "app.7d66cec9f53ccbed22aa.hot-update.js": {
+      "name": "app.7d66cec9f53ccbed22aa.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.7d66cec9f53ccbed22aa.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.7d66cec9f53ccbed22aa.hot-update.js"
+    },
+    "7d66cec9f53ccbed22aa.hot-update.json": {
+      "name": "7d66cec9f53ccbed22aa.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/7d66cec9f53ccbed22aa.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/7d66cec9f53ccbed22aa.hot-update.json"
+    },
+    "app.e656d51d4b1f6b1c57d8.hot-update.js": {
+      "name": "app.e656d51d4b1f6b1c57d8.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.e656d51d4b1f6b1c57d8.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.e656d51d4b1f6b1c57d8.hot-update.js"
+    },
+    "e656d51d4b1f6b1c57d8.hot-update.json": {
+      "name": "e656d51d4b1f6b1c57d8.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/e656d51d4b1f6b1c57d8.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/e656d51d4b1f6b1c57d8.hot-update.json"
+    },
+    "app.372791079c6c6f313847.hot-update.js": {
+      "name": "app.372791079c6c6f313847.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.372791079c6c6f313847.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.372791079c6c6f313847.hot-update.js"
+    },
+    "372791079c6c6f313847.hot-update.json": {
+      "name": "372791079c6c6f313847.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/372791079c6c6f313847.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/372791079c6c6f313847.hot-update.json"
+    },
+    "app.17bb46cb12e6c1b9098d.hot-update.js": {
+      "name": "app.17bb46cb12e6c1b9098d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.17bb46cb12e6c1b9098d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.17bb46cb12e6c1b9098d.hot-update.js"
+    },
+    "17bb46cb12e6c1b9098d.hot-update.json": {
+      "name": "17bb46cb12e6c1b9098d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/17bb46cb12e6c1b9098d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/17bb46cb12e6c1b9098d.hot-update.json"
+    },
+    "app.9c9b01b56189b66d216c.hot-update.js": {
+      "name": "app.9c9b01b56189b66d216c.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9c9b01b56189b66d216c.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.9c9b01b56189b66d216c.hot-update.js"
+    },
+    "9c9b01b56189b66d216c.hot-update.json": {
+      "name": "9c9b01b56189b66d216c.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9c9b01b56189b66d216c.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/9c9b01b56189b66d216c.hot-update.json"
+    },
+    "app.11ff2af7184d30c84ac5.hot-update.js": {
+      "name": "app.11ff2af7184d30c84ac5.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.11ff2af7184d30c84ac5.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.11ff2af7184d30c84ac5.hot-update.js"
+    },
+    "11ff2af7184d30c84ac5.hot-update.json": {
+      "name": "11ff2af7184d30c84ac5.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/11ff2af7184d30c84ac5.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/11ff2af7184d30c84ac5.hot-update.json"
+    },
+    "app.a4ff97e76968a077642e.hot-update.js": {
+      "name": "app.a4ff97e76968a077642e.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.a4ff97e76968a077642e.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.a4ff97e76968a077642e.hot-update.js"
+    },
+    "a4ff97e76968a077642e.hot-update.json": {
+      "name": "a4ff97e76968a077642e.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/a4ff97e76968a077642e.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/a4ff97e76968a077642e.hot-update.json"
+    },
+    "app.e67bb3e6550d0f61f52a.hot-update.js": {
+      "name": "app.e67bb3e6550d0f61f52a.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.e67bb3e6550d0f61f52a.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.e67bb3e6550d0f61f52a.hot-update.js"
+    },
+    "e67bb3e6550d0f61f52a.hot-update.json": {
+      "name": "e67bb3e6550d0f61f52a.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/e67bb3e6550d0f61f52a.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/e67bb3e6550d0f61f52a.hot-update.json"
+    },
+    "app.4210fa39683f25369aed.hot-update.js": {
+      "name": "app.4210fa39683f25369aed.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.4210fa39683f25369aed.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.4210fa39683f25369aed.hot-update.js"
+    },
+    "4210fa39683f25369aed.hot-update.json": {
+      "name": "4210fa39683f25369aed.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/4210fa39683f25369aed.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/4210fa39683f25369aed.hot-update.json"
+    },
+    "app.84169535ec5dfb5e8e05.hot-update.js": {
+      "name": "app.84169535ec5dfb5e8e05.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.84169535ec5dfb5e8e05.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.84169535ec5dfb5e8e05.hot-update.js"
+    },
+    "84169535ec5dfb5e8e05.hot-update.json": {
+      "name": "84169535ec5dfb5e8e05.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/84169535ec5dfb5e8e05.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/84169535ec5dfb5e8e05.hot-update.json"
+    },
+    "app.e775a745f999546f11eb.hot-update.js": {
+      "name": "app.e775a745f999546f11eb.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.e775a745f999546f11eb.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.e775a745f999546f11eb.hot-update.js"
+    },
+    "e775a745f999546f11eb.hot-update.json": {
+      "name": "e775a745f999546f11eb.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/e775a745f999546f11eb.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/e775a745f999546f11eb.hot-update.json"
+    },
+    "app.0de9957ed770efefff87.hot-update.js": {
+      "name": "app.0de9957ed770efefff87.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0de9957ed770efefff87.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.0de9957ed770efefff87.hot-update.js"
+    },
+    "0de9957ed770efefff87.hot-update.json": {
+      "name": "0de9957ed770efefff87.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0de9957ed770efefff87.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/0de9957ed770efefff87.hot-update.json"
+    },
+    "app.ca1078d0a4fd5e97f006.hot-update.js": {
+      "name": "app.ca1078d0a4fd5e97f006.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ca1078d0a4fd5e97f006.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.ca1078d0a4fd5e97f006.hot-update.js"
+    },
+    "ca1078d0a4fd5e97f006.hot-update.json": {
+      "name": "ca1078d0a4fd5e97f006.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ca1078d0a4fd5e97f006.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/ca1078d0a4fd5e97f006.hot-update.json"
+    },
+    "app.730445ee8041c22ec397.hot-update.js": {
+      "name": "app.730445ee8041c22ec397.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.730445ee8041c22ec397.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.730445ee8041c22ec397.hot-update.js"
+    },
+    "730445ee8041c22ec397.hot-update.json": {
+      "name": "730445ee8041c22ec397.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/730445ee8041c22ec397.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/730445ee8041c22ec397.hot-update.json"
+    },
+    "app.3cf4764c8661b230a5c0.hot-update.js": {
+      "name": "app.3cf4764c8661b230a5c0.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3cf4764c8661b230a5c0.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.3cf4764c8661b230a5c0.hot-update.js"
+    },
+    "3cf4764c8661b230a5c0.hot-update.json": {
+      "name": "3cf4764c8661b230a5c0.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3cf4764c8661b230a5c0.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/3cf4764c8661b230a5c0.hot-update.json"
+    },
+    "app.ccecc348619eb32e70c4.hot-update.js": {
+      "name": "app.ccecc348619eb32e70c4.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ccecc348619eb32e70c4.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.ccecc348619eb32e70c4.hot-update.js"
+    },
+    "ccecc348619eb32e70c4.hot-update.json": {
+      "name": "ccecc348619eb32e70c4.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ccecc348619eb32e70c4.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/ccecc348619eb32e70c4.hot-update.json"
+    },
+    "app.71a2eca7f3be834f0b34.hot-update.js": {
+      "name": "app.71a2eca7f3be834f0b34.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.71a2eca7f3be834f0b34.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.71a2eca7f3be834f0b34.hot-update.js"
+    },
+    "71a2eca7f3be834f0b34.hot-update.json": {
+      "name": "71a2eca7f3be834f0b34.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/71a2eca7f3be834f0b34.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/71a2eca7f3be834f0b34.hot-update.json"
+    },
+    "app.d3e613cdcb13822e813f.hot-update.js": {
+      "name": "app.d3e613cdcb13822e813f.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d3e613cdcb13822e813f.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.d3e613cdcb13822e813f.hot-update.js"
+    },
+    "d3e613cdcb13822e813f.hot-update.json": {
+      "name": "d3e613cdcb13822e813f.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d3e613cdcb13822e813f.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/d3e613cdcb13822e813f.hot-update.json"
+    },
+    "app.7677df4219a875078223.hot-update.js": {
+      "name": "app.7677df4219a875078223.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.7677df4219a875078223.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.7677df4219a875078223.hot-update.js"
+    },
+    "7677df4219a875078223.hot-update.json": {
+      "name": "7677df4219a875078223.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/7677df4219a875078223.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/7677df4219a875078223.hot-update.json"
     }
   },
   "chunks": {
     "app": [
       "bundle.css",
       "bundle.js",
-      "app.3d4fb2b7f482023b6c5a.hot-update.js"
+      "app.7677df4219a875078223.hot-update.js"
     ]
   },
-  "publicPath": "http://0.0.0.0:8080/"
+  "publicPath": "http://0.0.0.0:8080/",
+  "error": "ModuleError",
+  "message": "Module Error (from ./node_modules/eslint-loader/index.js):\n\n/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/src/components/AuctionForm.vue\n    3:21  warning  Delete `⏎·········`                                                                                                                                                                                                                                                                prettier/prettier\n    5:1   warning  Replace `··········` with `······`                                                                                                                                                                                                                                                 prettier/prettier\n    6:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n    7:9   warning  Replace `····<label·class=\"col-xxl-3·col-form-label\"⏎···················for=\"title\"⏎···················>Title⏎···········` with `<label·class=\"col-xxl-3·col-form-label\"·for=\"title\">Title`                                                                                        prettier/prettier\n   11:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   12:11  warning  Replace `····<input` with `<input⏎···········`                                                                                                                                                                                                                                     prettier/prettier\n   13:1   warning  Delete `·········`                                                                                                                                                                                                                                                                 prettier/prettier\n   14:13  warning  Delete `·········`                                                                                                                                                                                                                                                                 prettier/prettier\n   15:1   warning  Replace `·····················` with `············`                                                                                                                                                                                                                                prettier/prettier\n   16:1   warning  Delete `·········`                                                                                                                                                                                                                                                                 prettier/prettier\n   17:1   warning  Replace `·····················:class=\"{'is-invalid':·isTitleInvalid}\">` with `············:class=\"{·'is-invalid':·isTitleInvalid·}\"`                                                                                                                                               prettier/prettier\n   18:1   warning  Replace `··············` with `··········/>⏎··········`                                                                                                                                                                                                                            prettier/prettier\n   19:13  warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   20:1   warning  Replace `··················<li·v-for=\"(error,·index)·in·title.errors\"⏎······················:key=\"index\"` with `··············<li·v-for=\"(error,·index)·in·title.errors\"·:key=\"index\">`                                                                                            prettier/prettier\n   22:1   warning  Replace `······················>` with `················`                                                                                                                                                                                                                          prettier/prettier\n   23:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   24:13  warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   25:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   26:1   warning  Replace `············` with `········`                                                                                                                                                                                                                                             prettier/prettier\n   27:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   29:1   warning  Replace `··········` with `······`                                                                                                                                                                                                                                                 prettier/prettier\n   30:1   warning  Replace `··········` with `······`                                                                                                                                                                                                                                                 prettier/prettier\n   31:1   warning  Replace `············<label·class=\"col-xxl-3·col-form-label\"⏎··················` with `········<label·class=\"col-xxl-3·col-form-label\"`                                                                                                                                            prettier/prettier\n   33:1   warning  Delete `·········`                                                                                                                                                                                                                                                                 prettier/prettier\n   34:9   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   35:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   36:11  warning  Replace `····<textarea` with `<textarea⏎···········`                                                                                                                                                                                                                               prettier/prettier\n   37:1   warning  Replace `························` with `············`                                                                                                                                                                                                                             prettier/prettier\n   38:1   warning  Replace `························` with `············`                                                                                                                                                                                                                             prettier/prettier\n   39:1   warning  Replace `························` with `············`                                                                                                                                                                                                                             prettier/prettier\n   40:1   warning  Replace `························` with `············`                                                                                                                                                                                                                             prettier/prettier\n   41:1   warning  Replace `························:class=\"{'is-invalid':·isDescriptionInvalid}\">` with `············:class=\"{·'is-invalid':·isDescriptionInvalid·}\"`                                                                                                                                prettier/prettier\n   42:11  warning  Insert `>⏎······`                                                                                                                                                                                                                                                                  prettier/prettier\n   43:1   warning  Replace `··············<p·class=\"text-muted·mt-1·text-end·small·mb-0·mb-xxl-2\">{{·countDescriptionChars·}}/240` with `··········<p·class=\"text-muted·mt-1·text-end·small·mb-0·mb-xxl-2\">⏎············{{·countDescriptionChars·}}/240⏎··········`                                   prettier/prettier\n   44:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   45:13  warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   46:1   warning  Replace `··················<li·v-for=\"(error,·index)·in·description.errors\"⏎······················:key=\"index\"` with `··············<li·v-for=\"(error,·index)·in·description.errors\"·:key=\"index\">`                                                                                prettier/prettier\n   48:1   warning  Replace `······················>` with `················`                                                                                                                                                                                                                          prettier/prettier\n   49:1   warning  Replace `··················` with `··············`                                                                                                                                                                                                                                 prettier/prettier\n   50:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   51:11  warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   52:1   warning  Replace `············` with `········`                                                                                                                                                                                                                                             prettier/prettier\n   53:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   55:7   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   56:1   warning  Replace `··········` with `······`                                                                                                                                                                                                                                                 prettier/prettier\n   57:1   warning  Replace `············<label·class=\"col-xxl-3·col-form-label\"⏎··················` with `········<label·class=\"col-xxl-3·col-form-label\"`                                                                                                                                            prettier/prettier\n   59:1   warning  Replace `···················` with `··········`                                                                                                                                                                                                                                    prettier/prettier\n   60:9   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   61:1   warning  Replace `············` with `········`                                                                                                                                                                                                                                             prettier/prettier\n   62:1   warning  Replace `··············` with `··········`                                                                                                                                                                                                                                         prettier/prettier\n   63:13  warning  Replace `····<span·class=\"input-group-text\"⏎······················id=\"euro-symbol\"⏎······················>€⏎················</span>` with `<span·class=\"input-group-text\"·id=\"euro-symbol\">€·</span>⏎············<input`                                                           prettier/prettier\n   67:15  warning  Delete `··<input·`                                                                                                                                                                                                                                                                 prettier/prettier\n   68:1   warning  Replace `·······················` with `··············`                                                                                                                                                                                                                            prettier/prettier\n   69:15  warning  Delete `·········`                                                                                                                                                                                                                                                                 prettier/prettier\n   70:1   warning  Replace `·······················` with `··············`                                                                                                                                                                                                                            prettier/prettier\n   71:1   warning  Replace `·······················` with `··············`                                                                                                                                                                                                                            prettier/prettier\n   72:1   warning  Replace `·······················` with `··············`                                                                                                                                                                                                                            prettier/prettier\n   73:1   warning  Replace `·······················:class=\"{'is-invalid':·isInitialPriceInvalid}\">` with `··············:class=\"{·'is-invalid':·isInitialPriceInvalid·}\"`                                                                                                                             prettier/prettier\n   74:1   warning  Replace `················` with `············/>⏎············`                                                                                                                                                                                                                      prettier/prettier\n   75:15  warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   76:1   warning  Replace `····················<li·v-for=\"(error,·index)·in·initialPrice.errors\"⏎························:key=\"index\"` with `················<li·v-for=\"(error,·index)·in·initialPrice.errors\"·:key=\"index\">`                                                                        prettier/prettier\n   78:1   warning  Replace `························>` with `··················`                                                                                                                                                                                                                      prettier/prettier\n   79:1   warning  Replace `····················` with `················`                                                                                                                                                                                                                             prettier/prettier\n   80:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   81:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   82:11  warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   83:1   warning  Replace `············` with `········`                                                                                                                                                                                                                                             prettier/prettier\n   84:1   warning  Replace `··········` with `······`                                                                                                                                                                                                                                                 prettier/prettier\n   86:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   87:1   warning  Replace `··········` with `······`                                                                                                                                                                                                                                                 prettier/prettier\n   88:1   warning  Replace `············<label·class=\"col-xxl-3·col-form-label\"⏎··················` with `········<label·class=\"col-xxl-3·col-form-label\"`                                                                                                                                            prettier/prettier\n   90:1   warning  Replace `···················` with `··········`                                                                                                                                                                                                                                    prettier/prettier\n   91:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   92:9   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n   93:11  warning  Replace `····<input` with `<input⏎···········`                                                                                                                                                                                                                                     prettier/prettier\n   94:1   warning  Replace `·····················` with `············`                                                                                                                                                                                                                                prettier/prettier\n   95:1   warning  Replace `·····················` with `············`                                                                                                                                                                                                                                prettier/prettier\n   96:1   warning  Replace `·····················v-model=\"openedAt.value\">` with `············v-model=\"openedAt.value\"`                                                                                                                                                                               prettier/prettier\n   97:1   warning  Replace `············` with `··········/>⏎········`                                                                                                                                                                                                                                prettier/prettier\n   98:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n  100:1   warning  Replace `··········` with `······`                                                                                                                                                                                                                                                 prettier/prettier\n  101:1   warning  Replace `··········` with `······`                                                                                                                                                                                                                                                 prettier/prettier\n  102:9   warning  Replace `····<button·class=\"btn·btn-success\"⏎····················type=\"submit\"⏎····················v-if=\"isNewAuction\"` with `<button·class=\"btn·btn-success\"·type=\"submit\"·v-if=\"isNewAuction\">`                                                                                  prettier/prettier\n  105:1   warning  Replace `····················>` with `··········`                                                                                                                                                                                                                                  prettier/prettier\n  106:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n  107:1   warning  Replace `············<button·class=\"btn·btn-success\"⏎····················type=\"submit\"⏎····················v-else⏎····················>Update⏎············` with `········<button·class=\"btn·btn-success\"·type=\"submit\"·v-else>Update`                                             prettier/prettier\n  112:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n  119:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  120:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  121:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  122:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  124:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  125:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  126:1   warning  Replace `····` with `··`                                                                                                                                                                                                                                                           prettier/prettier\n  127:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  128:7   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  129:1   warning  Replace `········required:·false` with `······required:·false,`                                                                                                                                                                                                                    prettier/prettier\n  130:5   warning  Replace `··}` with `},`                                                                                                                                                                                                                                                            prettier/prettier\n  131:3   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  132:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  133:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  134:7   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  135:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  136:1   warning  Replace `··········errors:·[]` with `········errors:·[],`                                                                                                                                                                                                                          prettier/prettier\n  137:1   warning  Replace `········` with `······`                                                                                                                                                                                                                                                   prettier/prettier\n  138:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  139:9   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  140:9   warning  Replace `··errors:·[]` with `errors:·[],`                                                                                                                                                                                                                                          prettier/prettier\n  141:1   warning  Replace `········` with `······`                                                                                                                                                                                                                                                   prettier/prettier\n  142:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  143:9   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  144:1   warning  Replace `··········errors:·[]` with `········errors:·[],`                                                                                                                                                                                                                          prettier/prettier\n  145:1   warning  Replace `········` with `······`                                                                                                                                                                                                                                                   prettier/prettier\n  146:1   warning  Replace `········` with `······`                                                                                                                                                                                                                                                   prettier/prettier\n  147:9   warning  Replace `··value:·null` with `value:·null,`                                                                                                                                                                                                                                        prettier/prettier\n  148:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  149:7   warning  Replace `··error:·null` with `error:·null,`                                                                                                                                                                                                                                        prettier/prettier\n  150:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  151:3   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  152:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  153:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  154:7   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  155:9   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  156:1   warning  Replace `········` with `······`                                                                                                                                                                                                                                                   prettier/prettier\n  157:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  158:5   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  159:1   warning  Replace `······` with `····`                                                                                                                                                                                                                                                       prettier/prettier\n  160:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  161:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  162:7   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  163:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  164:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  165:5   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  166:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  167:1   warning  Replace `······` with `····`                                                                                                                                                                                                                                                       prettier/prettier\n  168:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  169:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  170:1   warning  Replace `······` with `····`                                                                                                                                                                                                                                                       prettier/prettier\n  171:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  172:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  173:5   warning  Replace `··}` with `},`                                                                                                                                                                                                                                                            prettier/prettier\n  174:3   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  175:1   warning  Replace `····` with `··`                                                                                                                                                                                                                                                           prettier/prettier\n  176:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  177:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  178:9   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  179:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  180:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  181:9   warning  Replace `··this.openedAt.value·=·moment.utc(this.auction.opened_at,·'YYYY-MM-DDTHH:mm').local().format('YYYY-MM-DDTHH:mm'` with `this.openedAt.value·=·moment⏎··········.utc(this.auction.opened_at,·\"YYYY-MM-DDTHH:mm\")⏎··········.local()⏎··········.format(\"YYYY-MM-DDTHH:mm\"`  prettier/prettier\n  182:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  183:5   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  184:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  185:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  200:7   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  201:7   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  202:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  202:13  error    'maxCharDescription' is defined but never used                                                                                                                                                                                                                                     no-unused-vars\n  203:7   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  204:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  205:1   warning  Replace `········` with `······`                                                                                                                                                                                                                                                   prettier/prettier\n  206:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  207:9   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  208:1   warning  Replace `········` with `······`                                                                                                                                                                                                                                                   prettier/prettier\n  209:9   warning  Replace `··this.title.errors.push('Maximum·number·of·characters·exceeded·(${this.title.value.length}/${maxCharTitle}).'` with `this.title.errors.push(⏎··········\"Maximum·number·of·characters·exceeded·(${this.title.value.length}/${maxCharTitle}).\"⏎········`                   prettier/prettier\n  210:1   warning  Replace `··········` with `········`                                                                                                                                                                                                                                               prettier/prettier\n  211:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  212:7   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  213:1   warning  Replace `········` with `······`                                                                                                                                                                                                                                                   prettier/prettier\n  214:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  215:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  216:11  warning  Replace `··this.description.errors.push(\"Maximum·number·of·characters·exceeded.\"` with `this.description.errors.push(⏎············\"Maximum·number·of·characters·exceeded.\"⏎··········`                                                                                             prettier/prettier\n  217:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  218:9   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  219:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  220:1   warning  Replace `········` with `······`                                                                                                                                                                                                                                                   prettier/prettier\n  221:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  222:7   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  223:1   warning  Replace `··········let·decimals·=·countDecimalPlaces(this.initialPrice.value)` with `········let·decimals·=·countDecimalPlaces(this.initialPrice.value);`                                                                                                                          prettier/prettier\n  224:1   warning  Replace `··········` with `········`                                                                                                                                                                                                                                               prettier/prettier\n  225:1   warning  Replace `············this.initialPrice.errors.push(\"Maximum·allowed·price:·€9999999999.99\");` with `··········this.initialPrice.errors.push(⏎············\"Maximum·allowed·price:·€9999999999.99\"`                                                                                  prettier/prettier\n  226:8   warning  Insert `···);⏎·····`                                                                                                                                                                                                                                                               prettier/prettier\n  227:1   warning  Replace `··········` with `········`                                                                                                                                                                                                                                               prettier/prettier\n  228:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  229:1   warning  Replace `············this.initialPrice.errors.push(\"Please·enter·a·price·with·no·more·than·2·decimals.\");` with `··········this.initialPrice.errors.push(⏎············\"Please·enter·a·price·with·no·more·than·2·decimals.\"`                                                        prettier/prettier\n  230:1   warning  Replace `············` with `··········);⏎··········`                                                                                                                                                                                                                              prettier/prettier\n  231:9   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  232:1   warning  Replace `··········` with `········`                                                                                                                                                                                                                                               prettier/prettier\n  233:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  234:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  235:9   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  236:11  warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  237:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  238:7   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  239:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  240:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  241:5   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  242:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  246:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  247:9   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  248:9   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  249:1   warning  Replace `··········` with `········`                                                                                                                                                                                                                                               prettier/prettier\n  250:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  251:11  warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  252:1   warning  Replace `··········` with `········`                                                                                                                                                                                                                                               prettier/prettier\n  253:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  254:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  255:11  warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  256:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  257:1   warning  Replace `············opened_at:·this.openedAt.value` with `··········opened_at:·this.openedAt.value,`                                                                                                                                                                              prettier/prettier\n  258:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  259:1   warning  Replace `··········await·apiService(endpoint,·method,·data)⏎············.then(response` with `········await·apiService(endpoint,·method,·data).then((response)`                                                                                                                    prettier/prettier\n  261:1   warning  Replace `··············` with `··········`                                                                                                                                                                                                                                         prettier/prettier\n  262:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n  263:13  warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n  264:13  warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n  265:1   warning  Replace `··············` with `··········`                                                                                                                                                                                                                                         prettier/prettier\n  266:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n  267:13  warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n  268:1   warning  Replace `················` with `············`                                                                                                                                                                                                                                     prettier/prettier\n  269:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n  270:13  warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n  271:1   warning  Replace `················` with `············`                                                                                                                                                                                                                                     prettier/prettier\n  272:11  warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n  273:1   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n  274:9   warning  Delete `····`                                                                                                                                                                                                                                                                      prettier/prettier\n  275:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  276:5   warning  Replace `··}` with `},`                                                                                                                                                                                                                                                            prettier/prettier\n  277:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  278:3   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  279:1   warning  Delete `··`                                                                                                                                                                                                                                                                        prettier/prettier\n  280:1   warning  Replace `····}` with `··},`                                                                                                                                                                                                                                                        prettier/prettier\n  281:1   warning  Replace `··}` with `};`                                                                                                                                                                                                                                                            prettier/prettier\n  284:26  warning  Delete `⏎`                                                                                                                                                                                                                                                                         prettier/prettier\n\n✖ 233 problems (1 error, 232 warnings)\n  0 errors and 232 warnings potentially fixable with the `--fix` option.\n"
 }
