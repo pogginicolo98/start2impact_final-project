@@ -39,7 +39,7 @@
             </div>
 
             <!-- Bid form -->
-            <BidFormComponent :id="id"
+            <BidFormComponent :auction="auction"
                               :isLastUser="isLastUser"/>
           </div>
         </div>
@@ -55,7 +55,7 @@
           </div>
           <div class="card-body">
             <p class="card-text my-2">{{ auction.description }}</p>
-            <p class="card-text text-muted fs-14px mb-0">Initial price: {{ auction.last_price }} €</p>
+            <p class="card-text text-muted fs-14px mb-0">Initial price: {{ auction.initial_price }} €</p>
             <p class="card-text text-muted fs-14px mb-2">Opened {{ getOpenedAt }}</p>
           </div>
         </div>

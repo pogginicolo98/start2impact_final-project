@@ -187,7 +187,7 @@
           this.title.value = this.auction.title;
           this.description.value = this.auction.description;
           this.initialPrice.value = this.auction.initial_price;
-          this.openedAt.value = moment.utc(this.auction.opened_at, 'YYYY-MM-DDTHH:mm').local().format('YYYY-MM-DDTHH:mm');
+          this.openedAt.value = moment.utc(this.auction.opened_at, 'YYYY-MM-DDTHH:mm').format('YYYY-MM-DDTHH:mm');
         }
       },
       validateForm() {

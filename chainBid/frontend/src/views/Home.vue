@@ -6,34 +6,30 @@
            v-for="(auction, index) in auctions"
            :key="index">
            <!-- Card -->
-           <div class="card mb-4 mx-auto"
-                style="width: 18rem; height: 22rem;">
-                <!-- Card image -->
-                <div class="auction-image">
-                  <img alt="product image"
-                       class="card-img-top"
-                       :src="auction.image">
-                </div>
-
-                <!-- Card body -->
-                <div class="card-body text-center">
-                  <h4 class="card-title">{{ auction.title }}</h4>
-                  <hr>
-                  <p class="card-text text-success">Current price: <strong>€{{ auction.last_price }}</strong></p>
-                  <template v-if="auction.remaining_time">
-                    <p class="card-text text-danger"><strong>Started</strong></p>
-                  </template>
-                  <template v-else>
-                    <p class="card-text text-muted"><strong>No bids yet</strong></p>
-                  </template>
-                  <div class="d-grid">
-                    <router-link class="btn btn-success"
-                                 :to="{ name: 'auction', params: { id: auction.id } }"
-                                 >Bid
-                    </router-link>
+           <router-link :to="{ name: 'auction', params: { id: auction.id } }">
+             <div class="card mb-4 mx-auto"
+                  style="width: 18rem; height: 22rem;">
+                  <!-- Card image -->
+                  <div class="auction-image">
+                    <img alt="product image"
+                         class="card-img-top"
+                         :src="auction.image">
                   </div>
-                </div>
-           </div> <!-- Card -->
+
+                  <!-- Card body -->
+                  <div class="card-body text-center">
+                    <h4 class="card-title">{{ auction.title }}</h4>
+                    <hr>
+                    <p class="card-text text-success">Current price: <strong>€{{ auction.last_price }}</strong></p>
+                    <template v-if="auction.remaining_time">
+                      <p class="card-text text-danger"><strong>Started</strong></p>
+                    </template>
+                    <template v-else>
+                      <p class="card-text text-muted"><strong>No bids yet</strong></p>
+                    </template>
+                  </div>
+             </div> <!-- Card -->
+           </router-link>
       </div> <!-- X col, signle auction -->
     </div> <!-- Row -->
 
@@ -112,5 +108,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .card {
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+      border-radius: 0;
+      border: 0;
+      margin-bottom: 1.5em;
+    }
+
+  .card:hover {
+    transform: scale(1.1);
   }
 </style>

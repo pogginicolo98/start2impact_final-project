@@ -200,9 +200,9 @@ class AuctionReport(models.Model):
             'description': self.auction.description,
             'initial price': self.auction.initial_price,
             'final price': self.auction.final_price,
-            'winner': str(self.auction.winner),
-            'opening date': self.auction.opened_at,
-            'closing date': self.auction.closed_at
+            'winner': self.auction.winner.username,
+            'opened at': self.auction.opened_at,
+            'closed at': self.auction.closed_at
         }
         file_name = f'auction {self.auction.pk}.json'
         destination_dir = os.path.join(self.MEDIA_DIR, 'reports')

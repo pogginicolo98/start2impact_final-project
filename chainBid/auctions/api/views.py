@@ -1,4 +1,5 @@
 from auctions.api.serializers import (AuctionBidSerializer,
+                                      AuctionClosedSerializer,
                                       AuctionImageSerializer,
                                       AuctionInfoSerializer,
                                       AuctionReportSerializer,
@@ -139,3 +140,21 @@ class AuctionReportRetrieveAPIView(RetrieveAPIView):
     def get_object(self):
         object = super().get_object()
         return object.report
+
+
+class AuctionClosedListRetrieveAPIView(ListModelMixin,
+                                       RetrieveModelMixin,
+                                       GenericViewSet):
+    """
+    Auction ViewSet.
+
+    :actions
+    - list
+    - retrieve
+
+    * Only authenticated users can access to this endpoint.
+    """
+
+    queryset = Auction.objects.filter(status=False).exclude(closed_at=None)
+    serializer_class = AuctionClosedSerializer
+    permission_classes = [IsAuthenticated]

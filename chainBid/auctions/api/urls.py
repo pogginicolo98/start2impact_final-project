@@ -1,4 +1,5 @@
 from auctions.api.views import (AuctionBidAPIView,
+                                AuctionClosedListRetrieveAPIView,
                                 AuctionImageUpdateAPIView,
                                 AuctionInfoRetrieveAPIView,
                                 AuctionListRetrieveAPIView,
@@ -10,6 +11,7 @@ from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
 router.register(r'schedule-auctions', AuctionScheduleViewSet, basename='schedule-auctions')
 router.register(r'auctions', AuctionListRetrieveAPIView, basename='auctions')
+router.register(r'closed-auctions', AuctionClosedListRetrieveAPIView, basename='closed-auctions')
 
 urlpatterns = [
     path('', include(router.urls)),
