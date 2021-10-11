@@ -1,0 +1,137 @@
+<template>
+  <div class="container mt-3 mt-md-5">
+    <div class="row justify-content-start">
+      <!-- X col per signle auction -->
+      <div class="col-12 col-md-6 col-lg-4 col-xxl-3"
+           v-for="(auction, index) in auctions"
+           :key="index">
+           <!-- Card -->
+           <router-link :to="{ name: 'closed auction detail', params: { id: auction.id } }">
+             <div class="card mb-4 mx-auto"
+                  style="width: 18rem; height: 22rem;">
+                  <!-- Card image -->
+                  <div class="auction-image">
+                    <img alt="product image"
+                         class="card-img-top"
+                         :src="auction.image">
+                  </div>
+
+                  <!-- Card body -->
+                  <div class="card-body text-center">
+                    <h4 class="card-title">{{ auction.title }}</h4>
+                    <hr>
+                    <template v-if="!isCanceled(auction)">
+                      <p class="card-text" v-show="!isCanceled(auction)">Won by: {{ auction.winner }}</p>
+                      <p class="card-text text-success">Price: <strong>€{{ auction.final_price }}</strong></p>
+                    </template>
+                    <template v-else>
+                      <p class="card-text text-danger">Canceled</p>
+                    </template>
+                  </div>
+
+                  <div class="card-footer text-center">
+                    <p class="card-text text-muted">Closed {{ getClosedAt(auction) }}</p>
+                  </div>
+             </div> <!-- Card -->
+           </router-link>
+      </div> <!-- X col, signle auction -->
+    </div> <!-- Row -->
+
+    <!-- Load more auction -->
+    <div class="mb-5 mt-2 text-center" >
+      <!-- Spinner -->
+      <div v-show="loadingAuctions">
+        <div class="spinner-border text-success"
+             role="status"
+             style="width: 3rem; height: 3rem;">
+        </div>
+      </div>
+
+      <!-- Button -->
+      <button class="btn btn-success"
+              v-show="next"
+              @click="getAuctions"
+              >Show more
+      </button>
+    </div>
+  </div> <!-- Container -->
+</template>
+
+<script>
+  // @ is an alias to /src
+  import { apiService } from "@/common/api.service.js";
+  import moment from 'moment';
+
+  export default {
+    name: "ClosedAuctions",
+    data() {
+      return {
+        auctions: [],
+        next: null,
+        loadingAuctions: false
+      };
+    },
+    methods: {
+      async getAuctions() {
+        /*
+          Retrieve active auctions according to pagination.
+        */
+
+        let endpoint = "/api/closed-auctions/";
+        if (this.next) {
+          endpoint = this.next;
+        }
+        this.loadingAuctions = true;
+        await apiService(endpoint)
+          .then(response => {
+            this.auctions.push(...response.results);
+            this.loadingAuctions = false;
+            if (response.next) {
+              this.next = response.next;
+            } else {
+              this.next = null;
+            }
+          });
+      },
+      getClosedAt(auction) {
+        return moment(auction.closed_at).fromNow();
+      },
+      isCanceled(auction) {
+        if (auction.winner != "None") {
+          return false;
+        }
+        return true;
+      }
+    },
+    created() {
+      document.title = "Closed auctions | ChainBid";
+      this.getAuctions();
+    }
+  }
+</script>
+
+<style lang="css" scoped>
+  .auction-image {
+    /*
+      Fixed width and height, image not stretched and centered.
+    */
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+      border-radius: 0;
+      border: 0;
+      margin-bottom: 1.5em;
+    }
+
+  .card:hover {
+    transform: scale(1.1);
+  }
+</style>

@@ -28,7 +28,7 @@
 
               <!-- Remaining time -->
               <div class="col-auto">
-                <p class="card-text text-muted fs-14px mb-0">Remaining time</p>
+                <p class="card-text text-muted fs-14px mb-0">Closing in</p>
                 <template v-if="auctionStarted">
                   <p class="card-text text-danger fs-5"><strong>{{ getRemainingTime }}</strong></p>
                 </template>
@@ -55,7 +55,7 @@
           </div>
           <div class="card-body">
             <p class="card-text my-2">{{ auction.description }}</p>
-            <p class="card-text text-muted fs-14px mb-0">Initial price: {{ auction.initial_price }} €</p>
+            <p class="card-text text-muted fs-14px mb-0">Initial price: €{{ auction.initial_price }}</p>
             <p class="card-text text-muted fs-14px mb-2">Opened {{ getOpenedAt }}</p>
           </div>
         </div>
@@ -125,7 +125,7 @@
           .then(response => {
             this.auction = response;
             this.lastPrice = response.last_price;
-            document.title = response.title;
+            document.title = `${response.title} | ChainBid`;
           });
       },
       async getAuctionInfo() {

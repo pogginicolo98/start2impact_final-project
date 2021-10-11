@@ -18,8 +18,7 @@
 
 <style>
   body {
-    /* font-family: 'Montserrat', sans-serif; */
-    font-family: 'Poppins', sans-serif;
+    background-color: #F2E9E4;
   }
 
   a {

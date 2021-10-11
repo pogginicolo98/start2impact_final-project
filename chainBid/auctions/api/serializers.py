@@ -177,4 +177,4 @@ class AuctionClosedSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'description', 'image', 'initial_price', 'final_price', 'winner', 'opened_at', 'closed_at']
 
     def get_winner(self, instance):
-        return instance.winner.username
+        return str(instance.winner)
