@@ -4,6 +4,8 @@ import Home from "@/views/Home.vue";
 import Auction from "@/views/Auction.vue";
 import ScheduleAuctions from "@/views/ScheduleAuctions.vue";
 import AuctionEditor from "@/views/AuctionEditor.vue";
+import ClosedAuctions from "@/views/ClosedAuctions.vue";
+import ClosedAuctionDetail from "@/views/ClosedAuctionDetail.vue";
 
 Vue.use(VueRouter);
 
@@ -28,6 +30,17 @@ const routes = [
     path: "/schedule-auctions/:id",
     name: "auction editor",
     component: AuctionEditor,
+    props: true
+  },
+  {
+    path: "/closed-auctions",
+    name: "closed auctions",
+    component: ClosedAuctions
+  },
+  {
+    path: "/closed-auctions/:id",
+    name: "closed auction detail",
+    component: ClosedAuctionDetail,
     props: true
   },
 ];

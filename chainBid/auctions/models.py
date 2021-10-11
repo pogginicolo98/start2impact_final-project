@@ -200,7 +200,7 @@ class AuctionReport(models.Model):
             'description': self.auction.description,
             'initial price': self.auction.initial_price,
             'final price': self.auction.final_price,
-            'winner': self.auction.winner.username,
+            'winner': str(self.auction.winner),
             'opened at': self.auction.opened_at,
             'closed at': self.auction.closed_at
         }

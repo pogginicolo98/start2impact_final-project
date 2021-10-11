@@ -1,5 +1,5 @@
 <template lang="html">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient sticky-top shadow">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-custom sticky-top shadow">
     <div class="container">
       <!-- Brand and logo -->
       <router-link class="navbar-brand"
@@ -33,10 +33,10 @@
                </router-link>
              </li>
              <li class="nav-item">
-               <a class="nav-link"
-                  href="#"
-                  >Closed auctions
-               </a>
+               <router-link class="nav-link"
+                            :to="{ name: 'closed auctions' }"
+                            >Closed auctions
+               </router-link>
              </li>
              <li class="nav-item" v-if="isStaffUser">
                <router-link class="nav-link"
@@ -126,6 +126,10 @@
 </script>
 
 <style lang="css">
+  .bg-custom {
+    background-image: linear-gradient(to bottom right, #22223B, #4A4E69);
+  }
+
   .nav-icon {
     color: #ffe3b0;
   }

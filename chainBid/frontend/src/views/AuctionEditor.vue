@@ -164,12 +164,12 @@
           await apiService(endpoint)
             .then(response => {
               this.modifiedAuction = response;
-              document.title = response.title;
+              document.title = `${response.title} | ChainBid`;
             });
         }
     },
     created() {
-      document.title = this.modifiedAuction.title;
+      document.title = `${this.modifiedAuction.title} | ChainBid`;
     },
   }
 </script>

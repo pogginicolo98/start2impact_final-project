@@ -6,30 +6,31 @@
            v-for="(auction, index) in auctions"
            :key="index">
            <!-- Card -->
-           <router-link :to="{ name: 'auction', params: { id: auction.id } }">
+           <router-link :to="{ name: 'closed auction detail', params: { id: auction.id } }">
              <div class="card mb-4 mx-auto"
-                  style="width: 18rem; height: 21rem;">
+                  style="width: 18rem; height: 22rem;">
                   <!-- Card image -->
-
+                  <div class="auction-image">
+                    <img alt="product image"
+                         class="card-img-top"
+                         :src="auction.image">
+                  </div>
 
                   <!-- Card body -->
                   <div class="card-body text-center">
-                    <p class="card-title text-custom fw-bold fs-4">{{ auction.title }}</p>
-                    <div class="card-img-wrap mt-3 mb-2">
-                      <img alt="product image"
-                           class="card-img"
-                           :src="auction.image">
-                    </div>
-                    <p class="card-text text-custom fs-5 mb-1">€{{ auction.last_price }}</p>
-                    <template v-if="auction.remaining_time">
-                      <p class="card-text text-danger">Started</p>
+                    <h4 class="card-title">{{ auction.title }}</h4>
+                    <hr>
+                    <template v-if="!isCanceled(auction)">
+                      <p class="card-text" v-show="!isCanceled(auction)">Won by: {{ auction.winner }}</p>
+                      <p class="card-text text-success">Price: <strong>€{{ auction.final_price }}</strong></p>
                     </template>
                     <template v-else>
-                      <p class="card-text text-muted">No bids yet</p>
+                      <p class="card-text text-danger">Canceled</p>
                     </template>
-                    <!-- <p class="card-text">€{{ auction.last_price }}</p> -->
-                    <hr class="text-custom my-2">
-                    <p class="card-text text-muted">Opened {{ getOpenedAt(auction) }}</p>
+                  </div>
+
+                  <div class="card-footer text-center">
+                    <p class="card-text text-muted">Closed {{ getClosedAt(auction) }}</p>
                   </div>
              </div> <!-- Card -->
            </router-link>
@@ -62,13 +63,13 @@
   import moment from 'moment';
 
   export default {
-    name: "Home",
+    name: "ClosedAuctions",
     data() {
       return {
         auctions: [],
         next: null,
         loadingAuctions: false
-      }
+      };
     },
     methods: {
       async getAuctions() {
@@ -76,7 +77,7 @@
           Retrieve active auctions according to pagination.
         */
 
-        let endpoint = "/api/auctions/";
+        let endpoint = "/api/closed-auctions/";
         if (this.next) {
           endpoint = this.next;
         }
@@ -92,17 +93,22 @@
             }
           });
       },
-      getOpenedAt(auction) {
-        return moment(auction.opened_at).fromNow();
+      getClosedAt(auction) {
+        return moment(auction.closed_at).fromNow();
+      },
+      isCanceled(auction) {
+        if (auction.winner != "None") {
+          return false;
+        }
+        return true;
       }
     },
     created() {
-      document.title = "ChainBid";
+      document.title = "Closed auctions | ChainBid";
       this.getAuctions();
     }
-  };
+  }
 </script>
-
 
 <style lang="css" scoped>
   .auction-image {
@@ -118,42 +124,14 @@
   }
 
   .card {
-    background-color: #F8F4F1;
-    transition: transform 0.2s ease;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
-    border-radius: 10%;
-    border: 0;
-    margin-bottom: 1.5em;
-  }
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+      border-radius: 0;
+      border: 0;
+      margin-bottom: 1.5em;
+    }
 
   .card:hover {
     transform: scale(1.1);
-  }
-
-  .card-img-wrap {
-    overflow: hidden;
-    position: relative;
-  }
-  .card-img-wrap:after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.3);
-    opacity: 0;
-    transition: opacity .25s;
-  }
-  .card-img-wrap img {
-    transition: transform .25s;
-    width: 100%;
-  }
-  .card:hover .card-img-wrap img {
-    transform: scale(1.2);
-  }
-  .card:hover .card-img-wrap:after {
-    opacity: 1;
-  }
-
-  .text-custom {
-    color: #37251B;
   }
 </style>
