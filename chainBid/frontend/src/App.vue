@@ -29,16 +29,20 @@
     box-shadow: none !important;
   }
 
-  .fs-18px {
-    font-size: 18px;
-  }
-
   .fs-15px {
     font-size: 15px;
   }
 
   .fs-14px {
     font-size: 14px;
+  }
+
+  .fs-17px {
+    font-size: 17px;
+  }
+
+  .fs-18px {
+    font-size: 18px;
   }
 
   .fs-20px {

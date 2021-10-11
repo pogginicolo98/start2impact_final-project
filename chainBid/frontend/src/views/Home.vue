@@ -14,22 +14,22 @@
 
                   <!-- Card body -->
                   <div class="card-body text-center">
-                    <p class="card-title text-custom fw-bold fs-4">{{ auction.title }}</p>
+                    <p class="card-title text-custom fw-bold fs-24px">{{ auction.title }}</p>
                     <div class="card-img-wrap mt-3 mb-2">
                       <img alt="product image"
                            class="card-img"
                            :src="auction.image">
                     </div>
-                    <p class="card-text text-custom fs-5 mb-1">€{{ auction.last_price }}</p>
+                    <p class="card-text text-custom fs-20px mb-1">€{{ auction.last_price }}</p>
                     <template v-if="auction.remaining_time">
-                      <p class="card-text text-danger">Started</p>
+                      <p class="card-text text-danger fs-17px">Started</p>
                     </template>
                     <template v-else>
-                      <p class="card-text text-muted">No bids yet</p>
+                      <p class="card-text text-muted fs-17px">No bids yet</p>
                     </template>
                     <!-- <p class="card-text">€{{ auction.last_price }}</p> -->
-                    <hr class="text-custom my-2">
-                    <p class="card-text text-muted">Opened {{ getOpenedAt(auction) }}</p>
+                    <hr class="text-custom mb-2">
+                    <p class="card-text text-muted fs-14px">Opened {{ getOpenedAt(auction) }}</p>
                   </div>
              </div> <!-- Card -->
            </router-link>
