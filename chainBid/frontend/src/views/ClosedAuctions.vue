@@ -1,53 +1,52 @@
 <template>
   <div class="container mt-3 mt-md-5">
     <div class="row justify-content-start">
-      <!-- X col per signle auction -->
       <div class="col-12 col-md-6 col-lg-4 col-xxl-3"
            v-for="(auction, index) in auctions"
            :key="index">
            <!-- Card -->
            <router-link :to="{ name: 'closed auction detail', params: { id: auction.id } }">
-             <div class="card mb-4 mx-auto"
-                  style="width: 18rem; height: 22rem;">
-                  <!-- Card image -->
-                  <div class="auction-image">
-                    <img alt="product image"
-                         class="card-img-top"
-                         :src="auction.image">
-                  </div>
-
-                  <!-- Card body -->
+             <div class="card card-auction mb-4 mx-auto position-relative"
+                  style="width: 18rem; height: 21rem;">
                   <div class="card-body text-center">
-                    <h4 class="card-title">{{ auction.title }}</h4>
-                    <hr>
+                    <!-- Card title -->
+                    <p class="text-card-auction fw-bold fs-24px mb-2">{{ auction.title }}</p>
+
+                    <!-- Card image -->
+                    <div class="card-img-wrap-auction">
+                      <img alt="product image"
+                           class="card-img-auction"
+                           :src="auction.image">
+                    </div>
+
+                    <!-- Card body -->
                     <template v-if="!isCanceled(auction)">
-                      <p class="card-text" v-show="!isCanceled(auction)">Won by: {{ auction.winner }}</p>
-                      <p class="card-text text-success">Price: <strong>€{{ auction.final_price }}</strong></p>
+                      <p class="text-card-auction fs-20px mt-2 mb-1">Won by @{{ auction.winner }}</p>
+                      <p class="text-card-auction fs-17px">€{{ auction.final_price }}</p>
                     </template>
                     <template v-else>
-                      <p class="card-text text-danger">Canceled</p>
+                      <p class="text-danger fs-17px mt-4">Canceled</p>
                     </template>
                   </div>
 
-                  <div class="card-footer text-center">
-                    <p class="card-text text-muted">Closed {{ getClosedAt(auction) }}</p>
+                  <!-- Card footer -->
+                  <div class="position-absolute bottom-0 start-50 translate-middle-x text-center" style="width: 90%">
+                    <hr class="text-card-auction mb-1">
+                    <p class="text-muted fs-14px mb-1">Closed {{ getClosedAt(auction) }}</p>
                   </div>
-             </div> <!-- Card -->
-           </router-link>
-      </div> <!-- X col, signle auction -->
+             </div>
+           </router-link> <!-- Card -->
+      </div>
     </div> <!-- Row -->
 
-    <!-- Load more auction -->
+    <!-- Pagination -->
     <div class="mb-5 mt-2 text-center" >
-      <!-- Spinner -->
       <div v-show="loadingAuctions">
         <div class="spinner-border text-success"
              role="status"
              style="width: 3rem; height: 3rem;">
         </div>
       </div>
-
-      <!-- Button -->
       <button class="btn btn-success"
               v-show="next"
               @click="getAuctions"

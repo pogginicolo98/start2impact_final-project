@@ -53,6 +53,61 @@
     font-size: 24px;
   }
 
+  .card-img-auction {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-auction {
+    background-color: #F8F4F1 !important;
+    transition: transform 0.2s ease !important;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1) !important;
+    border-radius: 10% !important;
+    border: 0 !important;
+    margin-bottom: 1.5em !important;
+  }
+
+  .card-auction:hover {
+    transform: scale(1.1);
+  }
+
+  .card-img-wrap-auction {
+    overflow: hidden;
+    position: relative;
+    height: 9rem;
+  }
+  .card-img-wrap-auction:after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: opacity .25s;
+  }
+  .card-img-wrap-auction img {
+    transition: transform .25s;
+    width: 100%;
+  }
+  .card-auction:hover .card-img-wrap-auction img {
+    transform: scale(1.2);
+  }
+  .card-auction:hover .card-img-wrap-auction:after {
+    opacity: 1;
+  }
+
+  .text-card-auction {
+    color: #37251B;
+  }
+
+  .bg-gradient-violet {
+    background-image: linear-gradient(to bottom right, #22223B, #4A4E69);
+  }
+
+  .text-violet {
+    color: #4A4E69;
+  }
+
   .card-header {
     background-color: white;
   }
