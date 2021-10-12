@@ -60,12 +60,12 @@
   }
 
   .card-auction {
-    background-color: #F8F4F1 !important;
-    transition: transform 0.2s ease !important;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1) !important;
-    border-radius: 10% !important;
-    border: 0 !important;
-    margin-bottom: 1.5em !important;
+    background-color: #F8F4F1;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10%;
+    border: 0;
+    margin-bottom: 1.5em;
   }
 
   .card-auction:hover {

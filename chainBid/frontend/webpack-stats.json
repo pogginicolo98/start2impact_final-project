@@ -200,13 +200,63 @@
       "name": "46d94a84725eebae5198.hot-update.json",
       "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/46d94a84725eebae5198.hot-update.json",
       "publicPath": "http://0.0.0.0:8080/46d94a84725eebae5198.hot-update.json"
+    },
+    "app.bfb08584c8dcaa05e34c.hot-update.js": {
+      "name": "app.bfb08584c8dcaa05e34c.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.bfb08584c8dcaa05e34c.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.bfb08584c8dcaa05e34c.hot-update.js"
+    },
+    "bfb08584c8dcaa05e34c.hot-update.json": {
+      "name": "bfb08584c8dcaa05e34c.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/bfb08584c8dcaa05e34c.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/bfb08584c8dcaa05e34c.hot-update.json"
+    },
+    "app.5fcf9508339dbd37d3ba.hot-update.js": {
+      "name": "app.5fcf9508339dbd37d3ba.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.5fcf9508339dbd37d3ba.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.5fcf9508339dbd37d3ba.hot-update.js"
+    },
+    "5fcf9508339dbd37d3ba.hot-update.json": {
+      "name": "5fcf9508339dbd37d3ba.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/5fcf9508339dbd37d3ba.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/5fcf9508339dbd37d3ba.hot-update.json"
+    },
+    "app.b6540037cc9665aaa971.hot-update.js": {
+      "name": "app.b6540037cc9665aaa971.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.b6540037cc9665aaa971.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.b6540037cc9665aaa971.hot-update.js"
+    },
+    "b6540037cc9665aaa971.hot-update.json": {
+      "name": "b6540037cc9665aaa971.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/b6540037cc9665aaa971.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/b6540037cc9665aaa971.hot-update.json"
+    },
+    "app.788ba31a07344547ebaa.hot-update.js": {
+      "name": "app.788ba31a07344547ebaa.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.788ba31a07344547ebaa.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.788ba31a07344547ebaa.hot-update.js"
+    },
+    "788ba31a07344547ebaa.hot-update.json": {
+      "name": "788ba31a07344547ebaa.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/788ba31a07344547ebaa.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/788ba31a07344547ebaa.hot-update.json"
+    },
+    "app.9701ad6df53e4a46091f.hot-update.js": {
+      "name": "app.9701ad6df53e4a46091f.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9701ad6df53e4a46091f.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.9701ad6df53e4a46091f.hot-update.js"
+    },
+    "9701ad6df53e4a46091f.hot-update.json": {
+      "name": "9701ad6df53e4a46091f.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9701ad6df53e4a46091f.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/9701ad6df53e4a46091f.hot-update.json"
     }
   },
   "chunks": {
     "app": [
       "bundle.css",
       "bundle.js",
-      "app.46d94a84725eebae5198.hot-update.js"
+      "app.9701ad6df53e4a46091f.hot-update.js"
     ]
   },
   "publicPath": "http://0.0.0.0:8080/",
