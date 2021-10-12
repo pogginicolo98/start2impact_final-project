@@ -1,12 +1,12 @@
 <template>
-  <div class="container mt-3 mt-md-5">
+  <div class="container mt-4 mt-md-5">
     <div class="row justify-content-start">
       <div class="col-12 col-md-6 col-lg-4 col-xxl-3"
            v-for="(auction, index) in auctions"
            :key="index">
            <!-- Card -->
            <router-link :to="{ name: 'auction', params: { id: auction.id } }">
-             <div class="card card-auction mb-4 mx-auto position-relative"
+             <div class="card card-auction position-relative mb-4 mx-auto"
                   style="width: 18rem; height: 21rem;">
                   <div class="card-body text-center">
                     <!-- Card title -->
@@ -32,16 +32,14 @@
                   <!-- Card footer -->
                   <div class="position-absolute bottom-0 start-50 translate-middle-x text-center" style="width: 90%">
                     <hr class="text-card-auction mb-1">
-                    <p class="text-muted fs-14px mb-1">Opened {{ getOpenedAt(auction) }}</p>
+                    <p class="text-muted fs-14px mb-1">Opened {{ getDateFromNow(auction.opened_at) }}</p>
                   </div>
              </div>
            </router-link> <!-- Card -->
-      </div>
+      </div> <!-- Col -->
     </div> <!-- Row -->
 
     <!-- Pagination -->
-    <!-- <div :class="{"position-absolute top-50 start-50 translate-middle": firstLoading,
-                  "mb-5 mt-2 text-center": !firstLoading}"> -->
     <div :class="{'position-absolute top-50 start-50 translate-middle': firstLoading,
                   'mb-5 mt-2 text-center': !firstLoading}">
       <div v-show="loadingAuctions">
@@ -49,13 +47,6 @@
              role="status"
              style="width: 3rem; height: 3rem;">
         </div>
-      </div>
-      <div v-show="!loadingAuctions">
-        <button class="btn btn-success"
-                v-show="next"
-                @click="getAuctions"
-                >Show more
-        </button>
       </div>
     </div>
   </div> <!-- Container -->
@@ -71,9 +62,9 @@
     data() {
       return {
         auctions: [],
+        firstLoading: true,
         next: null,
-        loadingAuctions: false,
-        firstLoading: true
+        loadingAuctions: false
       }
     },
     methods: {
@@ -101,9 +92,26 @@
             }
           });
       },
-      getOpenedAt(auction) {
-        return moment(auction.opened_at).fromNow();
+      getDateFromNow(date) {
+        return moment(date).fromNow();
+      },
+      getNextUser() {
+        /*
+          Retrieve new auction when scrolling down.
+        */
+
+        window.onscroll = () => {
+          if (this.next && !this.loadingAuctions) {
+            let bottomOfWindow = document.documentElement.scrollTop + window.innerHeight === document.documentElement.offsetHeight;
+            if (bottomOfWindow) {
+              this.getAuctions();
+            }
+          }
+        }
       }
+    },
+    mounted() {
+      this.getNextUser();
     },
     created() {
       document.title = "ChainBid";
