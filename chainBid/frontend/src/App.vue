@@ -29,12 +29,12 @@
     box-shadow: none !important;
   }
 
-  .fs-15px {
-    font-size: 15px;
-  }
-
   .fs-14px {
     font-size: 14px;
+  }
+
+  .fs-15px {
+    font-size: 15px;
   }
 
   .fs-17px {
@@ -51,6 +51,10 @@
 
   .fs-24px {
     font-size: 24px;
+  }
+
+  .fs-32px {
+    font-size: 32px;
   }
 
   .card-img-auction {
@@ -108,11 +112,21 @@
     color: #4A4E69;
   }
 
-  .card-header {
-    background-color: white;
+  .img-thumbnail-detail {
+    background-color: rgba(242,233,228,0.5);
+    border-color: #C9ADA7;
   }
 
-  .card-body-custom {
-    background-color: rgba(0,0,0,.03);
+  .card-detail {
+    border-color: #C9ADA7;
+  }
+
+  .card-header-detail {
+    background: #F2E9E4;
+    border-color: #C9ADA7;
+  }
+
+  .card-body-detail {
+    background: rgba(242,233,228,0.5);
   }
 </style>

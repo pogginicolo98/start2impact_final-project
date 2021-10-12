@@ -1,62 +1,63 @@
 <template lang="html">
-  <div class="container mt-3 mt-lg-5">
+  <div class="container mt-4 mt-lg-5">
     <div class="row">
-      <!-- Title for mobile formats -->
-      <div class="col-12 d-lg-none mb-2">
-        <h1>{{ auction.title }}</h1>
+      <!-- Title mobile formats -->
+      <div class="col-12 d-lg-none">
+        <p class="text-card-auction fw-bold fs-32px mb-2 ms-2">{{ auction.title }}</p>
       </div>
 
       <!-- Image -->
       <div class="col-12 col-lg-5">
         <img alt="product image"
-             class="img-fluid img-thumbnail"
+             class="img-fluid img-thumbnail img-thumbnail-detail"
              :src="auction.image">
       </div>
 
-      <!-- New bid -->
+      <!-- Bid -->
       <div class="col-12 col-lg-7 mt-3 mt-lg-0">
-        <!-- Title for desktop formats -->
-        <h1 class="d-none d-lg-block">{{ auction.title }}</h1>
-        <div class="card">
-          <div class="card-body">
+        <!-- Title desktop formats -->
+        <h1 class="text-card-auction fs-32px fw-bold d-none d-lg-block mb-3 ms-2">{{ auction.title }}</h1>
+        <!-- Card -->
+        <div class="card card-detail">
+          <div class="card-body card-body-detail">
             <div class="row mb-4">
               <!-- Current price -->
               <div class="col-auto">
-                <p class="card-text text-muted fs-14px mb-0">Current price</p>
-                <p class="card-text text-success fs-5"><strong>€{{ lastPrice }}</strong></p>
+                <p class="text-muted fs-15px mb-0">Current price</p>
+                <p class="text-card-auction fs-20px mb-0">€{{ lastPrice }}</p>
               </div>
 
               <!-- Remaining time -->
               <div class="col-auto">
-                <p class="card-text text-muted fs-14px mb-0">Closing in</p>
-                <template v-if="auctionStarted">
-                  <p class="card-text text-danger fs-5"><strong>{{ getRemainingTime }}</strong></p>
+                <p class="text-muted fs-15px mb-0">Closing in</p>
+                <template v-if="isStarted">
+                  <p class="text-danger fs-20px mb-0">{{ getRemainingTime }}</p>
                 </template>
                 <template v-else>
-                  <p class="card-text text-muted fs-5">Less than 24 hours</p>
+                  <p class="text-card-auction fs-20px mb-0">Less than 24 hours</p>
                 </template>
               </div>
             </div>
 
-            <!-- Bid form -->
+            <!-- Form -->
             <BidFormComponent :auction="auction"
                               :isLastUser="isLastUser"/>
           </div>
-        </div>
-      </div> <!-- New bid -->
+        </div> <!-- Card -->
+      </div> <!-- Bid -->
     </div> <!-- Row 1 -->
 
     <!-- Description -->
     <div class="row">
       <div class="col-12 col-lg-5">
-        <div class="card mt-3" style="width: 100%">
-          <div class="card-header">
-            <i class="bi bi-justify-left icon"></i><span class="fw-bold fs-18px"> Description</span>
+        <div class="card card-detail mt-3" style="width: 100%">
+          <div class="card-header card-header-detail text-card-auction">
+            <i class="bi bi-justify-left icon"></i><span class="fs-18px fw-bold"> Description</span>
           </div>
-          <div class="card-body">
-            <p class="card-text my-2">{{ auction.description }}</p>
-            <p class="card-text text-muted fs-14px mb-0">Initial price: €{{ auction.initial_price }}</p>
-            <p class="card-text text-muted fs-14px mb-2">Opened {{ getOpenedAt }}</p>
+          <div class="card-body card-body-detail pb-1">
+            <p class="text-card-auction mb-2">{{ auction.description }}</p>
+            <p class="text-muted fs-14px mb-0">Initial price: €{{ auction.initial_price }}</p>
+            <p class="text-muted fs-14px mb-0">Opened {{ getOpenedAtFromNow }}</p>
           </div>
         </div>
       </div>
@@ -92,16 +93,12 @@
       };
     },
     computed: {
-      auctionStarted() {
-        /*
-          Return true if the auction has already started checking if any bids have been made.
-        */
-
+      isStarted() {
         return this.remainingTime !== null;
       },
       getRemainingTime() {
         /*
-          Convert remainingTime (ex. 70) into Time format as string (ex. 01:10).
+          Format remainingTime in a timer (ex. 70 seconds -> 01:10).
         */
 
         var minutes = Math.floor(this.remainingTime / 60);
@@ -110,14 +107,14 @@
         if (seconds < 10) {seconds = "0"+seconds;}
         return `${minutes}:${seconds}`;
       },
-      getOpenedAt() {
+      getOpenedAtFromNow() {
         return moment(this.auction.opened_at).fromNow();
       }
     },
     methods: {
       async getAuctionData() {
         /*
-          Retrieve a specific auction's data and set page title.
+          Retrieve auction's data and set the page title.
         */
 
         let endpoint = `/api/auctions/${this.id}/`;
@@ -130,7 +127,7 @@
       },
       async getAuctionInfo() {
         /*
-          Retrieve auction's info about last bid.
+          Retrieve last bid.
         */
 
         let endpoint = `/api/auctions/${this.id}/info/`;
@@ -173,27 +170,7 @@
 </script>
 
 <style lang="css" scoped>
-  .fs-18px {
-    font-size: 18px;
-  }
-
-  .fs-15px {
-    font-size: 15px;
-  }
-
-  .fs-14px {
-    font-size: 14px;
-  }
-
   .icon {
     font-size: 24px;
-  }
-
-  .card-header {
-    background-color: white;
-  }
-
-  .card-body {
-    background-color: rgba(0,0,0,.03);
   }
 </style>
