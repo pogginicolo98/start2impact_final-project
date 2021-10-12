@@ -50,7 +50,7 @@ class AuctionImageUpdateAPIView(UpdateAPIView):
     serializer_class = AuctionImageSerializer
     permission_classes = [IsAuthenticated, IsAdminUser]
 
-import time
+
 class AuctionListRetrieveAPIView(ListModelMixin,
                                  RetrieveModelMixin,
                                  GenericViewSet):
@@ -67,10 +67,6 @@ class AuctionListRetrieveAPIView(ListModelMixin,
     queryset = Auction.objects.filter(status=True)
     serializer_class = AuctionSerializer
     permission_classes = [IsAuthenticated]
-
-    def get_queryset(self):
-        time.sleep(1)
-        return self.queryset
 
 
 class AuctionBidAPIView(APIView):
