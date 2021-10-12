@@ -21,7 +21,7 @@
 
                     <!-- Card body -->
                     <template v-if="!isCanceled(auction)">
-                      <p class="text-card-auction fs-20px mt-2 mb-1">Won by @{{ auction.winner }}</p>
+                      <p class="text-card-auction fs-20px mt-3 mb-1">Won by @{{ auction.winner }}</p>
                       <p class="text-card-auction fs-17px">€{{ auction.final_price }}</p>
                     </template>
                     <template v-else>

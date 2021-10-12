@@ -67,7 +67,7 @@
     background-color: #F8F4F1;
     transition: transform 0.2s ease;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
-    border-radius: 10%;
+    border-radius: 20px;
     border: 0;
     margin-bottom: 1.5em;
   }
@@ -80,6 +80,7 @@
     overflow: hidden;
     position: relative;
     height: 9rem;
+    border-radius: 10px;
   }
   .card-img-wrap-auction:after {
     content: '';

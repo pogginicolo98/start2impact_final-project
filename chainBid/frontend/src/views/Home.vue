@@ -20,7 +20,7 @@
                     </div>
 
                     <!-- Card body -->
-                    <p class="text-card-auction fs-20px mt-2 mb-1">€{{ auction.last_price }}</p>
+                    <p class="text-card-auction fs-20px mt-3 mb-1">€{{ auction.last_price }}</p>
                     <template v-if="auction.remaining_time">
                       <p class="text-danger fs-17px">Started</p>
                     </template>

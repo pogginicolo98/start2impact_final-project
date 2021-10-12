@@ -5,12 +5,10 @@
           <!-- Input -->
           <div class="col-12 col-sm-6 col-md-5 col-lg-6 col-xl-5 col-xxl-4">
             <div class="input-group has-validation fs-15px">
-              <span class="input-group-text"
-                    id="euro-symbol"
-                    >€
-              </span>
+              <span class="input-group-text" style="border-radius: 50rem 0px 0px 50rem"><i class="fa-solid fa-euro-sign"></i></span>
               <input aria-describedby="euro-symbol"
                      class="form-control"
+                     style="border-radius: 0px 50rem 50rem 0px"
                      placeholder="Price"
                      step="0.01"
                      type="number"
@@ -30,12 +28,12 @@
 
           <!-- Button -->
           <div class="col-12 col-sm-6 col-md-5 col-lg-6 col-xl-5 col-xxl-4 mt-2 d-grid d-block">
-            <button class="btn btn-success"
+            <button class="btn btn-primary rounded-pill"
                     type="submit"
                     :class="{'btn-danger': isLastUser,
-                             'btn-success': !isLastUser}"
+                             'btn-primary': !isLastUser}"
                     :disabled="isLastUser"
-                    >Place a bid
+                    >Place a bid <i class="fa-solid fa-hand"></i>
             </button>
           </div>
     </form>
@@ -127,4 +125,13 @@
 </script>
 
 <style lang="css" scoped>
+ .btn-primary {
+   background-color: #4A4E69;
+   border-color: #4A4E69;
+ }
+
+ .btn-primary:hover {
+   background-color: #44475F;
+   border-color: #44475F;
+ }
 </style>
