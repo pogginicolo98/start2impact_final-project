@@ -16,7 +16,7 @@
       <!-- Bid -->
       <div class="col-12 col-lg-7 mt-3 mt-lg-0">
         <!-- Title desktop formats -->
-        <h1 class="text-card-auction fs-32px fw-bold d-none d-lg-block mb-3 ms-2">{{ auction.title }}</h1>
+        <p class="text-card-auction fs-32px fw-bold d-none d-lg-block mb-3 ms-2">{{ auction.title }}</p>
         <!-- Card -->
         <div class="card card-detail">
           <div class="card-body card-body-detail">
@@ -53,7 +53,7 @@
         <div class="card card-detail mt-3"
              style="width: 100%">
              <div class="card-header card-header-detail text-card-auction">
-               <i class="bi bi-justify-left icon"></i><span class="fs-18px fw-bold"> Description</span>
+               <i class="fa-solid fa-align-left me-2"></i><span class="fs-18px fw-bold">Description</span>
              </div>
              <div class="card-body card-body-detail pb-1">
                <p class="text-card-auction mb-2">{{ auction.description }}</p>
