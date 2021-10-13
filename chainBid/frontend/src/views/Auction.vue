@@ -24,7 +24,7 @@
               <!-- Current price -->
               <div class="col-auto">
                 <p class="text-muted fs-15px mb-0">Current price</p>
-                <p class="text-card-auction fs-20px mb-0">€{{ lastPrice }}</p>
+                <p class="text-card-auction fs-20px mb-0">€ {{ lastPrice }}</p>
               </div>
 
               <!-- Remaining time -->
@@ -50,15 +50,16 @@
     <!-- Description -->
     <div class="row">
       <div class="col-12 col-lg-5">
-        <div class="card card-detail mt-3" style="width: 100%">
-          <div class="card-header card-header-detail text-card-auction">
-            <i class="bi bi-justify-left icon"></i><span class="fs-18px fw-bold"> Description</span>
-          </div>
-          <div class="card-body card-body-detail pb-1">
-            <p class="text-card-auction mb-2">{{ auction.description }}</p>
-            <p class="text-muted fs-14px mb-0">Initial price: €{{ auction.initial_price }}</p>
-            <p class="text-muted fs-14px mb-0">Opened {{ getOpenedAtFromNow }}</p>
-          </div>
+        <div class="card card-detail mt-3"
+             style="width: 100%">
+             <div class="card-header card-header-detail text-card-auction">
+               <i class="bi bi-justify-left icon"></i><span class="fs-18px fw-bold"> Description</span>
+             </div>
+             <div class="card-body card-body-detail pb-1">
+               <p class="text-card-auction mb-2">{{ auction.description }}</p>
+               <p class="text-muted fs-14px mb-0">Initial price: € {{ auction.initial_price }}</p>
+               <p class="text-muted fs-14px mb-0">Opened {{ getOpenedAtFromNow }}</p>
+             </div>
         </div>
       </div>
     </div> <!-- Row 2 -->

@@ -2,39 +2,43 @@
   <div>
     <form novalidate
           @submit.prevent="onSubmit">
-          <!-- Input -->
-          <div class="col-12 col-sm-6 col-md-5 col-lg-6 col-xl-5 col-xxl-4">
-            <div class="input-group has-validation fs-15px">
-              <span class="input-group-text" style="border-radius: 50rem 0px 0px 50rem"><i class="fa-solid fa-euro-sign"></i></span>
-              <input aria-describedby="euro-symbol"
-                     class="form-control"
-                     style="border-radius: 0px 50rem 50rem 0px"
-                     placeholder="Price"
-                     step="0.01"
-                     type="number"
-                     v-model="newPrice.value"
-                     :class="{'is-invalid': isInitialPriceInvalid}"
-                     :disabled="isLastUser">
-              <div class="invalid-feedback">
-                <ul>
-                  <li v-for="(error, index) in newPrice.errors"
-                      :key="index"
-                      >{{ error }}
-                  </li>
-                </ul>
+          <div class="row">
+            <!-- Input -->
+            <div class="col-12 col-sm-5 col-md-4 col-lg-5 col-xl-4 col-xxl-4 pe-sm-0">
+              <label class="position-relative d-block">
+                <i class="fa-solid fa-euro-sign position-absolute top-50 start-0 translate-middle text-muted ms-3"></i>
+                <input aria-describedby="bidFormFeedback"
+                       class="form-control rounded-pill"
+                       placeholder="Price"
+                       step="0.01"
+                       style="padding-left: 27px;"
+                       type="number"
+                       v-model="newPrice.value"
+                       :class="{'is-invalid': isInitialPriceInvalid}"
+                       :disabled="isLastUser">
+              </label>
+              <div class="invalid-feedback d-block"
+                   id="bidFormFeedback">
+                   <ul>
+                     <li v-for="(error, index) in newPrice.errors"
+                         :key="index"
+                         >{{ error }}
+                     </li>
+                  </ul>
               </div>
             </div>
-          </div>
 
-          <!-- Button -->
-          <div class="col-12 col-sm-6 col-md-5 col-lg-6 col-xl-5 col-xxl-4 mt-2 d-grid d-block">
-            <button class="btn btn-primary rounded-pill"
-                    type="submit"
-                    :class="{'btn-danger': isLastUser,
-                             'btn-primary': !isLastUser}"
-                    :disabled="isLastUser"
-                    >Place a bid <i class="fa-solid fa-hand"></i>
-            </button>
+            <!-- Button -->
+            <div class="col-12 col-sm-3 col-md-2 col-lg-3 col-xl-2 d-grid d-block">
+              <button class="btn rounded-pill"
+                      style="height: 38px;"
+                      type="submit"
+                      :class="{'btn-danger': isLastUser,
+                               'btn-violet': !isLastUser}"
+                      :disabled="isLastUser"
+                      >Bid<i class="fa-solid fa-hand ms-2"></i>
+              </button>
+            </div>
           </div>
     </form>
   </div>
@@ -89,11 +93,11 @@
         if (this.newPrice.value > this.auction.last_price) {
           let decimals = countDecimalPlaces(this.newPrice.value)
           if (this.newPrice.value > 999999999.99) {
-            this.newPrice.errors.push("Maximum allowed price: €9999999999.99");
+            this.newPrice.errors.push("Maximum allowed: €9999999999.99");
             formIsValid = false;
           }
           if (decimals > 2) {
-            this.newPrice.errors.push("Please enter a price with no more than 2 decimals.");
+            this.newPrice.errors.push("Please enter no more than 2 decimals.");
             formIsValid = false;
           }
         } else {
@@ -125,13 +129,4 @@
 </script>
 
 <style lang="css" scoped>
- .btn-primary {
-   background-color: #4A4E69;
-   border-color: #4A4E69;
- }
-
- .btn-primary:hover {
-   background-color: #44475F;
-   border-color: #44475F;
- }
 </style>

@@ -130,4 +130,17 @@
   .card-body-detail {
     background: rgba(242,233,228,0.5);
   }
+
+  .btn-violet {
+    background-color: #4A4E69;
+    border-color: #4A4E69;
+    color: #FFF;
+    transition: 0.5s;
+  }
+
+  .btn-violet:hover {
+    background-color: #52528E;
+    border-color: #4A4E69;
+    color: #FFF;
+  }
 </style>
