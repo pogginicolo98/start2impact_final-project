@@ -27,7 +27,7 @@
           </div>
 
           <!-- Description -->
-          <div class="mb-0 mb-xxl-2 row">
+          <div class="mb-1 row">
             <label class="col-xxl-3 col-form-label"
                    for="description"
                    >Description
@@ -45,7 +45,7 @@
                           'text-danger': !descriptionCharsValid}"
                  >{{ countDescriptionChars }}/240
               </p>
-              <div class="invalid-feedback">
+              <div class="invalid-feedback mt-0">
                 <ul>
                   <li v-for="(error, index) in description.errors"
                       :key="index"
@@ -57,38 +57,37 @@
           </div>
 
           <!-- Initial price -->
-          <div class="mb-3 row">
+          <div class="mb-1 row">
             <label class="col-xxl-3 col-form-label"
                    for="initial-price"
                    >Initial price
             </label>
             <div class="col-xxl-9">
-              <div class="input-group has-validation">
-                <span class="input-group-text"
-                      id="euro-symbol"
-                      >€
-                </span>
-                <input aria-describedby="euro-symbol"
+              <label class="position-relative d-block">
+                <i class="fa-solid fa-euro-sign position-absolute top-50 start-0 translate-middle text-muted ms-3"></i>
+                <input aria-describedby="bidFormFeedback"
                        class="form-control"
                        id="initial-price"
                        step="0.01"
+                       style="padding-left: 27px;"
                        type="number"
                        v-model="initialPrice.value"
                        :class="{'is-invalid': isInitialPriceInvalid}">
-                <div class="invalid-feedback">
-                  <ul>
-                    <li v-for="(error, index) in initialPrice.errors"
-                        :key="index"
-                        >{{ error }}
-                    </li>
-                  </ul>
-                </div>
+              </label>
+              <div class="invalid-feedback d-block"
+                   id="bidFormFeedback">
+                   <ul>
+                     <li v-for="(error, index) in initialPrice.errors"
+                         :key="index"
+                         >{{ error }}
+                     </li>
+                   </ul>
               </div>
             </div>
           </div>
 
           <!-- Opening date -->
-          <div class="mb-3 row">
+          <div class="row">
             <label class="col-xxl-3 col-form-label"
                    for="opening-date"
                    >Opening date
@@ -102,16 +101,16 @@
           </div>
 
           <!-- Submit button -->
-          <div class="col-sm-2 mt-2 ms-auto d-grid d-block">
-            <button class="btn btn-success"
+          <div class="col-sm-3 col-md-2 col-lg-3 col-xxl-2 d-grid d-block ms-auto mt-3" v-if="isNewAuction">
+            <button class="btn btn-violet rounded-pill"
                     type="submit"
-                    v-if="isNewAuction"
-                    >Create
+                    >Create<i class="fa-solid fa-plus ms-2"></i>
             </button>
-            <button class="btn btn-success"
+          </div>
+          <div class="col-sm-3 col-md-2 d-grid d-block ms-auto mt-3" v-else>
+            <button class="btn btn-violet rounded-pill"
                     type="submit"
-                    v-else
-                    >Update
+                    >Save<i class="fa-solid fa-floppy-disk ms-2"></i>
             </button>
           </div>
     </form>
@@ -267,19 +266,17 @@
           };
           await apiService(endpoint, method, data)
             .then(response => {
-              let param = null;
               if (response.detail) {
                 // Da gestire per la pagina "not found"
                 this.error = response.detail;
               }
               if (!this.auction) {
-                param = true;
                 this.title.value = null;
                 this.description.value = null;
                 this.initialPrice.value = null;
                 this.openedAt.value = null;
               }
-              this.$emit("refresh-auctions", param);
+              this.$emit("refresh-auctions");
             });
         }
       }

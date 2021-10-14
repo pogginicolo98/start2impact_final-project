@@ -59,11 +59,11 @@ class Auction(models.Model):
         2) Set the close_auction() task to run on a random date between 20 to 24 hours after the opening.
         """
 
-        self.status = not self.status
-        self.save()
         min_duration = self.opened_at + timezone.timedelta(hours=20)
         max_duration = self.opened_at + timezone.timedelta(hours=24)
         max_closing_date = random_date(start=min_duration, end=max_duration)
+        self.status = True
+        self.save()
         return max_closing_date
 
     def close_auction(self):
@@ -74,92 +74,66 @@ class Auction(models.Model):
         3) Remove bids data from Redis.
         """
 
-        self.status = not self.status
+        self.status = False
         self.closed_at = timezone.now()
-        latest_bid = self.get_latest_bid()
+        latest_bid = self.get_latest_object_on_redis(type_obj='bids')
         if latest_bid is not None:
             self.winner = get_object_or_404(UserModel, username=latest_bid['user'])
             self.final_price = latest_bid['price']
         self.save()
         self.clean_db()
 
-    def get_latest_bid(self):
+    def record_object_on_redis(self, **kwargs):
         """
-        Get the latest bid placed.
+        Record an object on Redis.
+
+        :kwargs
+        1) Schedule auction task: 'schedule_id'.
+        2) Close auction task: 'close_id', 'eta' (optional).
+        3) Bid: 'bid_user', 'bid_price'.
+        """
+
+        key = None
+        obj = None
+        if kwargs.get('schedule_id', None) is not None:
+            key = f'Auction n.{self.pk} - schedule'
+            obj = {'task_id': kwargs['schedule_id']}
+        elif kwargs.get('close_id', None) is not None:
+            key = f'Auction n.{self.pk} - close'
+            obj = {
+                'task_id': kwargs['close_id'],
+                'eta': kwargs.get('eta', None)
+            }
+        elif kwargs.get('bid_user', None) is not None and kwargs.get('bid_price', None) is not None:
+            key = f'Auction n.{self.pk} - bids'
+            obj = {
+                'user': kwargs['bid_user'],
+                'price': kwargs['bid_price']
+            }
+        if key is not None and obj is not None:
+            redis_client = Redis(self.REDIS_HOST, port=self.REDIS_PORT)
+            value = json.dumps(obj, cls=AuctionEncoder)
+            redis_client.lpush(key, value)
+
+    def get_latest_object_on_redis(self, type_obj):
+        """
+        Get the latest object recorded on Redis.
+
+        :type_obj
+        1) 'schedule': Return the latest schedule auction task.
+        2) 'close': Return the latest close auction task.
+        3) 'bids': Return the latest bid.
 
         :return
         - None: If no bid is found.
-        - {'task_id', "celery task id", 'eta': "DateTime object"}: Sample task.
+        - obj: Dictionary.
         """
 
         redis_client = Redis(self.REDIS_HOST, port=self.REDIS_PORT)
-        key = f'Auction n.{self.pk} - bids'
-        latest_bid_json = redis_client.lrange(key, 0, 0)
-        if latest_bid_json:
-            return json.loads(latest_bid_json[0])
-        return None
-
-    def push_new_bid(self, user, price):
-        """
-        Record a new bid.
-        """
-
-        redis_client = Redis(self.REDIS_HOST, port=self.REDIS_PORT)
-        key = f'Auction n.{self.pk} - bids'
-        bid = {
-            'user': user,
-            'price': price
-        }
-        value = json.dumps(bid)
-        redis_client.lpush(key, value)
-
-    def push_task(self, task_id, eta=None):
-        """
-        Record the id and eta of the last celery task that is handling the closing of the auction.
-        """
-
-        redis_client = Redis(self.REDIS_HOST, port=self.REDIS_PORT)
-        key = f'Auction n.{self.pk} - remaining time'
-        task = {
-            'task_id': task_id,
-            'eta': eta
-        }
-        value = json.dumps(task, cls=AuctionEncoder)
-        redis_client.lpush(key, value)
-
-    def pop_task(self):
-        """
-        Get the id and eta of the last celery task that is handling the closing of the auction.
-
-        :return
-        - None: If no task is found.
-        - {'task_id', "celery task id", 'eta': "DateTime object"}: Sample task.
-        """
-
-        redis_client = Redis(self.REDIS_HOST, port=self.REDIS_PORT)
-        key = f'Auction n.{self.pk} - remaining time'
-        value = redis_client.lpop(key)
-        if value is not None:
-            return json.loads(value, cls=DateTimeDecoder)
-        return None
-
-    def get_auction_remaining_time(self):
-        """
-        Get the time remaining before the auction closes
-
-        :return
-        - None: If no task is found or no eta is set.
-        - delta.seconds: Int representing the seconds remaining.
-        """
-
-        redis_client = Redis(self.REDIS_HOST, port=self.REDIS_PORT)
-        key = f'Auction n.{self.pk} - remaining time'
-        task_json = redis_client.lrange(key, 0, 0)
-        if task_json:
-            task = json.loads(task_json[0], cls=DateTimeDecoder)
-            if task['eta'] is not None:
-                delta = task['eta'] - timezone.now()
-                return delta.seconds
+        key = f'Auction n.{self.pk} - {type_obj}'
+        value = redis_client.lrange(key, 0, 0)
+        if value is not None and len(value) > 0:
+            return json.loads(value[0], cls=DateTimeDecoder)
         return None
 
     def clean_db(self):
@@ -169,8 +143,9 @@ class Auction(models.Model):
 
         redis_client = Redis(self.REDIS_HOST, port=self.REDIS_PORT)
         key1 = f'Auction n.{self.pk} - bids'
-        key2 = f'Auction n.{self.pk} - remaining time'
-        redis_client.delete(key1, key2)
+        key2 = f'Auction n.{self.pk} - close'
+        key3 = f'Auction n.{self.pk} - schedule'
+        redis_client.delete(key1, key2, key3)
 
 
 class AuctionReport(models.Model):

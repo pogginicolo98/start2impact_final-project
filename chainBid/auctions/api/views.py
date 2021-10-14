@@ -91,9 +91,9 @@ class AuctionBidAPIView(APIView):
             }
             serializer = self.serializer_class(data=request.data, context=serializer_context)
             if serializer.is_valid():
-                auction.push_new_bid(
-                    user=request.user.username,
-                    price=float(serializer.data.get('price'))
+                auction.record_object_on_redis(
+                    bid_user=request.user.username,
+                    bid_price=float(serializer.data.get('price'))
                 )
                 # Send signal in order to update the auction's remaining time
                 auction_bid_apiview_called.send(sender='auction-bid-api-view', instance=auction)

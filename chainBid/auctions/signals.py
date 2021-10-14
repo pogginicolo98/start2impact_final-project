@@ -1,7 +1,7 @@
 from auctions.models import Auction, AuctionReport
 from auctions.tasks import close_auction, open_auction
 from chainBid.celery import app
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, pre_delete
 from django.dispatch import receiver, Signal
 from django.utils import timezone
 
@@ -18,7 +18,37 @@ def open_auction_handler(sender, instance, created, **kwargs):
     now = timezone.now()
     if instance.opened_at and instance.initial_price:
         if now < instance.opened_at and not instance.status:
-            open_auction.apply_async((instance.pk,), eta=instance.opened_at)
+            if not created:
+                previous_task = instance.get_latest_object_on_redis(type_obj='schedule')
+                if previous_task is not None:
+                    app.control.revoke(previous_task['task_id'], terminate=True, signal='SIGKILL')
+            new_task = open_auction.apply_async((instance.pk,), eta=instance.opened_at).id
+            instance.record_object_on_redis(schedule_id=new_task)
+
+
+@receiver(pre_delete, sender=Auction)
+def delete_auction_handler(sender, instance, **kwargs):
+    """
+    Abort tasks associated with an auction when it is deleted.
+    """
+
+    schedule_task = instance.get_latest_object_on_redis(type_obj='schedule')
+    if schedule_task is not None:
+        app.control.revoke(schedule_task['task_id'], terminate=True, signal='SIGKILL')
+    close_auction_task = instance.get_latest_object_on_redis(type_obj='close')
+    if close_auction_task is not None:
+        app.control.revoke(close_auction_task['task_id'], terminate=True, signal='SIGKILL')
+    instance.clean_db()
+
+
+@receiver(post_save, sender=AuctionReport)
+def make_report_handler(sender, instance, created, **kwargs):
+    """
+    Make an auction report and write it on the Ethereum blockchain.
+    """
+
+    if created:
+        instance.make_report()
 
 
 def update_bid_closing_time(sender, instance, **kwargs):
@@ -27,22 +57,12 @@ def update_bid_closing_time(sender, instance, **kwargs):
     a new one is created with 15 seconds of countdown.
     """
 
-    task = instance.pop_task()
-    if task is not None:
-        app.control.revoke(task['task_id'], terminate=True, signal='SIGKILL')
+    previous_task = instance.get_latest_object_on_redis(type_obj='close')
+    if previous_task is not None:
+        app.control.revoke(previous_task['task_id'], terminate=True, signal='SIGKILL')
     eta = timezone.now() + timezone.timedelta(minutes=2)
-    task_id = close_auction.apply_async((instance.pk,), eta=eta).id
-    instance.push_task(task_id=task_id, eta=eta)
-
-
-@receiver(post_save, sender=AuctionReport)
-def open_auction_handler(sender, instance, created, **kwargs):
-    """
-    Make an auction report and write it on the Ethereum blockchain.
-    """
-
-    if created:
-        instance.make_report()
+    new_task = close_auction.apply_async((instance.pk,), eta=eta).id
+    instance.record_object_on_redis(close_id=new_task, eta=eta)
 
 
 # Connecting custom signals for views: AuctionBidAPIView

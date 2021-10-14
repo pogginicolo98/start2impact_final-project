@@ -4,13 +4,19 @@
     <div class="row">
       <!-- Edit image -->
       <div class="col-12 col-lg-5">
-        <div class="card pb-1"
+        <div class="card card-detail"
              style="width: 100%">
-             <div class="card-header">
-               <i class="bi bi-pencil-square fs-24px me-2"></i>
-               <span class="fw-bold fs-18px">Edit image</span>
+             <div class="card-header card-header-detail text-card-auction">
+               <div class="row justify-content-between">
+                 <div class="col-auto">
+                   <span class="fw-bold fs-18px">Change image</span>
+                 </div>
+                 <div class="col-auto">
+                   <i class="fa-solid fa-pen"></i>
+                 </div>
+               </div>
              </div>
-             <div class="card-body card-body-custom">
+             <div class="card-body card-body-detail">
                <img alt="product image"
                     class="img-fluid"
                     :src="getImage">
@@ -22,11 +28,11 @@
                         @change="onImageSelected">
                  <div class="invalid-feedback">{{ image.error }}</div>
                </div>
-               <div class="col-12 col-sm-1 col-md-1 col-lg-12 col-xl-1 col-xxl-1 d-grid d-block mt-2 fs-18px ms-auto">
-                 <button class="btn btn-success"
+               <div class="col-12 col-sm-3 col-md-2 col-lg-4 col-xl-3 d-grid d-block mt-3 ms-auto">
+                 <button class="btn btn-violet rounded-pill"
                          type="submit"
                          @click="onUpload"
-                         ><i class="bi bi-cloud-upload"></i>
+                         >Upload<i class="fa-solid fa-upload ms-2"></i>
                  </button>
                </div>
              </div>
@@ -35,13 +41,19 @@
 
       <!-- Edit data -->
       <div class="col-12 col-lg-7 mt-3 mt-lg-0">
-        <div class="card pb-1"
+        <div class="card card-detail"
              style="width: 100%">
-             <div class="card-header">
-               <i class="bi bi-pencil-square fs-24px me-2"></i>
-               <span class="fw-bold fs-18px">Edit Data</span>
+             <div class="card-header card-header-detail text-card-auction">
+               <div class="row justify-content-between">
+                 <div class="col-auto">
+                   <span class="fw-bold fs-18px">Edit Data</span>
+                 </div>
+                 <div class="col-auto">
+                   <i class="fa-solid fa-pen"></i>
+                 </div>
+               </div>
              </div>
-             <div class="card-body card-body-custom">
+             <div class="card-body card-body-detail">
                <AuctionFormComponent :auction="modifiedAuction"
                                      @refresh-auctions="updateData"/>
              </div>
@@ -175,4 +187,9 @@
 </script>
 
 <style lang="css" scoped>
+  input[type=file]::file-selector-button {
+    background-color: #4A4E69 !important;
+    border-color: #4A4E69 !important;
+    color: #FFF !important;
+  }
 </style>
