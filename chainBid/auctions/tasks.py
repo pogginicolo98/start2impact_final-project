@@ -28,4 +28,4 @@ def open_auction(pk):
     auction = get_object_or_404(Auction, pk=pk)
     max_closing_date = auction.open_auction()
     new_task = close_auction.apply_async((pk,), eta=max_closing_date).id
-    auction.add_close_auction_task(task_id=new_task)
+    auction.record_object_on_redis(close_id=new_task)

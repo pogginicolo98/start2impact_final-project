@@ -19,11 +19,11 @@ def open_auction_handler(sender, instance, created, **kwargs):
     if instance.opened_at and instance.initial_price:
         if now < instance.opened_at and not instance.status:
             if not created:
-                previous_task = instance.get_latest_schedule_task()
+                previous_task = instance.get_latest_object_on_redis(type_obj='schedule')
                 if previous_task is not None:
                     app.control.revoke(previous_task['task_id'], terminate=True, signal='SIGKILL')
             new_task = open_auction.apply_async((instance.pk,), eta=instance.opened_at).id
-            instance.add_schedule_task(task_id=new_task)
+            instance.record_object_on_redis(schedule_id=new_task)
 
 
 @receiver(pre_delete, sender=Auction)
@@ -32,10 +32,10 @@ def delete_auction_handler(sender, instance, **kwargs):
     Abort tasks associated with an auction when it is deleted.
     """
 
-    schedule_task = instance.get_latest_schedule_task()
+    schedule_task = instance.get_latest_object_on_redis(type_obj='schedule')
     if schedule_task is not None:
         app.control.revoke(schedule_task['task_id'], terminate=True, signal='SIGKILL')
-    close_auction_task = instance.get_latest_close_auction_task()
+    close_auction_task = instance.get_latest_object_on_redis(type_obj='close')
     if close_auction_task is not None:
         app.control.revoke(close_auction_task['task_id'], terminate=True, signal='SIGKILL')
     instance.clean_db()
@@ -57,12 +57,12 @@ def update_bid_closing_time(sender, instance, **kwargs):
     a new one is created with 15 seconds of countdown.
     """
 
-    previous_task = instance.get_latest_close_auction_task()
+    previous_task = instance.get_latest_object_on_redis(type_obj='close')
     if previous_task is not None:
         app.control.revoke(previous_task['task_id'], terminate=True, signal='SIGKILL')
     eta = timezone.now() + timezone.timedelta(minutes=2)
     new_task = close_auction.apply_async((instance.pk,), eta=eta).id
-    instance.add_close_auction_task(task_id=new_task, eta=eta)
+    instance.record_object_on_redis(close_id=new_task, eta=eta)
 
 
 # Connecting custom signals for views: AuctionBidAPIView

@@ -67,13 +67,13 @@ class AuctionSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'description', 'image', 'opened_at', 'initial_price', 'last_price', 'remaining_time']
 
     def get_last_price(self, instance):
-        latest_bid = instance.get_latest_bid()
-        if latest_bid is not None:
-            return latest_bid['price']
+        bid = instance.get_latest_object_on_redis(type_obj='bids')
+        if bid is not None:
+            return bid['price']
         return instance.initial_price
 
     def get_remaining_time(self, instance):
-        task = instance.get_latest_close_auction_task()
+        task = instance.get_latest_object_on_redis(type_obj='close')
         if task is not None:
             if task['eta'] is not None:
                 delta = task['eta'] - timezone.now()
@@ -93,10 +93,10 @@ class AuctionBidSerializer(serializers.Serializer):
     def validate(self, data):
         request_user = self.context.get('request').user
         auction = self.context.get('auction')
-        latest_bid = auction.get_latest_bid()
-        if latest_bid is not None:
-            is_last_user = bool(request_user.username == latest_bid['user'])
-            last_price = latest_bid['price']
+        bid = auction.get_latest_object_on_redis(type_obj='bids')
+        if bid is not None:
+            is_last_user = bool(request_user.username == bid['user'])
+            last_price = bid['price']
         else:
             is_last_user = False
             last_price = auction.initial_price
@@ -125,22 +125,22 @@ class AuctionInfoSerializer(serializers.Serializer):
     def get_is_last_user(self, instance):
         request_user = self.context.get('request').user
         auction = self.context.get('auction')
-        latest_bid = auction.get_latest_bid()
-        if latest_bid is not None:
-            return bool(request_user.username == latest_bid['user'])
+        bid = auction.get_latest_object_on_redis(type_obj='bids')
+        if bid is not None:
+            return bool(request_user.username == bid['user'])
         return False
 
     def get_last_price(self, instance):
         # If no offers have been placed yet, then return the initial_price
         auction = self.context.get('auction')
-        latest_bid = auction.get_latest_bid()
-        if latest_bid is not None:
-            return latest_bid['price']
+        bid = auction.get_latest_object_on_redis(type_obj='bids')
+        if bid is not None:
+            return bid['price']
         return auction.initial_price
 
     def get_remaining_time(self, instance):
         auction = self.context.get('auction')
-        task = auction.get_latest_close_auction_task()
+        task = auction.get_latest_object_on_redis(type_obj='close')
         if task is not None:
             if task['eta'] is not None:
                 delta = task['eta'] - timezone.now()
