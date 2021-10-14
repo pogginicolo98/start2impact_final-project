@@ -1,7 +1,7 @@
 from auctions.models import Auction, AuctionReport
 from auctions.tasks import close_auction, open_auction
 from chainBid.celery import app
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, pre_delete
 from django.dispatch import receiver, Signal
 from django.utils import timezone
 
@@ -21,6 +21,27 @@ def open_auction_handler(sender, instance, created, **kwargs):
             open_auction.apply_async((instance.pk,), eta=instance.opened_at)
 
 
+@receiver(pre_delete, sender=Auction)
+def open_auction_handler(sender, instance, created, **kwargs):
+    """
+    Abort tasks associated with an auction when it is deleted.
+    """
+
+    task = instance.pop_task()
+    if task is not None:
+        app.control.revoke(task['task_id'], terminate=True, signal='SIGKILL')
+
+
+@receiver(post_save, sender=AuctionReport)
+def make_report_handler(sender, instance, created, **kwargs):
+    """
+    Make an auction report and write it on the Ethereum blockchain.
+    """
+
+    if created:
+        instance.make_report()
+
+
 def update_bid_closing_time(sender, instance, **kwargs):
     """
     When a new bid is placed, the last celery task that is handling the closing of the auction is revoked and
@@ -33,16 +54,6 @@ def update_bid_closing_time(sender, instance, **kwargs):
     eta = timezone.now() + timezone.timedelta(minutes=2)
     task_id = close_auction.apply_async((instance.pk,), eta=eta).id
     instance.push_task(task_id=task_id, eta=eta)
-
-
-@receiver(post_save, sender=AuctionReport)
-def open_auction_handler(sender, instance, created, **kwargs):
-    """
-    Make an auction report and write it on the Ethereum blockchain.
-    """
-
-    if created:
-        instance.make_report()
 
 
 # Connecting custom signals for views: AuctionBidAPIView
