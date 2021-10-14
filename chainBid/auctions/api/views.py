@@ -91,7 +91,7 @@ class AuctionBidAPIView(APIView):
             }
             serializer = self.serializer_class(data=request.data, context=serializer_context)
             if serializer.is_valid():
-                auction.push_new_bid(
+                auction.add_bid(
                     user=request.user.username,
                     price=float(serializer.data.get('price'))
                 )

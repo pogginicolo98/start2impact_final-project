@@ -1,4 +1,5 @@
 from auctions.models import Auction, AuctionReport
+from django.utils import timezone
 from rest_framework import serializers
 
 
@@ -72,8 +73,12 @@ class AuctionSerializer(serializers.ModelSerializer):
         return instance.initial_price
 
     def get_remaining_time(self, instance):
-        return instance.get_auction_remaining_time()
-
+        task = instance.get_latest_close_auction_task()
+        if task is not None:
+            if task['eta'] is not None:
+                delta = task['eta'] - timezone.now()
+                return delta.seconds
+        return None
 
 class AuctionBidSerializer(serializers.Serializer):
     """
@@ -135,7 +140,12 @@ class AuctionInfoSerializer(serializers.Serializer):
 
     def get_remaining_time(self, instance):
         auction = self.context.get('auction')
-        return auction.get_auction_remaining_time()
+        task = auction.get_latest_close_auction_task()
+        if task is not None:
+            if task['eta'] is not None:
+                delta = task['eta'] - timezone.now()
+                return delta.seconds
+        return None
 
 
 class AuctionReportSerializer(serializers.ModelSerializer):

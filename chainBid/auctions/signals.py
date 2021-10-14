@@ -18,18 +18,27 @@ def open_auction_handler(sender, instance, created, **kwargs):
     now = timezone.now()
     if instance.opened_at and instance.initial_price:
         if now < instance.opened_at and not instance.status:
-            open_auction.apply_async((instance.pk,), eta=instance.opened_at)
+            if not created:
+                previous_task = instance.get_latest_schedule_task()
+                if previous_task is not None:
+                    app.control.revoke(previous_task['task_id'], terminate=True, signal='SIGKILL')
+            new_task = open_auction.apply_async((instance.pk,), eta=instance.opened_at).id
+            instance.add_schedule_task(task_id=new_task)
 
 
 @receiver(pre_delete, sender=Auction)
-def open_auction_handler(sender, instance, created, **kwargs):
+def delete_auction_handler(sender, instance, **kwargs):
     """
     Abort tasks associated with an auction when it is deleted.
     """
 
-    task = instance.pop_task()
-    if task is not None:
-        app.control.revoke(task['task_id'], terminate=True, signal='SIGKILL')
+    schedule_task = instance.get_latest_schedule_task()
+    if schedule_task is not None:
+        app.control.revoke(schedule_task['task_id'], terminate=True, signal='SIGKILL')
+    close_auction_task = instance.get_latest_close_auction_task()
+    if close_auction_task is not None:
+        app.control.revoke(close_auction_task['task_id'], terminate=True, signal='SIGKILL')
+    instance.clean_db()
 
 
 @receiver(post_save, sender=AuctionReport)
@@ -48,12 +57,12 @@ def update_bid_closing_time(sender, instance, **kwargs):
     a new one is created with 15 seconds of countdown.
     """
 
-    task = instance.pop_task()
-    if task is not None:
-        app.control.revoke(task['task_id'], terminate=True, signal='SIGKILL')
+    previous_task = instance.get_latest_close_auction_task()
+    if previous_task is not None:
+        app.control.revoke(previous_task['task_id'], terminate=True, signal='SIGKILL')
     eta = timezone.now() + timezone.timedelta(minutes=2)
-    task_id = close_auction.apply_async((instance.pk,), eta=eta).id
-    instance.push_task(task_id=task_id, eta=eta)
+    new_task = close_auction.apply_async((instance.pk,), eta=eta).id
+    instance.add_close_auction_task(task_id=new_task, eta=eta)
 
 
 # Connecting custom signals for views: AuctionBidAPIView
