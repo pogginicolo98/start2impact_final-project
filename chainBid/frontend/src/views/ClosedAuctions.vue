@@ -1,5 +1,6 @@
 <template>
-  <div class="container mt-3 mt-md-5">
+  <div class="container mt-4 mt-md-5">
+    <!-- Auctions -->
     <div class="row justify-content-start">
       <div class="col-12 col-md-6 col-lg-4 col-xxl-3"
            v-for="(auction, index) in auctions"
@@ -22,7 +23,7 @@
                     <!-- Card body -->
                     <template v-if="!isCanceled(auction)">
                       <p class="text-card-auction fs-20px mt-3 mb-1">Won by @{{ auction.winner }}</p>
-                      <p class="text-card-auction fs-17px">€{{ auction.final_price }}</p>
+                      <p class="text-card-auction fs-17px">{{ auction.final_price }} €</p>
                     </template>
                     <template v-else>
                       <p class="text-danger fs-17px mt-4">Canceled</p>
@@ -30,14 +31,15 @@
                   </div>
 
                   <!-- Card footer -->
-                  <div class="position-absolute bottom-0 start-50 translate-middle-x text-center" style="width: 90%">
-                    <hr class="text-card-auction mb-1">
-                    <p class="text-muted fs-14px mb-1">Closed {{ getDateFromNow(auction.closed_at) }}</p>
+                  <div class="position-absolute bottom-0 start-50 translate-middle-x text-center"
+                       style="width: 90%">
+                       <hr class="text-card-auction mb-1">
+                       <p class="text-muted fs-14px mb-1">{{ getDateFromNow(auction.closed_at) }}</p>
                   </div>
              </div>
            </router-link> <!-- Card -->
       </div> <!-- Col -->
-    </div> <!-- Row -->
+    </div> <!-- Auctions -->
 
     <!-- Pagination -->
     <div :class="{'position-absolute top-50 start-50 translate-middle': firstLoading,

@@ -1,6 +1,6 @@
 <template lang="html">
-  <div class="container mt-3 mt-lg-5">
-    <h2 class="mb-3">{{ modifiedAuction.title }}</h2>
+  <div class="container mt-2 mt-lg-5">
+    <p class="text-card-auction fw-bold fs-32px mb-2 ms-2">{{ modifiedAuction.title }}</p>
     <div class="row">
       <!-- Edit image -->
       <div class="col-12 col-lg-5">
@@ -40,7 +40,7 @@
       </div>
 
       <!-- Edit data -->
-      <div class="col-12 col-lg-7 mt-3 mt-lg-0">
+      <div class="col-12 col-lg-7 mt-4 mt-lg-0">
         <div class="card card-detail"
              style="width: 100%">
              <div class="card-header card-header-detail text-card-auction">
@@ -176,12 +176,12 @@
           await apiService(endpoint)
             .then(response => {
               this.modifiedAuction = response;
-              document.title = `${response.title} | ChainBid`;
+              document.title = `${response.title} | Schedule auctions | ChainBid`;
             });
         }
     },
     created() {
-      document.title = `${this.modifiedAuction.title} | ChainBid`;
+      document.title = `${this.modifiedAuction.title} | Schedule auctions | ChainBid`;
     },
   }
 </script>

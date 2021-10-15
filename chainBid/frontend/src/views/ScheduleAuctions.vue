@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="container mt-3 mt-md-5 ">
+  <div class="container mt-4 mt-md-5">
     <!-- New auction -->
     <div class="row justify-content-center">
       <div class="col-12 col-lg-6">
@@ -16,9 +16,9 @@
       </div>
     </div>
 
+    <!-- Scheduled auctions -->
     <template v-if="auctions.length > 0">
-      <!-- Scheduled auctions -->
-      <div class="table-responsive mt-5">
+      <div class="table-responsive text-nowrap mt-5">
         <table class="table table-hover caption-top text-card-auction">
           <caption>
             <i class="fa-solid fa-database fs-20px me-2"></i>
@@ -36,8 +36,12 @@
             <tr v-for="(auction, index) in auctions"
                 :key="index">
                 <th scope="row">{{ auction.id }}</th>
-                <td><router-link :to="{ name: 'auction editor', params: { id: auction.id } }"><i class="fa-solid fa-pen-to-square me-1"></i>{{ auction.title }}</router-link></td>
-                <td v-if="auction.initial_price">€ {{ auction.initial_price }}</td>
+                <td>
+                  <router-link :to="{ name: 'auction editor', params: { id: auction.id } }">
+                    <i class="fa-solid fa-pen-to-square me-1"></i>{{ auction.title }}
+                  </router-link>
+                </td>
+                <td v-if="auction.initial_price">{{ auction.initial_price }} €</td>
                 <td v-else>Not set</td>
                 <td v-if="auction.opened_at">{{ getOpeningDate(auction) }}</td>
                 <td v-else>Not set</td>
@@ -69,6 +73,8 @@
         </div>
       </div>
     </template>
+
+    <!-- Archive empty -->
     <template v-else>
       <div class="text-center mt-5">
         <p class="fs-32px fw-blod text-muted">There are no auctions in the archive</p>

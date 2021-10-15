@@ -62,7 +62,7 @@
                   href="#"
                   id="navbarDarkDropdownMenuLink"
                   role="button">
-                  <i class="bi bi-person-lines-fill fs-3 nav-icon"></i>
+                  <i class="fa-solid fa-user-gear fs-24px"></i>
                </a>
 
                <!-- Dropdown elements -->
@@ -81,7 +81,7 @@
                    </a></li>
                    <li><a class="dropdown-item"
                           href="/accounts/logout/">
-                          <i class="bi bi-box-arrow-left fs-5 nav-icon"></i>
+                          Log out<i class="fa-solid fa-right-from-bracket fs-14px ms-2"></i>
                    </a></li>
                </ul>
              </li>

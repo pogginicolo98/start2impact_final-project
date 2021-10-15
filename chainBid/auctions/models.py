@@ -9,8 +9,7 @@ from django.db import models
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from redis import Redis
-from utils.decoders import DateTimeDecoder
-from utils.encoders import AuctionEncoder
+from utils.encoders_decoders import AuctionDecoder, AuctionEncoder
 from utils.randomics import random_date
 from utils.transactions import write_message_on_chain
 
@@ -133,7 +132,7 @@ class Auction(models.Model):
         key = f'Auction n.{self.pk} - {type_obj}'
         value = redis_client.lrange(key, 0, 0)
         if value is not None and len(value) > 0:
-            return json.loads(value[0], cls=DateTimeDecoder)
+            return json.loads(value[0], cls=AuctionDecoder)
         return None
 
     def clean_db(self):
@@ -180,7 +179,8 @@ class AuctionReport(models.Model):
             'closed at': self.auction.closed_at
         }
         file_name = f'auction {self.auction.pk}.json'
-        destination_dir = os.path.join(self.MEDIA_DIR, 'reports')
+        reports_dir = 'reports'
+        destination_dir = os.path.join(self.MEDIA_DIR, reports_dir)
         path = os.path.join(destination_dir, file_name)
         try:
             os.mkdir(destination_dir)
@@ -188,7 +188,7 @@ class AuctionReport(models.Model):
             pass  # Already exists
         with open(path, 'w') as f:
             json.dump(report, f, cls=AuctionEncoder)
-        self.json_file = os.path.join('reports', file_name)
+        self.json_file.name = os.path.join(reports_dir, file_name)
         self.hash = hashlib.sha256(json.dumps(report, cls=AuctionEncoder).encode('utf-8')).hexdigest()
         self.tx_id = write_message_on_chain(self.hash)
         self.save()

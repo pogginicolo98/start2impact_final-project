@@ -1,6 +1,7 @@
 from datetime import datetime
+from dateutil import parser
 from decimal import Decimal
-from json import JSONEncoder
+from json import JSONDecoder, JSONEncoder
 
 
 class DateTimeEncoder(JSONEncoder):
@@ -37,6 +38,37 @@ class AuctionEncoder(DateTimeEncoder, DecimalEncoder):
     """
     Auction encoder designed for auction objects.
     Extends JSONEncoder, DateTimeEncoder and DecimalEncoder.
+    """
+
+    pass
+
+
+class DateTimeDecoder(JSONDecoder):
+    """
+    Datetime decoder for json serializer.
+
+    usage:
+    x = str(datetime.now())
+    json.loads(x, cls=DateTimeDecoder)
+    """
+
+    def __init__(self, *args, **kwargs):
+        JSONDecoder.__init__(self, object_hook=self.object_hook, *args, **kwargs)
+
+    def object_hook(self, source):
+        for k, v in source.items():
+            if isinstance(v, str):
+                try:
+                    source[k] = parser.isoparse(v)
+                except:
+                    pass
+        return source
+
+
+class AuctionDecoder(DateTimeDecoder):
+    """
+    Auction decoder designed for auction objects.
+    Extends JSONEncoder and DateTimeDecoder.
     """
 
     pass
