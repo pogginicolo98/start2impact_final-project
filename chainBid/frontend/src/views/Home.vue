@@ -20,7 +20,7 @@
                     </div>
 
                     <!-- Card body -->
-                    <p class="text-card-auction fs-20px mt-3 mb-1">€ {{ auction.last_price }}</p>
+                    <p class="text-card-auction fs-20px mt-3 mb-1">{{ auction.last_price }} €</p>
                     <template v-if="auction.remaining_time">
                       <p class="text-danger fs-17px">Started</p>
                     </template>
@@ -32,7 +32,7 @@
                   <!-- Card footer -->
                   <div class="position-absolute bottom-0 start-50 translate-middle-x text-center" style="width: 90%">
                     <hr class="text-card-auction mb-1">
-                    <p class="text-muted fs-14px mb-1">Opened {{ getDateFromNow(auction.opened_at) }}</p>
+                    <p class="text-muted fs-14px mb-1">{{ getDateFromNow(auction.opened_at) }}</p>
                   </div>
              </div>
            </router-link> <!-- Card -->

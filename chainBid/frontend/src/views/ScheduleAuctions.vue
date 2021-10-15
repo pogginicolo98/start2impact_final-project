@@ -18,7 +18,7 @@
 
     <template v-if="auctions.length > 0">
       <!-- Scheduled auctions -->
-      <div class="table-responsive mt-5">
+      <div class="table-responsive text-nowrap mt-5">
         <table class="table table-hover caption-top text-card-auction">
           <caption>
             <i class="fa-solid fa-database fs-20px me-2"></i>
@@ -37,7 +37,7 @@
                 :key="index">
                 <th scope="row">{{ auction.id }}</th>
                 <td><router-link :to="{ name: 'auction editor', params: { id: auction.id } }"><i class="fa-solid fa-pen-to-square me-1"></i>{{ auction.title }}</router-link></td>
-                <td v-if="auction.initial_price">€ {{ auction.initial_price }}</td>
+                <td v-if="auction.initial_price">{{ auction.initial_price }} €</td>
                 <td v-else>Not set</td>
                 <td v-if="auction.opened_at">{{ getOpeningDate(auction) }}</td>
                 <td v-else>Not set</td>

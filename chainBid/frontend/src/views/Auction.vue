@@ -7,10 +7,12 @@
       </div>
 
       <!-- Image -->
-      <div class="col-12 col-lg-5">
-        <img alt="product image"
-             class="img-fluid img-thumbnail img-thumbnail-detail"
-             :src="auction.image">
+      <div class="col-12 col-lg-5 mt-0 mt-lg-3">
+        <figure class="figure">
+         <img alt="product image"
+              class="figure-img img-fluid rounded img-thumbnail-detail"
+              :src="auction.image">
+        </figure>
       </div>
 
       <!-- Bid -->
@@ -23,13 +25,13 @@
             <div class="row mb-4">
               <!-- Current price -->
               <div class="col-auto">
-                <p class="text-muted fs-15px mb-0">Current price</p>
-                <p class="text-card-auction fs-20px mb-0">€ {{ lastPrice }}</p>
+                <p class="text-muted fs-15px fw-bold mb-0">Current price</p>
+                <p class="text-card-auction fs-20px mb-0">{{ lastPrice }} €</p>
               </div>
 
               <!-- Remaining time -->
               <div class="col-auto">
-                <p class="text-muted fs-15px mb-0">Closing in</p>
+                <p class="text-muted fs-15px fw-bold mb-0">Closing in</p>
                 <template v-if="isStarted">
                   <p class="text-danger fs-20px mb-0">{{ getRemainingTime }}</p>
                 </template>
@@ -57,8 +59,9 @@
              </div>
              <div class="card-body card-body-detail pb-1">
                <p class="text-card-auction mb-2">{{ auction.description }}</p>
-               <p class="text-muted fs-14px mb-0">Initial price: € {{ auction.initial_price }}</p>
-               <p class="text-muted fs-14px mb-0">Opened {{ getOpenedAtFromNow }}</p>
+               <p class="text-muted fs-14px mb-0"><strong>Initial price</strong>: {{ auction.initial_price }} €</p>
+               <p class="text-muted fs-14px mb-0"><strong>Opened</strong>: {{ getOpenedAtFromNow }}</p>
+               <!-- <p class="text-muted fs-14px mb-0">Opened {{ getOpenedAtFromNow }}</p> -->
              </div>
         </div>
       </div>

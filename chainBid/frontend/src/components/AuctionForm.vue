@@ -35,7 +35,7 @@
             <div class="col-xxl-9">
               <textarea class="form-control"
                         id="description"
-                        rows="3"
+                        rows="4"
                         type="text"
                         v-model="description.value"
                         :class="{'is-invalid': isDescriptionInvalid}">
@@ -230,7 +230,7 @@
         if (this.initialPrice.value != null) {
           let decimals = countDecimalPlaces(this.initialPrice.value)
           if (this.initialPrice.value > 999999999.99) {
-            this.initialPrice.errors.push("Maximum allowed price: €9999999999.99");
+            this.initialPrice.errors.push("Maximum allowed price: 9999999999.99 €");
             formIsValid = false;
           }
           if (decimals > 2) {

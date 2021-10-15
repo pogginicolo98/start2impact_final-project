@@ -93,7 +93,7 @@
         if (this.newPrice.value > this.auction.last_price) {
           let decimals = countDecimalPlaces(this.newPrice.value)
           if (this.newPrice.value > 999999999.99) {
-            this.newPrice.errors.push("Maximum allowed: €9999999999.99");
+            this.newPrice.errors.push("Maximum allowed: 9999999999.99 €");
             formIsValid = false;
           }
           if (decimals > 2) {

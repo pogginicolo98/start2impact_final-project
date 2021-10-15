@@ -114,7 +114,7 @@
   }
 
   .img-thumbnail-detail {
-    background-color: rgba(242,233,228,0.5);
+    border: 1px solid;
     border-color: #C9ADA7;
   }
 

@@ -148,19 +148,19 @@ class AuctionInfoSerializer(serializers.Serializer):
         return None
 
 
-class AuctionReportSerializer(serializers.ModelSerializer):
-    """
-    AuctionReport serializer for AuctionReportRetrieveAPIView.
-
-    :fields
-    - json_file
-
-    * format: DATA.
-    """
-
-    class Meta:
-        model = AuctionReport
-        fields = ['json_file']
+# class AuctionReportSerializer(serializers.ModelSerializer):
+#     """
+#     AuctionReport serializer for AuctionReportRetrieveAPIView.
+#
+#     :fields
+#     - json_file
+#
+#     * format: DATA.
+#     """
+#
+#     class Meta:
+#         model = AuctionReport
+#         fields = ['json_file']
 
 
 class AuctionClosedSerializer(serializers.ModelSerializer):
@@ -176,15 +176,35 @@ class AuctionClosedSerializer(serializers.ModelSerializer):
     - winner
     - opened_at
     - closed_at
+    - json_file
 
     * format: JSON.
     """
 
     winner = serializers.SerializerMethodField(read_only=True)
+    json_file = serializers.SerializerMethodField(read_only=True)
+    hash = serializers.SerializerMethodField(read_only=True)
+    tx_id = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
         model = Auction
-        fields = ['id', 'title', 'description', 'image', 'initial_price', 'final_price', 'winner', 'opened_at', 'closed_at']
+        exclude = ['status']
 
     def get_winner(self, instance):
         return str(instance.winner)
+
+    def get_json_file(self, instance):
+        request = self.context.get("request")
+        if instance.report.json_file:
+            return request.build_absolute_uri(instance.report.json_file.url)
+        return None
+
+    def get_hash(self, instance):
+        if instance.report.hash:
+            return instance.report.hash
+        return None
+
+    def get_tx_id(self, instance):
+        if instance.report.tx_id:
+            return instance.report.tx_id
+        return None
