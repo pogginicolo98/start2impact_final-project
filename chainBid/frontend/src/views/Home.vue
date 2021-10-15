@@ -1,5 +1,6 @@
 <template>
   <div class="container mt-4 mt-md-5">
+    <!-- Auctions -->
     <div class="row justify-content-start">
       <div class="col-12 col-md-6 col-lg-4 col-xxl-3"
            v-for="(auction, index) in auctions"
@@ -30,14 +31,15 @@
                   </div>
 
                   <!-- Card footer -->
-                  <div class="position-absolute bottom-0 start-50 translate-middle-x text-center" style="width: 90%">
-                    <hr class="text-card-auction mb-1">
-                    <p class="text-muted fs-14px mb-1">{{ getDateFromNow(auction.opened_at) }}</p>
+                  <div class="position-absolute bottom-0 start-50 translate-middle-x text-center"
+                       style="width: 90%">
+                       <hr class="text-card-auction mb-1">
+                       <p class="text-muted fs-14px mb-1">{{ getDateFromNow(auction.opened_at) }}</p>
                   </div>
              </div>
            </router-link> <!-- Card -->
       </div> <!-- Col -->
-    </div> <!-- Row -->
+    </div> <!-- Auctions -->
 
     <!-- Pagination -->
     <div :class="{'position-absolute top-50 start-50 translate-middle': firstLoading,
@@ -114,12 +116,11 @@
       this.getNextUser();
     },
     created() {
-      document.title = "ChainBid";
+      document.title = "Live auctions | ChainBid";
       this.getAuctions();
     }
   };
 </script>
-
 
 <style lang="css" scoped>
 </style>

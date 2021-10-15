@@ -1,24 +1,43 @@
 <template lang="html">
-  <div class="container mt-4 mt-lg-5">
+  <div class="container mt-2 mt-lg-5">
     <div class="row">
       <!-- Title mobile formats -->
       <div class="col-12 d-lg-none">
         <p class="text-card-auction fw-bold fs-32px mb-2 ms-2">{{ auction.title }}</p>
       </div>
 
-      <!-- Image -->
+      <!-- Image and description -->
       <div class="col-12 col-lg-5 mt-0 mt-lg-3">
-        <figure class="figure">
-         <img alt="product image"
-              class="figure-img img-fluid rounded img-thumbnail-detail"
-              :src="auction.image">
-        </figure>
+        <!-- Image -->
+        <div class="col-12">
+          <figure class="figure">
+           <img alt="product image"
+                class="figure-img img-fluid rounded img-thumbnail-detail"
+                :src="auction.image">
+          </figure>
+        </div>
+
+        <!-- Description desktop formats -->
+        <div class="col-12 d-none d-lg-block">
+          <div class="card card-detail"
+               style="width: 100%">
+               <div class="card-header card-header-detail text-card-auction">
+                 <i class="fa-solid fa-align-left me-2"></i><span class="fs-18px fw-bold">Description</span>
+               </div>
+               <div class="card-body card-body-detail pb-1">
+                 <p class="text-card-auction mb-2">{{ auction.description }}</p>
+                 <p class="text-muted fs-14px mb-0"><strong>Initial price</strong>: {{ auction.initial_price }} €</p>
+                 <p class="text-muted fs-14px mb-0"><strong>Opened</strong>: {{ getOpenedAtFromNow }}</p>
+               </div>
+          </div>
+        </div>
       </div>
 
       <!-- Bid -->
-      <div class="col-12 col-lg-7 mt-3 mt-lg-0">
+      <div class="col-12 col-lg-7 mb-2">
         <!-- Title desktop formats -->
         <p class="text-card-auction fs-32px fw-bold d-none d-lg-block mb-3 ms-2">{{ auction.title }}</p>
+
         <!-- Card -->
         <div class="card card-detail">
           <div class="card-body card-body-detail">
@@ -49,8 +68,8 @@
       </div> <!-- Bid -->
     </div> <!-- Row 1 -->
 
-    <!-- Description -->
-    <div class="row">
+    <!-- Description mobile formats -->
+    <div class="row d-lg-none">
       <div class="col-12 col-lg-5">
         <div class="card card-detail mt-3"
              style="width: 100%">
@@ -61,7 +80,6 @@
                <p class="text-card-auction mb-2">{{ auction.description }}</p>
                <p class="text-muted fs-14px mb-0"><strong>Initial price</strong>: {{ auction.initial_price }} €</p>
                <p class="text-muted fs-14px mb-0"><strong>Opened</strong>: {{ getOpenedAtFromNow }}</p>
-               <!-- <p class="text-muted fs-14px mb-0">Opened {{ getOpenedAtFromNow }}</p> -->
              </div>
         </div>
       </div>
@@ -126,7 +144,7 @@
           .then(response => {
             this.auction = response;
             this.lastPrice = response.last_price;
-            document.title = `${response.title} | ChainBid`;
+            document.title = `${response.title} | Live auctions | ChainBid`;
           });
       },
       async getAuctionInfo() {
@@ -174,7 +192,4 @@
 </script>
 
 <style lang="css" scoped>
-  .icon {
-    font-size: 24px;
-  }
 </style>

@@ -101,16 +101,10 @@
           </div>
 
           <!-- Submit button -->
-          <div class="col-sm-3 col-md-2 col-lg-3 col-xxl-2 d-grid d-block ms-auto mt-3" v-if="isNewAuction">
+          <div class="col-sm-3 col-md-2 col-lg-3 col-xxl-2 d-grid d-block ms-auto mt-3">
             <button class="btn btn-violet rounded-pill"
                     type="submit"
-                    >Create<i class="fa-solid fa-plus ms-2"></i>
-            </button>
-          </div>
-          <div class="col-sm-3 col-md-2 d-grid d-block ms-auto mt-3" v-else>
-            <button class="btn btn-violet rounded-pill"
-                    type="submit"
-                    >Save<i class="fa-solid fa-floppy-disk ms-2"></i>
+                    v-html="createUpdateMessage">
             </button>
           </div>
     </form>
@@ -148,16 +142,11 @@
         openedAt: {
           value: null
         },
+        createUpdateMessage: null,
         error: null
       };
     },
     computed: {
-      isNewAuction() {
-        if (this.auction) {
-          return false;
-        }
-        return true;
-      },
       countDescriptionChars() {
         if (this.description.value) {
           return this.description.value.length;
@@ -187,6 +176,9 @@
           this.description.value = this.auction.description;
           this.initialPrice.value = this.auction.initial_price;
           this.openedAt.value = moment.utc(this.auction.opened_at, 'YYYY-MM-DDTHH:mm').format('YYYY-MM-DDTHH:mm');
+          this.createUpdateMessage = "Save<i class='fa-solid fa-floppy-disk ms-2'></i>";
+        } else {
+          this.createUpdateMessage = "Create<i class='fa-solid fa-plus ms-2'></i>";
         }
       },
       validateForm() {

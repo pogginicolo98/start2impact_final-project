@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div class="bid-form">
     <form novalidate
           @submit.prevent="onSubmit">
           <div class="row">

@@ -1,13 +1,14 @@
 <template lang="html">
-  <div class="container mt-4 mt-lg-5">
+  <div class="container mt-2 mt-lg-5">
     <div class="row">
       <!-- Title mobile formats -->
       <div class="col-12 d-lg-none">
         <p class="text-card-auction fw-bold fs-32px mb-2 ms-2">{{ auction.title }}</p>
       </div>
 
-      <!-- Image -->
+      <!-- Image and description -->
       <div class="col-12 col-lg-5 mt-0 mt-lg-3">
+        <!-- Image -->
         <div class="col-12">
           <figure class="figure">
            <img alt="product image"
@@ -15,6 +16,8 @@
                 :src="auction.image">
           </figure>
         </div>
+
+        <!-- Description desktop formats -->
         <div class="col-12 d-none d-lg-block">
           <div class="card card-detail"
                style="width: 100%">
@@ -32,19 +35,36 @@
       <div class="col-12 col-lg-7 mb-2">
         <!-- Title desktop formats -->
         <p class="text-card-auction fs-32px fw-bold d-none d-lg-block mb-3 ms-2">{{ auction.title }}</p>
+
         <!-- Card -->
         <div class="card card-detail">
           <div class="card-body card-body-detail">
-            <p class="text-card-auction fs-20px"><span class="fw-bold me-2">Winner:</span>@{{ auction.winner }}</p>
+            <!-- Winner -->
+            <p class="text-card-auction fs-20px">
+              <span class="fw-bold me-2">Winner:</span>@{{ auction.winner }}
+            </p>
 
+            <!-- Table stats -->
             <div class="table-responsive text-nowrap">
               <table class="table text-card-auction">
                 <thead>
                   <tr>
-                    <th class="text-nowrap" scope="col">Initial price</th>
-                    <th class="text-nowrap" scope="col">Final price</th>
-                    <th class="text-nowrap" scope="col">Opened at</th>
-                    <th class="text-nowrap" scope="col">Closed at</th>
+                    <th class="text-nowrap"
+                        scope="col"
+                        >Initial price
+                    </th>
+                    <th class="text-nowrap"
+                        scope="col"
+                        >Final price
+                    </th>
+                    <th class="text-nowrap"
+                        scope="col"
+                        >Opened at
+                    </th>
+                    <th class="text-nowrap"
+                        scope="col"
+                        >Closed at
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
@@ -58,26 +78,37 @@
               </table>
             </div>
 
+            <!-- Hash -->
             <p class="text-card-auction fw-bold mb-1 mt-2">SHA256:</p>
-            <div class="container hash rounded text-card-auction pe-1">
+            <div class="container text-card-auction box-report rounded pe-1">
               <div class="row">
                 <div class="col-9 col-sm-10">
-                  <p class="mt-3" id="text-hash">{{ auction.hash }}</p>
+                  <p class="mt-3"
+                     id="text-hash"
+                     >{{ auction.hash }}
+                  </p>
                 </div>
                 <div class="col-3 col-sm-2 text-end">
-                  <button class="btn btn-violet my-1" @click="copyToClipboard(auction.hash)"><i class="fa-solid fa-clone"></i></button>
+                  <button class="btn btn-report my-1"
+                          v-html="copyToClipboardMessage"
+                          @click="copyToClipboard(auction.hash)">
+                  </button>
                 </div>
               </div>
             </div>
 
+            <!-- Transaction ID -->
             <p class="text-card-auction fw-bold mb-1 mt-2">Transaction ID:</p>
-            <div class="container hash rounded text-card-auction pe-1">
+            <div class="container text-card-auction box-report rounded pe-1">
               <div class="row">
                 <div class="col-9 col-sm-10">
-                  <p class="mt-3" id="text-hash">{{ auction.tx_id }}</p>
+                  <p class="mt-3"
+                     id="text-hash"
+                     >{{ auction.tx_id }}
+                  </p>
                 </div>
                 <div class="col-3 col-sm-2 text-end">
-                  <a class="btn btn-violet my-1"
+                  <a class="btn btn-report my-1"
                      :href="txIdLink"
                      ><i class="fa-solid fa-link"></i>
                   </a>
@@ -85,6 +116,7 @@
               </div>
             </div>
 
+            <!-- Download -->
             <div class="text-end mt-3">
               <a class="btn btn-violet rounded-pill"
                  download
@@ -93,11 +125,11 @@
               </a>
             </div>
           </div>
-        </div>
-      </div> <!-- New bid -->
+        </div> <!-- Card -->
+      </div> <!-- Info -->
     </div> <!-- Row 1 -->
 
-    <!-- Description -->
+    <!-- Description mobile formats -->
     <div class="row d-lg-none">
       <div class="col-12 col-lg-5">
         <div class="card card-detail mt-3"
@@ -130,6 +162,7 @@
     data() {
       return {
         auction: {},
+        copyToClipboardMessage: "<i class='fa-solid fa-clone'></i>",
         txIdLink: null
       };
     },
@@ -149,14 +182,24 @@
           .then(response => {
             this.auction = response;
             this.txIdLink = `https://ropsten.etherscan.io/tx/${response.tx_id}`;
-            document.title = `${response.title} | ChainBid`;
+            document.title = `${response.title} | Closed auctions | ChainBid`;
           });
       },
       getDate(date) {
-        return moment.utc(date, 'YYYY/MM/DD, HH:mm:ss').format('YYYY/MM/DD, HH:mm:ss');
+        return moment.utc(date, 'YYYY/MM/DD - HH:mm:ss').format('YYYY/MM/DD - HH:mm:ss');
       },
       copyToClipboard(text) {
-        this.$clipboard(text)
+        /*
+          Change copy to clipboard button's icon.
+        */
+
+        this.$clipboard(text);
+        if (this.copyToClipboardMessage === "<i class='fa-solid fa-clone'></i>") {
+          this.copyToClipboardMessage = "<i class='fa-solid fa-clipboard-check'></i>";
+          setTimeout(() => {
+            this.copyToClipboardMessage = "<i class='fa-solid fa-clone'></i>";
+          }, 5000);
+        }
       }
     },
     created() {
@@ -166,9 +209,24 @@
 </script>
 
 <style lang="css" scoped>
-  .hash {
+  .box-report {
     border: 1px solid;
     border-color: #C9ADA7;
     background-color: #F2E9E4;
+  }
+
+  .btn-report {
+    background-color: rgba(55, 37, 27, 0.2);
+    border-color: #C9ADA7;
+    color: #37251B;
+    transition: 0.8s;
+    width: 46px;
+    height: 38px;
+  }
+
+  .btn-report:hover {
+    background-color: rgba(74, 78, 105, 0.8);
+    border-color: #4A4E69;
+    color: #fff;
   }
 </style>
