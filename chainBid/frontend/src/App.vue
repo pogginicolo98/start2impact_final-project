@@ -144,4 +144,9 @@
     border-color: #4A4E69;
     color: #FFF;
   }
+
+  .vue-toast {
+    background-color: #2a9d8f !important;
+    color: #fff !important;
+  }
 </style>

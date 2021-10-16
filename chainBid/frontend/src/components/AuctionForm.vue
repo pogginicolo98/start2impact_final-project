@@ -175,7 +175,9 @@
           this.title.value = this.auction.title;
           this.description.value = this.auction.description;
           this.initialPrice.value = this.auction.initial_price;
-          this.openedAt.value = moment.utc(this.auction.opened_at, 'YYYY-MM-DDTHH:mm').format('YYYY-MM-DDTHH:mm');
+          if (this.openedAt.value) {
+            this.openedAt.value = moment.utc(this.auction.opened_at, 'YYYY-MM-DDTHH:mm').format('YYYY-MM-DDTHH:mm');
+          }
           this.createUpdateMessage = "Save<i class='fa-solid fa-floppy-disk ms-2'></i>";
         } else {
           this.createUpdateMessage = "Create<i class='fa-solid fa-plus ms-2'></i>";
@@ -254,19 +256,22 @@
             title: this.title.value,
             description: this.description.value,
             initial_price: this.initialPrice.value,
-            opened_at: this.openedAt.value
+            opened_at: this.openedAt.value != "" ? this.openedAt.value : null
           };
           await apiService(endpoint, method, data)
             .then(response => {
               if (response.detail) {
                 // Da gestire per la pagina "not found"
-                this.error = response.detail;
+                this.error = response;
               }
               if (!this.auction) {
                 this.title.value = null;
                 this.description.value = null;
                 this.initialPrice.value = null;
                 this.openedAt.value = null;
+                this.$toasted.show('Created', {icon: "circle-check"});
+              } else {
+                this.$toasted.show('Saved', {icon: "circle-check"});
               }
               this.$emit("refresh-auctions");
             });
