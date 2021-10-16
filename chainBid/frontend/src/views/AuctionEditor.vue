@@ -65,6 +65,8 @@
         </div>
       </div>
     </div> <!-- Row -->
+
+
   </div> <!-- Container -->
 </template>
 
@@ -187,7 +189,7 @@
     },
     created() {
       document.title = `${this.modifiedAuction.title} | Schedule auctions | ChainBid`;
-    },
+    }
   }
 </script>
 
