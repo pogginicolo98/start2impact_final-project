@@ -26,825 +26,1095 @@
       "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/favicon.ico",
       "publicPath": "http://0.0.0.0:8080/favicon.ico"
     },
-    "app.b5932c44969e5b1711be.hot-update.js": {
-      "name": "app.b5932c44969e5b1711be.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.b5932c44969e5b1711be.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.b5932c44969e5b1711be.hot-update.js"
-    },
-    "b5932c44969e5b1711be.hot-update.json": {
-      "name": "b5932c44969e5b1711be.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/b5932c44969e5b1711be.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/b5932c44969e5b1711be.hot-update.json"
-    },
-    "app.408ac663600e608424cf.hot-update.js": {
-      "name": "app.408ac663600e608424cf.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.408ac663600e608424cf.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.408ac663600e608424cf.hot-update.js"
-    },
-    "408ac663600e608424cf.hot-update.json": {
-      "name": "408ac663600e608424cf.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/408ac663600e608424cf.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/408ac663600e608424cf.hot-update.json"
-    },
-    "app.44e8085bfca6a3672b78.hot-update.js": {
-      "name": "app.44e8085bfca6a3672b78.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.44e8085bfca6a3672b78.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.44e8085bfca6a3672b78.hot-update.js"
-    },
-    "44e8085bfca6a3672b78.hot-update.json": {
-      "name": "44e8085bfca6a3672b78.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/44e8085bfca6a3672b78.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/44e8085bfca6a3672b78.hot-update.json"
-    },
-    "app.d91425bb3e6b9f2f9181.hot-update.js": {
-      "name": "app.d91425bb3e6b9f2f9181.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d91425bb3e6b9f2f9181.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.d91425bb3e6b9f2f9181.hot-update.js"
-    },
-    "d91425bb3e6b9f2f9181.hot-update.json": {
-      "name": "d91425bb3e6b9f2f9181.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d91425bb3e6b9f2f9181.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/d91425bb3e6b9f2f9181.hot-update.json"
-    },
-    "app.39bc995d723912e6fcc7.hot-update.js": {
-      "name": "app.39bc995d723912e6fcc7.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.39bc995d723912e6fcc7.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.39bc995d723912e6fcc7.hot-update.js"
-    },
-    "39bc995d723912e6fcc7.hot-update.json": {
-      "name": "39bc995d723912e6fcc7.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/39bc995d723912e6fcc7.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/39bc995d723912e6fcc7.hot-update.json"
-    },
-    "app.93ecf69bcdab98833c74.hot-update.js": {
-      "name": "app.93ecf69bcdab98833c74.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.93ecf69bcdab98833c74.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.93ecf69bcdab98833c74.hot-update.js"
-    },
-    "93ecf69bcdab98833c74.hot-update.json": {
-      "name": "93ecf69bcdab98833c74.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/93ecf69bcdab98833c74.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/93ecf69bcdab98833c74.hot-update.json"
-    },
-    "app.0f04a97f97f5503cee0e.hot-update.js": {
-      "name": "app.0f04a97f97f5503cee0e.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0f04a97f97f5503cee0e.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.0f04a97f97f5503cee0e.hot-update.js"
-    },
-    "0f04a97f97f5503cee0e.hot-update.json": {
-      "name": "0f04a97f97f5503cee0e.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0f04a97f97f5503cee0e.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/0f04a97f97f5503cee0e.hot-update.json"
-    },
-    "app.db38d0546c739a8e07cf.hot-update.js": {
-      "name": "app.db38d0546c739a8e07cf.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.db38d0546c739a8e07cf.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.db38d0546c739a8e07cf.hot-update.js"
-    },
-    "db38d0546c739a8e07cf.hot-update.json": {
-      "name": "db38d0546c739a8e07cf.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/db38d0546c739a8e07cf.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/db38d0546c739a8e07cf.hot-update.json"
-    },
-    "app.9eaf46b98df8a2631d36.hot-update.js": {
-      "name": "app.9eaf46b98df8a2631d36.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9eaf46b98df8a2631d36.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.9eaf46b98df8a2631d36.hot-update.js"
-    },
-    "9eaf46b98df8a2631d36.hot-update.json": {
-      "name": "9eaf46b98df8a2631d36.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9eaf46b98df8a2631d36.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/9eaf46b98df8a2631d36.hot-update.json"
-    },
-    "app.f92b5b884458a628c56a.hot-update.js": {
-      "name": "app.f92b5b884458a628c56a.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.f92b5b884458a628c56a.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.f92b5b884458a628c56a.hot-update.js"
-    },
-    "f92b5b884458a628c56a.hot-update.json": {
-      "name": "f92b5b884458a628c56a.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/f92b5b884458a628c56a.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/f92b5b884458a628c56a.hot-update.json"
-    },
-    "app.2bedbb027c339714ce17.hot-update.js": {
-      "name": "app.2bedbb027c339714ce17.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.2bedbb027c339714ce17.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.2bedbb027c339714ce17.hot-update.js"
-    },
-    "2bedbb027c339714ce17.hot-update.json": {
-      "name": "2bedbb027c339714ce17.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/2bedbb027c339714ce17.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/2bedbb027c339714ce17.hot-update.json"
-    },
-    "app.dfbba1bad2678b2830ec.hot-update.js": {
-      "name": "app.dfbba1bad2678b2830ec.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.dfbba1bad2678b2830ec.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.dfbba1bad2678b2830ec.hot-update.js"
-    },
-    "dfbba1bad2678b2830ec.hot-update.json": {
-      "name": "dfbba1bad2678b2830ec.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/dfbba1bad2678b2830ec.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/dfbba1bad2678b2830ec.hot-update.json"
-    },
-    "app.38ae18242a89c17a6b32.hot-update.js": {
-      "name": "app.38ae18242a89c17a6b32.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.38ae18242a89c17a6b32.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.38ae18242a89c17a6b32.hot-update.js"
-    },
-    "38ae18242a89c17a6b32.hot-update.json": {
-      "name": "38ae18242a89c17a6b32.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/38ae18242a89c17a6b32.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/38ae18242a89c17a6b32.hot-update.json"
-    },
-    "app.35c354c1ec2139d56876.hot-update.js": {
-      "name": "app.35c354c1ec2139d56876.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.35c354c1ec2139d56876.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.35c354c1ec2139d56876.hot-update.js"
-    },
-    "35c354c1ec2139d56876.hot-update.json": {
-      "name": "35c354c1ec2139d56876.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/35c354c1ec2139d56876.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/35c354c1ec2139d56876.hot-update.json"
-    },
-    "app.1bc45fcc47a4dfec3f5b.hot-update.js": {
-      "name": "app.1bc45fcc47a4dfec3f5b.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.1bc45fcc47a4dfec3f5b.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.1bc45fcc47a4dfec3f5b.hot-update.js"
-    },
-    "1bc45fcc47a4dfec3f5b.hot-update.json": {
-      "name": "1bc45fcc47a4dfec3f5b.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/1bc45fcc47a4dfec3f5b.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/1bc45fcc47a4dfec3f5b.hot-update.json"
-    },
-    "app.61eb05a717fabea78887.hot-update.js": {
-      "name": "app.61eb05a717fabea78887.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.61eb05a717fabea78887.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.61eb05a717fabea78887.hot-update.js"
-    },
-    "61eb05a717fabea78887.hot-update.json": {
-      "name": "61eb05a717fabea78887.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/61eb05a717fabea78887.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/61eb05a717fabea78887.hot-update.json"
-    },
-    "app.ab53d179ed789b2fd5dc.hot-update.js": {
-      "name": "app.ab53d179ed789b2fd5dc.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ab53d179ed789b2fd5dc.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.ab53d179ed789b2fd5dc.hot-update.js"
-    },
-    "ab53d179ed789b2fd5dc.hot-update.json": {
-      "name": "ab53d179ed789b2fd5dc.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ab53d179ed789b2fd5dc.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/ab53d179ed789b2fd5dc.hot-update.json"
-    },
-    "app.9bc1149b9de059dcadde.hot-update.js": {
-      "name": "app.9bc1149b9de059dcadde.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9bc1149b9de059dcadde.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.9bc1149b9de059dcadde.hot-update.js"
-    },
-    "9bc1149b9de059dcadde.hot-update.json": {
-      "name": "9bc1149b9de059dcadde.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9bc1149b9de059dcadde.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/9bc1149b9de059dcadde.hot-update.json"
-    },
-    "app.95118801e49bc2803f71.hot-update.js": {
-      "name": "app.95118801e49bc2803f71.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.95118801e49bc2803f71.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.95118801e49bc2803f71.hot-update.js"
-    },
-    "95118801e49bc2803f71.hot-update.json": {
-      "name": "95118801e49bc2803f71.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/95118801e49bc2803f71.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/95118801e49bc2803f71.hot-update.json"
-    },
-    "app.407bc395b045b1b3e2d3.hot-update.js": {
-      "name": "app.407bc395b045b1b3e2d3.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.407bc395b045b1b3e2d3.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.407bc395b045b1b3e2d3.hot-update.js"
-    },
-    "407bc395b045b1b3e2d3.hot-update.json": {
-      "name": "407bc395b045b1b3e2d3.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/407bc395b045b1b3e2d3.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/407bc395b045b1b3e2d3.hot-update.json"
-    },
-    "app.3a2fba3896efcd9c011c.hot-update.js": {
-      "name": "app.3a2fba3896efcd9c011c.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3a2fba3896efcd9c011c.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.3a2fba3896efcd9c011c.hot-update.js"
-    },
-    "3a2fba3896efcd9c011c.hot-update.json": {
-      "name": "3a2fba3896efcd9c011c.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3a2fba3896efcd9c011c.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/3a2fba3896efcd9c011c.hot-update.json"
-    },
-    "app.3bd4b1200e4947f49d2a.hot-update.js": {
-      "name": "app.3bd4b1200e4947f49d2a.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3bd4b1200e4947f49d2a.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.3bd4b1200e4947f49d2a.hot-update.js"
-    },
-    "3bd4b1200e4947f49d2a.hot-update.json": {
-      "name": "3bd4b1200e4947f49d2a.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3bd4b1200e4947f49d2a.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/3bd4b1200e4947f49d2a.hot-update.json"
-    },
-    "app.7e0b261302b8a4739088.hot-update.js": {
-      "name": "app.7e0b261302b8a4739088.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.7e0b261302b8a4739088.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.7e0b261302b8a4739088.hot-update.js"
-    },
-    "7e0b261302b8a4739088.hot-update.json": {
-      "name": "7e0b261302b8a4739088.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/7e0b261302b8a4739088.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/7e0b261302b8a4739088.hot-update.json"
-    },
-    "app.ab16090399793b9d2b1b.hot-update.js": {
-      "name": "app.ab16090399793b9d2b1b.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ab16090399793b9d2b1b.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.ab16090399793b9d2b1b.hot-update.js"
-    },
-    "ab16090399793b9d2b1b.hot-update.json": {
-      "name": "ab16090399793b9d2b1b.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ab16090399793b9d2b1b.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/ab16090399793b9d2b1b.hot-update.json"
-    },
-    "app.7032736078d3ed9b5ae6.hot-update.js": {
-      "name": "app.7032736078d3ed9b5ae6.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.7032736078d3ed9b5ae6.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.7032736078d3ed9b5ae6.hot-update.js"
-    },
-    "7032736078d3ed9b5ae6.hot-update.json": {
-      "name": "7032736078d3ed9b5ae6.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/7032736078d3ed9b5ae6.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/7032736078d3ed9b5ae6.hot-update.json"
-    },
-    "app.57f5be9c681e18fadb7e.hot-update.js": {
-      "name": "app.57f5be9c681e18fadb7e.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.57f5be9c681e18fadb7e.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.57f5be9c681e18fadb7e.hot-update.js"
-    },
-    "57f5be9c681e18fadb7e.hot-update.json": {
-      "name": "57f5be9c681e18fadb7e.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/57f5be9c681e18fadb7e.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/57f5be9c681e18fadb7e.hot-update.json"
-    },
-    "app.5b2c0b289d62cb7f870e.hot-update.js": {
-      "name": "app.5b2c0b289d62cb7f870e.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.5b2c0b289d62cb7f870e.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.5b2c0b289d62cb7f870e.hot-update.js"
-    },
-    "5b2c0b289d62cb7f870e.hot-update.json": {
-      "name": "5b2c0b289d62cb7f870e.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/5b2c0b289d62cb7f870e.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/5b2c0b289d62cb7f870e.hot-update.json"
-    },
-    "app.458ad9e8f0e72ab19491.hot-update.js": {
-      "name": "app.458ad9e8f0e72ab19491.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.458ad9e8f0e72ab19491.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.458ad9e8f0e72ab19491.hot-update.js"
-    },
-    "458ad9e8f0e72ab19491.hot-update.json": {
-      "name": "458ad9e8f0e72ab19491.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/458ad9e8f0e72ab19491.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/458ad9e8f0e72ab19491.hot-update.json"
-    },
-    "app.691d85ddfb1121772ae1.hot-update.js": {
-      "name": "app.691d85ddfb1121772ae1.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.691d85ddfb1121772ae1.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.691d85ddfb1121772ae1.hot-update.js"
-    },
-    "691d85ddfb1121772ae1.hot-update.json": {
-      "name": "691d85ddfb1121772ae1.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/691d85ddfb1121772ae1.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/691d85ddfb1121772ae1.hot-update.json"
-    },
-    "app.89f3c83e604b5fc59ad2.hot-update.js": {
-      "name": "app.89f3c83e604b5fc59ad2.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.89f3c83e604b5fc59ad2.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.89f3c83e604b5fc59ad2.hot-update.js"
-    },
-    "89f3c83e604b5fc59ad2.hot-update.json": {
-      "name": "89f3c83e604b5fc59ad2.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/89f3c83e604b5fc59ad2.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/89f3c83e604b5fc59ad2.hot-update.json"
-    },
-    "app.b593aed071cda5b54ac8.hot-update.js": {
-      "name": "app.b593aed071cda5b54ac8.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.b593aed071cda5b54ac8.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.b593aed071cda5b54ac8.hot-update.js"
-    },
-    "b593aed071cda5b54ac8.hot-update.json": {
-      "name": "b593aed071cda5b54ac8.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/b593aed071cda5b54ac8.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/b593aed071cda5b54ac8.hot-update.json"
-    },
-    "app.8ffafb28d5234bb5de7e.hot-update.js": {
-      "name": "app.8ffafb28d5234bb5de7e.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.8ffafb28d5234bb5de7e.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.8ffafb28d5234bb5de7e.hot-update.js"
-    },
-    "8ffafb28d5234bb5de7e.hot-update.json": {
-      "name": "8ffafb28d5234bb5de7e.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/8ffafb28d5234bb5de7e.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/8ffafb28d5234bb5de7e.hot-update.json"
-    },
-    "app.d0441b41e60b0d21e284.hot-update.js": {
-      "name": "app.d0441b41e60b0d21e284.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d0441b41e60b0d21e284.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.d0441b41e60b0d21e284.hot-update.js"
-    },
-    "d0441b41e60b0d21e284.hot-update.json": {
-      "name": "d0441b41e60b0d21e284.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d0441b41e60b0d21e284.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/d0441b41e60b0d21e284.hot-update.json"
-    },
-    "app.9e0c1c6631ae4522bdac.hot-update.js": {
-      "name": "app.9e0c1c6631ae4522bdac.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9e0c1c6631ae4522bdac.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.9e0c1c6631ae4522bdac.hot-update.js"
-    },
-    "9e0c1c6631ae4522bdac.hot-update.json": {
-      "name": "9e0c1c6631ae4522bdac.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9e0c1c6631ae4522bdac.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/9e0c1c6631ae4522bdac.hot-update.json"
-    },
-    "app.074bd0667b919655c771.hot-update.js": {
-      "name": "app.074bd0667b919655c771.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.074bd0667b919655c771.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.074bd0667b919655c771.hot-update.js"
-    },
-    "074bd0667b919655c771.hot-update.json": {
-      "name": "074bd0667b919655c771.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/074bd0667b919655c771.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/074bd0667b919655c771.hot-update.json"
-    },
-    "app.192634923e06c0049b92.hot-update.js": {
-      "name": "app.192634923e06c0049b92.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.192634923e06c0049b92.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.192634923e06c0049b92.hot-update.js"
-    },
-    "192634923e06c0049b92.hot-update.json": {
-      "name": "192634923e06c0049b92.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/192634923e06c0049b92.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/192634923e06c0049b92.hot-update.json"
-    },
-    "app.83415ebce9e83774ad9e.hot-update.js": {
-      "name": "app.83415ebce9e83774ad9e.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.83415ebce9e83774ad9e.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.83415ebce9e83774ad9e.hot-update.js"
-    },
-    "83415ebce9e83774ad9e.hot-update.json": {
-      "name": "83415ebce9e83774ad9e.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/83415ebce9e83774ad9e.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/83415ebce9e83774ad9e.hot-update.json"
-    },
-    "app.40f110fffd87c77b8356.hot-update.js": {
-      "name": "app.40f110fffd87c77b8356.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.40f110fffd87c77b8356.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.40f110fffd87c77b8356.hot-update.js"
-    },
-    "40f110fffd87c77b8356.hot-update.json": {
-      "name": "40f110fffd87c77b8356.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/40f110fffd87c77b8356.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/40f110fffd87c77b8356.hot-update.json"
-    },
-    "app.55909bfce7f9da14deeb.hot-update.js": {
-      "name": "app.55909bfce7f9da14deeb.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.55909bfce7f9da14deeb.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.55909bfce7f9da14deeb.hot-update.js"
-    },
-    "55909bfce7f9da14deeb.hot-update.json": {
-      "name": "55909bfce7f9da14deeb.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/55909bfce7f9da14deeb.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/55909bfce7f9da14deeb.hot-update.json"
-    },
-    "app.d09ba239fe1f33677df1.hot-update.js": {
-      "name": "app.d09ba239fe1f33677df1.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d09ba239fe1f33677df1.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.d09ba239fe1f33677df1.hot-update.js"
-    },
-    "d09ba239fe1f33677df1.hot-update.json": {
-      "name": "d09ba239fe1f33677df1.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d09ba239fe1f33677df1.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/d09ba239fe1f33677df1.hot-update.json"
-    },
-    "app.81394a1319131f44c0ff.hot-update.js": {
-      "name": "app.81394a1319131f44c0ff.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.81394a1319131f44c0ff.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.81394a1319131f44c0ff.hot-update.js"
-    },
-    "81394a1319131f44c0ff.hot-update.json": {
-      "name": "81394a1319131f44c0ff.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/81394a1319131f44c0ff.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/81394a1319131f44c0ff.hot-update.json"
-    },
-    "app.9ef6fd555eb0c43b1bfd.hot-update.js": {
-      "name": "app.9ef6fd555eb0c43b1bfd.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9ef6fd555eb0c43b1bfd.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.9ef6fd555eb0c43b1bfd.hot-update.js"
-    },
-    "9ef6fd555eb0c43b1bfd.hot-update.json": {
-      "name": "9ef6fd555eb0c43b1bfd.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9ef6fd555eb0c43b1bfd.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/9ef6fd555eb0c43b1bfd.hot-update.json"
-    },
-    "app.3c50d50467e5e0485280.hot-update.js": {
-      "name": "app.3c50d50467e5e0485280.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3c50d50467e5e0485280.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.3c50d50467e5e0485280.hot-update.js"
-    },
-    "3c50d50467e5e0485280.hot-update.json": {
-      "name": "3c50d50467e5e0485280.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3c50d50467e5e0485280.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/3c50d50467e5e0485280.hot-update.json"
-    },
-    "app.5f308c33a035e1051c79.hot-update.js": {
-      "name": "app.5f308c33a035e1051c79.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.5f308c33a035e1051c79.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.5f308c33a035e1051c79.hot-update.js"
-    },
-    "5f308c33a035e1051c79.hot-update.json": {
-      "name": "5f308c33a035e1051c79.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/5f308c33a035e1051c79.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/5f308c33a035e1051c79.hot-update.json"
-    },
-    "app.413252ae73313d7a9b52.hot-update.js": {
-      "name": "app.413252ae73313d7a9b52.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.413252ae73313d7a9b52.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.413252ae73313d7a9b52.hot-update.js"
-    },
-    "413252ae73313d7a9b52.hot-update.json": {
-      "name": "413252ae73313d7a9b52.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/413252ae73313d7a9b52.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/413252ae73313d7a9b52.hot-update.json"
-    },
-    "app.b436ddee6f29e25e19fa.hot-update.js": {
-      "name": "app.b436ddee6f29e25e19fa.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.b436ddee6f29e25e19fa.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.b436ddee6f29e25e19fa.hot-update.js"
-    },
-    "b436ddee6f29e25e19fa.hot-update.json": {
-      "name": "b436ddee6f29e25e19fa.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/b436ddee6f29e25e19fa.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/b436ddee6f29e25e19fa.hot-update.json"
-    },
-    "app.dc687757003894f7f175.hot-update.js": {
-      "name": "app.dc687757003894f7f175.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.dc687757003894f7f175.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.dc687757003894f7f175.hot-update.js"
-    },
-    "dc687757003894f7f175.hot-update.json": {
-      "name": "dc687757003894f7f175.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/dc687757003894f7f175.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/dc687757003894f7f175.hot-update.json"
-    },
-    "app.e62b88f938aaa1f86347.hot-update.js": {
-      "name": "app.e62b88f938aaa1f86347.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.e62b88f938aaa1f86347.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.e62b88f938aaa1f86347.hot-update.js"
-    },
-    "e62b88f938aaa1f86347.hot-update.json": {
-      "name": "e62b88f938aaa1f86347.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/e62b88f938aaa1f86347.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/e62b88f938aaa1f86347.hot-update.json"
-    },
-    "app.b6e062bca4a3bf3fae88.hot-update.js": {
-      "name": "app.b6e062bca4a3bf3fae88.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.b6e062bca4a3bf3fae88.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.b6e062bca4a3bf3fae88.hot-update.js"
-    },
-    "b6e062bca4a3bf3fae88.hot-update.json": {
-      "name": "b6e062bca4a3bf3fae88.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/b6e062bca4a3bf3fae88.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/b6e062bca4a3bf3fae88.hot-update.json"
-    },
-    "app.c5d7922740f43cb372a0.hot-update.js": {
-      "name": "app.c5d7922740f43cb372a0.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.c5d7922740f43cb372a0.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.c5d7922740f43cb372a0.hot-update.js"
-    },
-    "c5d7922740f43cb372a0.hot-update.json": {
-      "name": "c5d7922740f43cb372a0.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/c5d7922740f43cb372a0.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/c5d7922740f43cb372a0.hot-update.json"
-    },
-    "app.74cc3e14d8db7c9ff4ac.hot-update.js": {
-      "name": "app.74cc3e14d8db7c9ff4ac.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.74cc3e14d8db7c9ff4ac.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.74cc3e14d8db7c9ff4ac.hot-update.js"
-    },
-    "74cc3e14d8db7c9ff4ac.hot-update.json": {
-      "name": "74cc3e14d8db7c9ff4ac.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/74cc3e14d8db7c9ff4ac.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/74cc3e14d8db7c9ff4ac.hot-update.json"
-    },
-    "app.bdecf9ed0d9ad9039c4e.hot-update.js": {
-      "name": "app.bdecf9ed0d9ad9039c4e.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.bdecf9ed0d9ad9039c4e.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.bdecf9ed0d9ad9039c4e.hot-update.js"
-    },
-    "bdecf9ed0d9ad9039c4e.hot-update.json": {
-      "name": "bdecf9ed0d9ad9039c4e.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/bdecf9ed0d9ad9039c4e.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/bdecf9ed0d9ad9039c4e.hot-update.json"
-    },
-    "app.c4d6f98c48c32b432464.hot-update.js": {
-      "name": "app.c4d6f98c48c32b432464.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.c4d6f98c48c32b432464.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.c4d6f98c48c32b432464.hot-update.js"
-    },
-    "c4d6f98c48c32b432464.hot-update.json": {
-      "name": "c4d6f98c48c32b432464.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/c4d6f98c48c32b432464.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/c4d6f98c48c32b432464.hot-update.json"
-    },
-    "app.edc20ffd9c5bb1a9817e.hot-update.js": {
-      "name": "app.edc20ffd9c5bb1a9817e.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.edc20ffd9c5bb1a9817e.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.edc20ffd9c5bb1a9817e.hot-update.js"
-    },
-    "edc20ffd9c5bb1a9817e.hot-update.json": {
-      "name": "edc20ffd9c5bb1a9817e.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/edc20ffd9c5bb1a9817e.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/edc20ffd9c5bb1a9817e.hot-update.json"
-    },
-    "app.24284a548648ce860d4b.hot-update.js": {
-      "name": "app.24284a548648ce860d4b.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.24284a548648ce860d4b.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.24284a548648ce860d4b.hot-update.js"
-    },
-    "24284a548648ce860d4b.hot-update.json": {
-      "name": "24284a548648ce860d4b.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/24284a548648ce860d4b.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/24284a548648ce860d4b.hot-update.json"
-    },
-    "app.a11f8f07422de7c6e849.hot-update.js": {
-      "name": "app.a11f8f07422de7c6e849.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.a11f8f07422de7c6e849.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.a11f8f07422de7c6e849.hot-update.js"
-    },
-    "a11f8f07422de7c6e849.hot-update.json": {
-      "name": "a11f8f07422de7c6e849.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/a11f8f07422de7c6e849.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/a11f8f07422de7c6e849.hot-update.json"
-    },
-    "app.f9a5715503e24b699b59.hot-update.js": {
-      "name": "app.f9a5715503e24b699b59.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.f9a5715503e24b699b59.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.f9a5715503e24b699b59.hot-update.js"
-    },
-    "f9a5715503e24b699b59.hot-update.json": {
-      "name": "f9a5715503e24b699b59.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/f9a5715503e24b699b59.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/f9a5715503e24b699b59.hot-update.json"
-    },
-    "app.d72bd27b2e2b9f612ef4.hot-update.js": {
-      "name": "app.d72bd27b2e2b9f612ef4.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d72bd27b2e2b9f612ef4.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.d72bd27b2e2b9f612ef4.hot-update.js"
-    },
-    "d72bd27b2e2b9f612ef4.hot-update.json": {
-      "name": "d72bd27b2e2b9f612ef4.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d72bd27b2e2b9f612ef4.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/d72bd27b2e2b9f612ef4.hot-update.json"
-    },
-    "app.d688ca0d9cc795e74eb7.hot-update.js": {
-      "name": "app.d688ca0d9cc795e74eb7.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d688ca0d9cc795e74eb7.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.d688ca0d9cc795e74eb7.hot-update.js"
-    },
-    "d688ca0d9cc795e74eb7.hot-update.json": {
-      "name": "d688ca0d9cc795e74eb7.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d688ca0d9cc795e74eb7.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/d688ca0d9cc795e74eb7.hot-update.json"
-    },
-    "app.56cf3e1b57bc62ac863d.hot-update.js": {
-      "name": "app.56cf3e1b57bc62ac863d.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.56cf3e1b57bc62ac863d.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.56cf3e1b57bc62ac863d.hot-update.js"
-    },
-    "56cf3e1b57bc62ac863d.hot-update.json": {
-      "name": "56cf3e1b57bc62ac863d.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/56cf3e1b57bc62ac863d.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/56cf3e1b57bc62ac863d.hot-update.json"
-    },
-    "app.6107ebbbbb469897d347.hot-update.js": {
-      "name": "app.6107ebbbbb469897d347.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.6107ebbbbb469897d347.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.6107ebbbbb469897d347.hot-update.js"
-    },
-    "6107ebbbbb469897d347.hot-update.json": {
-      "name": "6107ebbbbb469897d347.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/6107ebbbbb469897d347.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/6107ebbbbb469897d347.hot-update.json"
-    },
-    "app.1c2a7d03a8c4ab929d06.hot-update.js": {
-      "name": "app.1c2a7d03a8c4ab929d06.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.1c2a7d03a8c4ab929d06.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.1c2a7d03a8c4ab929d06.hot-update.js"
-    },
-    "1c2a7d03a8c4ab929d06.hot-update.json": {
-      "name": "1c2a7d03a8c4ab929d06.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/1c2a7d03a8c4ab929d06.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/1c2a7d03a8c4ab929d06.hot-update.json"
-    },
-    "app.ce2a69186f8a2b32271b.hot-update.js": {
-      "name": "app.ce2a69186f8a2b32271b.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ce2a69186f8a2b32271b.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.ce2a69186f8a2b32271b.hot-update.js"
-    },
-    "ce2a69186f8a2b32271b.hot-update.json": {
-      "name": "ce2a69186f8a2b32271b.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ce2a69186f8a2b32271b.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/ce2a69186f8a2b32271b.hot-update.json"
-    },
-    "app.9cd81f5a1dee9b761698.hot-update.js": {
-      "name": "app.9cd81f5a1dee9b761698.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9cd81f5a1dee9b761698.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.9cd81f5a1dee9b761698.hot-update.js"
-    },
-    "9cd81f5a1dee9b761698.hot-update.json": {
-      "name": "9cd81f5a1dee9b761698.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9cd81f5a1dee9b761698.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/9cd81f5a1dee9b761698.hot-update.json"
-    },
-    "app.95ff28e531c4f9571bb0.hot-update.js": {
-      "name": "app.95ff28e531c4f9571bb0.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.95ff28e531c4f9571bb0.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.95ff28e531c4f9571bb0.hot-update.js"
-    },
-    "95ff28e531c4f9571bb0.hot-update.json": {
-      "name": "95ff28e531c4f9571bb0.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/95ff28e531c4f9571bb0.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/95ff28e531c4f9571bb0.hot-update.json"
-    },
-    "app.51fa47d58a6ba3818226.hot-update.js": {
-      "name": "app.51fa47d58a6ba3818226.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.51fa47d58a6ba3818226.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.51fa47d58a6ba3818226.hot-update.js"
-    },
-    "51fa47d58a6ba3818226.hot-update.json": {
-      "name": "51fa47d58a6ba3818226.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/51fa47d58a6ba3818226.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/51fa47d58a6ba3818226.hot-update.json"
-    },
-    "app.838666d7b012fbe8c8ae.hot-update.js": {
-      "name": "app.838666d7b012fbe8c8ae.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.838666d7b012fbe8c8ae.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.838666d7b012fbe8c8ae.hot-update.js"
-    },
-    "838666d7b012fbe8c8ae.hot-update.json": {
-      "name": "838666d7b012fbe8c8ae.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/838666d7b012fbe8c8ae.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/838666d7b012fbe8c8ae.hot-update.json"
-    },
-    "app.9184901284452584bf6f.hot-update.js": {
-      "name": "app.9184901284452584bf6f.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9184901284452584bf6f.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.9184901284452584bf6f.hot-update.js"
-    },
-    "9184901284452584bf6f.hot-update.json": {
-      "name": "9184901284452584bf6f.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9184901284452584bf6f.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/9184901284452584bf6f.hot-update.json"
-    },
-    "app.6750cccbb57735fa6c2e.hot-update.js": {
-      "name": "app.6750cccbb57735fa6c2e.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.6750cccbb57735fa6c2e.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.6750cccbb57735fa6c2e.hot-update.js"
-    },
-    "6750cccbb57735fa6c2e.hot-update.json": {
-      "name": "6750cccbb57735fa6c2e.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/6750cccbb57735fa6c2e.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/6750cccbb57735fa6c2e.hot-update.json"
-    },
-    "app.fdee87220deca5d78614.hot-update.js": {
-      "name": "app.fdee87220deca5d78614.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.fdee87220deca5d78614.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.fdee87220deca5d78614.hot-update.js"
-    },
-    "fdee87220deca5d78614.hot-update.json": {
-      "name": "fdee87220deca5d78614.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/fdee87220deca5d78614.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/fdee87220deca5d78614.hot-update.json"
-    },
-    "app.d2522175708eba679746.hot-update.js": {
-      "name": "app.d2522175708eba679746.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d2522175708eba679746.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.d2522175708eba679746.hot-update.js"
-    },
-    "d2522175708eba679746.hot-update.json": {
-      "name": "d2522175708eba679746.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d2522175708eba679746.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/d2522175708eba679746.hot-update.json"
-    },
-    "app.fb00bd48548dfc2bf7fc.hot-update.js": {
-      "name": "app.fb00bd48548dfc2bf7fc.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.fb00bd48548dfc2bf7fc.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.fb00bd48548dfc2bf7fc.hot-update.js"
-    },
-    "fb00bd48548dfc2bf7fc.hot-update.json": {
-      "name": "fb00bd48548dfc2bf7fc.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/fb00bd48548dfc2bf7fc.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/fb00bd48548dfc2bf7fc.hot-update.json"
-    },
-    "app.401e35b6c02f65fe6297.hot-update.js": {
-      "name": "app.401e35b6c02f65fe6297.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.401e35b6c02f65fe6297.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.401e35b6c02f65fe6297.hot-update.js"
-    },
-    "401e35b6c02f65fe6297.hot-update.json": {
-      "name": "401e35b6c02f65fe6297.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/401e35b6c02f65fe6297.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/401e35b6c02f65fe6297.hot-update.json"
-    },
-    "app.203e33e21b70cea955d6.hot-update.js": {
-      "name": "app.203e33e21b70cea955d6.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.203e33e21b70cea955d6.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.203e33e21b70cea955d6.hot-update.js"
-    },
-    "203e33e21b70cea955d6.hot-update.json": {
-      "name": "203e33e21b70cea955d6.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/203e33e21b70cea955d6.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/203e33e21b70cea955d6.hot-update.json"
-    },
-    "app.105723cb6ea3a0d65762.hot-update.js": {
-      "name": "app.105723cb6ea3a0d65762.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.105723cb6ea3a0d65762.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.105723cb6ea3a0d65762.hot-update.js"
-    },
-    "105723cb6ea3a0d65762.hot-update.json": {
-      "name": "105723cb6ea3a0d65762.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/105723cb6ea3a0d65762.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/105723cb6ea3a0d65762.hot-update.json"
-    },
-    "app.3ad0e9deb71eeb2794af.hot-update.js": {
-      "name": "app.3ad0e9deb71eeb2794af.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3ad0e9deb71eeb2794af.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.3ad0e9deb71eeb2794af.hot-update.js"
-    },
-    "3ad0e9deb71eeb2794af.hot-update.json": {
-      "name": "3ad0e9deb71eeb2794af.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3ad0e9deb71eeb2794af.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/3ad0e9deb71eeb2794af.hot-update.json"
-    },
-    "app.c7132dd98a09b8f0b250.hot-update.js": {
-      "name": "app.c7132dd98a09b8f0b250.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.c7132dd98a09b8f0b250.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.c7132dd98a09b8f0b250.hot-update.js"
-    },
-    "c7132dd98a09b8f0b250.hot-update.json": {
-      "name": "c7132dd98a09b8f0b250.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/c7132dd98a09b8f0b250.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/c7132dd98a09b8f0b250.hot-update.json"
-    },
-    "app.5385e7335960dce41599.hot-update.js": {
-      "name": "app.5385e7335960dce41599.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.5385e7335960dce41599.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.5385e7335960dce41599.hot-update.js"
-    },
-    "5385e7335960dce41599.hot-update.json": {
-      "name": "5385e7335960dce41599.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/5385e7335960dce41599.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/5385e7335960dce41599.hot-update.json"
-    },
-    "app.691127f6cde36f9d5237.hot-update.js": {
-      "name": "app.691127f6cde36f9d5237.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.691127f6cde36f9d5237.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.691127f6cde36f9d5237.hot-update.js"
-    },
-    "691127f6cde36f9d5237.hot-update.json": {
-      "name": "691127f6cde36f9d5237.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/691127f6cde36f9d5237.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/691127f6cde36f9d5237.hot-update.json"
-    },
-    "app.dbbc6da744690da9138e.hot-update.js": {
-      "name": "app.dbbc6da744690da9138e.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.dbbc6da744690da9138e.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.dbbc6da744690da9138e.hot-update.js"
-    },
-    "dbbc6da744690da9138e.hot-update.json": {
-      "name": "dbbc6da744690da9138e.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/dbbc6da744690da9138e.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/dbbc6da744690da9138e.hot-update.json"
-    },
-    "app.b714625503b3e1a9d0e5.hot-update.js": {
-      "name": "app.b714625503b3e1a9d0e5.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.b714625503b3e1a9d0e5.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.b714625503b3e1a9d0e5.hot-update.js"
-    },
-    "b714625503b3e1a9d0e5.hot-update.json": {
-      "name": "b714625503b3e1a9d0e5.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/b714625503b3e1a9d0e5.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/b714625503b3e1a9d0e5.hot-update.json"
+    "app.fee7aad96b29fd4c0767.hot-update.js": {
+      "name": "app.fee7aad96b29fd4c0767.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.fee7aad96b29fd4c0767.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.fee7aad96b29fd4c0767.hot-update.js"
+    },
+    "fee7aad96b29fd4c0767.hot-update.json": {
+      "name": "fee7aad96b29fd4c0767.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/fee7aad96b29fd4c0767.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/fee7aad96b29fd4c0767.hot-update.json"
+    },
+    "app.3265a510bce2c0bb774c.hot-update.js": {
+      "name": "app.3265a510bce2c0bb774c.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3265a510bce2c0bb774c.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.3265a510bce2c0bb774c.hot-update.js"
+    },
+    "3265a510bce2c0bb774c.hot-update.json": {
+      "name": "3265a510bce2c0bb774c.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3265a510bce2c0bb774c.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/3265a510bce2c0bb774c.hot-update.json"
+    },
+    "app.51c41044250c9fcbe1ef.hot-update.js": {
+      "name": "app.51c41044250c9fcbe1ef.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.51c41044250c9fcbe1ef.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.51c41044250c9fcbe1ef.hot-update.js"
+    },
+    "51c41044250c9fcbe1ef.hot-update.json": {
+      "name": "51c41044250c9fcbe1ef.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/51c41044250c9fcbe1ef.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/51c41044250c9fcbe1ef.hot-update.json"
+    },
+    "aabea1182a2959224aa7.hot-update.json": {
+      "name": "aabea1182a2959224aa7.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/aabea1182a2959224aa7.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/aabea1182a2959224aa7.hot-update.json"
+    },
+    "app.9f9317030f352311d5d2.hot-update.js": {
+      "name": "app.9f9317030f352311d5d2.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9f9317030f352311d5d2.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.9f9317030f352311d5d2.hot-update.js"
+    },
+    "9f9317030f352311d5d2.hot-update.json": {
+      "name": "9f9317030f352311d5d2.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9f9317030f352311d5d2.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/9f9317030f352311d5d2.hot-update.json"
+    },
+    "app.f76633311ebf1e9eed81.hot-update.js": {
+      "name": "app.f76633311ebf1e9eed81.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.f76633311ebf1e9eed81.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.f76633311ebf1e9eed81.hot-update.js"
+    },
+    "f76633311ebf1e9eed81.hot-update.json": {
+      "name": "f76633311ebf1e9eed81.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/f76633311ebf1e9eed81.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/f76633311ebf1e9eed81.hot-update.json"
+    },
+    "app.3ebf4a524a9e320ee4a0.hot-update.js": {
+      "name": "app.3ebf4a524a9e320ee4a0.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3ebf4a524a9e320ee4a0.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.3ebf4a524a9e320ee4a0.hot-update.js"
+    },
+    "3ebf4a524a9e320ee4a0.hot-update.json": {
+      "name": "3ebf4a524a9e320ee4a0.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3ebf4a524a9e320ee4a0.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/3ebf4a524a9e320ee4a0.hot-update.json"
+    },
+    "app.a02a00e7fea102307cc8.hot-update.js": {
+      "name": "app.a02a00e7fea102307cc8.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.a02a00e7fea102307cc8.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.a02a00e7fea102307cc8.hot-update.js"
+    },
+    "a02a00e7fea102307cc8.hot-update.json": {
+      "name": "a02a00e7fea102307cc8.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/a02a00e7fea102307cc8.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/a02a00e7fea102307cc8.hot-update.json"
+    },
+    "app.52891112c6f89f2e6c61.hot-update.js": {
+      "name": "app.52891112c6f89f2e6c61.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.52891112c6f89f2e6c61.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.52891112c6f89f2e6c61.hot-update.js"
+    },
+    "52891112c6f89f2e6c61.hot-update.json": {
+      "name": "52891112c6f89f2e6c61.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/52891112c6f89f2e6c61.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/52891112c6f89f2e6c61.hot-update.json"
+    },
+    "app.0041ed0cbfe32695ef4e.hot-update.js": {
+      "name": "app.0041ed0cbfe32695ef4e.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0041ed0cbfe32695ef4e.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.0041ed0cbfe32695ef4e.hot-update.js"
+    },
+    "0041ed0cbfe32695ef4e.hot-update.json": {
+      "name": "0041ed0cbfe32695ef4e.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0041ed0cbfe32695ef4e.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/0041ed0cbfe32695ef4e.hot-update.json"
+    },
+    "app.23f0e3ef71d1a4254f09.hot-update.js": {
+      "name": "app.23f0e3ef71d1a4254f09.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.23f0e3ef71d1a4254f09.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.23f0e3ef71d1a4254f09.hot-update.js"
+    },
+    "23f0e3ef71d1a4254f09.hot-update.json": {
+      "name": "23f0e3ef71d1a4254f09.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/23f0e3ef71d1a4254f09.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/23f0e3ef71d1a4254f09.hot-update.json"
+    },
+    "app.33072d588f09aebc4321.hot-update.js": {
+      "name": "app.33072d588f09aebc4321.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.33072d588f09aebc4321.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.33072d588f09aebc4321.hot-update.js"
+    },
+    "33072d588f09aebc4321.hot-update.json": {
+      "name": "33072d588f09aebc4321.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/33072d588f09aebc4321.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/33072d588f09aebc4321.hot-update.json"
+    },
+    "app.3c828073ab2c53e81e94.hot-update.js": {
+      "name": "app.3c828073ab2c53e81e94.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3c828073ab2c53e81e94.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.3c828073ab2c53e81e94.hot-update.js"
+    },
+    "3c828073ab2c53e81e94.hot-update.json": {
+      "name": "3c828073ab2c53e81e94.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3c828073ab2c53e81e94.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/3c828073ab2c53e81e94.hot-update.json"
+    },
+    "app.7a11360c735cb8dd9606.hot-update.js": {
+      "name": "app.7a11360c735cb8dd9606.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.7a11360c735cb8dd9606.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.7a11360c735cb8dd9606.hot-update.js"
+    },
+    "7a11360c735cb8dd9606.hot-update.json": {
+      "name": "7a11360c735cb8dd9606.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/7a11360c735cb8dd9606.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/7a11360c735cb8dd9606.hot-update.json"
+    },
+    "app.8bdc9a6b5c53eb780f81.hot-update.js": {
+      "name": "app.8bdc9a6b5c53eb780f81.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.8bdc9a6b5c53eb780f81.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.8bdc9a6b5c53eb780f81.hot-update.js"
+    },
+    "8bdc9a6b5c53eb780f81.hot-update.json": {
+      "name": "8bdc9a6b5c53eb780f81.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/8bdc9a6b5c53eb780f81.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/8bdc9a6b5c53eb780f81.hot-update.json"
+    },
+    "app.0db229763c36bd94fe4e.hot-update.js": {
+      "name": "app.0db229763c36bd94fe4e.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0db229763c36bd94fe4e.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.0db229763c36bd94fe4e.hot-update.js"
+    },
+    "0db229763c36bd94fe4e.hot-update.json": {
+      "name": "0db229763c36bd94fe4e.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0db229763c36bd94fe4e.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/0db229763c36bd94fe4e.hot-update.json"
+    },
+    "app.3a6f1433a8cdd033bf23.hot-update.js": {
+      "name": "app.3a6f1433a8cdd033bf23.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3a6f1433a8cdd033bf23.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.3a6f1433a8cdd033bf23.hot-update.js"
+    },
+    "3a6f1433a8cdd033bf23.hot-update.json": {
+      "name": "3a6f1433a8cdd033bf23.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3a6f1433a8cdd033bf23.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/3a6f1433a8cdd033bf23.hot-update.json"
+    },
+    "app.c933c29c76a825a6b016.hot-update.js": {
+      "name": "app.c933c29c76a825a6b016.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.c933c29c76a825a6b016.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.c933c29c76a825a6b016.hot-update.js"
+    },
+    "c933c29c76a825a6b016.hot-update.json": {
+      "name": "c933c29c76a825a6b016.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/c933c29c76a825a6b016.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/c933c29c76a825a6b016.hot-update.json"
+    },
+    "app.9050f542ab0b015a06ab.hot-update.js": {
+      "name": "app.9050f542ab0b015a06ab.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9050f542ab0b015a06ab.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.9050f542ab0b015a06ab.hot-update.js"
+    },
+    "9050f542ab0b015a06ab.hot-update.json": {
+      "name": "9050f542ab0b015a06ab.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9050f542ab0b015a06ab.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/9050f542ab0b015a06ab.hot-update.json"
+    },
+    "app.d8ff63c8c19c94a9e2b0.hot-update.js": {
+      "name": "app.d8ff63c8c19c94a9e2b0.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d8ff63c8c19c94a9e2b0.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.d8ff63c8c19c94a9e2b0.hot-update.js"
+    },
+    "d8ff63c8c19c94a9e2b0.hot-update.json": {
+      "name": "d8ff63c8c19c94a9e2b0.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d8ff63c8c19c94a9e2b0.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/d8ff63c8c19c94a9e2b0.hot-update.json"
+    },
+    "app.b84b4d344785a7386585.hot-update.js": {
+      "name": "app.b84b4d344785a7386585.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.b84b4d344785a7386585.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.b84b4d344785a7386585.hot-update.js"
+    },
+    "b84b4d344785a7386585.hot-update.json": {
+      "name": "b84b4d344785a7386585.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/b84b4d344785a7386585.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/b84b4d344785a7386585.hot-update.json"
+    },
+    "app.d8e05ea997a133a93296.hot-update.js": {
+      "name": "app.d8e05ea997a133a93296.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d8e05ea997a133a93296.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.d8e05ea997a133a93296.hot-update.js"
+    },
+    "d8e05ea997a133a93296.hot-update.json": {
+      "name": "d8e05ea997a133a93296.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d8e05ea997a133a93296.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/d8e05ea997a133a93296.hot-update.json"
+    },
+    "app.b7f51e731ad1adb4b1ba.hot-update.js": {
+      "name": "app.b7f51e731ad1adb4b1ba.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.b7f51e731ad1adb4b1ba.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.b7f51e731ad1adb4b1ba.hot-update.js"
+    },
+    "b7f51e731ad1adb4b1ba.hot-update.json": {
+      "name": "b7f51e731ad1adb4b1ba.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/b7f51e731ad1adb4b1ba.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/b7f51e731ad1adb4b1ba.hot-update.json"
+    },
+    "app.74d0360ea7334bd82c0b.hot-update.js": {
+      "name": "app.74d0360ea7334bd82c0b.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.74d0360ea7334bd82c0b.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.74d0360ea7334bd82c0b.hot-update.js"
+    },
+    "74d0360ea7334bd82c0b.hot-update.json": {
+      "name": "74d0360ea7334bd82c0b.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/74d0360ea7334bd82c0b.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/74d0360ea7334bd82c0b.hot-update.json"
+    },
+    "app.2f6bb23616453b99f629.hot-update.js": {
+      "name": "app.2f6bb23616453b99f629.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.2f6bb23616453b99f629.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.2f6bb23616453b99f629.hot-update.js"
+    },
+    "2f6bb23616453b99f629.hot-update.json": {
+      "name": "2f6bb23616453b99f629.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/2f6bb23616453b99f629.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/2f6bb23616453b99f629.hot-update.json"
+    },
+    "app.d43267479465e6d63bbd.hot-update.js": {
+      "name": "app.d43267479465e6d63bbd.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d43267479465e6d63bbd.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.d43267479465e6d63bbd.hot-update.js"
+    },
+    "d43267479465e6d63bbd.hot-update.json": {
+      "name": "d43267479465e6d63bbd.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d43267479465e6d63bbd.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/d43267479465e6d63bbd.hot-update.json"
+    },
+    "app.0172411fdb7a86aa0c7b.hot-update.js": {
+      "name": "app.0172411fdb7a86aa0c7b.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0172411fdb7a86aa0c7b.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.0172411fdb7a86aa0c7b.hot-update.js"
+    },
+    "0172411fdb7a86aa0c7b.hot-update.json": {
+      "name": "0172411fdb7a86aa0c7b.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0172411fdb7a86aa0c7b.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/0172411fdb7a86aa0c7b.hot-update.json"
+    },
+    "app.bdff79c4578a784bf3b2.hot-update.js": {
+      "name": "app.bdff79c4578a784bf3b2.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.bdff79c4578a784bf3b2.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.bdff79c4578a784bf3b2.hot-update.js"
+    },
+    "bdff79c4578a784bf3b2.hot-update.json": {
+      "name": "bdff79c4578a784bf3b2.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/bdff79c4578a784bf3b2.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/bdff79c4578a784bf3b2.hot-update.json"
+    },
+    "app.3e95b3739789f6673dbe.hot-update.js": {
+      "name": "app.3e95b3739789f6673dbe.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3e95b3739789f6673dbe.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.3e95b3739789f6673dbe.hot-update.js"
+    },
+    "3e95b3739789f6673dbe.hot-update.json": {
+      "name": "3e95b3739789f6673dbe.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3e95b3739789f6673dbe.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/3e95b3739789f6673dbe.hot-update.json"
+    },
+    "app.2cf005abb332682248f5.hot-update.js": {
+      "name": "app.2cf005abb332682248f5.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.2cf005abb332682248f5.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.2cf005abb332682248f5.hot-update.js"
+    },
+    "2cf005abb332682248f5.hot-update.json": {
+      "name": "2cf005abb332682248f5.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/2cf005abb332682248f5.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/2cf005abb332682248f5.hot-update.json"
+    },
+    "app.51c827f6bf9213b55646.hot-update.js": {
+      "name": "app.51c827f6bf9213b55646.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.51c827f6bf9213b55646.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.51c827f6bf9213b55646.hot-update.js"
+    },
+    "51c827f6bf9213b55646.hot-update.json": {
+      "name": "51c827f6bf9213b55646.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/51c827f6bf9213b55646.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/51c827f6bf9213b55646.hot-update.json"
+    },
+    "app.7651f16a658edd12162c.hot-update.js": {
+      "name": "app.7651f16a658edd12162c.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.7651f16a658edd12162c.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.7651f16a658edd12162c.hot-update.js"
+    },
+    "7651f16a658edd12162c.hot-update.json": {
+      "name": "7651f16a658edd12162c.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/7651f16a658edd12162c.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/7651f16a658edd12162c.hot-update.json"
+    },
+    "app.cf7301fe16104fe7d2b1.hot-update.js": {
+      "name": "app.cf7301fe16104fe7d2b1.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.cf7301fe16104fe7d2b1.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.cf7301fe16104fe7d2b1.hot-update.js"
+    },
+    "cf7301fe16104fe7d2b1.hot-update.json": {
+      "name": "cf7301fe16104fe7d2b1.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/cf7301fe16104fe7d2b1.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/cf7301fe16104fe7d2b1.hot-update.json"
+    },
+    "app.4b5d08672569af1e6952.hot-update.js": {
+      "name": "app.4b5d08672569af1e6952.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.4b5d08672569af1e6952.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.4b5d08672569af1e6952.hot-update.js"
+    },
+    "4b5d08672569af1e6952.hot-update.json": {
+      "name": "4b5d08672569af1e6952.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/4b5d08672569af1e6952.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/4b5d08672569af1e6952.hot-update.json"
+    },
+    "app.92b91c5ad419cd1c9f74.hot-update.js": {
+      "name": "app.92b91c5ad419cd1c9f74.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.92b91c5ad419cd1c9f74.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.92b91c5ad419cd1c9f74.hot-update.js"
+    },
+    "92b91c5ad419cd1c9f74.hot-update.json": {
+      "name": "92b91c5ad419cd1c9f74.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/92b91c5ad419cd1c9f74.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/92b91c5ad419cd1c9f74.hot-update.json"
+    },
+    "app.172b29b97ef0c95ce048.hot-update.js": {
+      "name": "app.172b29b97ef0c95ce048.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.172b29b97ef0c95ce048.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.172b29b97ef0c95ce048.hot-update.js"
+    },
+    "172b29b97ef0c95ce048.hot-update.json": {
+      "name": "172b29b97ef0c95ce048.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/172b29b97ef0c95ce048.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/172b29b97ef0c95ce048.hot-update.json"
+    },
+    "app.92da0fe1ae102906089d.hot-update.js": {
+      "name": "app.92da0fe1ae102906089d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.92da0fe1ae102906089d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.92da0fe1ae102906089d.hot-update.js"
+    },
+    "92da0fe1ae102906089d.hot-update.json": {
+      "name": "92da0fe1ae102906089d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/92da0fe1ae102906089d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/92da0fe1ae102906089d.hot-update.json"
+    },
+    "app.425765b47171c40b1d4d.hot-update.js": {
+      "name": "app.425765b47171c40b1d4d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.425765b47171c40b1d4d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.425765b47171c40b1d4d.hot-update.js"
+    },
+    "425765b47171c40b1d4d.hot-update.json": {
+      "name": "425765b47171c40b1d4d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/425765b47171c40b1d4d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/425765b47171c40b1d4d.hot-update.json"
+    },
+    "app.8b1b8abbe700587bbdbd.hot-update.js": {
+      "name": "app.8b1b8abbe700587bbdbd.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.8b1b8abbe700587bbdbd.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.8b1b8abbe700587bbdbd.hot-update.js"
+    },
+    "8b1b8abbe700587bbdbd.hot-update.json": {
+      "name": "8b1b8abbe700587bbdbd.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/8b1b8abbe700587bbdbd.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/8b1b8abbe700587bbdbd.hot-update.json"
+    },
+    "app.bb8ed807eb5a8fbc705e.hot-update.js": {
+      "name": "app.bb8ed807eb5a8fbc705e.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.bb8ed807eb5a8fbc705e.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.bb8ed807eb5a8fbc705e.hot-update.js"
+    },
+    "bb8ed807eb5a8fbc705e.hot-update.json": {
+      "name": "bb8ed807eb5a8fbc705e.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/bb8ed807eb5a8fbc705e.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/bb8ed807eb5a8fbc705e.hot-update.json"
+    },
+    "app.aa7a3de89aa687508a17.hot-update.js": {
+      "name": "app.aa7a3de89aa687508a17.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.aa7a3de89aa687508a17.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.aa7a3de89aa687508a17.hot-update.js"
+    },
+    "aa7a3de89aa687508a17.hot-update.json": {
+      "name": "aa7a3de89aa687508a17.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/aa7a3de89aa687508a17.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/aa7a3de89aa687508a17.hot-update.json"
+    },
+    "app.e82e7725f2bf81e6daa4.hot-update.js": {
+      "name": "app.e82e7725f2bf81e6daa4.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.e82e7725f2bf81e6daa4.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.e82e7725f2bf81e6daa4.hot-update.js"
+    },
+    "e82e7725f2bf81e6daa4.hot-update.json": {
+      "name": "e82e7725f2bf81e6daa4.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/e82e7725f2bf81e6daa4.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/e82e7725f2bf81e6daa4.hot-update.json"
+    },
+    "app.f00ec3712b1a30ed3df6.hot-update.js": {
+      "name": "app.f00ec3712b1a30ed3df6.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.f00ec3712b1a30ed3df6.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.f00ec3712b1a30ed3df6.hot-update.js"
+    },
+    "f00ec3712b1a30ed3df6.hot-update.json": {
+      "name": "f00ec3712b1a30ed3df6.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/f00ec3712b1a30ed3df6.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/f00ec3712b1a30ed3df6.hot-update.json"
+    },
+    "app.d21538d0edcfa7fca2af.hot-update.js": {
+      "name": "app.d21538d0edcfa7fca2af.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d21538d0edcfa7fca2af.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.d21538d0edcfa7fca2af.hot-update.js"
+    },
+    "d21538d0edcfa7fca2af.hot-update.json": {
+      "name": "d21538d0edcfa7fca2af.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d21538d0edcfa7fca2af.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/d21538d0edcfa7fca2af.hot-update.json"
+    },
+    "app.ce11477dd64108a17e74.hot-update.js": {
+      "name": "app.ce11477dd64108a17e74.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ce11477dd64108a17e74.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.ce11477dd64108a17e74.hot-update.js"
+    },
+    "ce11477dd64108a17e74.hot-update.json": {
+      "name": "ce11477dd64108a17e74.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ce11477dd64108a17e74.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/ce11477dd64108a17e74.hot-update.json"
+    },
+    "app.a52bf742530b1e2d1d5b.hot-update.js": {
+      "name": "app.a52bf742530b1e2d1d5b.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.a52bf742530b1e2d1d5b.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.a52bf742530b1e2d1d5b.hot-update.js"
+    },
+    "a52bf742530b1e2d1d5b.hot-update.json": {
+      "name": "a52bf742530b1e2d1d5b.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/a52bf742530b1e2d1d5b.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/a52bf742530b1e2d1d5b.hot-update.json"
+    },
+    "app.972addcef211f3aefc90.hot-update.js": {
+      "name": "app.972addcef211f3aefc90.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.972addcef211f3aefc90.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.972addcef211f3aefc90.hot-update.js"
+    },
+    "972addcef211f3aefc90.hot-update.json": {
+      "name": "972addcef211f3aefc90.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/972addcef211f3aefc90.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/972addcef211f3aefc90.hot-update.json"
+    },
+    "app.e09c16d97f53de31b4fd.hot-update.js": {
+      "name": "app.e09c16d97f53de31b4fd.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.e09c16d97f53de31b4fd.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.e09c16d97f53de31b4fd.hot-update.js"
+    },
+    "e09c16d97f53de31b4fd.hot-update.json": {
+      "name": "e09c16d97f53de31b4fd.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/e09c16d97f53de31b4fd.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/e09c16d97f53de31b4fd.hot-update.json"
+    },
+    "app.6dfd85f025f7b03eb4eb.hot-update.js": {
+      "name": "app.6dfd85f025f7b03eb4eb.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.6dfd85f025f7b03eb4eb.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.6dfd85f025f7b03eb4eb.hot-update.js"
+    },
+    "6dfd85f025f7b03eb4eb.hot-update.json": {
+      "name": "6dfd85f025f7b03eb4eb.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/6dfd85f025f7b03eb4eb.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/6dfd85f025f7b03eb4eb.hot-update.json"
+    },
+    "app.543190198b2f19618f0f.hot-update.js": {
+      "name": "app.543190198b2f19618f0f.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.543190198b2f19618f0f.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.543190198b2f19618f0f.hot-update.js"
+    },
+    "543190198b2f19618f0f.hot-update.json": {
+      "name": "543190198b2f19618f0f.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/543190198b2f19618f0f.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/543190198b2f19618f0f.hot-update.json"
+    },
+    "app.0cff38e91aa0a42f996a.hot-update.js": {
+      "name": "app.0cff38e91aa0a42f996a.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0cff38e91aa0a42f996a.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.0cff38e91aa0a42f996a.hot-update.js"
+    },
+    "0cff38e91aa0a42f996a.hot-update.json": {
+      "name": "0cff38e91aa0a42f996a.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0cff38e91aa0a42f996a.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/0cff38e91aa0a42f996a.hot-update.json"
+    },
+    "app.47dfcef7027367c70ac8.hot-update.js": {
+      "name": "app.47dfcef7027367c70ac8.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.47dfcef7027367c70ac8.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.47dfcef7027367c70ac8.hot-update.js"
+    },
+    "47dfcef7027367c70ac8.hot-update.json": {
+      "name": "47dfcef7027367c70ac8.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/47dfcef7027367c70ac8.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/47dfcef7027367c70ac8.hot-update.json"
+    },
+    "app.c59267f276157a82dda9.hot-update.js": {
+      "name": "app.c59267f276157a82dda9.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.c59267f276157a82dda9.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.c59267f276157a82dda9.hot-update.js"
+    },
+    "c59267f276157a82dda9.hot-update.json": {
+      "name": "c59267f276157a82dda9.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/c59267f276157a82dda9.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/c59267f276157a82dda9.hot-update.json"
+    },
+    "app.d1b1b86bf28abf7f8b59.hot-update.js": {
+      "name": "app.d1b1b86bf28abf7f8b59.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d1b1b86bf28abf7f8b59.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.d1b1b86bf28abf7f8b59.hot-update.js"
+    },
+    "d1b1b86bf28abf7f8b59.hot-update.json": {
+      "name": "d1b1b86bf28abf7f8b59.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d1b1b86bf28abf7f8b59.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/d1b1b86bf28abf7f8b59.hot-update.json"
+    },
+    "app.e7c8e1924b1cad0af889.hot-update.js": {
+      "name": "app.e7c8e1924b1cad0af889.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.e7c8e1924b1cad0af889.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.e7c8e1924b1cad0af889.hot-update.js"
+    },
+    "e7c8e1924b1cad0af889.hot-update.json": {
+      "name": "e7c8e1924b1cad0af889.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/e7c8e1924b1cad0af889.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/e7c8e1924b1cad0af889.hot-update.json"
+    },
+    "app.8c952f944fe14b167406.hot-update.js": {
+      "name": "app.8c952f944fe14b167406.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.8c952f944fe14b167406.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.8c952f944fe14b167406.hot-update.js"
+    },
+    "8c952f944fe14b167406.hot-update.json": {
+      "name": "8c952f944fe14b167406.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/8c952f944fe14b167406.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/8c952f944fe14b167406.hot-update.json"
+    },
+    "app.d06821a6114e0a8294b4.hot-update.js": {
+      "name": "app.d06821a6114e0a8294b4.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d06821a6114e0a8294b4.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.d06821a6114e0a8294b4.hot-update.js"
+    },
+    "d06821a6114e0a8294b4.hot-update.json": {
+      "name": "d06821a6114e0a8294b4.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d06821a6114e0a8294b4.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/d06821a6114e0a8294b4.hot-update.json"
+    },
+    "app.095a2ee093fd442afbf9.hot-update.js": {
+      "name": "app.095a2ee093fd442afbf9.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.095a2ee093fd442afbf9.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.095a2ee093fd442afbf9.hot-update.js"
+    },
+    "095a2ee093fd442afbf9.hot-update.json": {
+      "name": "095a2ee093fd442afbf9.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/095a2ee093fd442afbf9.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/095a2ee093fd442afbf9.hot-update.json"
+    },
+    "app.6d17281435fc3614d70d.hot-update.js": {
+      "name": "app.6d17281435fc3614d70d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.6d17281435fc3614d70d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.6d17281435fc3614d70d.hot-update.js"
+    },
+    "6d17281435fc3614d70d.hot-update.json": {
+      "name": "6d17281435fc3614d70d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/6d17281435fc3614d70d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/6d17281435fc3614d70d.hot-update.json"
+    },
+    "app.1e43ad07f8101ce12ed6.hot-update.js": {
+      "name": "app.1e43ad07f8101ce12ed6.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.1e43ad07f8101ce12ed6.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.1e43ad07f8101ce12ed6.hot-update.js"
+    },
+    "1e43ad07f8101ce12ed6.hot-update.json": {
+      "name": "1e43ad07f8101ce12ed6.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/1e43ad07f8101ce12ed6.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/1e43ad07f8101ce12ed6.hot-update.json"
+    },
+    "app.ae9beb04c27e1b7ed92d.hot-update.js": {
+      "name": "app.ae9beb04c27e1b7ed92d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ae9beb04c27e1b7ed92d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.ae9beb04c27e1b7ed92d.hot-update.js"
+    },
+    "ae9beb04c27e1b7ed92d.hot-update.json": {
+      "name": "ae9beb04c27e1b7ed92d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ae9beb04c27e1b7ed92d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/ae9beb04c27e1b7ed92d.hot-update.json"
+    },
+    "app.d9aebe5ed1fa9345aca6.hot-update.js": {
+      "name": "app.d9aebe5ed1fa9345aca6.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d9aebe5ed1fa9345aca6.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.d9aebe5ed1fa9345aca6.hot-update.js"
+    },
+    "d9aebe5ed1fa9345aca6.hot-update.json": {
+      "name": "d9aebe5ed1fa9345aca6.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d9aebe5ed1fa9345aca6.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/d9aebe5ed1fa9345aca6.hot-update.json"
+    },
+    "app.87947f5dbc68af373970.hot-update.js": {
+      "name": "app.87947f5dbc68af373970.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.87947f5dbc68af373970.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.87947f5dbc68af373970.hot-update.js"
+    },
+    "87947f5dbc68af373970.hot-update.json": {
+      "name": "87947f5dbc68af373970.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/87947f5dbc68af373970.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/87947f5dbc68af373970.hot-update.json"
+    },
+    "app.9b021b90603e2bf56cd4.hot-update.js": {
+      "name": "app.9b021b90603e2bf56cd4.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9b021b90603e2bf56cd4.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.9b021b90603e2bf56cd4.hot-update.js"
+    },
+    "9b021b90603e2bf56cd4.hot-update.json": {
+      "name": "9b021b90603e2bf56cd4.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9b021b90603e2bf56cd4.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/9b021b90603e2bf56cd4.hot-update.json"
+    },
+    "app.bed22e56b44c480c5956.hot-update.js": {
+      "name": "app.bed22e56b44c480c5956.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.bed22e56b44c480c5956.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.bed22e56b44c480c5956.hot-update.js"
+    },
+    "bed22e56b44c480c5956.hot-update.json": {
+      "name": "bed22e56b44c480c5956.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/bed22e56b44c480c5956.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/bed22e56b44c480c5956.hot-update.json"
+    },
+    "app.8d5bca65beb952da4526.hot-update.js": {
+      "name": "app.8d5bca65beb952da4526.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.8d5bca65beb952da4526.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.8d5bca65beb952da4526.hot-update.js"
+    },
+    "8d5bca65beb952da4526.hot-update.json": {
+      "name": "8d5bca65beb952da4526.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/8d5bca65beb952da4526.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/8d5bca65beb952da4526.hot-update.json"
+    },
+    "app.aa392932430ce937a343.hot-update.js": {
+      "name": "app.aa392932430ce937a343.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.aa392932430ce937a343.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.aa392932430ce937a343.hot-update.js"
+    },
+    "aa392932430ce937a343.hot-update.json": {
+      "name": "aa392932430ce937a343.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/aa392932430ce937a343.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/aa392932430ce937a343.hot-update.json"
+    },
+    "app.3f93b1587f74f9cdcddc.hot-update.js": {
+      "name": "app.3f93b1587f74f9cdcddc.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3f93b1587f74f9cdcddc.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.3f93b1587f74f9cdcddc.hot-update.js"
+    },
+    "3f93b1587f74f9cdcddc.hot-update.json": {
+      "name": "3f93b1587f74f9cdcddc.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3f93b1587f74f9cdcddc.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/3f93b1587f74f9cdcddc.hot-update.json"
+    },
+    "app.2152f65c2342ef56ab65.hot-update.js": {
+      "name": "app.2152f65c2342ef56ab65.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.2152f65c2342ef56ab65.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.2152f65c2342ef56ab65.hot-update.js"
+    },
+    "2152f65c2342ef56ab65.hot-update.json": {
+      "name": "2152f65c2342ef56ab65.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/2152f65c2342ef56ab65.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/2152f65c2342ef56ab65.hot-update.json"
+    },
+    "app.9d4d1a2684417e914dbf.hot-update.js": {
+      "name": "app.9d4d1a2684417e914dbf.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9d4d1a2684417e914dbf.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.9d4d1a2684417e914dbf.hot-update.js"
+    },
+    "9d4d1a2684417e914dbf.hot-update.json": {
+      "name": "9d4d1a2684417e914dbf.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9d4d1a2684417e914dbf.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/9d4d1a2684417e914dbf.hot-update.json"
+    },
+    "app.27ca99e04646c6fc5127.hot-update.js": {
+      "name": "app.27ca99e04646c6fc5127.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.27ca99e04646c6fc5127.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.27ca99e04646c6fc5127.hot-update.js"
+    },
+    "27ca99e04646c6fc5127.hot-update.json": {
+      "name": "27ca99e04646c6fc5127.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/27ca99e04646c6fc5127.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/27ca99e04646c6fc5127.hot-update.json"
+    },
+    "app.6561a2778ed09bb8fd27.hot-update.js": {
+      "name": "app.6561a2778ed09bb8fd27.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.6561a2778ed09bb8fd27.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.6561a2778ed09bb8fd27.hot-update.js"
+    },
+    "6561a2778ed09bb8fd27.hot-update.json": {
+      "name": "6561a2778ed09bb8fd27.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/6561a2778ed09bb8fd27.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/6561a2778ed09bb8fd27.hot-update.json"
+    },
+    "app.236c6a532ed190ac393d.hot-update.js": {
+      "name": "app.236c6a532ed190ac393d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.236c6a532ed190ac393d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.236c6a532ed190ac393d.hot-update.js"
+    },
+    "236c6a532ed190ac393d.hot-update.json": {
+      "name": "236c6a532ed190ac393d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/236c6a532ed190ac393d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/236c6a532ed190ac393d.hot-update.json"
+    },
+    "app.7d1fa4ff062cd820df9d.hot-update.js": {
+      "name": "app.7d1fa4ff062cd820df9d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.7d1fa4ff062cd820df9d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.7d1fa4ff062cd820df9d.hot-update.js"
+    },
+    "7d1fa4ff062cd820df9d.hot-update.json": {
+      "name": "7d1fa4ff062cd820df9d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/7d1fa4ff062cd820df9d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/7d1fa4ff062cd820df9d.hot-update.json"
+    },
+    "app.1f4ba26d61405f3288d1.hot-update.js": {
+      "name": "app.1f4ba26d61405f3288d1.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.1f4ba26d61405f3288d1.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.1f4ba26d61405f3288d1.hot-update.js"
+    },
+    "1f4ba26d61405f3288d1.hot-update.json": {
+      "name": "1f4ba26d61405f3288d1.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/1f4ba26d61405f3288d1.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/1f4ba26d61405f3288d1.hot-update.json"
+    },
+    "app.a93b9ebdd472bd8908a0.hot-update.js": {
+      "name": "app.a93b9ebdd472bd8908a0.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.a93b9ebdd472bd8908a0.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.a93b9ebdd472bd8908a0.hot-update.js"
+    },
+    "a93b9ebdd472bd8908a0.hot-update.json": {
+      "name": "a93b9ebdd472bd8908a0.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/a93b9ebdd472bd8908a0.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/a93b9ebdd472bd8908a0.hot-update.json"
+    },
+    "app.0f5ca37f1522c3202d12.hot-update.js": {
+      "name": "app.0f5ca37f1522c3202d12.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0f5ca37f1522c3202d12.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.0f5ca37f1522c3202d12.hot-update.js"
+    },
+    "0f5ca37f1522c3202d12.hot-update.json": {
+      "name": "0f5ca37f1522c3202d12.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0f5ca37f1522c3202d12.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/0f5ca37f1522c3202d12.hot-update.json"
+    },
+    "app.c79bc6fff9447e5f73c9.hot-update.js": {
+      "name": "app.c79bc6fff9447e5f73c9.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.c79bc6fff9447e5f73c9.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.c79bc6fff9447e5f73c9.hot-update.js"
+    },
+    "c79bc6fff9447e5f73c9.hot-update.json": {
+      "name": "c79bc6fff9447e5f73c9.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/c79bc6fff9447e5f73c9.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/c79bc6fff9447e5f73c9.hot-update.json"
+    },
+    "app.49605589b9c21360d340.hot-update.js": {
+      "name": "app.49605589b9c21360d340.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.49605589b9c21360d340.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.49605589b9c21360d340.hot-update.js"
+    },
+    "49605589b9c21360d340.hot-update.json": {
+      "name": "49605589b9c21360d340.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/49605589b9c21360d340.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/49605589b9c21360d340.hot-update.json"
+    },
+    "app.87be1006ba343d5d0235.hot-update.js": {
+      "name": "app.87be1006ba343d5d0235.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.87be1006ba343d5d0235.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.87be1006ba343d5d0235.hot-update.js"
+    },
+    "87be1006ba343d5d0235.hot-update.json": {
+      "name": "87be1006ba343d5d0235.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/87be1006ba343d5d0235.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/87be1006ba343d5d0235.hot-update.json"
+    },
+    "app.50b271b0c96fbfdc1d2e.hot-update.js": {
+      "name": "app.50b271b0c96fbfdc1d2e.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.50b271b0c96fbfdc1d2e.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.50b271b0c96fbfdc1d2e.hot-update.js"
+    },
+    "50b271b0c96fbfdc1d2e.hot-update.json": {
+      "name": "50b271b0c96fbfdc1d2e.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/50b271b0c96fbfdc1d2e.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/50b271b0c96fbfdc1d2e.hot-update.json"
+    },
+    "app.ebd35168d85486ab5228.hot-update.js": {
+      "name": "app.ebd35168d85486ab5228.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ebd35168d85486ab5228.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.ebd35168d85486ab5228.hot-update.js"
+    },
+    "ebd35168d85486ab5228.hot-update.json": {
+      "name": "ebd35168d85486ab5228.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ebd35168d85486ab5228.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/ebd35168d85486ab5228.hot-update.json"
+    },
+    "app.520bd85ef98ab18aa98f.hot-update.js": {
+      "name": "app.520bd85ef98ab18aa98f.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.520bd85ef98ab18aa98f.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.520bd85ef98ab18aa98f.hot-update.js"
+    },
+    "520bd85ef98ab18aa98f.hot-update.json": {
+      "name": "520bd85ef98ab18aa98f.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/520bd85ef98ab18aa98f.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/520bd85ef98ab18aa98f.hot-update.json"
+    },
+    "app.0aec5db3bf590d2f45f1.hot-update.js": {
+      "name": "app.0aec5db3bf590d2f45f1.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0aec5db3bf590d2f45f1.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.0aec5db3bf590d2f45f1.hot-update.js"
+    },
+    "0aec5db3bf590d2f45f1.hot-update.json": {
+      "name": "0aec5db3bf590d2f45f1.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0aec5db3bf590d2f45f1.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/0aec5db3bf590d2f45f1.hot-update.json"
+    },
+    "app.b70707cb2f45ad4621c4.hot-update.js": {
+      "name": "app.b70707cb2f45ad4621c4.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.b70707cb2f45ad4621c4.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.b70707cb2f45ad4621c4.hot-update.js"
+    },
+    "b70707cb2f45ad4621c4.hot-update.json": {
+      "name": "b70707cb2f45ad4621c4.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/b70707cb2f45ad4621c4.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/b70707cb2f45ad4621c4.hot-update.json"
+    },
+    "224ddf015f4517b347cb.hot-update.json": {
+      "name": "224ddf015f4517b347cb.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/224ddf015f4517b347cb.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/224ddf015f4517b347cb.hot-update.json"
+    },
+    "app.b2509e8e4ca628fbe6d2.hot-update.js": {
+      "name": "app.b2509e8e4ca628fbe6d2.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.b2509e8e4ca628fbe6d2.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.b2509e8e4ca628fbe6d2.hot-update.js"
+    },
+    "b2509e8e4ca628fbe6d2.hot-update.json": {
+      "name": "b2509e8e4ca628fbe6d2.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/b2509e8e4ca628fbe6d2.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/b2509e8e4ca628fbe6d2.hot-update.json"
+    },
+    "app.0067da2c3d9f6e5de299.hot-update.js": {
+      "name": "app.0067da2c3d9f6e5de299.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0067da2c3d9f6e5de299.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.0067da2c3d9f6e5de299.hot-update.js"
+    },
+    "0067da2c3d9f6e5de299.hot-update.json": {
+      "name": "0067da2c3d9f6e5de299.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0067da2c3d9f6e5de299.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/0067da2c3d9f6e5de299.hot-update.json"
+    },
+    "app.9a5370326fa8e9ac4b23.hot-update.js": {
+      "name": "app.9a5370326fa8e9ac4b23.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9a5370326fa8e9ac4b23.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.9a5370326fa8e9ac4b23.hot-update.js"
+    },
+    "9a5370326fa8e9ac4b23.hot-update.json": {
+      "name": "9a5370326fa8e9ac4b23.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9a5370326fa8e9ac4b23.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/9a5370326fa8e9ac4b23.hot-update.json"
+    },
+    "app.8b46177af7a322530d64.hot-update.js": {
+      "name": "app.8b46177af7a322530d64.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.8b46177af7a322530d64.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.8b46177af7a322530d64.hot-update.js"
+    },
+    "8b46177af7a322530d64.hot-update.json": {
+      "name": "8b46177af7a322530d64.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/8b46177af7a322530d64.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/8b46177af7a322530d64.hot-update.json"
+    },
+    "app.1967ea5ce699bb9948c0.hot-update.js": {
+      "name": "app.1967ea5ce699bb9948c0.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.1967ea5ce699bb9948c0.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.1967ea5ce699bb9948c0.hot-update.js"
+    },
+    "1967ea5ce699bb9948c0.hot-update.json": {
+      "name": "1967ea5ce699bb9948c0.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/1967ea5ce699bb9948c0.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/1967ea5ce699bb9948c0.hot-update.json"
+    },
+    "app.66253763a4ff2390e82b.hot-update.js": {
+      "name": "app.66253763a4ff2390e82b.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.66253763a4ff2390e82b.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.66253763a4ff2390e82b.hot-update.js"
+    },
+    "66253763a4ff2390e82b.hot-update.json": {
+      "name": "66253763a4ff2390e82b.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/66253763a4ff2390e82b.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/66253763a4ff2390e82b.hot-update.json"
+    },
+    "app.37f4d6c2d7b084364aae.hot-update.js": {
+      "name": "app.37f4d6c2d7b084364aae.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.37f4d6c2d7b084364aae.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.37f4d6c2d7b084364aae.hot-update.js"
+    },
+    "37f4d6c2d7b084364aae.hot-update.json": {
+      "name": "37f4d6c2d7b084364aae.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/37f4d6c2d7b084364aae.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/37f4d6c2d7b084364aae.hot-update.json"
+    },
+    "app.4cd26a13d1092940a11d.hot-update.js": {
+      "name": "app.4cd26a13d1092940a11d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.4cd26a13d1092940a11d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.4cd26a13d1092940a11d.hot-update.js"
+    },
+    "4cd26a13d1092940a11d.hot-update.json": {
+      "name": "4cd26a13d1092940a11d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/4cd26a13d1092940a11d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/4cd26a13d1092940a11d.hot-update.json"
+    },
+    "app.aa40deccc2f22eb59f92.hot-update.js": {
+      "name": "app.aa40deccc2f22eb59f92.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.aa40deccc2f22eb59f92.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.aa40deccc2f22eb59f92.hot-update.js"
+    },
+    "aa40deccc2f22eb59f92.hot-update.json": {
+      "name": "aa40deccc2f22eb59f92.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/aa40deccc2f22eb59f92.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/aa40deccc2f22eb59f92.hot-update.json"
+    },
+    "app.51274f43f508a4db012d.hot-update.js": {
+      "name": "app.51274f43f508a4db012d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.51274f43f508a4db012d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.51274f43f508a4db012d.hot-update.js"
+    },
+    "51274f43f508a4db012d.hot-update.json": {
+      "name": "51274f43f508a4db012d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/51274f43f508a4db012d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/51274f43f508a4db012d.hot-update.json"
+    },
+    "app.e80a31b6c2cb931b4464.hot-update.js": {
+      "name": "app.e80a31b6c2cb931b4464.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.e80a31b6c2cb931b4464.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.e80a31b6c2cb931b4464.hot-update.js"
+    },
+    "e80a31b6c2cb931b4464.hot-update.json": {
+      "name": "e80a31b6c2cb931b4464.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/e80a31b6c2cb931b4464.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/e80a31b6c2cb931b4464.hot-update.json"
+    },
+    "app.a41100462b853d8f662c.hot-update.js": {
+      "name": "app.a41100462b853d8f662c.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.a41100462b853d8f662c.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.a41100462b853d8f662c.hot-update.js"
+    },
+    "a41100462b853d8f662c.hot-update.json": {
+      "name": "a41100462b853d8f662c.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/a41100462b853d8f662c.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/a41100462b853d8f662c.hot-update.json"
+    },
+    "app.8a4718b016bd5e17e1d0.hot-update.js": {
+      "name": "app.8a4718b016bd5e17e1d0.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.8a4718b016bd5e17e1d0.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.8a4718b016bd5e17e1d0.hot-update.js"
+    },
+    "8a4718b016bd5e17e1d0.hot-update.json": {
+      "name": "8a4718b016bd5e17e1d0.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/8a4718b016bd5e17e1d0.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/8a4718b016bd5e17e1d0.hot-update.json"
+    },
+    "app.2daabf0fc5baa8606a10.hot-update.js": {
+      "name": "app.2daabf0fc5baa8606a10.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.2daabf0fc5baa8606a10.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.2daabf0fc5baa8606a10.hot-update.js"
+    },
+    "2daabf0fc5baa8606a10.hot-update.json": {
+      "name": "2daabf0fc5baa8606a10.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/2daabf0fc5baa8606a10.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/2daabf0fc5baa8606a10.hot-update.json"
+    },
+    "app.f901797a365d8dcea038.hot-update.js": {
+      "name": "app.f901797a365d8dcea038.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.f901797a365d8dcea038.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.f901797a365d8dcea038.hot-update.js"
+    },
+    "f901797a365d8dcea038.hot-update.json": {
+      "name": "f901797a365d8dcea038.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/f901797a365d8dcea038.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/f901797a365d8dcea038.hot-update.json"
+    },
+    "app.aef433f74f85469445fa.hot-update.js": {
+      "name": "app.aef433f74f85469445fa.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.aef433f74f85469445fa.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.aef433f74f85469445fa.hot-update.js"
+    },
+    "aef433f74f85469445fa.hot-update.json": {
+      "name": "aef433f74f85469445fa.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/aef433f74f85469445fa.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/aef433f74f85469445fa.hot-update.json"
+    },
+    "app.35cd6bf9abd9d423e767.hot-update.js": {
+      "name": "app.35cd6bf9abd9d423e767.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.35cd6bf9abd9d423e767.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.35cd6bf9abd9d423e767.hot-update.js"
+    },
+    "35cd6bf9abd9d423e767.hot-update.json": {
+      "name": "35cd6bf9abd9d423e767.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/35cd6bf9abd9d423e767.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/35cd6bf9abd9d423e767.hot-update.json"
+    },
+    "app.30fa3974c632a1db60b5.hot-update.js": {
+      "name": "app.30fa3974c632a1db60b5.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.30fa3974c632a1db60b5.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.30fa3974c632a1db60b5.hot-update.js"
+    },
+    "30fa3974c632a1db60b5.hot-update.json": {
+      "name": "30fa3974c632a1db60b5.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/30fa3974c632a1db60b5.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/30fa3974c632a1db60b5.hot-update.json"
+    },
+    "app.76ddfc095c7db9647457.hot-update.js": {
+      "name": "app.76ddfc095c7db9647457.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.76ddfc095c7db9647457.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.76ddfc095c7db9647457.hot-update.js"
+    },
+    "76ddfc095c7db9647457.hot-update.json": {
+      "name": "76ddfc095c7db9647457.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/76ddfc095c7db9647457.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/76ddfc095c7db9647457.hot-update.json"
+    },
+    "app.05cea287949449ca785c.hot-update.js": {
+      "name": "app.05cea287949449ca785c.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.05cea287949449ca785c.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.05cea287949449ca785c.hot-update.js"
+    },
+    "05cea287949449ca785c.hot-update.json": {
+      "name": "05cea287949449ca785c.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/05cea287949449ca785c.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/05cea287949449ca785c.hot-update.json"
+    },
+    "app.4e9418bf2002d16ecbe0.hot-update.js": {
+      "name": "app.4e9418bf2002d16ecbe0.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.4e9418bf2002d16ecbe0.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.4e9418bf2002d16ecbe0.hot-update.js"
+    },
+    "4e9418bf2002d16ecbe0.hot-update.json": {
+      "name": "4e9418bf2002d16ecbe0.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/4e9418bf2002d16ecbe0.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/4e9418bf2002d16ecbe0.hot-update.json"
+    },
+    "app.6a3d25842b950b4fca58.hot-update.js": {
+      "name": "app.6a3d25842b950b4fca58.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.6a3d25842b950b4fca58.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.6a3d25842b950b4fca58.hot-update.js"
+    },
+    "6a3d25842b950b4fca58.hot-update.json": {
+      "name": "6a3d25842b950b4fca58.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/6a3d25842b950b4fca58.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/6a3d25842b950b4fca58.hot-update.json"
+    },
+    "app.84d2a07a87267b38af53.hot-update.js": {
+      "name": "app.84d2a07a87267b38af53.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.84d2a07a87267b38af53.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.84d2a07a87267b38af53.hot-update.js"
+    },
+    "84d2a07a87267b38af53.hot-update.json": {
+      "name": "84d2a07a87267b38af53.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/84d2a07a87267b38af53.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/84d2a07a87267b38af53.hot-update.json"
     }
   },
   "chunks": {
     "app": [
       "bundle.css",
       "bundle.js",
-      "app.b714625503b3e1a9d0e5.hot-update.js"
+      "app.84d2a07a87267b38af53.hot-update.js"
     ]
   },
   "publicPath": "http://0.0.0.0:8080/",
-  "error": "ModuleError",
-  "message": "Module Error (from ./node_modules/eslint-loader/index.js):\n\n/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/src/views/ClosedAuctionDetail.vue\n  192:35  error  Parsing error: Missing semicolon.\n\n  43 |       copyToClipboard(text) {\n  44 |         this.$clipboard(text);\n> 45 |         this.copyToClipboardMessage: \"<i class='fa-solid fa-clipboard-check'></i>\";\n     |                                    ^\n  46 |       }\n  47 |     },\n  48 |     created() {\n\n✖ 1 problem (1 error, 0 warnings)\n"
+  "error": "ModuleBuildError",
+  "message": "Module build failed (from ./node_modules/eslint-loader/index.js):\nError: ENOENT: no such file or directory, open '/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/src/views/ClosedAuctions.vue'"
 }

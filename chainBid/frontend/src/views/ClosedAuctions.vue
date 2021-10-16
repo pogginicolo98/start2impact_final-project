@@ -1,7 +1,12 @@
 <template>
-  <div class="container mt-4 mt-md-5">
+  <div class="container mt-3">
+    <!-- Title -->
+    <div class="text-center text-card-auction fw-bold fs-32px">
+      <p>Closed auctions</p>
+    </div>
+
     <!-- Auctions -->
-    <div class="row justify-content-start">
+    <div class="row justify-content-start mt-4">
       <div class="col-12 col-md-6 col-lg-4 col-xxl-3"
            v-for="(auction, index) in auctions"
            :key="index">
