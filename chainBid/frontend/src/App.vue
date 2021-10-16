@@ -115,6 +115,7 @@
 
   .img-thumbnail-detail {
     border: 1px solid;
+    padding: 3px 3px 3px 3px;
     border-color: #C9ADA7;
   }
 

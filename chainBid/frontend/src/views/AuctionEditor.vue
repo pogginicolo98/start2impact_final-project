@@ -1,7 +1,12 @@
 <template lang="html">
-  <div class="container mt-2 mt-lg-5">
-    <p class="text-card-auction fw-bold fs-32px mb-2 ms-2">{{ modifiedAuction.title }}</p>
-    <div class="row">
+  <div class="container mt-3">
+    <!-- Title -->
+    <div class="text-center text-card-auction fw-bold fs-32px">
+      <p>{{ modifiedAuction.title }}</p>
+    </div>
+
+    <!-- <p class="text-card-auction fw-bold fs-32px mb-2 ms-2"></p> -->
+    <div class="row mt-4">
       <!-- Edit image -->
       <div class="col-12 col-lg-5">
         <div class="card card-detail"
@@ -9,7 +14,7 @@
              <div class="card-header card-header-detail text-card-auction">
                <div class="row justify-content-between">
                  <div class="col-auto">
-                   <span class="fw-bold fs-18px">Change image</span>
+                   <span class="fw-bold fs-18px">Image</span>
                  </div>
                  <div class="col-auto">
                    <i class="fa-solid fa-pen"></i>
@@ -46,7 +51,7 @@
              <div class="card-header card-header-detail text-card-auction">
                <div class="row justify-content-between">
                  <div class="col-auto">
-                   <span class="fw-bold fs-18px">Edit Data</span>
+                   <span class="fw-bold fs-18px">Data</span>
                  </div>
                  <div class="col-auto">
                    <i class="fa-solid fa-pen"></i>

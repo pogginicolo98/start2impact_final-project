@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="container mt-2 mt-lg-5">
+  <div class="container mt-3 mt-lg-4">
     <div class="row">
       <!-- Title mobile formats -->
       <div class="col-12 d-lg-none">
@@ -7,7 +7,7 @@
       </div>
 
       <!-- Image and description -->
-      <div class="col-12 col-lg-5 mt-0 mt-lg-3">
+      <div class="col-12 col-lg-5 mt-3 mt-lg-3">
         <!-- Image -->
         <div class="col-12">
           <figure class="figure">

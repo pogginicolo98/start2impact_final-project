@@ -1,7 +1,12 @@
 <template lang="html">
-  <div class="container mt-4 mt-md-5">
+  <div class="container mt-3">
+    <!-- Title -->
+    <div class="text-center text-card-auction fw-bold fs-32px">
+      <p>Schedule auctions</p>
+    </div>
+
     <!-- New auction -->
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-4">
       <div class="col-12 col-lg-6">
         <div class="card card-detail"
              style="width: 100%">
