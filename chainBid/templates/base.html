@@ -40,13 +40,6 @@
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
     </script>
 
-    <script type="text/javascript">
-      let alertList = document.querySelectorAll('.alert');
-      let alerts =  [].slice.call(alertList).map(function (element) {
-        return new bootstrap.Alert(element);
-      });
-    </script>
-
     {% block script %}
     {% endblock %}
   </body>
