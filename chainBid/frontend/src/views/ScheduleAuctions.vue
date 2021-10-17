@@ -42,7 +42,7 @@
             <tr v-for="(auction, index) in auctions"
                 :key="index">
                 <td style="width: 20px">
-                  <button class="btn text-danger fa-solid fa-trash-can"
+                  <button class="btn text-danger fa-solid fa-trash-can pt-0"
                           @click="deleteAuction(auction, index)">
                   </button>
                 </td>

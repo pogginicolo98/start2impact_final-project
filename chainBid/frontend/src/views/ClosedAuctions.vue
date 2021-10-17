@@ -16,7 +16,7 @@
                   style="width: 18rem; height: 21rem;">
                   <div class="card-body text-center">
                     <!-- Card title -->
-                    <p class="text-card-auction fw-bold fs-24px mb-2">{{ auction.title }}</p>
+                    <p class="text-card-auction text-truncate fw-bold fs-24px mb-2">{{ auction.title }}</p>
 
                     <!-- Card image -->
                     <div class="card-img-wrap-auction">
@@ -31,7 +31,7 @@
                       <p class="text-card-auction fs-17px">{{ auction.final_price }} €</p>
                     </template>
                     <template v-else>
-                      <p class="text-danger fs-17px mt-4">Canceled</p>
+                      <p class="text-danger fs-17px mt-4"><i class="fa-solid fa-ban me-2"></i>Canceled</p>
                     </template>
                   </div>
 

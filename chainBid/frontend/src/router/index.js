@@ -6,6 +6,7 @@ import ScheduleAuctions from "@/views/ScheduleAuctions.vue";
 import AuctionEditor from "@/views/AuctionEditor.vue";
 import ClosedAuctions from "@/views/ClosedAuctions.vue";
 import ClosedAuctionDetail from "@/views/ClosedAuctionDetail.vue";
+import NotFound from "@/views/NotFound.vue";
 
 Vue.use(VueRouter);
 
@@ -43,6 +44,11 @@ const routes = [
     component: ClosedAuctionDetail,
     props: true
   },
+  {
+    path: "*",
+    name: "page not found",
+    component: NotFound
+  }
 ];
 
 const router = new VueRouter({

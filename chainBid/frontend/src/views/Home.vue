@@ -16,7 +16,7 @@
                   style="width: 18rem; height: 21rem;">
                   <div class="card-body text-center">
                     <!-- Card title -->
-                    <p class="text-card-auction fw-bold fs-24px mb-2">{{ auction.title }}</p>
+                    <p class="text-card-auction text-truncate fw-bold fs-24px mb-2">{{ auction.title }}</p>
 
                     <!-- Card image -->
                     <div class="card-img-wrap-auction">

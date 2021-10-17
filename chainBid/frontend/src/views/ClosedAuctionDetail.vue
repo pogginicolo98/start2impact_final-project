@@ -3,7 +3,7 @@
     <div class="row">
       <!-- Title mobile formats -->
       <div class="col-12 d-lg-none">
-        <p class="text-card-auction fw-bold fs-32px mb-2 ms-2">{{ auction.title }}</p>
+        <p class="text-card-auction text-truncate fw-bold fs-32px mb-2 ms-2">{{ auction.title }}</p>
       </div>
 
       <!-- Image and description -->
@@ -25,7 +25,14 @@
                  <i class="fa-solid fa-align-left me-2"></i><span class="fs-18px fw-bold">Description</span>
                </div>
                <div class="card-body card-body-detail">
-                 <p class="my-2">{{ auction.description }}</p>
+                 <p class="text-muted my-2"
+                    v-if="!auction.description"
+                    >No description provided
+                 </p>
+                 <p class="text-card-auction my-2"
+                    v-else
+                    >{{ auction.description }}
+                 </p>
                </div>
           </div>
         </div>
@@ -34,14 +41,19 @@
       <!-- Info -->
       <div class="col-12 col-lg-7 mb-2">
         <!-- Title desktop formats -->
-        <p class="text-card-auction fs-32px fw-bold d-none d-lg-block mb-3 ms-2">{{ auction.title }}</p>
+        <p class="text-card-auction text-truncate fs-32px fw-bold d-none d-lg-block mb-3 ms-2">{{ auction.title }}</p>
 
         <!-- Card -->
         <div class="card card-detail">
           <div class="card-body card-body-detail">
             <!-- Winner -->
-            <p class="text-card-auction fs-20px">
-              <span class="fw-bold me-2">Winner:</span>@{{ auction.winner }}
+            <p class="text-card-auction fs-20px"
+               v-if="auction.winner != 'None'"
+               ><span class="fw-bold me-2">Winner:</span>@{{ auction.winner }}
+            </p>
+            <p class="text-danger fw-bold fs-20px me-2"
+               v-else
+               >Auction canceled
             </p>
 
             <!-- Table stats -->
@@ -55,6 +67,7 @@
                     </th>
                     <th class="text-nowrap"
                         scope="col"
+                        v-if="auction.final_price"
                         >Final price
                     </th>
                     <th class="text-nowrap"
@@ -70,7 +83,7 @@
                 <tbody>
                   <tr>
                     <td>{{ auction.initial_price }} €</td>
-                    <td>{{ auction.final_price }} €</td>
+                    <td v-if="auction.final_price">{{ auction.final_price }} €</td>
                     <td>{{ getDate(auction.opened_at) }}</td>
                     <td>{{ getDate(auction.closed_at) }}</td>
                   </tr>
@@ -82,13 +95,13 @@
             <p class="text-card-auction fw-bold mb-1 mt-2">SHA256:</p>
             <div class="container text-card-auction box-icon rounded pe-1">
               <div class="row">
-                <div class="col-9 col-sm-10">
+                <div class="col-9 col-sm-10 col-xxl-11">
                   <p class="mt-3"
                      id="text-hash"
                      >{{ auction.hash }}
                   </p>
                 </div>
-                <div class="col-3 col-sm-2 text-end">
+                <div class="col-3 col-sm-2 col-xxl-1 text-end ps-0">
                   <button class="btn btn-icon my-1"
                           style="width: 46px; height: 38px;"
                           v-html="copyToClipboardMessage"
@@ -102,13 +115,13 @@
             <p class="text-card-auction fw-bold mb-1 mt-2">Transaction ID:</p>
             <div class="container text-card-auction box-icon rounded pe-1">
               <div class="row">
-                <div class="col-9 col-sm-10">
+                <div class="col-9 col-sm-10 col-xxl-11">
                   <p class="mt-3"
                      id="text-hash"
                      >{{ auction.tx_id }}
                   </p>
                 </div>
-                <div class="col-3 col-sm-2 text-end">
+                <div class="col-3 col-sm-2 col-xxl-1 text-end ps-0">
                   <a class="btn btn-icon my-1"
                      style="width: 46px; height: 38px;"
                      :href="txIdLink"
@@ -119,7 +132,7 @@
             </div>
 
             <!-- Download -->
-            <div class="text-end mt-3">
+            <div class="d-grid d-sm-block text-end mt-3">
               <a class="btn btn-violet rounded-pill"
                  download
                  :href="auction.json_file"
@@ -140,7 +153,14 @@
                <i class="fa-solid fa-align-left me-2"></i><span class="fs-18px fw-bold">Description</span>
              </div>
              <div class="card-body card-body-detail">
-               <p class="my-2">{{ auction.description }}</p>
+               <p class="text-muted my-2"
+                  v-if="!auction.description"
+                  >No description provided
+               </p>
+               <p class="text-card-auction my-2"
+                  v-else
+                  >{{ auction.description }}
+               </p>
              </div>
         </div>
       </div>
