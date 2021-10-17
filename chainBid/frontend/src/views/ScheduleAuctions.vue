@@ -15,14 +15,15 @@
                <span class="fw-bold fs-18px">Create a new auction</span>
              </div>
              <div class="card-body card-body-detail">
-               <AuctionFormComponent @refresh-auctions="getAuctions"/>
+               <AuctionFormComponent :enableEdit="editData"
+                                     @refresh-auctions="getAuctions"/>
              </div>
         </div>
       </div>
     </div>
 
     <!-- Scheduled auctions -->
-    <template v-if="auctions.length > 0">
+    <template v-if="!isEmpty">
       <div class="table-responsive text-nowrap mt-5">
         <table class="table table-hover caption-top text-card-auction">
           <caption>
@@ -31,7 +32,7 @@
           </caption>
           <thead>
             <tr>
-              <th scope="col"><i class="fa-solid fa-key me-2"></i>ID</th>
+              <th scope="col"></th>
               <th scope="col">Title</th>
               <th scope="col">Initial Price</th>
               <th scope="col"><i class="fa-solid fa-calendar-days me-2"></i>Opening date</th>
@@ -40,7 +41,11 @@
           <tbody>
             <tr v-for="(auction, index) in auctions"
                 :key="index">
-                <th scope="row">{{ auction.id }}</th>
+                <td style="width: 20px">
+                  <button class="btn text-danger fa-solid fa-trash-can"
+                          @click="deleteAuction(auction, index)">
+                  </button>
+                </td>
                 <td>
                   <router-link :to="{ name: 'auction editor', params: { id: auction.id } }">
                     <i class="fa-solid fa-pen-to-square me-1"></i>{{ auction.title }}
@@ -101,6 +106,7 @@
     },
     data() {
       return {
+        editData: true,
         auctions: [],
         currentPage: 1,
         pages: 1,
@@ -121,6 +127,12 @@
           return true;
         }
         return false;
+      },
+      isEmpty() {
+        if (this.auctions.length === 0 && this.pages < 2) {
+          return true;
+        }
+        return false;
       }
     },
     methods: {
@@ -137,11 +149,15 @@
         } else if (action === "next") {
           endpoint = this.next;
           this.currentPage += 1;
+        } else {
+          this.currentPage = 1;
         }
         this.loadingAuctions = true;
         await apiService(endpoint)
           .then(response => {
-            this.auctions.splice(0, (this.auctions.length));
+            if (this.auctions.length > 0) {
+              this.auctions.splice(0, (this.auctions.length));
+            }
             this.auctions.push(...response.results);
             this.loadingAuctions = false;
             if (response.next) {
@@ -154,6 +170,36 @@
               this.previous = response.previous;
             } else {
               this.previous = null;
+            }
+          });
+      },
+      async deleteAuction(auction, index) {
+        /*
+          Delete auction and redirect to the schedule auctions page.
+        */
+
+        let endpoint = `/api/schedule-auctions/${auction.id}/`;
+        let method = "DELETE"
+        await apiService(endpoint, method)
+          .then(() => {
+            this.auctions.splice(index, 1);
+            this.$toasted.show(`${auction.title} deleted`, {icon: "trash-can"});
+            if (this.auctions.length === 0) {
+              let action = null;
+              if (this.next || this.previous) {
+                if (this.previous) {
+                  if (this.currentPage > 1) {
+                    action = "previous";
+                  }
+                } else if (this.next) {
+                  if (this.currentPage > 1) {
+                    action = "next";
+                  }
+                  this.currentPage -= 1;
+                }
+                this.pages -= 1;
+                this.getAuctions(action);
+              }
             }
           });
       },

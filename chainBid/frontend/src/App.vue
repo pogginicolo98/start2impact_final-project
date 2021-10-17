@@ -149,4 +149,23 @@
     background-color: #2a9d8f !important;
     color: #fff !important;
   }
+
+  .box-icon {
+    border: 1px solid;
+    border-color: #C9ADA7;
+    background-color: #F2E9E4;
+  }
+
+  .btn-icon {
+    background-color: rgba(55, 37, 27, 0.2);
+    border-color: #C9ADA7;
+    color: #37251B;
+    transition: 0.8s;
+  }
+
+  .btn-icon:hover {
+    background-color: rgba(74, 78, 105, 0.8);
+    border-color: #4A4E69;
+    color: #fff;
+  }
 </style>
