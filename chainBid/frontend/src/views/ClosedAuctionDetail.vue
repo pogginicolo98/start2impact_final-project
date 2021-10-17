@@ -80,7 +80,7 @@
 
             <!-- Hash -->
             <p class="text-card-auction fw-bold mb-1 mt-2">SHA256:</p>
-            <div class="container text-card-auction box-report rounded pe-1">
+            <div class="container text-card-auction box-icon rounded pe-1">
               <div class="row">
                 <div class="col-9 col-sm-10">
                   <p class="mt-3"
@@ -89,7 +89,8 @@
                   </p>
                 </div>
                 <div class="col-3 col-sm-2 text-end">
-                  <button class="btn btn-report my-1"
+                  <button class="btn btn-icon my-1"
+                          style="width: 46px; height: 38px;"
                           v-html="copyToClipboardMessage"
                           @click="copyToClipboard(auction.hash)">
                   </button>
@@ -99,7 +100,7 @@
 
             <!-- Transaction ID -->
             <p class="text-card-auction fw-bold mb-1 mt-2">Transaction ID:</p>
-            <div class="container text-card-auction box-report rounded pe-1">
+            <div class="container text-card-auction box-icon rounded pe-1">
               <div class="row">
                 <div class="col-9 col-sm-10">
                   <p class="mt-3"
@@ -108,7 +109,8 @@
                   </p>
                 </div>
                 <div class="col-3 col-sm-2 text-end">
-                  <a class="btn btn-report my-1"
+                  <a class="btn btn-icon my-1"
+                     style="width: 46px; height: 38px;"
                      :href="txIdLink"
                      ><i class="fa-solid fa-link"></i>
                   </a>
@@ -209,24 +211,4 @@
 </script>
 
 <style lang="css" scoped>
-  .box-report {
-    border: 1px solid;
-    border-color: #C9ADA7;
-    background-color: #F2E9E4;
-  }
-
-  .btn-report {
-    background-color: rgba(55, 37, 27, 0.2);
-    border-color: #C9ADA7;
-    color: #37251B;
-    transition: 0.8s;
-    width: 46px;
-    height: 38px;
-  }
-
-  .btn-report:hover {
-    background-color: rgba(74, 78, 105, 0.8);
-    border-color: #4A4E69;
-    color: #fff;
-  }
 </style>

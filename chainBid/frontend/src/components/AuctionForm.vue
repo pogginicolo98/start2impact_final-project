@@ -14,7 +14,8 @@
                      required
                      type="text"
                      v-model="title.value"
-                     :class="{'is-invalid': isTitleInvalid}">
+                     :class="{'is-invalid': isTitleInvalid}"
+                     :disabled="!enableEdit">
               <div class="invalid-feedback">
                 <ul>
                   <li v-for="(error, index) in title.errors"
@@ -38,7 +39,8 @@
                         rows="4"
                         type="text"
                         v-model="description.value"
-                        :class="{'is-invalid': isDescriptionInvalid}">
+                        :class="{'is-invalid': isDescriptionInvalid}"
+                        :disabled="!enableEdit">
               </textarea>
               <p class="mt-1 text-end small mb-0 mb-xxl-2"
                  :class="{'text-muted': descriptionCharsValid,
@@ -72,7 +74,8 @@
                        style="padding-left: 27px;"
                        type="number"
                        v-model="initialPrice.value"
-                       :class="{'is-invalid': isInitialPriceInvalid}">
+                       :class="{'is-invalid': isInitialPriceInvalid}"
+                       :disabled="!enableEdit">
               </label>
               <div class="invalid-feedback d-block"
                    id="bidFormFeedback">
@@ -96,7 +99,8 @@
               <input class="form-control"
                      id="opening-date"
                      type="datetime-local"
-                     v-model="openedAt.value">
+                     v-model="openedAt.value"
+                     :disabled="!enableEdit">
             </div>
           </div>
 
@@ -104,7 +108,8 @@
           <div class="col-sm-3 col-md-2 col-lg-3 col-xxl-2 d-grid d-block ms-auto mt-3">
             <button class="btn btn-violet rounded-pill"
                     type="submit"
-                    v-html="createUpdateMessage">
+                    v-html="createUpdateMessage"
+                    :class="{'disabled': !enableEdit}">
             </button>
           </div>
     </form>
@@ -123,6 +128,10 @@
       auction: {
         type: Object,
         required: false
+      },
+      enableEdit: {
+        type: Boolean,
+        required: true
       }
     },
     data() {
@@ -175,7 +184,7 @@
           this.title.value = this.auction.title;
           this.description.value = this.auction.description;
           this.initialPrice.value = this.auction.initial_price;
-          if (this.openedAt.value) {
+          if (this.auction.opened_at) {
             this.openedAt.value = moment.utc(this.auction.opened_at, 'YYYY-MM-DDTHH:mm').format('YYYY-MM-DDTHH:mm');
           }
           this.createUpdateMessage = "Save<i class='fa-solid fa-floppy-disk ms-2'></i>";

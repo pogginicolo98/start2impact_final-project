@@ -5,7 +5,6 @@
       <p>{{ modifiedAuction.title }}</p>
     </div>
 
-    <!-- <p class="text-card-auction fw-bold fs-32px mb-2 ms-2"></p> -->
     <div class="row mt-4">
       <!-- Edit image -->
       <div class="col-12 col-lg-5">
@@ -17,7 +16,11 @@
                    <span class="fw-bold fs-18px">Image</span>
                  </div>
                  <div class="col-auto">
-                   <i class="fa-solid fa-pen"></i>
+                   <button class="btn btn-icon p-0"
+                           style="width: 27px; height: 27px;"
+                           @click="toggleEditImage"
+                           ><i class="fa-solid fa-pen"></i>
+                   </button>
                  </div>
                </div>
              </div>
@@ -30,12 +33,14 @@
                         class="form-control"
                         type="file"
                         :class="{'is-invalid': imageIsInvalid}"
+                        :disabled="!editImage"
                         @change="onImageSelected">
                  <div class="invalid-feedback">{{ image.error }}</div>
                </div>
                <div class="col-12 col-sm-3 col-md-2 col-lg-4 col-xl-3 d-grid d-block mt-3 ms-auto">
                  <button class="btn btn-violet rounded-pill"
                          type="submit"
+                         :class="{'disabled': !editImage}"
                          @click="onUpload"
                          >Upload<i class="fa-solid fa-upload ms-2"></i>
                  </button>
@@ -54,19 +59,64 @@
                    <span class="fw-bold fs-18px">Data</span>
                  </div>
                  <div class="col-auto">
-                   <i class="fa-solid fa-pen"></i>
+                   <button class="btn btn-icon p-0 me-2"
+                           style="width: 27px; height: 27px;"
+                           data-bs-toggle="modal"
+                           data-bs-target="#deleteAuctionModal"
+                           ><i class="fa-solid fa-trash-can"></i>
+                   </button>
+                   <button class="btn btn-icon p-0"
+                           style="width: 27px; height: 27px;"
+                           @click="toggleEditData"
+                           ><i class="fa-solid fa-pen"></i>
+                   </button>
                  </div>
                </div>
              </div>
              <div class="card-body card-body-detail">
                <AuctionFormComponent :auction="modifiedAuction"
+                                     :enableEdit="editData"
                                      @refresh-auctions="updateData"/>
              </div>
         </div>
       </div>
     </div> <!-- Row -->
 
-
+    <!-- Delete auction modal -->
+    <div aria-hidden="true"
+         aria-labelledby="deleteAuctionModalLabel"
+         class="modal fade"
+         id="deleteAuctionModal"
+         tabindex="-1">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <div class="modal-body text-center">
+               <p class="text-card-auction fw-bold fs-20px"
+                  id="deleteAuctionModalLabel"
+                  >Do you want to delete the following auction?
+               </p>
+               <p class="text-card-auction fs-18px">{{ auction.title }}</p>
+               <div class="row justify-content-between mt-4">
+                 <div class="col-auto">
+                   <button class="btn btn-secondary rounded-pill"
+                           data-bs-dismiss="modal"
+                           type="button"
+                           >Cancel
+                   </button>
+                 </div>
+                 <div class="col-auto">
+                   <button class="btn btn-danger rounded-pill"
+                           data-bs-dismiss="modal"
+                           type="button"
+                           @click="deleteAuction"
+                           >Delete
+                   </button>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+    </div> <!-- Delete auction modal -->
   </div> <!-- Container -->
 </template>
 
@@ -112,6 +162,8 @@
           url: null,
           error: null
         },
+        editImage: false,
+        editData: false,
         error: null
       }
     },
@@ -127,6 +179,12 @@
       }
     },
     methods: {
+      toggleEditImage() {
+        this.editImage = !this.editImage;
+      },
+      toggleEditData() {
+        this.editData = !this.editData;
+      },
       onImageSelected(event) {
         this.image.file = event.target.files[0];
       },
@@ -185,7 +243,20 @@
               this.modifiedAuction = response;
               document.title = `${response.title} | Schedule auctions | ChainBid`;
             });
-        }
+        },
+        async deleteAuction() {
+          /*
+            Delete auction and redirect to the schedule auctions page.
+          */
+
+          let endpoint = `/api/schedule-auctions/${this.modifiedAuction.id}/`;
+          let method = "DELETE"
+          await apiService(endpoint, method)
+            .then(() => {
+              this.$router.push({name: "schedule auctions"});
+              this.$toasted.show(`${this.modifiedAuction.title} deleted`, {icon: "trash-can"});
+            });
+        },
     },
     created() {
       document.title = `${this.modifiedAuction.title} | Schedule auctions | ChainBid`;
@@ -198,5 +269,20 @@
     background-color: #4A4E69 !important;
     border-color: #4A4E69 !important;
     color: #FFF !important;
+  }
+
+  input[type=file]:hover::file-selector-button {
+    background-color: #52528E !important;
+  }
+
+  input[type=file]:disabled::file-selector-button {
+    background-color: #4A4E69 !important;
+    pointer-events: none;
+    opacity: .65;
+  }
+
+  .modal-content {
+    background-color: #F2E9E4;
+    border-color: #C9ADA7;
   }
 </style>
