@@ -1,4 +1,4 @@
-from auctions.models import Auction, AuctionReport
+from auctions.models import Auction
 from django.utils import timezone
 from rest_framework import serializers
 
@@ -80,6 +80,7 @@ class AuctionSerializer(serializers.ModelSerializer):
                 return delta.seconds
         return None
 
+
 class AuctionBidSerializer(serializers.Serializer):
     """
     Bid serializer for AuctionBidAPIView.
@@ -146,21 +147,6 @@ class AuctionInfoSerializer(serializers.Serializer):
                 delta = task['eta'] - timezone.now()
                 return delta.seconds
         return None
-
-
-# class AuctionReportSerializer(serializers.ModelSerializer):
-#     """
-#     AuctionReport serializer for AuctionReportRetrieveAPIView.
-#
-#     :fields
-#     - json_file
-#
-#     * format: DATA.
-#     """
-#
-#     class Meta:
-#         model = AuctionReport
-#         fields = ['json_file']
 
 
 class AuctionClosedSerializer(serializers.ModelSerializer):

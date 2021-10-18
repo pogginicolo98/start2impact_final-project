@@ -163,8 +163,7 @@
           error: null
         },
         editImage: false,
-        editData: false,
-        error: null
+        editData: false
       }
     },
     computed: {
@@ -221,13 +220,14 @@
           await apiService(endpoint, method, data, imageData)
             .then(response => {
               if (response.detail) {
-                // Da gestire per la pagina "not found"
-                this.error = response.detail;
-              }
-              this.image.url = URL.createObjectURL(this.image.file);
-              this.image.file = null;
-              if (this.image.error) {
-                this.image.error = null;
+                console.log(response);
+                this.$router.push({name: "not found"});
+              } else {
+                this.image.url = URL.createObjectURL(this.image.file);
+                this.image.file = null;
+                if (this.image.error) {
+                  this.image.error = null;
+                }
               }
             });
           }
@@ -240,8 +240,13 @@
           let endpoint = `/api/schedule-auctions/${this.modifiedAuction.id}/`;
           await apiService(endpoint)
             .then(response => {
-              this.modifiedAuction = response;
-              document.title = `${response.title} | Schedule auctions | ChainBid`;
+              if (response.detail) {
+                console.log(response);
+                this.$router.push({name: "not found"});
+              } else {
+                this.modifiedAuction = response;
+                document.title = `${response.title} | Schedule auctions | ChainBid`;
+              }
             });
         },
         async deleteAuction() {
@@ -252,13 +257,22 @@
           let endpoint = `/api/schedule-auctions/${this.modifiedAuction.id}/`;
           let method = "DELETE"
           await apiService(endpoint, method)
-            .then(() => {
-              this.$router.push({name: "schedule auctions"});
-              this.$toasted.show(`${this.modifiedAuction.title} deleted`, {icon: "trash-can"});
+            .then(response => {
+              if (response.detail) {
+                console.log(response);
+                this.$router.push({name: "not found"});
+              } else {
+                this.$router.push({name: "schedule auctions"});
+                this.$toasted.show(`${this.modifiedAuction.title} deleted`, {icon: "trash-can"});
+              }
             });
         },
     },
     created() {
+      if (this.auction.detail) {
+        console.log(this.auction);
+        this.$router.push({name: "not found"});
+      }
       document.title = `${this.modifiedAuction.title} | Schedule auctions | ChainBid`;
     }
   }

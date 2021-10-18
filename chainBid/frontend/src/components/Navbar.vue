@@ -113,9 +113,14 @@
         let endpoint = "/api/user/";
         await apiService(endpoint)
           .then(response => {
-            this.requestUser = response.username;
-            this.isStaffUser = response.is_staff;
-            window.localStorage.setItem("username", this.requestUser);
+            if (response.detail) {
+              console.log(response);
+              this.$router.push({name: "not found"});
+            } else {
+              this.requestUser = response.username;
+              this.isStaffUser = response.is_staff;
+              window.localStorage.setItem("username", this.requestUser);
+            }
           });
       }
     },

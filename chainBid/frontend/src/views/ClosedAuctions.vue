@@ -16,7 +16,7 @@
                   style="width: 18rem; height: 21rem;">
                   <div class="card-body text-center">
                     <!-- Card title -->
-                    <p class="text-card-auction fw-bold fs-24px mb-2">{{ auction.title }}</p>
+                    <p class="text-card-auction text-truncate fw-bold fs-24px mb-2">{{ auction.title }}</p>
 
                     <!-- Card image -->
                     <div class="card-img-wrap-auction">
@@ -31,7 +31,7 @@
                       <p class="text-card-auction fs-17px">{{ auction.final_price }} €</p>
                     </template>
                     <template v-else>
-                      <p class="text-danger fs-17px mt-4">Canceled</p>
+                      <p class="text-danger fs-17px mt-4"><i class="fa-solid fa-ban me-2"></i>Canceled</p>
                     </template>
                   </div>
 
@@ -87,12 +87,20 @@
         this.loadingAuctions = true;
         await apiService(endpoint)
           .then(response => {
-            this.auctions.push(...response.results);
-            this.loadingAuctions = false;
-            if (response.next) {
-              this.next = response.next;
+            if (response.detail) {
+              console.log(response);
+              this.$router.push({name: "not found"});
             } else {
-              this.next = null;
+              this.auctions.push(...response.results);
+              this.loadingAuctions = false;
+              if (response.next) {
+                this.next = response.next;
+              } else {
+                this.next = null;
+              }
+              if (this.firstLoading) {
+                this.firstLoading = false;
+              }
             }
           });
       },
@@ -105,7 +113,7 @@
         }
         return false;
       },
-      getNextUser() {
+      getNextAuctions() {
         /*
           Retrieve new auction when scrolling down.
         */
@@ -121,7 +129,7 @@
       }
     },
     mounted() {
-      this.getNextUser();
+      this.getNextAuctions();
     },
     created() {
       document.title = "Closed auctions | ChainBid";

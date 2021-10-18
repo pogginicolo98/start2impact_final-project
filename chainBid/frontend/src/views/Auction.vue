@@ -3,7 +3,7 @@
     <div class="row">
       <!-- Title mobile formats -->
       <div class="col-12 d-lg-none">
-        <p class="text-card-auction fw-bold fs-32px mb-2 ms-2">{{ auction.title }}</p>
+        <p class="text-card-auction text-truncate fw-bold fs-32px mb-2 ms-2">{{ auction.title }}</p>
       </div>
 
       <!-- Image and description -->
@@ -25,7 +25,14 @@
                  <i class="fa-solid fa-align-left me-2"></i><span class="fs-18px fw-bold">Description</span>
                </div>
                <div class="card-body card-body-detail pb-1">
-                 <p class="text-card-auction mb-2">{{ auction.description }}</p>
+                 <p class="text-muted mb-2"
+                    v-if="!auction.description"
+                    >No description provided
+                 </p>
+                 <p class="text-card-auction mb-2"
+                    v-else
+                    >{{ auction.description }}
+                 </p>
                  <p class="text-muted fs-14px mb-0"><strong>Initial price</strong>: {{ auction.initial_price }} €</p>
                  <p class="text-muted fs-14px mb-0"><strong>Opened</strong>: {{ getOpenedAtFromNow }}</p>
                </div>
@@ -36,7 +43,7 @@
       <!-- Bid -->
       <div class="col-12 col-lg-7 mb-2">
         <!-- Title desktop formats -->
-        <p class="text-card-auction fs-32px fw-bold d-none d-lg-block mb-3 ms-2">{{ auction.title }}</p>
+        <p class="text-card-auction text-truncate fs-32px fw-bold d-none d-lg-block mb-3 ms-2">{{ auction.title }}</p>
 
         <!-- Card -->
         <div class="card card-detail">
@@ -77,7 +84,14 @@
                <i class="fa-solid fa-align-left me-2"></i><span class="fs-18px fw-bold">Description</span>
              </div>
              <div class="card-body card-body-detail pb-1">
-               <p class="text-card-auction mb-2">{{ auction.description }}</p>
+               <p class="text-muted mb-2"
+                  v-if="!auction.description"
+                  >No description provided
+               </p>
+               <p class="text-card-auction mb-2"
+                  v-else
+                  >{{ auction.description }}
+               </p>
                <p class="text-muted fs-14px mb-0"><strong>Initial price</strong>: {{ auction.initial_price }} €</p>
                <p class="text-muted fs-14px mb-0"><strong>Opened</strong>: {{ getOpenedAtFromNow }}</p>
              </div>
@@ -142,9 +156,14 @@
         let endpoint = `/api/auctions/${this.id}/`;
         await apiService(endpoint)
           .then(response => {
-            this.auction = response;
-            this.lastPrice = response.last_price;
-            document.title = `${response.title} | Live auctions | ChainBid`;
+            if (response.detail) {
+              console.log(response);
+              this.$router.push({name: "not found"});
+            } else {
+              this.auction = response;
+              this.lastPrice = response.last_price;
+              document.title = `${response.title} | Live auctions | ChainBid`;
+            }
           });
       },
       async getAuctionInfo() {
@@ -155,17 +174,23 @@
         let endpoint = `/api/auctions/${this.id}/info/`;
         await apiService(endpoint)
           .then(response => {
-            this.isLastUser = response.is_last_user;
-            this.lastPrice = response.last_price;
-            if (this.remainingTime === null && response.remaining_time != null) {
-              // Initialize timerDisplay
-              this.remainingTime = response.remaining_time;
-              this.timerDisplay = setInterval(this.decrementTimerDisplay, 1000);
-            } else if (this.remainingTime < response.remaining_time - 2 || this.remainingTime > response.remaining_time + 2) {
-              // Reset timerDisplay if it differs from the original for more than +-2 seconds
-              this.remainingTime = response.remaining_time;
-              clearInterval(this.timerDisplay);
-              this.timerDisplay = setInterval(this.decrementTimerDisplay, 1000);
+            if (response.detail) {
+              console.log(response);
+              // Gestire chiusura asta
+              // this.$router.push({name: "not found"});
+            } else {
+              this.isLastUser = response.is_last_user;
+              this.lastPrice = response.last_price;
+              if (this.remainingTime === null && response.remaining_time != null) {
+                // Initialize timerDisplay
+                this.remainingTime = response.remaining_time;
+                this.timerDisplay = setInterval(this.decrementTimerDisplay, 1000);
+              } else if (this.remainingTime < response.remaining_time - 2 || this.remainingTime > response.remaining_time + 2) {
+                // Reset timerDisplay if it differs from the original for more than +-2 seconds
+                this.remainingTime = response.remaining_time;
+                clearInterval(this.timerDisplay);
+                this.timerDisplay = setInterval(this.decrementTimerDisplay, 1000);
+              }
             }
           });
       },

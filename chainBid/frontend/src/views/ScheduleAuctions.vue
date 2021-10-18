@@ -42,7 +42,7 @@
             <tr v-for="(auction, index) in auctions"
                 :key="index">
                 <td style="width: 20px">
-                  <button class="btn text-danger fa-solid fa-trash-can"
+                  <button class="btn text-danger fa-solid fa-trash-can pt-0"
                           @click="deleteAuction(auction, index)">
                   </button>
                 </td>
@@ -155,21 +155,26 @@
         this.loadingAuctions = true;
         await apiService(endpoint)
           .then(response => {
-            if (this.auctions.length > 0) {
-              this.auctions.splice(0, (this.auctions.length));
-            }
-            this.auctions.push(...response.results);
-            this.loadingAuctions = false;
-            if (response.next) {
-              this.next = response.next;
-              this.pages = Math.ceil(response.count / response.results.length);
+            if (response.detail) {
+              console.log(response);
+              this.$router.push({name: "not found"});
             } else {
-              this.next = null;
-            }
-            if (response.previous) {
-              this.previous = response.previous;
-            } else {
-              this.previous = null;
+              if (this.auctions.length > 0) {
+                this.auctions.splice(0, (this.auctions.length));
+              }
+              this.auctions.push(...response.results);
+              this.loadingAuctions = false;
+              if (response.next) {
+                this.next = response.next;
+                this.pages = Math.ceil(response.count / response.results.length);
+              } else {
+                this.next = null;
+              }
+              if (response.previous) {
+                this.previous = response.previous;
+              } else {
+                this.previous = null;
+              }
             }
           });
       },
@@ -181,24 +186,29 @@
         let endpoint = `/api/schedule-auctions/${auction.id}/`;
         let method = "DELETE"
         await apiService(endpoint, method)
-          .then(() => {
-            this.auctions.splice(index, 1);
-            this.$toasted.show(`${auction.title} deleted`, {icon: "trash-can"});
-            if (this.auctions.length === 0) {
-              let action = null;
-              if (this.next || this.previous) {
-                if (this.previous) {
-                  if (this.currentPage > 1) {
-                    action = "previous";
+          .then(response => {
+            if (response.detail) {
+              console.log(response);
+              this.$router.push({name: "not found"});
+            } else {
+              this.auctions.splice(index, 1);
+              this.$toasted.show(`${auction.title} deleted`, {icon: "trash-can"});
+              if (this.auctions.length === 0) {
+                let action = null;
+                if (this.next || this.previous) {
+                  if (this.previous) {
+                    if (this.currentPage > 1) {
+                      action = "previous";
+                    }
+                  } else if (this.next) {
+                    if (this.currentPage > 1) {
+                      action = "next";
+                    }
+                    this.currentPage -= 1;
                   }
-                } else if (this.next) {
-                  if (this.currentPage > 1) {
-                    action = "next";
-                  }
-                  this.currentPage -= 1;
+                  this.pages -= 1;
+                  this.getAuctions(action);
                 }
-                this.pages -= 1;
-                this.getAuctions(action);
               }
             }
           });
