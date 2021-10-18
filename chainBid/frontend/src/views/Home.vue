@@ -87,22 +87,27 @@
         this.loadingAuctions = true;
         await apiService(endpoint)
           .then(response => {
-            this.auctions.push(...response.results);
-            this.loadingAuctions = false;
-            if (response.next) {
-              this.next = response.next;
+            if (response.detail) {
+              console.log(response);
+              this.$router.push({name: "not found"});
             } else {
-              this.next = null;
-            }
-            if (this.firstLoading) {
-              this.firstLoading = false;
+              this.auctions.push(...response.results);
+              this.loadingAuctions = false;
+              if (response.next) {
+                this.next = response.next;
+              } else {
+                this.next = null;
+              }
+              if (this.firstLoading) {
+                this.firstLoading = false;
+              }
             }
           });
       },
       getDateFromNow(date) {
         return moment(date).fromNow();
       },
-      getNextUser() {
+      getNextAuctions() {
         /*
           Retrieve new auction when scrolling down.
         */
@@ -118,7 +123,7 @@
       }
     },
     mounted() {
-      this.getNextUser();
+      this.getNextAuctions();
     },
     created() {
       document.title = "Live auctions | ChainBid";

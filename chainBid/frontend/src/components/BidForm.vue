@@ -66,8 +66,7 @@
         newPrice: {
           value: null,
           errors: []
-        },
-        error: null
+        }
       };
     },
     computed: {
@@ -118,9 +117,11 @@
           await apiService(endpoint, method, data)
             .then(response => {
               if (response.detail) {
-                this.error = response.detail;
+                console.log(response);
+                this.$router.push({name: "not found"});
+              } else {
+                this.newPrice.value = null;
               }
-              this.newPrice.value = null;
             });
         }
       }

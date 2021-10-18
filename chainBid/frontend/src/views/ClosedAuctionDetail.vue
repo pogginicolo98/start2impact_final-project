@@ -202,9 +202,14 @@
         let endpoint = `/api/closed-auctions/${this.id}/`;
         await apiService(endpoint)
           .then(response => {
-            this.auction = response;
-            this.txIdLink = `https://ropsten.etherscan.io/tx/${response.tx_id}`;
-            document.title = `${response.title} | Closed auctions | ChainBid`;
+            if (response.detail) {
+              console.log(response);
+              this.$router.push({name: "not found"});
+            } else {
+              this.auction = response;
+              this.txIdLink = `https://ropsten.etherscan.io/tx/${response.tx_id}`;
+              document.title = `${response.title} | Closed auctions | ChainBid`;
+            }
           });
       },
       getDate(date) {

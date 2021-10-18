@@ -151,8 +151,7 @@
         openedAt: {
           value: null
         },
-        createUpdateMessage: null,
-        error: null
+        createUpdateMessage: null
       };
     },
     computed: {
@@ -270,19 +269,20 @@
           await apiService(endpoint, method, data)
             .then(response => {
               if (response.detail) {
-                // Da gestire per la pagina "not found"
-                this.error = response;
-              }
-              if (!this.auction) {
-                this.title.value = null;
-                this.description.value = null;
-                this.initialPrice.value = null;
-                this.openedAt.value = null;
-                this.$toasted.show('Created', {icon: "circle-check"});
+                console.log(response);
+                this.$router.push({name: "not found"});
               } else {
-                this.$toasted.show('Saved', {icon: "circle-check"});
+                if (!this.auction) {
+                  this.title.value = null;
+                  this.description.value = null;
+                  this.initialPrice.value = null;
+                  this.openedAt.value = null;
+                  this.$toasted.show('Created', {icon: "circle-check"});
+                } else {
+                  this.$toasted.show('Saved', {icon: "circle-check"});
+                }
+                this.$emit("refresh-auctions");
               }
-              this.$emit("refresh-auctions");
             });
         }
       }

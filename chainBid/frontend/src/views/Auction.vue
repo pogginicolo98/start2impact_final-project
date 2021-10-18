@@ -156,9 +156,14 @@
         let endpoint = `/api/auctions/${this.id}/`;
         await apiService(endpoint)
           .then(response => {
-            this.auction = response;
-            this.lastPrice = response.last_price;
-            document.title = `${response.title} | Live auctions | ChainBid`;
+            if (response.detail) {
+              console.log(response);
+              this.$router.push({name: "not found"});
+            } else {
+              this.auction = response;
+              this.lastPrice = response.last_price;
+              document.title = `${response.title} | Live auctions | ChainBid`;
+            }
           });
       },
       async getAuctionInfo() {
@@ -169,17 +174,23 @@
         let endpoint = `/api/auctions/${this.id}/info/`;
         await apiService(endpoint)
           .then(response => {
-            this.isLastUser = response.is_last_user;
-            this.lastPrice = response.last_price;
-            if (this.remainingTime === null && response.remaining_time != null) {
-              // Initialize timerDisplay
-              this.remainingTime = response.remaining_time;
-              this.timerDisplay = setInterval(this.decrementTimerDisplay, 1000);
-            } else if (this.remainingTime < response.remaining_time - 2 || this.remainingTime > response.remaining_time + 2) {
-              // Reset timerDisplay if it differs from the original for more than +-2 seconds
-              this.remainingTime = response.remaining_time;
-              clearInterval(this.timerDisplay);
-              this.timerDisplay = setInterval(this.decrementTimerDisplay, 1000);
+            if (response.detail) {
+              console.log(response);
+              // Gestire chiusura asta
+              // this.$router.push({name: "not found"});
+            } else {
+              this.isLastUser = response.is_last_user;
+              this.lastPrice = response.last_price;
+              if (this.remainingTime === null && response.remaining_time != null) {
+                // Initialize timerDisplay
+                this.remainingTime = response.remaining_time;
+                this.timerDisplay = setInterval(this.decrementTimerDisplay, 1000);
+              } else if (this.remainingTime < response.remaining_time - 2 || this.remainingTime > response.remaining_time + 2) {
+                // Reset timerDisplay if it differs from the original for more than +-2 seconds
+                this.remainingTime = response.remaining_time;
+                clearInterval(this.timerDisplay);
+                this.timerDisplay = setInterval(this.decrementTimerDisplay, 1000);
+              }
             }
           });
       },

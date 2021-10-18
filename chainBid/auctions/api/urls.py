@@ -3,7 +3,6 @@ from auctions.api.views import (AuctionBidAPIView,
                                 AuctionImageUpdateAPIView,
                                 AuctionInfoRetrieveAPIView,
                                 AuctionListRetrieveAPIView,
-                                # AuctionReportRetrieveAPIView,
                                 AuctionScheduleViewSet)
 from django.urls import include, path
 from rest_framework.routers import DefaultRouter
@@ -18,5 +17,4 @@ urlpatterns = [
     path('schedule-auctions/<int:pk>/upload-image/', AuctionImageUpdateAPIView.as_view(), name='upload-image'),
     path('auctions/<int:pk>/bid/', AuctionBidAPIView.as_view(), name='auction-bid'),
     path('auctions/<int:pk>/info/', AuctionInfoRetrieveAPIView.as_view(), name='auction-info'),
-    # path('closed-auctions/<int:pk>/download-report/', AuctionReportRetrieveAPIView.as_view(), name='download-report'),
 ]
