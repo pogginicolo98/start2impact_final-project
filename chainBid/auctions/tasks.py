@@ -2,6 +2,7 @@ from auctions.models import Auction, AuctionReport
 from chainBid.celery import app
 from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404
+from utils.auction_redis import record_object_on_redis
 
 UserModel = get_user_model()
 
@@ -28,4 +29,4 @@ def open_auction(pk):
     auction = get_object_or_404(Auction, pk=pk)
     max_closing_date = auction.open_auction()
     new_task = close_auction.apply_async((pk,), eta=max_closing_date).id
-    auction.record_object_on_redis(close_id=new_task)
+    record_object_on_redis(auction=auction.pk, close_id=new_task)
