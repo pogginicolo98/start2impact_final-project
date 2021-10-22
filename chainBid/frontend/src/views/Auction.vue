@@ -58,7 +58,7 @@
               <!-- Remaining time -->
               <div class="col-auto">
                 <p class="text-muted fs-15px fw-bold mb-0">Closing in</p>
-                <template v-if="isStarted">
+                <template v-if="remainingTime !== null">
                   <p class="text-danger fs-20px mb-0">{{ getRemainingTime }}</p>
                 </template>
                 <template v-else>
@@ -69,7 +69,8 @@
 
             <!-- Form -->
             <BidFormComponent :auction="auction"
-                              :isLastUser="isLastUser"/>
+                              :isLastUser="isLastUser"
+                              :bidSocket="bidSocket"/>
           </div>
         </div> <!-- Card -->
       </div> <!-- Bid -->
@@ -106,6 +107,7 @@
   import { apiService } from "@/common/api.service.js";
   import BidFormComponent from "@/components/BidForm.vue";
   import moment from 'moment';
+  import * as ReconnectingWebSocket from "../../dist/js/reconnecting-websocket.min.js";
 
   export default {
     name: "Auction",
@@ -124,14 +126,12 @@
         isLastUser: false,
         lastPrice: null,
         remainingTime: null,
+        bidSocket: null,
         timerInfo: null,
         timerDisplay: null
       };
     },
     computed: {
-      isStarted() {
-        return this.remainingTime !== null;
-      },
       getRemainingTime() {
         /*
           Format remainingTime in a timer (ex. 70 seconds -> 01:10).
@@ -166,52 +166,51 @@
             }
           });
       },
-      async getAuctionInfo() {
-        /*
-          Retrieve last bid.
-        */
-
-        let endpoint = `/api/auctions/${this.id}/info/`;
-        await apiService(endpoint)
-          .then(response => {
-            if (response.detail) {
-              console.log(response);
-              // Gestire chiusura asta
-              // this.$router.push({name: "not found"});
-            } else {
-              this.isLastUser = response.is_last_user;
-              this.lastPrice = response.last_price;
-              if (this.remainingTime === null && response.remaining_time != null) {
-                // Initialize timerDisplay
-                this.remainingTime = response.remaining_time;
-                this.timerDisplay = setInterval(this.decrementTimerDisplay, 1000);
-              } else if (this.remainingTime < response.remaining_time - 2 || this.remainingTime > response.remaining_time + 2) {
-                // Reset timerDisplay if it differs from the original for more than +-2 seconds
-                this.remainingTime = response.remaining_time;
-                clearInterval(this.timerDisplay);
-                this.timerDisplay = setInterval(this.decrementTimerDisplay, 1000);
-              }
-            }
-          });
-      },
-      clearTimers() {
-          clearInterval(this.timerInfo);
-          clearInterval(this.timerDisplay);
-      },
       decrementTimerDisplay() {
         if (this.remainingTime > 0) {
           this.remainingTime -= 1;
         } else {
           clearInterval(this.timerDisplay);
+          this.remainingTime = -1;
         }
       }
     },
+    mounted() {
+      /*
+        Create a websocket and connect it to the Bid consumer.
+      */
+
+      this.bidSocket = new ReconnectingWebSocket(
+          'ws://'
+          + window.location.host
+          + '/ws/auctions/'
+          + this.id
+          + '/bid/'
+      );
+      this.bidSocket.onmessage = e => {
+          let data = JSON.parse(e.data);
+          if (data.errors) {
+            console.error(data.errors);
+            this.$router.push({name: "not found"});
+          } else {
+            this.isLastUser = data.is_last_user;
+            this.lastPrice = data.last_price;
+            this.remainingTime = data.remaining_time;
+            if (data.remaining_time) {
+              clearInterval(this.timerDisplay);
+              this.timerDisplay = setInterval(this.decrementTimerDisplay, 1000);
+            }
+          }
+      };
+      this.bidSocket.onclose = () => {
+          console.error('Chat socket closed unexpectedly');
+      };
+    },
     created() {
       this.getAuctionData();
-      this.timerInfo = setInterval(this.getAuctionInfo, 1000);
     },
     beforeDestroy() {
-      this.clearTimers();
+      clearInterval(this.timerDisplay);
     }
   }
 </script>

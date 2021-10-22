@@ -1,7 +1,7 @@
-from auctions.api.views import (AuctionBidAPIView,
+from auctions.api.views import (# AuctionBidAPIView,
                                 AuctionClosedListRetrieveAPIView,
                                 AuctionImageUpdateAPIView,
-                                AuctionInfoRetrieveAPIView,
+                                # AuctionInfoRetrieveAPIView,
                                 AuctionListRetrieveAPIView,
                                 AuctionScheduleViewSet)
 from django.urls import include, path
@@ -15,6 +15,6 @@ router.register(r'closed-auctions', AuctionClosedListRetrieveAPIView, basename='
 urlpatterns = [
     path('', include(router.urls)),
     path('schedule-auctions/<int:pk>/upload-image/', AuctionImageUpdateAPIView.as_view(), name='upload-image'),
-    path('auctions/<int:pk>/bid/', AuctionBidAPIView.as_view(), name='auction-bid'),
-    path('auctions/<int:pk>/info/', AuctionInfoRetrieveAPIView.as_view(), name='auction-info'),
+    # path('auctions/<int:pk>/bid/', AuctionBidAPIView.as_view(), name='auction-bid'),
+    # path('auctions/<int:pk>/info/', AuctionInfoRetrieveAPIView.as_view(), name='auction-info'),
 ]

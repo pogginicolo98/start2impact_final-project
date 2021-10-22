@@ -46,7 +46,6 @@
 
 <script>
   // @ is an alias to /src
-  import { apiService } from "@/common/api.service.js";
   import { countDecimalPlaces } from "@/common/utility.js";
 
   export default {
@@ -59,6 +58,10 @@
       isLastUser: {
         type: Boolean,
         required: true
+      },
+      bidSocket: {
+        type: Object,
+        required: false
       }
     },
     data() {
@@ -107,22 +110,12 @@
       },
       async onSubmit() {
         /*
-          Send a new bid.
+          Send a new bid to the bid consumer.
         */
 
         if (this.validateForm()) {
-          let endpoint = `/api/auctions/${this.auction.id}/bid/`;
-          let method = "POST";
-          let data = { price: this.newPrice.value };
-          await apiService(endpoint, method, data)
-            .then(response => {
-              if (response.detail) {
-                console.log(response);
-                this.$router.push({name: "not found"});
-              } else {
-                this.newPrice.value = null;
-              }
-            });
+          this.bidSocket.send(JSON.stringify({'price': this.newPrice.value}));
+          this.newPrice.value = null;
         }
       }
     }

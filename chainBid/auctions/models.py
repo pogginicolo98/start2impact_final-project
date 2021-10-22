@@ -8,9 +8,8 @@ from django.core.validators import MinValueValidator
 from django.db import models
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
-from utils.auction_redis import clean_db, get_latest_object_on_redis, record_object_on_redis
+from utils.auction_redis import BIDS_KEY, clean_db, get_latest_object_on_redis, record_object_on_redis, TASKS_KEY
 from utils.encoders_decoders import AuctionEncoder
-from utils.randomics import random_date
 from utils.transactions import write_message_on_chain
 
 UserModel = get_user_model()
@@ -51,7 +50,7 @@ class Auction(models.Model):
     def __str__(self):
         return self.title
 
-    def open_auction(self):
+    def open(self):
         """
         Perform the following actions:
         1) Initialize redis in order to accept new bids.
@@ -61,17 +60,13 @@ class Auction(models.Model):
 
         record_object_on_redis(
             auction=self.pk,
-            bid_user="",
-            bid_price=float(self.initial_price)
+            user=None,
+            price=float(self.initial_price)
         )
-        min_duration = self.opened_at + timezone.timedelta(hours=20)
-        max_duration = self.opened_at + timezone.timedelta(hours=24)
-        max_closing_date = random_date(start=min_duration, end=max_duration)
         self.status = True
         self.save()
-        return max_closing_date
 
-    def close_auction(self):
+    def close(self):
         """
         Perform the following actions:
         1) Disable the auction.
@@ -81,7 +76,7 @@ class Auction(models.Model):
 
         self.status = False
         self.closed_at = timezone.now()
-        latest_bid = get_latest_object_on_redis(auction=self.pk, type_obj='bids')
+        latest_bid = get_latest_object_on_redis(auction=self.pk, type_obj=BIDS_KEY)
         if latest_bid is not None:
             if latest_bid.get('user', None):
                 self.winner = get_object_or_404(UserModel, username=latest_bid['user'])
