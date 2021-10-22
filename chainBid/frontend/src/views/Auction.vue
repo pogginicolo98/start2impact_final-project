@@ -7,7 +7,7 @@
       </div>
 
       <!-- Image and description -->
-      <div class="col-12 col-lg-5 mt-3 mt-lg-3">
+      <div class="col-12 col-lg-5 mt-3">
         <!-- Image -->
         <div class="col-12">
           <figure class="figure">
@@ -49,28 +49,36 @@
         <div class="card card-detail">
           <div class="card-body card-body-detail">
             <div class="row mb-4">
-              <!-- Current price -->
-              <div class="col-auto">
-                <p class="text-muted fs-15px fw-bold mb-0">Current price</p>
-                <p class="text-card-auction fs-20px mb-0">{{ lastPrice }} €</p>
-              </div>
+              <template v-if="auctionClosed">
+                <div class="col-12 text-danger fs-20px fw-bold">
+                  <p>Auction closed</p>
+                </div>
+              </template>
 
-              <!-- Remaining time -->
-              <div class="col-auto">
-                <p class="text-muted fs-15px fw-bold mb-0">Closing in</p>
-                <template v-if="remainingTime !== null">
-                  <p class="text-danger fs-20px mb-0">{{ getRemainingTime }}</p>
-                </template>
-                <template v-else>
-                  <p class="text-card-auction fs-20px mb-0">Less than 24 hours</p>
-                </template>
-              </div>
+              <template v-else>
+                <!-- Current price -->
+                <div class="col-auto">
+                  <p class="text-muted fs-15px fw-bold mb-0">Current price</p>
+                  <p class="text-card-auction fs-20px mb-0">{{ lastPrice }} €</p>
+                </div>
+
+                <!-- Remaining time -->
+                <div class="col-auto">
+                  <p class="text-muted fs-15px fw-bold mb-0">Closing in</p>
+                  <template v-if="remainingTime !== null">
+                    <p class="text-danger fs-20px mb-0">{{ getRemainingTime }}</p>
+                  </template>
+                  <template v-else>
+                    <p class="text-card-auction fs-20px mb-0">Less than 24 hours</p>
+                  </template>
+                </div>
+              </template>
             </div>
 
             <!-- Form -->
             <BidFormComponent :auction="auction"
-                              :isLastUser="isLastUser"
-                              :bidSocket="bidSocket"/>
+                              :bidSocket="bidSocket"
+                              :enabled="getFormEnabled"/>
           </div>
         </div> <!-- Card -->
       </div> <!-- Bid -->
@@ -78,7 +86,7 @@
 
     <!-- Description mobile formats -->
     <div class="row d-lg-none">
-      <div class="col-12 col-lg-5">
+      <div class="col-12">
         <div class="card card-detail mt-3"
              style="width: 100%">
              <div class="card-header card-header-detail text-card-auction">
@@ -107,7 +115,7 @@
   import { apiService } from "@/common/api.service.js";
   import BidFormComponent from "@/components/BidForm.vue";
   import moment from 'moment';
-  import * as ReconnectingWebSocket from "../../dist/js/reconnecting-websocket.min.js";
+  import * as ReconnectingWebSocket from "../../../static-storage/js/reconnecting-websocket.min.js";
 
   export default {
     name: "Auction",
@@ -123,11 +131,12 @@
     data() {
       return {
         auction: {},
+        auctionClosed: false,
+        requestUser: null,
         isLastUser: false,
         lastPrice: null,
         remainingTime: null,
         bidSocket: null,
-        timerInfo: null,
         timerDisplay: null
       };
     },
@@ -145,9 +154,15 @@
       },
       getOpenedAtFromNow() {
         return moment(this.auction.opened_at).fromNow();
+      },
+      getFormEnabled() {
+        return this.isLastUser || this.auctionClosed;
       }
     },
     methods: {
+      setRequestUser() {
+        this.requestUser = window.localStorage.getItem("username");
+      },
       async getAuctionData() {
         /*
           Retrieve auction's data and set the page title.
@@ -171,7 +186,7 @@
           this.remainingTime -= 1;
         } else {
           clearInterval(this.timerDisplay);
-          this.remainingTime = -1;
+          this.remainingTime = null;
         }
       }
     },
@@ -192,6 +207,13 @@
           if (data.errors) {
             console.error(data.errors);
             this.$router.push({name: "not found"});
+          } else if (data.closed) {
+            this.remainingTime = null;
+            this.auctionClosed = true;
+            if (data.is_winner) {
+              this.$toasted.show('You have won!', {icon: "gift"});
+            }
+            this.bidSocket.close();
           } else {
             this.isLastUser = data.is_last_user;
             this.lastPrice = data.last_price;
@@ -202,12 +224,10 @@
             }
           }
       };
-      this.bidSocket.onclose = () => {
-          console.error('Chat socket closed unexpectedly');
-      };
     },
     created() {
       this.getAuctionData();
+      this.setRequestUser();
     },
     beforeDestroy() {
       clearInterval(this.timerDisplay);

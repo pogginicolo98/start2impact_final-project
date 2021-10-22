@@ -15,9 +15,9 @@ class BidConsumer(WebsocketConsumer):
     Receive new bids and record them on Redis and
     echo new bids to all users connected to the same auction.
 
-    :actions
-    - receive
-    - send
+    :events
+    - echo_bid_info: Send the new bid's info to users who monitor the same auction.
+    - auction_closed: Notify the end of the auction.
 
     * Only authenticated users can send (receive action for consumer) new bids.
     * Every user receive (send action for consumer) bid's updates.
@@ -31,26 +31,25 @@ class BidConsumer(WebsocketConsumer):
         self.user = async_to_sync(get_user)(self.scope)
         self.auction = self.scope['url_route']['kwargs']['pk']
         self.channel_group = f'auction_{self.auction}'
-        async_to_sync(self.channel_layer.group_add)(
-            self.channel_group,
-            self.channel_name
-        )
-        self.accept()
         latest_bid = self.get_bid(auction=self.auction)
         if latest_bid is not None:
+            async_to_sync(self.channel_layer.group_add)(
+                self.channel_group,
+                self.channel_name
+            )
+            self.accept()
             self.send(text_data=json.dumps({
                 'is_last_user': bool(self.user.username == latest_bid.get('user', None)),
                 'last_price': latest_bid['price'],
                 'remaining_time': latest_bid.get('remaining_time', None)
             }))
-        else:
-            self.send(text_data=json.dumps({'errors': 'Auction not available.'}))
 
     def disconnect(self, close_code):
         async_to_sync(self.channel_layer.group_discard)(
             self.channel_group,
             self.channel_name
         )
+        print("disconnected")
 
     def receive(self, text_data=None, bytes_data=None):
         if self.user.is_authenticated:
@@ -87,6 +86,12 @@ class BidConsumer(WebsocketConsumer):
             'remaining_time': event.get('remaining_time', None)
         }))
 
+    def auction_closed(self, event):
+        self.send(text_data=json.dumps({
+            'closed': True,
+            'is_winner': bool(self.user.username == event.get('winner', None))
+        }))
+
     def accept_new_bid(self, auction, user, price):
         serializer_context = {
             'user': user,
@@ -94,7 +99,7 @@ class BidConsumer(WebsocketConsumer):
         }
         serializer = AuctionBidSerializer(data={'price': price}, context=serializer_context)
         if serializer.is_valid():
-            eta = timezone.now() + timezone.timedelta(minutes=2)
+            eta = timezone.now() + timezone.timedelta(seconds=10)
             record_object_on_redis(
                 auction=auction,
                 user=user,

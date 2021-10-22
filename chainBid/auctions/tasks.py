@@ -1,8 +1,10 @@
+from asgiref.sync import async_to_sync
 from auctions.models import Auction, AuctionReport
 from chainBid.celery import app
+from channels.layers import get_channel_layer
 from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404
-from utils.auction_redis import get_latest_object_on_redis, record_object_on_redis, TASKS_KEY
+from utils.auction_redis import clean_db, get_latest_object_on_redis, record_object_on_redis, TASKS_KEY
 
 
 UserModel = get_user_model()
@@ -17,6 +19,16 @@ def close_auction(pk):
 
     auction = get_object_or_404(Auction, pk=pk)
     auction.close()
+    channel_layer = get_channel_layer()
+    channel_group = f'auction_{pk}'
+    async_to_sync(channel_layer.group_send)(
+        channel_group,
+        {
+            'type': 'auction_closed',
+            'winner': auction.winner.username if auction.winner else None
+        }
+    )
+    clean_db(auction=pk)
     AuctionReport.objects.create(auction=auction)
 
 

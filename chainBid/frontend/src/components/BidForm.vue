@@ -15,7 +15,7 @@
                        type="number"
                        v-model="newPrice.value"
                        :class="{'is-invalid': isInitialPriceInvalid}"
-                       :disabled="isLastUser">
+                       :disabled="enabled">
               </label>
               <div class="invalid-feedback d-block"
                    id="bidFormFeedback">
@@ -33,9 +33,9 @@
               <button class="btn rounded-pill"
                       style="height: 38px;"
                       type="submit"
-                      :class="{'btn-danger': isLastUser,
-                               'btn-violet': !isLastUser}"
-                      :disabled="isLastUser"
+                      :class="{'btn-danger': enabled,
+                               'btn-violet': !enabled}"
+                      :disabled="enabled"
                       >Bid<i class="fa-solid fa-hand ms-2"></i>
               </button>
             </div>
@@ -55,14 +55,14 @@
         type: Object,
         required: true
       },
-      isLastUser: {
-        type: Boolean,
-        required: true
-      },
       bidSocket: {
         type: Object,
         required: false
-      }
+      },
+      enabled: {
+        type: Boolean,
+        required: true
+      }      
     },
     data() {
       return {

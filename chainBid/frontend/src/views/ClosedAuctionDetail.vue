@@ -7,7 +7,7 @@
       </div>
 
       <!-- Image and description -->
-      <div class="col-12 col-lg-5 mt-3 mt-lg-3">
+      <div class="col-12 col-lg-5 mt-3">
         <!-- Image -->
         <div class="col-12">
           <figure class="figure">
@@ -48,10 +48,10 @@
           <div class="card-body card-body-detail">
             <!-- Winner -->
             <p class="text-card-auction fs-20px"
-               v-if="auction.winner != 'None'"
-               ><span class="fw-bold me-2">Winner:</span>@{{ auction.winner }}
+               v-if="auction.winner"
+               ><span class="fw-bold">Winner</span>: @{{ auction.winner }}
             </p>
-            <p class="text-danger fw-bold fs-20px me-2"
+            <p class="text-danger fw-bold fs-20px"
                v-else
                >Auction canceled
             </p>

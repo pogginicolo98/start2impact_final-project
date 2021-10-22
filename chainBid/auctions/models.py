@@ -82,7 +82,6 @@ class Auction(models.Model):
                 self.winner = get_object_or_404(UserModel, username=latest_bid['user'])
                 self.final_price = latest_bid.get('price', None)
         self.save()
-        clean_db(auction=self.pk)
 
 
 class AuctionReport(models.Model):

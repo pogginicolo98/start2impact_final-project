@@ -1,5 +1,5 @@
 {
-  "status": "error",
+  "status": "done",
   "assets": {
     "img/logo-200x32-orig.f992058c.png": {
       "name": "img/logo-200x32-orig.f992058c.png",
@@ -31,165 +31,420 @@
       "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/favicon.ico",
       "publicPath": "http://0.0.0.0:8080/favicon.ico"
     },
-    "app.da3c62c6c3f382379850.hot-update.js": {
-      "name": "app.da3c62c6c3f382379850.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.da3c62c6c3f382379850.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.da3c62c6c3f382379850.hot-update.js"
+    "app.ede9288c1486a3a3cc3d.hot-update.js": {
+      "name": "app.ede9288c1486a3a3cc3d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ede9288c1486a3a3cc3d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.ede9288c1486a3a3cc3d.hot-update.js"
     },
-    "da3c62c6c3f382379850.hot-update.json": {
-      "name": "da3c62c6c3f382379850.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/da3c62c6c3f382379850.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/da3c62c6c3f382379850.hot-update.json"
+    "ede9288c1486a3a3cc3d.hot-update.json": {
+      "name": "ede9288c1486a3a3cc3d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ede9288c1486a3a3cc3d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/ede9288c1486a3a3cc3d.hot-update.json"
     },
-    "app.5f6bf5bd9f9b3705bd51.hot-update.js": {
-      "name": "app.5f6bf5bd9f9b3705bd51.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.5f6bf5bd9f9b3705bd51.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.5f6bf5bd9f9b3705bd51.hot-update.js"
+    "app.cedfc5978687849f4544.hot-update.js": {
+      "name": "app.cedfc5978687849f4544.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.cedfc5978687849f4544.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.cedfc5978687849f4544.hot-update.js"
     },
-    "5f6bf5bd9f9b3705bd51.hot-update.json": {
-      "name": "5f6bf5bd9f9b3705bd51.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/5f6bf5bd9f9b3705bd51.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/5f6bf5bd9f9b3705bd51.hot-update.json"
+    "cedfc5978687849f4544.hot-update.json": {
+      "name": "cedfc5978687849f4544.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/cedfc5978687849f4544.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/cedfc5978687849f4544.hot-update.json"
     },
-    "app.4b04a159c9a0aca5158e.hot-update.js": {
-      "name": "app.4b04a159c9a0aca5158e.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.4b04a159c9a0aca5158e.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.4b04a159c9a0aca5158e.hot-update.js"
+    "app.e7c7e4e2f315093f1900.hot-update.js": {
+      "name": "app.e7c7e4e2f315093f1900.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.e7c7e4e2f315093f1900.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.e7c7e4e2f315093f1900.hot-update.js"
     },
-    "4b04a159c9a0aca5158e.hot-update.json": {
-      "name": "4b04a159c9a0aca5158e.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/4b04a159c9a0aca5158e.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/4b04a159c9a0aca5158e.hot-update.json"
+    "e7c7e4e2f315093f1900.hot-update.json": {
+      "name": "e7c7e4e2f315093f1900.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/e7c7e4e2f315093f1900.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/e7c7e4e2f315093f1900.hot-update.json"
     },
-    "app.f917dba680203724affc.hot-update.js": {
-      "name": "app.f917dba680203724affc.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.f917dba680203724affc.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.f917dba680203724affc.hot-update.js"
+    "app.0b23c2caaa10d9f76663.hot-update.js": {
+      "name": "app.0b23c2caaa10d9f76663.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0b23c2caaa10d9f76663.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.0b23c2caaa10d9f76663.hot-update.js"
     },
-    "f917dba680203724affc.hot-update.json": {
-      "name": "f917dba680203724affc.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/f917dba680203724affc.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/f917dba680203724affc.hot-update.json"
+    "0b23c2caaa10d9f76663.hot-update.json": {
+      "name": "0b23c2caaa10d9f76663.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0b23c2caaa10d9f76663.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/0b23c2caaa10d9f76663.hot-update.json"
     },
-    "app.4ca97d4126b3f4fecd7c.hot-update.js": {
-      "name": "app.4ca97d4126b3f4fecd7c.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.4ca97d4126b3f4fecd7c.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.4ca97d4126b3f4fecd7c.hot-update.js"
+    "app.8e5fb72e01b4a539ed6c.hot-update.js": {
+      "name": "app.8e5fb72e01b4a539ed6c.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.8e5fb72e01b4a539ed6c.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.8e5fb72e01b4a539ed6c.hot-update.js"
     },
-    "4ca97d4126b3f4fecd7c.hot-update.json": {
-      "name": "4ca97d4126b3f4fecd7c.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/4ca97d4126b3f4fecd7c.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/4ca97d4126b3f4fecd7c.hot-update.json"
+    "8e5fb72e01b4a539ed6c.hot-update.json": {
+      "name": "8e5fb72e01b4a539ed6c.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/8e5fb72e01b4a539ed6c.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/8e5fb72e01b4a539ed6c.hot-update.json"
     },
-    "app.de6eadfaf20432467071.hot-update.js": {
-      "name": "app.de6eadfaf20432467071.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.de6eadfaf20432467071.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.de6eadfaf20432467071.hot-update.js"
+    "app.13e06ee9cbac685dd717.hot-update.js": {
+      "name": "app.13e06ee9cbac685dd717.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.13e06ee9cbac685dd717.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.13e06ee9cbac685dd717.hot-update.js"
     },
-    "de6eadfaf20432467071.hot-update.json": {
-      "name": "de6eadfaf20432467071.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/de6eadfaf20432467071.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/de6eadfaf20432467071.hot-update.json"
+    "13e06ee9cbac685dd717.hot-update.json": {
+      "name": "13e06ee9cbac685dd717.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/13e06ee9cbac685dd717.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/13e06ee9cbac685dd717.hot-update.json"
     },
-    "app.610a64468e8cf111558b.hot-update.js": {
-      "name": "app.610a64468e8cf111558b.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.610a64468e8cf111558b.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.610a64468e8cf111558b.hot-update.js"
+    "app.723f23f47aad83de3a37.hot-update.js": {
+      "name": "app.723f23f47aad83de3a37.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.723f23f47aad83de3a37.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.723f23f47aad83de3a37.hot-update.js"
     },
-    "610a64468e8cf111558b.hot-update.json": {
-      "name": "610a64468e8cf111558b.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/610a64468e8cf111558b.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/610a64468e8cf111558b.hot-update.json"
+    "723f23f47aad83de3a37.hot-update.json": {
+      "name": "723f23f47aad83de3a37.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/723f23f47aad83de3a37.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/723f23f47aad83de3a37.hot-update.json"
     },
-    "app.9a3460732847a6c27a8f.hot-update.js": {
-      "name": "app.9a3460732847a6c27a8f.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.9a3460732847a6c27a8f.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.9a3460732847a6c27a8f.hot-update.js"
+    "app.bdec78135e63fb4c8a97.hot-update.js": {
+      "name": "app.bdec78135e63fb4c8a97.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.bdec78135e63fb4c8a97.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.bdec78135e63fb4c8a97.hot-update.js"
     },
-    "9a3460732847a6c27a8f.hot-update.json": {
-      "name": "9a3460732847a6c27a8f.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/9a3460732847a6c27a8f.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/9a3460732847a6c27a8f.hot-update.json"
+    "bdec78135e63fb4c8a97.hot-update.json": {
+      "name": "bdec78135e63fb4c8a97.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/bdec78135e63fb4c8a97.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/bdec78135e63fb4c8a97.hot-update.json"
     },
-    "app.46a21a669bff96bcd60e.hot-update.js": {
-      "name": "app.46a21a669bff96bcd60e.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.46a21a669bff96bcd60e.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.46a21a669bff96bcd60e.hot-update.js"
+    "app.b46b5a603c9cc25d1bb6.hot-update.js": {
+      "name": "app.b46b5a603c9cc25d1bb6.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.b46b5a603c9cc25d1bb6.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.b46b5a603c9cc25d1bb6.hot-update.js"
     },
-    "46a21a669bff96bcd60e.hot-update.json": {
-      "name": "46a21a669bff96bcd60e.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/46a21a669bff96bcd60e.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/46a21a669bff96bcd60e.hot-update.json"
+    "b46b5a603c9cc25d1bb6.hot-update.json": {
+      "name": "b46b5a603c9cc25d1bb6.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/b46b5a603c9cc25d1bb6.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/b46b5a603c9cc25d1bb6.hot-update.json"
     },
-    "app.c118d51a638c365328e2.hot-update.js": {
-      "name": "app.c118d51a638c365328e2.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.c118d51a638c365328e2.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.c118d51a638c365328e2.hot-update.js"
+    "app.725a470b1abbe72e1745.hot-update.js": {
+      "name": "app.725a470b1abbe72e1745.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.725a470b1abbe72e1745.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.725a470b1abbe72e1745.hot-update.js"
     },
-    "c118d51a638c365328e2.hot-update.json": {
-      "name": "c118d51a638c365328e2.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/c118d51a638c365328e2.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/c118d51a638c365328e2.hot-update.json"
+    "725a470b1abbe72e1745.hot-update.json": {
+      "name": "725a470b1abbe72e1745.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/725a470b1abbe72e1745.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/725a470b1abbe72e1745.hot-update.json"
     },
-    "app.aab70f95dbdba9365dfe.hot-update.js": {
-      "name": "app.aab70f95dbdba9365dfe.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.aab70f95dbdba9365dfe.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.aab70f95dbdba9365dfe.hot-update.js"
+    "app.82295b3486755da48d47.hot-update.js": {
+      "name": "app.82295b3486755da48d47.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.82295b3486755da48d47.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.82295b3486755da48d47.hot-update.js"
     },
-    "aab70f95dbdba9365dfe.hot-update.json": {
-      "name": "aab70f95dbdba9365dfe.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/aab70f95dbdba9365dfe.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/aab70f95dbdba9365dfe.hot-update.json"
+    "82295b3486755da48d47.hot-update.json": {
+      "name": "82295b3486755da48d47.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/82295b3486755da48d47.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/82295b3486755da48d47.hot-update.json"
     },
-    "app.49b828550c6ee2f86115.hot-update.js": {
-      "name": "app.49b828550c6ee2f86115.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.49b828550c6ee2f86115.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.49b828550c6ee2f86115.hot-update.js"
+    "app.3b123014b2d29ae8459d.hot-update.js": {
+      "name": "app.3b123014b2d29ae8459d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.3b123014b2d29ae8459d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.3b123014b2d29ae8459d.hot-update.js"
     },
-    "49b828550c6ee2f86115.hot-update.json": {
-      "name": "49b828550c6ee2f86115.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/49b828550c6ee2f86115.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/49b828550c6ee2f86115.hot-update.json"
+    "3b123014b2d29ae8459d.hot-update.json": {
+      "name": "3b123014b2d29ae8459d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/3b123014b2d29ae8459d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/3b123014b2d29ae8459d.hot-update.json"
     },
-    "app.40d1f1759208a5b73071.hot-update.js": {
-      "name": "app.40d1f1759208a5b73071.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.40d1f1759208a5b73071.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.40d1f1759208a5b73071.hot-update.js"
+    "90ce51c6dc37385d3bd8.hot-update.json": {
+      "name": "90ce51c6dc37385d3bd8.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/90ce51c6dc37385d3bd8.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/90ce51c6dc37385d3bd8.hot-update.json"
     },
-    "40d1f1759208a5b73071.hot-update.json": {
-      "name": "40d1f1759208a5b73071.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/40d1f1759208a5b73071.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/40d1f1759208a5b73071.hot-update.json"
+    "18a4e0a9819455c06faf.hot-update.json": {
+      "name": "18a4e0a9819455c06faf.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/18a4e0a9819455c06faf.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/18a4e0a9819455c06faf.hot-update.json"
     },
-    "app.a7cb3bd2791119a8d0eb.hot-update.js": {
-      "name": "app.a7cb3bd2791119a8d0eb.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.a7cb3bd2791119a8d0eb.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.a7cb3bd2791119a8d0eb.hot-update.js"
+    "app.06ed63fcccaf8f1fa43f.hot-update.js": {
+      "name": "app.06ed63fcccaf8f1fa43f.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.06ed63fcccaf8f1fa43f.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.06ed63fcccaf8f1fa43f.hot-update.js"
     },
-    "a7cb3bd2791119a8d0eb.hot-update.json": {
-      "name": "a7cb3bd2791119a8d0eb.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/a7cb3bd2791119a8d0eb.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/a7cb3bd2791119a8d0eb.hot-update.json"
+    "06ed63fcccaf8f1fa43f.hot-update.json": {
+      "name": "06ed63fcccaf8f1fa43f.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/06ed63fcccaf8f1fa43f.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/06ed63fcccaf8f1fa43f.hot-update.json"
     },
-    "app.8e5a2ad4666edfe2b716.hot-update.js": {
-      "name": "app.8e5a2ad4666edfe2b716.hot-update.js",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.8e5a2ad4666edfe2b716.hot-update.js",
-      "publicPath": "http://0.0.0.0:8080/app.8e5a2ad4666edfe2b716.hot-update.js"
+    "app.53cffba5a3b0871f8072.hot-update.js": {
+      "name": "app.53cffba5a3b0871f8072.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.53cffba5a3b0871f8072.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.53cffba5a3b0871f8072.hot-update.js"
     },
-    "8e5a2ad4666edfe2b716.hot-update.json": {
-      "name": "8e5a2ad4666edfe2b716.hot-update.json",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/8e5a2ad4666edfe2b716.hot-update.json",
-      "publicPath": "http://0.0.0.0:8080/8e5a2ad4666edfe2b716.hot-update.json"
+    "53cffba5a3b0871f8072.hot-update.json": {
+      "name": "53cffba5a3b0871f8072.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/53cffba5a3b0871f8072.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/53cffba5a3b0871f8072.hot-update.json"
+    },
+    "app.7af6c390391f57b92f8f.hot-update.js": {
+      "name": "app.7af6c390391f57b92f8f.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.7af6c390391f57b92f8f.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.7af6c390391f57b92f8f.hot-update.js"
+    },
+    "7af6c390391f57b92f8f.hot-update.json": {
+      "name": "7af6c390391f57b92f8f.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/7af6c390391f57b92f8f.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/7af6c390391f57b92f8f.hot-update.json"
+    },
+    "app.e05bb86b3c12fe85186d.hot-update.js": {
+      "name": "app.e05bb86b3c12fe85186d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.e05bb86b3c12fe85186d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.e05bb86b3c12fe85186d.hot-update.js"
+    },
+    "e05bb86b3c12fe85186d.hot-update.json": {
+      "name": "e05bb86b3c12fe85186d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/e05bb86b3c12fe85186d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/e05bb86b3c12fe85186d.hot-update.json"
+    },
+    "app.ae24f0542b26bb80819a.hot-update.js": {
+      "name": "app.ae24f0542b26bb80819a.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ae24f0542b26bb80819a.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.ae24f0542b26bb80819a.hot-update.js"
+    },
+    "ae24f0542b26bb80819a.hot-update.json": {
+      "name": "ae24f0542b26bb80819a.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ae24f0542b26bb80819a.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/ae24f0542b26bb80819a.hot-update.json"
+    },
+    "app.ae6efb5f0b9d960979b1.hot-update.js": {
+      "name": "app.ae6efb5f0b9d960979b1.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ae6efb5f0b9d960979b1.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.ae6efb5f0b9d960979b1.hot-update.js"
+    },
+    "ae6efb5f0b9d960979b1.hot-update.json": {
+      "name": "ae6efb5f0b9d960979b1.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ae6efb5f0b9d960979b1.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/ae6efb5f0b9d960979b1.hot-update.json"
+    },
+    "app.da8075c27fe3f9cd0d3a.hot-update.js": {
+      "name": "app.da8075c27fe3f9cd0d3a.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.da8075c27fe3f9cd0d3a.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.da8075c27fe3f9cd0d3a.hot-update.js"
+    },
+    "da8075c27fe3f9cd0d3a.hot-update.json": {
+      "name": "da8075c27fe3f9cd0d3a.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/da8075c27fe3f9cd0d3a.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/da8075c27fe3f9cd0d3a.hot-update.json"
+    },
+    "app.2cf92b944fee4c624480.hot-update.js": {
+      "name": "app.2cf92b944fee4c624480.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.2cf92b944fee4c624480.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.2cf92b944fee4c624480.hot-update.js"
+    },
+    "2cf92b944fee4c624480.hot-update.json": {
+      "name": "2cf92b944fee4c624480.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/2cf92b944fee4c624480.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/2cf92b944fee4c624480.hot-update.json"
+    },
+    "app.d40d851142bc8115d04c.hot-update.js": {
+      "name": "app.d40d851142bc8115d04c.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.d40d851142bc8115d04c.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.d40d851142bc8115d04c.hot-update.js"
+    },
+    "d40d851142bc8115d04c.hot-update.json": {
+      "name": "d40d851142bc8115d04c.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d40d851142bc8115d04c.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/d40d851142bc8115d04c.hot-update.json"
+    },
+    "app.8379467dcef2fec7ec9f.hot-update.js": {
+      "name": "app.8379467dcef2fec7ec9f.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.8379467dcef2fec7ec9f.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.8379467dcef2fec7ec9f.hot-update.js"
+    },
+    "8379467dcef2fec7ec9f.hot-update.json": {
+      "name": "8379467dcef2fec7ec9f.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/8379467dcef2fec7ec9f.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/8379467dcef2fec7ec9f.hot-update.json"
+    },
+    "app.af22d079354547ac9925.hot-update.js": {
+      "name": "app.af22d079354547ac9925.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.af22d079354547ac9925.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.af22d079354547ac9925.hot-update.js"
+    },
+    "af22d079354547ac9925.hot-update.json": {
+      "name": "af22d079354547ac9925.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/af22d079354547ac9925.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/af22d079354547ac9925.hot-update.json"
+    },
+    "app.95b9f26175475baa2c9d.hot-update.js": {
+      "name": "app.95b9f26175475baa2c9d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.95b9f26175475baa2c9d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.95b9f26175475baa2c9d.hot-update.js"
+    },
+    "95b9f26175475baa2c9d.hot-update.json": {
+      "name": "95b9f26175475baa2c9d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/95b9f26175475baa2c9d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/95b9f26175475baa2c9d.hot-update.json"
+    },
+    "app.370f4fc36df832e7c44a.hot-update.js": {
+      "name": "app.370f4fc36df832e7c44a.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.370f4fc36df832e7c44a.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.370f4fc36df832e7c44a.hot-update.js"
+    },
+    "370f4fc36df832e7c44a.hot-update.json": {
+      "name": "370f4fc36df832e7c44a.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/370f4fc36df832e7c44a.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/370f4fc36df832e7c44a.hot-update.json"
+    },
+    "app.aba399cb249d2152dd55.hot-update.js": {
+      "name": "app.aba399cb249d2152dd55.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.aba399cb249d2152dd55.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.aba399cb249d2152dd55.hot-update.js"
+    },
+    "aba399cb249d2152dd55.hot-update.json": {
+      "name": "aba399cb249d2152dd55.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/aba399cb249d2152dd55.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/aba399cb249d2152dd55.hot-update.json"
+    },
+    "app.1eca7fb0fdeb4926cafc.hot-update.js": {
+      "name": "app.1eca7fb0fdeb4926cafc.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.1eca7fb0fdeb4926cafc.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.1eca7fb0fdeb4926cafc.hot-update.js"
+    },
+    "1eca7fb0fdeb4926cafc.hot-update.json": {
+      "name": "1eca7fb0fdeb4926cafc.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/1eca7fb0fdeb4926cafc.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/1eca7fb0fdeb4926cafc.hot-update.json"
+    },
+    "app.a2ed7304654a7baea40d.hot-update.js": {
+      "name": "app.a2ed7304654a7baea40d.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.a2ed7304654a7baea40d.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.a2ed7304654a7baea40d.hot-update.js"
+    },
+    "a2ed7304654a7baea40d.hot-update.json": {
+      "name": "a2ed7304654a7baea40d.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/a2ed7304654a7baea40d.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/a2ed7304654a7baea40d.hot-update.json"
+    },
+    "app.4894ba8c490eb2cf3eb2.hot-update.js": {
+      "name": "app.4894ba8c490eb2cf3eb2.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.4894ba8c490eb2cf3eb2.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.4894ba8c490eb2cf3eb2.hot-update.js"
+    },
+    "4894ba8c490eb2cf3eb2.hot-update.json": {
+      "name": "4894ba8c490eb2cf3eb2.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/4894ba8c490eb2cf3eb2.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/4894ba8c490eb2cf3eb2.hot-update.json"
+    },
+    "app.158ed42262cb67e5952a.hot-update.js": {
+      "name": "app.158ed42262cb67e5952a.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.158ed42262cb67e5952a.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.158ed42262cb67e5952a.hot-update.js"
+    },
+    "158ed42262cb67e5952a.hot-update.json": {
+      "name": "158ed42262cb67e5952a.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/158ed42262cb67e5952a.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/158ed42262cb67e5952a.hot-update.json"
+    },
+    "app.e6ba552f22a88c422d02.hot-update.js": {
+      "name": "app.e6ba552f22a88c422d02.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.e6ba552f22a88c422d02.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.e6ba552f22a88c422d02.hot-update.js"
+    },
+    "e6ba552f22a88c422d02.hot-update.json": {
+      "name": "e6ba552f22a88c422d02.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/e6ba552f22a88c422d02.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/e6ba552f22a88c422d02.hot-update.json"
+    },
+    "app.dfd0e0653908a150cd25.hot-update.js": {
+      "name": "app.dfd0e0653908a150cd25.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.dfd0e0653908a150cd25.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.dfd0e0653908a150cd25.hot-update.js"
+    },
+    "dfd0e0653908a150cd25.hot-update.json": {
+      "name": "dfd0e0653908a150cd25.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/dfd0e0653908a150cd25.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/dfd0e0653908a150cd25.hot-update.json"
+    },
+    "app.33c9b859f6c617944a6b.hot-update.js": {
+      "name": "app.33c9b859f6c617944a6b.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.33c9b859f6c617944a6b.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.33c9b859f6c617944a6b.hot-update.js"
+    },
+    "33c9b859f6c617944a6b.hot-update.json": {
+      "name": "33c9b859f6c617944a6b.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/33c9b859f6c617944a6b.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/33c9b859f6c617944a6b.hot-update.json"
+    },
+    "app.6a2d6d72fb9baa1f2b58.hot-update.js": {
+      "name": "app.6a2d6d72fb9baa1f2b58.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.6a2d6d72fb9baa1f2b58.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.6a2d6d72fb9baa1f2b58.hot-update.js"
+    },
+    "6a2d6d72fb9baa1f2b58.hot-update.json": {
+      "name": "6a2d6d72fb9baa1f2b58.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/6a2d6d72fb9baa1f2b58.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/6a2d6d72fb9baa1f2b58.hot-update.json"
+    },
+    "app.2efc7d4c2385025b87ed.hot-update.js": {
+      "name": "app.2efc7d4c2385025b87ed.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.2efc7d4c2385025b87ed.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.2efc7d4c2385025b87ed.hot-update.js"
+    },
+    "2efc7d4c2385025b87ed.hot-update.json": {
+      "name": "2efc7d4c2385025b87ed.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/2efc7d4c2385025b87ed.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/2efc7d4c2385025b87ed.hot-update.json"
+    },
+    "d34b14411e861cda25d6.hot-update.json": {
+      "name": "d34b14411e861cda25d6.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/d34b14411e861cda25d6.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/d34b14411e861cda25d6.hot-update.json"
+    },
+    "app.ac8bc26d84af7c27bd87.hot-update.js": {
+      "name": "app.ac8bc26d84af7c27bd87.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.ac8bc26d84af7c27bd87.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.ac8bc26d84af7c27bd87.hot-update.js"
+    },
+    "ac8bc26d84af7c27bd87.hot-update.json": {
+      "name": "ac8bc26d84af7c27bd87.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/ac8bc26d84af7c27bd87.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/ac8bc26d84af7c27bd87.hot-update.json"
+    },
+    "app.6a5171e7c81069c7906b.hot-update.js": {
+      "name": "app.6a5171e7c81069c7906b.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.6a5171e7c81069c7906b.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.6a5171e7c81069c7906b.hot-update.js"
+    },
+    "6a5171e7c81069c7906b.hot-update.json": {
+      "name": "6a5171e7c81069c7906b.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/6a5171e7c81069c7906b.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/6a5171e7c81069c7906b.hot-update.json"
+    },
+    "app.0f25ed2a23cf7cab14f3.hot-update.js": {
+      "name": "app.0f25ed2a23cf7cab14f3.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.0f25ed2a23cf7cab14f3.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.0f25ed2a23cf7cab14f3.hot-update.js"
+    },
+    "0f25ed2a23cf7cab14f3.hot-update.json": {
+      "name": "0f25ed2a23cf7cab14f3.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/0f25ed2a23cf7cab14f3.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/0f25ed2a23cf7cab14f3.hot-update.json"
+    },
+    "app.53999c4f5c5dab053cf5.hot-update.js": {
+      "name": "app.53999c4f5c5dab053cf5.hot-update.js",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/app.53999c4f5c5dab053cf5.hot-update.js",
+      "publicPath": "http://0.0.0.0:8080/app.53999c4f5c5dab053cf5.hot-update.js"
+    },
+    "53999c4f5c5dab053cf5.hot-update.json": {
+      "name": "53999c4f5c5dab053cf5.hot-update.json",
+      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/53999c4f5c5dab053cf5.hot-update.json",
+      "publicPath": "http://0.0.0.0:8080/53999c4f5c5dab053cf5.hot-update.json"
     }
   },
   "chunks": {
     "app": [
       "bundle.css",
       "bundle.js",
-      "app.8e5a2ad4666edfe2b716.hot-update.js"
+      "app.53999c4f5c5dab053cf5.hot-update.js"
     ]
   },
   "publicPath": "http://0.0.0.0:8080/",
-  "error": "ModuleBuildError",
-  "message": "Module build failed (from ./node_modules/eslint-loader/index.js):\nError: ENOENT: no such file or directory, open '/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/js/reconnecting-websocket.min.js'"
+  "error": "ModuleError",
+  "message": "Module Error (from ./node_modules/eslint-loader/index.js):\n\n/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/src/views/Auction.vue\n    6:78  warning  Replace `{{·auction.title·}}` with `⏎··········{{·auction.title·}}⏎········`                                                                                                                                                                                                                                                                                   prettier/prettier\n   14:12  warning  Replace `<img` with `·<img⏎·············`                                                                                                                                                                                                                                                                                                                      prettier/prettier\n   15:1   warning  Replace `················` with `··············`                                                                                                                                                                                                                                                                                                               prettier/prettier\n   16:15  warning  Replace `··:src=\"auction.image\"` with `:src=\"auction.image\"⏎············/`                                                                                                                                                                                                                                                                                     prettier/prettier\n   22:40  warning  Delete `⏎··············`                                                                                                                                                                                                                                                                                                                                       prettier/prettier\n   24:1   warning  Delete `···`                                                                                                                                                                                                                                                                                                                                                   prettier/prettier\n   25:1   warning  Replace `·················<i·class=\"fa-solid·fa-align-left·me-2\"></i` with `··············<i·class=\"fa-solid·fa-align-left·me-2\"></i⏎··············`                                                                                                                                                                                                           prettier/prettier\n   26:1   warning  Replace `···············` with `············`                                                                                                                                                                                                                                                                                                                  prettier/prettier\n   27:1   warning  Delete `···`                                                                                                                                                                                                                                                                                                                                                   prettier/prettier\n   28:15  warning  Replace `···<p·class=\"text-muted·mb-2\"⏎····················v-if=\"!auction.description\"` with `<p·class=\"text-muted·mb-2\"·v-if=\"!auction.description\">`                                                                                                                                                                                                         prettier/prettier\n   30:1   warning  Replace `····················>` with `················`                                                                                                                                                                                                                                                                                                        prettier/prettier\n   31:1   warning  Replace `·················` with `··············`                                                                                                                                                                                                                                                                                                              prettier/prettier\n   32:1   warning  Replace `·················<p·class=\"text-card-auction·mb-2\"⏎····················v-else` with `··············<p·class=\"text-card-auction·mb-2\"·v-else>`                                                                                                                                                                                                         prettier/prettier\n   34:1   warning  Replace `····················>` with `················`                                                                                                                                                                                                                                                                                                        prettier/prettier\n   35:15  warning  Delete `···`                                                                                                                                                                                                                                                                                                                                                   prettier/prettier\n   36:1   warning  Replace `·················<p·class=\"text-muted·fs-14px·mb-0\"><strong>Initial·price</strong>:·{{·auction.initial_price·}}·€` with `··············<p·class=\"text-muted·fs-14px·mb-0\">⏎················<strong>Initial·price</strong>:·{{·auction.initial_price·}}·€⏎··············`                                                                              prettier/prettier\n   37:1   warning  Replace `·················<p·class=\"text-muted·fs-14px·mb-0\"><strong>Opened</strong>:·{{·getOpenedAtFromNow·}}` with `··············<p·class=\"text-muted·fs-14px·mb-0\">⏎················<strong>Opened</strong>:·{{·getOpenedAtFromNow·}}⏎··············`                                                                                                      prettier/prettier\n   38:1   warning  Delete `···`                                                                                                                                                                                                                                                                                                                                                   prettier/prettier\n   46:11  warning  Replace `·class=\"text-card-auction·text-truncate·fs-32px·fw-bold·d-none·d-lg-block·mb-3·ms-2\">{{·auction.title·}}` with `⏎··········class=\"⏎············text-card-auction·text-truncate⏎············fs-32px⏎············fw-bold⏎············d-none·d-lg-block⏎············mb-3⏎············ms-2⏎··········\"⏎········>⏎··········{{·auction.title·}}⏎········`  prettier/prettier\n   62:61  warning  Replace `{{·lastPrice·}}·€` with `⏎····················{{·lastPrice·}}·€⏎··················`                                                                                                                                                                                                                                                                   prettier/prettier\n   69:57  warning  Replace `{{·getRemainingTime·}}` with `⏎······················{{·getRemainingTime·}}⏎····················`                                                                                                                                                                                                                                                     prettier/prettier\n   72:63  warning  Replace `Less·than·24·hours` with `⏎······················Less·than·24·hours⏎····················`                                                                                                                                                                                                                                                             prettier/prettier\n   79:30  warning  Insert `⏎·············`                                                                                                                                                                                                                                                                                                                                        prettier/prettier\n   80:1   warning  Delete `················`                                                                                                                                                                                                                                                                                                                                      prettier/prettier\n   81:1   warning  Replace `······························:enabled=\"getFormEnabled\"` with `··············:enabled=\"getFormEnabled\"⏎············`                                                                                                                                                                                                                                  prettier/prettier\n   83:15  warning  Insert `⏎·······`                                                                                                                                                                                                                                                                                                                                              prettier/prettier\n   84:13  warning  Insert `⏎·····`                                                                                                                                                                                                                                                                                                                                                prettier/prettier\n   85:11  warning  Insert `⏎···`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n   90:43  warning  Delete `⏎············`                                                                                                                                                                                                                                                                                                                                         prettier/prettier\n   92:1   warning  Delete `···`                                                                                                                                                                                                                                                                                                                                                   prettier/prettier\n   93:13  warning  Replace `···<i·class=\"fa-solid·fa-align-left·me-2\"></i` with `<i·class=\"fa-solid·fa-align-left·me-2\"></i⏎············`                                                                                                                                                                                                                                         prettier/prettier\n   94:11  warning  Delete `···`                                                                                                                                                                                                                                                                                                                                                   prettier/prettier\n   95:1   warning  Replace `·············` with `··········`                                                                                                                                                                                                                                                                                                                      prettier/prettier\n   96:13  warning  Replace `···<p·class=\"text-muted·mb-2\"⏎··················v-if=\"!auction.description\"` with `<p·class=\"text-muted·mb-2\"·v-if=\"!auction.description\">`                                                                                                                                                                                                           prettier/prettier\n   98:1   warning  Replace `··················>` with `··············`                                                                                                                                                                                                                                                                                                            prettier/prettier\n   99:13  warning  Delete `···`                                                                                                                                                                                                                                                                                                                                                   prettier/prettier\n  100:1   warning  Replace `···············<p·class=\"text-card-auction·mb-2\"⏎··················v-else` with `············<p·class=\"text-card-auction·mb-2\"·v-else>`                                                                                                                                                                                                               prettier/prettier\n  102:1   warning  Replace `··················>` with `··············`                                                                                                                                                                                                                                                                                                            prettier/prettier\n  103:13  warning  Delete `···`                                                                                                                                                                                                                                                                                                                                                   prettier/prettier\n  104:1   warning  Replace `···············<p·class=\"text-muted·fs-14px·mb-0\"><strong>Initial·price</strong>:·{{·auction.initial_price·}}·€` with `············<p·class=\"text-muted·fs-14px·mb-0\">⏎··············<strong>Initial·price</strong>:·{{·auction.initial_price·}}·€⏎············`                                                                                      prettier/prettier\n  105:1   warning  Replace `···············<p·class=\"text-muted·fs-14px·mb-0\"><strong>Opened</strong>:·{{·getOpenedAtFromNow·}}` with `············<p·class=\"text-muted·fs-14px·mb-0\">⏎··············<strong>Opened</strong>:·{{·getOpenedAtFromNow·}}⏎············`                                                                                                              prettier/prettier\n  106:1   warning  Replace `·············` with `··········`                                                                                                                                                                                                                                                                                                                      prettier/prettier\n  109:11  warning  Insert `⏎···`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  110:9   warning  Insert `⏎·`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  114:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  115:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  116:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  117:1   warning  Replace `··import·moment·from·'moment'` with `import·moment·from·\"moment\"`                                                                                                                                                                                                                                                                                     prettier/prettier\n  118:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  120:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  121:1   warning  Replace `····` with `··`                                                                                                                                                                                                                                                                                                                                       prettier/prettier\n  122:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  123:5   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  124:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  125:1   warning  Replace `········required:·true` with `······required:·true,`                                                                                                                                                                                                                                                                                                  prettier/prettier\n  126:1   warning  Replace `······}` with `····},`                                                                                                                                                                                                                                                                                                                                prettier/prettier\n  127:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  128:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  129:5   warning  Replace `··BidFormComponent` with `BidFormComponent,`                                                                                                                                                                                                                                                                                                          prettier/prettier\n  130:1   warning  Replace `····` with `··`                                                                                                                                                                                                                                                                                                                                       prettier/prettier\n  131:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  132:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  133:7   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  134:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  135:7   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  136:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  137:7   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  138:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  139:7   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  140:1   warning  Replace `········timerDisplay:·null` with `······timerDisplay:·null,`                                                                                                                                                                                                                                                                                          prettier/prettier\n  141:5   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  142:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  143:3   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  144:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  145:1   warning  Replace `········` with `······`                                                                                                                                                                                                                                                                                                                               prettier/prettier\n  149:7   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  150:1   warning  Replace `········var·seconds·=·this.remainingTime·-·(minutes·*·60)` with `······var·seconds·=·this.remainingTime·-·minutes·*·60`                                                                                                                                                                                                                               prettier/prettier\n  151:1   warning  Replace `········if·(minutes·<·10)·{minutes·=·\"0\"+minutes;}` with `······if·(minutes·<·10)·{⏎········minutes·=·\"0\"·+·minutes;`                                                                                                                                                                                                                                 prettier/prettier\n  152:7   warning  Replace `··if·(seconds·<·10)·{seconds·=·\"0\"+seconds;}` with `}⏎······if·(seconds·<·10)·{⏎········seconds·=·\"0\"·+·seconds;`                                                                                                                                                                                                                                     prettier/prettier\n  153:7   warning  Insert `}⏎····`                                                                                                                                                                                                                                                                                                                                                prettier/prettier\n  154:5   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  155:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  156:7   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  157:5   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  158:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  159:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  160:5   warning  Replace `··}` with `},`                                                                                                                                                                                                                                                                                                                                        prettier/prettier\n  161:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  162:3   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  163:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  164:7   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  165:5   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  166:1   warning  Replace `······` with `····`                                                                                                                                                                                                                                                                                                                                   prettier/prettier\n  167:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  171:1   warning  Replace `········` with `······`                                                                                                                                                                                                                                                                                                                               prettier/prettier\n  172:7   warning  Replace `··await·apiService(endpoint)⏎··········.then(response` with `await·apiService(endpoint).then((response)`                                                                                                                                                                                                                                              prettier/prettier\n  174:1   warning  Replace `············` with `········`                                                                                                                                                                                                                                                                                                                         prettier/prettier\n  175:1   warning  Delete `····`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  176:1   warning  Replace `··············this.$router.push({name:·\"not·found\"` with `··········this.$router.push({·name:·\"not·found\"·`                                                                                                                                                                                                                                           prettier/prettier\n  177:1   warning  Replace `············` with `········`                                                                                                                                                                                                                                                                                                                         prettier/prettier\n  178:1   warning  Replace `··············` with `··········`                                                                                                                                                                                                                                                                                                                     prettier/prettier\n  179:1   warning  Delete `····`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  180:1   warning  Replace `··············` with `··········`                                                                                                                                                                                                                                                                                                                     prettier/prettier\n  181:9   warning  Delete `····`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  182:1   warning  Delete `····`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  183:5   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  184:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  185:1   warning  Replace `········` with `······`                                                                                                                                                                                                                                                                                                                               prettier/prettier\n  186:9   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  187:1   warning  Replace `········` with `······`                                                                                                                                                                                                                                                                                                                               prettier/prettier\n  188:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  189:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  190:7   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  191:1   warning  Replace `······}` with `····},`                                                                                                                                                                                                                                                                                                                                prettier/prettier\n  192:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  193:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  194:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  198:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  199:7   warning  Replace `····'ws://'⏎··········+·window.location.host⏎··········+·'/ws/auctions/'⏎··········+·this.id⏎··········+·'/bid/'` with `\"ws://\"·+·window.location.host·+·\"/ws/auctions/\"·+·this.id·+·\"/bid/\"`                                                                                                                                                         prettier/prettier\n  204:5   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  205:1   warning  Replace `······this.bidSocket.onmessage·=·e` with `····this.bidSocket.onmessage·=·(e)`                                                                                                                                                                                                                                                                         prettier/prettier\n  206:7   warning  Delete `····`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  207:7   warning  Delete `····`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  208:1   warning  Replace `············` with `········`                                                                                                                                                                                                                                                                                                                         prettier/prettier\n  209:1   warning  Replace `············this.$router.push({name:·\"not·found\"` with `········this.$router.push({·name:·\"not·found\"·`                                                                                                                                                                                                                                               prettier/prettier\n  210:7   warning  Delete `····`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  211:1   warning  Delete `····`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  212:1   warning  Replace `············` with `········`                                                                                                                                                                                                                                                                                                                         prettier/prettier\n  213:1   warning  Delete `····`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  214:1   warning  Replace `··············this.$toasted.show('You·won!',·{icon:·\"circle-check\"` with `··········this.$toasted.show(\"You·won!\",·{·icon:·\"circle-check\"·`                                                                                                                                                                                                           prettier/prettier\n  215:1   warning  Replace `············` with `········`                                                                                                                                                                                                                                                                                                                         prettier/prettier\n  215:20  error    Empty block statement                                                                                                                                                                                                                                                                                                                                          no-empty\n  216:1   warning  Delete `⏎····`                                                                                                                                                                                                                                                                                                                                                 prettier/prettier\n  218:7   warning  Delete `····`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  219:1   warning  Delete `····`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  220:1   warning  Replace `············` with `········`                                                                                                                                                                                                                                                                                                                         prettier/prettier\n  221:1   warning  Delete `····`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  222:1   warning  Replace `············` with `········`                                                                                                                                                                                                                                                                                                                         prettier/prettier\n  223:1   warning  Delete `····`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  224:1   warning  Replace `··············` with `··········`                                                                                                                                                                                                                                                                                                                     prettier/prettier\n  225:9   warning  Delete `····`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  226:1   warning  Delete `····`                                                                                                                                                                                                                                                                                                                                                  prettier/prettier\n  227:5   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  228:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  229:7   warning  Replace `····console.error('Chat·socket·closed·unexpectedly'` with `console.error(\"Chat·socket·closed·unexpectedly\"`                                                                                                                                                                                                                                           prettier/prettier\n  230:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  231:3   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  232:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  233:5   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  234:1   warning  Replace `······` with `····`                                                                                                                                                                                                                                                                                                                                   prettier/prettier\n  235:1   warning  Replace `····` with `··`                                                                                                                                                                                                                                                                                                                                       prettier/prettier\n  236:1   warning  Delete `··`                                                                                                                                                                                                                                                                                                                                                    prettier/prettier\n  237:1   warning  Replace `······` with `····`                                                                                                                                                                                                                                                                                                                                   prettier/prettier\n  238:3   warning  Replace `··}` with `},`                                                                                                                                                                                                                                                                                                                                        prettier/prettier\n  239:1   warning  Replace `··}` with `};`                                                                                                                                                                                                                                                                                                                                        prettier/prettier\n  242:26  warning  Delete `⏎`                                                                                                                                                                                                                                                                                                                                                     prettier/prettier\n\n✖ 156 problems (1 error, 155 warnings)\n  0 errors and 155 warnings potentially fixable with the `--fix` option.\n"
 }
