@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
+    'channels',
+
     'rest_framework',
     'rest_framework.authtoken',
 
@@ -209,4 +211,16 @@ WEBPACK_LOADER = {
         'BUNDLE_DIR_NAME': 'dist/',
         'STATS_FILE': BASE_DIR / 'frontend' / 'webpack-stats.json',
     }
+}
+
+
+# 'django-channels' app settings
+ASGI_APPLICATION = 'chainBid.asgi.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "hosts": [(REDIS_HOST, REDIS_PORT)],
+        },
+    },
 }

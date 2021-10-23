@@ -1,134 +1,147 @@
 <template lang="html">
-  <div class="container mt-3">
-    <!-- Title -->
-    <div class="text-center text-card-auction fw-bold fs-32px">
-      <p>{{ modifiedAuction.title }}</p>
+  <div class="schedule-auction-detail">
+    <!-- Error 404 -->
+    <div class="not-found"
+         v-if="notFound">
+         <Error404Component :auctionNotAvailable="true"/>
     </div>
 
-    <div class="row mt-4">
-      <!-- Edit image -->
-      <div class="col-12 col-lg-5">
-        <div class="card card-detail"
-             style="width: 100%">
-             <div class="card-header card-header-detail text-card-auction">
-               <div class="row justify-content-between">
-                 <div class="col-auto">
-                   <span class="fw-bold fs-18px">Image</span>
-                 </div>
-                 <div class="col-auto">
-                   <button class="btn btn-icon p-0"
-                           style="width: 27px; height: 27px;"
-                           @click="toggleEditImage"
-                           ><i class="fa-solid fa-pen"></i>
-                   </button>
-                 </div>
-               </div>
-             </div>
-             <div class="card-body card-body-detail">
-               <img alt="product image"
-                    class="img-fluid"
-                    :src="getImage">
-               <div class="col-12 mt-3 fs-18px">
-                 <input accept="image/*"
-                        class="form-control"
-                        type="file"
-                        :class="{'is-invalid': imageIsInvalid}"
-                        :disabled="!editImage"
-                        @change="onImageSelected">
-                 <div class="invalid-feedback">{{ image.error }}</div>
-               </div>
-               <div class="col-12 col-sm-3 col-md-2 col-lg-4 col-xl-3 d-grid d-block mt-3 ms-auto">
-                 <button class="btn btn-violet rounded-pill"
-                         type="submit"
-                         :class="{'disabled': !editImage}"
-                         @click="onUpload"
-                         >Upload<i class="fa-solid fa-upload ms-2"></i>
-                 </button>
-               </div>
-             </div>
-        </div>
-      </div>
+    <!-- Schedule auction detail -->
+    <div class="container mt-3"
+         v-else>
+         <!-- Title -->
+         <div class="text-center text-card-auction fw-bold fs-32px">
+           <p>{{ modifiedAuction.title }}</p>
+         </div>
 
-      <!-- Edit data -->
-      <div class="col-12 col-lg-7 mt-4 mt-lg-0">
-        <div class="card card-detail"
-             style="width: 100%">
-             <div class="card-header card-header-detail text-card-auction">
-               <div class="row justify-content-between">
-                 <div class="col-auto">
-                   <span class="fw-bold fs-18px">Data</span>
-                 </div>
-                 <div class="col-auto">
-                   <button class="btn btn-icon p-0 me-2"
-                           style="width: 27px; height: 27px;"
-                           data-bs-toggle="modal"
-                           data-bs-target="#deleteAuctionModal"
-                           ><i class="fa-solid fa-trash-can"></i>
-                   </button>
-                   <button class="btn btn-icon p-0"
-                           style="width: 27px; height: 27px;"
-                           @click="toggleEditData"
-                           ><i class="fa-solid fa-pen"></i>
-                   </button>
-                 </div>
-               </div>
-             </div>
-             <div class="card-body card-body-detail">
-               <AuctionFormComponent :auction="modifiedAuction"
-                                     :enableEdit="editData"
-                                     @refresh-auctions="updateData"/>
-             </div>
-        </div>
-      </div>
-    </div> <!-- Row -->
-
-    <!-- Delete auction modal -->
-    <div aria-hidden="true"
-         aria-labelledby="deleteAuctionModalLabel"
-         class="modal fade"
-         id="deleteAuctionModal"
-         tabindex="-1">
-         <div class="modal-dialog">
-           <div class="modal-content">
-             <div class="modal-body text-center">
-               <p class="text-card-auction fw-bold fs-20px"
-                  id="deleteAuctionModalLabel"
-                  >Do you want to delete the following auction?
-               </p>
-               <p class="text-card-auction fs-18px">{{ auction.title }}</p>
-               <div class="row justify-content-between mt-4">
-                 <div class="col-auto">
-                   <button class="btn btn-secondary rounded-pill"
-                           data-bs-dismiss="modal"
-                           type="button"
-                           >Cancel
-                   </button>
-                 </div>
-                 <div class="col-auto">
-                   <button class="btn btn-danger rounded-pill"
-                           data-bs-dismiss="modal"
-                           type="button"
-                           @click="deleteAuction"
-                           >Delete
-                   </button>
-                 </div>
-               </div>
+         <div class="row mt-4">
+           <!-- Edit image -->
+           <div class="col-12 col-lg-5">
+             <div class="card card-detail"
+                  style="width: 100%">
+                  <div class="card-header card-header-detail text-card-auction">
+                    <div class="row justify-content-between">
+                      <div class="col-auto">
+                        <span class="fw-bold fs-18px">Image</span>
+                      </div>
+                      <div class="col-auto">
+                        <button class="btn btn-icon p-0"
+                                style="width: 27px; height: 27px;"
+                                @click="toggleEditImage"
+                                ><i class="fa-solid fa-pen"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-detail">
+                    <img alt="product image"
+                         class="img-fluid"
+                         :src="getImage">
+                    <div class="col-12 mt-3 fs-18px">
+                      <input accept="image/*"
+                             class="form-control"
+                             type="file"
+                             :class="{'is-invalid': imageIsInvalid}"
+                             :disabled="!editImage"
+                             @change="onImageSelected">
+                      <div class="invalid-feedback">{{ image.error }}</div>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-2 col-lg-4 col-xl-3 d-grid d-block mt-3 ms-auto">
+                      <button class="btn btn-violet rounded-pill"
+                              type="submit"
+                              :class="{'disabled': !editImage}"
+                              @click="onUpload"
+                              >Upload<i class="fa-solid fa-upload ms-2"></i>
+                      </button>
+                    </div>
+                  </div>
              </div>
            </div>
-         </div>
-    </div> <!-- Delete auction modal -->
-  </div> <!-- Container -->
+
+           <!-- Edit data -->
+           <div class="col-12 col-lg-7 mt-4 mt-lg-0">
+             <div class="card card-detail"
+                  style="width: 100%">
+                  <div class="card-header card-header-detail text-card-auction">
+                    <div class="row justify-content-between">
+                      <div class="col-auto">
+                        <span class="fw-bold fs-18px">Data</span>
+                      </div>
+                      <div class="col-auto">
+                        <button class="btn btn-icon p-0 me-2"
+                                style="width: 27px; height: 27px;"
+                                data-bs-toggle="modal"
+                                data-bs-target="#deleteAuctionModal"
+                                ><i class="fa-solid fa-trash-can"></i>
+                        </button>
+                        <button class="btn btn-icon p-0"
+                                style="width: 27px; height: 27px;"
+                                @click="toggleEditData"
+                                ><i class="fa-solid fa-pen"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body card-body-detail">
+                    <AuctionFormComponent :auction="modifiedAuction"
+                                          :enableEdit="editData"
+                                          @not-found="setNotFound"
+                                          @refresh-auctions="updateData"/>
+                  </div>
+             </div>
+           </div>
+         </div> <!-- Row -->
+
+         <!-- Delete auction modal -->
+         <div aria-hidden="true"
+              aria-labelledby="deleteAuctionModalLabel"
+              class="modal fade"
+              id="deleteAuctionModal"
+              tabindex="-1">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body text-center">
+                    <p class="text-card-auction fw-bold fs-20px"
+                       id="deleteAuctionModalLabel"
+                       >Do you want to delete the following auction?
+                    </p>
+                    <p class="text-card-auction fs-18px">{{ auction.title }}</p>
+                    <div class="row justify-content-between mt-4">
+                      <div class="col-auto">
+                        <button class="btn btn-secondary rounded-pill"
+                                data-bs-dismiss="modal"
+                                type="button"
+                                >Cancel
+                        </button>
+                      </div>
+                      <div class="col-auto">
+                        <button class="btn btn-danger rounded-pill"
+                                data-bs-dismiss="modal"
+                                type="button"
+                                @click="deleteAuction"
+                                >Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+         </div> <!-- Delete auction modal -->
+    </div> <!-- Container -->
+  </div>
 </template>
 
 <script>
   // @ is an alias to /src
   import { apiService } from "@/common/api.service.js";
   import AuctionFormComponent from "@/components/AuctionForm.vue";
+  import Error404Component from "@/components/Error404.vue";
 
   export default {
     name: "AuctionEditor",
     components: {
-      AuctionFormComponent
+      AuctionFormComponent,
+      Error404Component
     },
     props: {
       id: {
@@ -151,6 +164,9 @@
       await apiService(endpoint)
         .then(response => {
           to.params.auction = response;
+        })
+        .catch(error => {
+          console.log(error);
         });
       return next();
     },
@@ -163,7 +179,8 @@
           error: null
         },
         editImage: false,
-        editData: false
+        editData: false,
+        notFound: false
       }
     },
     computed: {
@@ -220,8 +237,8 @@
           await apiService(endpoint, method, data, imageData)
             .then(response => {
               if (response.detail) {
-                console.log(response);
-                this.$router.push({name: "not found"});
+                console.log(response.detail);
+                this.notFound = true;
               } else {
                 this.image.url = URL.createObjectURL(this.image.file);
                 this.image.file = null;
@@ -229,24 +246,32 @@
                   this.image.error = null;
                 }
               }
+            })
+            .catch(error => {
+              console.log(error);
+              this.notFound = true;
             });
           }
         },
         async updateData() {
           /*
-            Update auction's data displayed.
+            Update auction's data after save.
           */
 
           let endpoint = `/api/schedule-auctions/${this.modifiedAuction.id}/`;
           await apiService(endpoint)
             .then(response => {
               if (response.detail) {
-                console.log(response);
-                this.$router.push({name: "not found"});
+                console.log(response.detail);
+                this.notFound = true;
               } else {
                 this.modifiedAuction = response;
                 document.title = `${response.title} | Schedule auctions | ChainBid`;
               }
+            })
+            .catch(error => {
+              console.log(error);
+              this.notFound = true;
             });
         },
         async deleteAuction() {
@@ -259,19 +284,26 @@
           await apiService(endpoint, method)
             .then(response => {
               if (response.detail) {
-                console.log(response);
-                this.$router.push({name: "not found"});
+                console.log(response.detail);
+                this.notFound = true;
               } else {
                 this.$router.push({name: "schedule auctions"});
                 this.$toasted.show(`${this.modifiedAuction.title} deleted`, {icon: "trash-can"});
               }
+            })
+            .catch(error => {
+              console.log(error);
+              this.notFound = true;
             });
         },
+        setNotFound() {
+          this.notFound = true;
+        }
     },
     created() {
       if (this.auction.detail) {
-        console.log(this.auction);
-        this.$router.push({name: "not found"});
+        console.log(this.auction.detail);
+        this.notFound = true;
       }
       document.title = `${this.modifiedAuction.title} | Schedule auctions | ChainBid`;
     }

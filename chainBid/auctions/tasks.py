@@ -1,7 +1,11 @@
+from asgiref.sync import async_to_sync
 from auctions.models import Auction, AuctionReport
 from chainBid.celery import app
+from channels.layers import get_channel_layer
 from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404
+from utils.auction_redis import clean_db, get_latest_object_on_redis, record_object_on_redis, TASKS_KEY
+
 
 UserModel = get_user_model()
 
@@ -14,18 +18,42 @@ def close_auction(pk):
     """
 
     auction = get_object_or_404(Auction, pk=pk)
-    auction.close_auction()
+    auction.close()
+    channel_layer = get_channel_layer()
+    channel_group = f'auction_{pk}'
+    async_to_sync(channel_layer.group_send)(
+        channel_group,
+        {
+            'type': 'auction_closed',
+            'winner': auction.winner.username if auction.winner else None
+        }
+    )
+    clean_db(auction=pk)
     AuctionReport.objects.create(auction=auction)
 
 
 @app.task
-def open_auction(pk):
+def open_auction(pk, max_closing_date):
     """
     Auction asynchronous task.
     Executed when the opening date occurs.
     """
 
     auction = get_object_or_404(Auction, pk=pk)
-    max_closing_date = auction.open_auction()
-    new_task = close_auction.apply_async((pk,), eta=max_closing_date).id
-    auction.record_object_on_redis(close_id=new_task)
+    auction.open()
+    close_auction_task = close_auction.apply_async((pk,), eta=max_closing_date).id
+    record_object_on_redis(auction=auction.pk, task_id=close_auction_task)
+
+
+def update_close_auction(pk, eta):
+    """
+    When a new bid is placed, the last celery task that is handling the closing of the auction is revoked and
+    a new one is created with 15 seconds of countdown.
+    """
+
+    previous_task = get_latest_object_on_redis(auction=pk, type_obj=TASKS_KEY)
+    if previous_task is not None:
+        if previous_task.get('task_id', None):
+            app.control.revoke(previous_task['task_id'], terminate=True, signal='SIGKILL')
+    close_auction_task = close_auction.apply_async((pk,), eta=eta).id
+    record_object_on_redis(auction=pk, task_id=close_auction_task)

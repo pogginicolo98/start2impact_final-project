@@ -15,7 +15,7 @@
                        type="number"
                        v-model="newPrice.value"
                        :class="{'is-invalid': isInitialPriceInvalid}"
-                       :disabled="isLastUser">
+                       :disabled="enabled">
               </label>
               <div class="invalid-feedback d-block"
                    id="bidFormFeedback">
@@ -33,9 +33,9 @@
               <button class="btn rounded-pill"
                       style="height: 38px;"
                       type="submit"
-                      :class="{'btn-danger': isLastUser,
-                               'btn-violet': !isLastUser}"
-                      :disabled="isLastUser"
+                      :class="{'btn-danger': enabled,
+                               'btn-violet': !enabled}"
+                      :disabled="enabled"
                       >Bid<i class="fa-solid fa-hand ms-2"></i>
               </button>
             </div>
@@ -46,7 +46,6 @@
 
 <script>
   // @ is an alias to /src
-  import { apiService } from "@/common/api.service.js";
   import { countDecimalPlaces } from "@/common/utility.js";
 
   export default {
@@ -56,7 +55,11 @@
         type: Object,
         required: true
       },
-      isLastUser: {
+      bidSocket: {
+        type: Object,
+        required: false
+      },
+      enabled: {
         type: Boolean,
         required: true
       }
@@ -81,9 +84,9 @@
 
           :fields
           -price:
-              1) 999999999.99 maximum value.
-              2) 2 decimals maximum.
-              3) Higher than last_price.
+            1) 999999999.99 maximum value.
+            2) 2 decimals maximum.
+            3) Higher than last_price.
         */
 
         let formIsValid = true;
@@ -107,22 +110,12 @@
       },
       async onSubmit() {
         /*
-          Send a new bid.
+          Send a new bid to the bid consumer.
         */
 
         if (this.validateForm()) {
-          let endpoint = `/api/auctions/${this.auction.id}/bid/`;
-          let method = "POST";
-          let data = { price: this.newPrice.value };
-          await apiService(endpoint, method, data)
-            .then(response => {
-              if (response.detail) {
-                console.log(response);
-                this.$router.push({name: "not found"});
-              } else {
-                this.newPrice.value = null;
-              }
-            });
+          this.bidSocket.send(JSON.stringify({'price': this.newPrice.value}));
+          this.newPrice.value = null;
         }
       }
     }

@@ -1,29 +1,20 @@
 <template lang="html">
-  <div class="container position-absolute top-50 start-50 translate-middle">
-    <div class="text-center">
-      <img class="img-fluid" src="../../../static-storage/page-not-found.png" alt="page-not-found">
-      <div class="">
-        <router-link class="btn btn-violet rounded-pill fs-20px"
-                     :to="{ name: 'home' }"
-                     >Back to homepage
-        </router-link>
-      </div>
-    </div>
+  <div class="not-found">
+    <Error404Component/>
   </div>
 </template>
 
 <script>
+  // @ is an alias to /src
+  import Error404Component from "@/components/Error404.vue";
+
   export default {
-    name: "NotFound"
+    name: "NotFound",
+    components: {
+      Error404Component
+    },
   }
 </script>
 
 <style lang="css" scoped>
-  html, body{
-    height: 100% !important;
-  }
-
-  .router-link-active {
-    color: #fff !important;
-  }
 </style>

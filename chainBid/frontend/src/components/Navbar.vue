@@ -6,7 +6,7 @@
                    :to="{ name: 'home' }">
         <img alt="logo"
              class="d-inline-block mb-2"
-             src="../../../static-storage/logo-200x32-orig.png">
+             src="../../../static-storage/assets/logo-200x32-orig.png">
       </router-link>
 
       <!-- Collapsed menu button -->
