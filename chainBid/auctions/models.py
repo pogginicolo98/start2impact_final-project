@@ -8,7 +8,7 @@ from django.core.validators import MinValueValidator
 from django.db import models
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
-from utils.auction_redis import BIDS_KEY, clean_db, get_latest_object_on_redis, record_object_on_redis, TASKS_KEY
+from utils.auction_redis import BIDS_KEY, get_latest_object_on_redis, record_object_on_redis
 from utils.encoders_decoders import AuctionEncoder
 from utils.transactions import write_message_on_chain
 
@@ -27,8 +27,6 @@ class Auction(models.Model):
     """
 
     # Generic config
-    REDIS_HOST = settings.REDIS_HOST
-    REDIS_PORT = settings.REDIS_PORT
     IMAGES_DIR = 'auction images'
 
     # Fields
@@ -98,6 +96,14 @@ class AuctionReport(models.Model):
     hash = models.CharField(max_length=64, blank=True, null=True)
     tx_id = models.CharField(max_length=66, blank=True, null=True)
 
+    class Meta:
+        verbose_name = 'Auction report'
+        verbose_name_plural = 'Auction reports'
+        ordering = ['-auction__opened_at', 'auction__title']
+
+    def __str__(self):
+        return self.auction.title
+
     def make_report(self):
         """
         Make a json report and write it on the Ethereum blockchain.
@@ -129,5 +135,5 @@ class AuctionReport(models.Model):
             json.dump(report, f, cls=AuctionEncoder)
         self.json_file.name = os.path.join(reports_dir, file_name)
         self.hash = hashlib.sha256(json.dumps(report, cls=AuctionEncoder).encode('utf-8')).hexdigest()
-        # self.tx_id = write_message_on_chain(self.hash)
+        self.tx_id = write_message_on_chain(self.hash)
         self.save()

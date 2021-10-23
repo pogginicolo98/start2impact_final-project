@@ -106,46 +106,6 @@ class AuctionBidSerializer(serializers.Serializer):
         return data
 
 
-# class AuctionInfoSerializer(serializers.Serializer):
-#     """
-#     Auction serializer for AuctionInfoRetrieveAPIView.
-#
-#     :fields
-#     - is_last_user: Is the current user the last one that placed a bid?
-#     - last_price: price of the last bid placed.
-#
-#     * format: JSON.
-#     """
-#
-#     is_last_user = serializers.SerializerMethodField(read_only=True)
-#     last_price = serializers.SerializerMethodField(read_only=True)
-#     remaining_time = serializers.SerializerMethodField(read_only=True)
-#
-#     def get_is_last_user(self, instance):
-#         user = self.context.get('user')
-#         auction_pk = self.context.get('auction')
-#         bid = get_latest_object_on_redis(auction=auction_pk, type_obj='bids')
-#         if bid is not None:
-#             return bool(user == bid.get('user', None))
-#         return False
-#
-#     def get_last_price(self, instance):
-#         auction_pk = self.context.get('auction')
-#         bid = get_latest_object_on_redis(auction=auction_pk, type_obj='bids')
-#         if bid is not None:
-#             return bid.get('price', None)
-#         return None
-#
-#     def get_remaining_time(self, instance):
-#         auction_pk = self.context.get('auction')
-#         task = get_latest_object_on_redis(auction=auction_pk, type_obj='close')
-#         if task is not None:
-#             if task.get('eta', None):
-#                 delta = task['eta'] - timezone.now()
-#                 return delta.seconds
-#         return None
-
-
 class AuctionClosedSerializer(serializers.ModelSerializer):
     """
     Auction serializer for AuctionClosedListRetrieveAPIView.

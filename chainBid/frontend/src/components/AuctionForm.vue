@@ -269,8 +269,8 @@
           await apiService(endpoint, method, data)
             .then(response => {
               if (response.detail) {
-                console.log(response);
-                this.$router.push({name: "not found"});
+                console.log(response.detail);
+                this.$emit("not-found");
               } else {
                 if (!this.auction) {
                   this.title.value = null;
@@ -283,6 +283,10 @@
                 }
                 this.$emit("refresh-auctions");
               }
+            })
+            .catch(error => {
+              console.log(error);
+              this.$emit("not-found");
             });
         }
       }

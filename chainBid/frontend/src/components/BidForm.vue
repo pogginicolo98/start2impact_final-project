@@ -62,7 +62,7 @@
       enabled: {
         type: Boolean,
         required: true
-      }      
+      }
     },
     data() {
       return {
@@ -84,9 +84,9 @@
 
           :fields
           -price:
-              1) 999999999.99 maximum value.
-              2) 2 decimals maximum.
-              3) Higher than last_price.
+            1) 999999999.99 maximum value.
+            2) 2 decimals maximum.
+            3) Higher than last_price.
         */
 
         let formIsValid = true;
