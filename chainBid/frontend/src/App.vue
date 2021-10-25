@@ -19,6 +19,7 @@
 <style>
   body {
     background-color: #F2E9E4;
+    color: #37251B;
   }
 
   a {

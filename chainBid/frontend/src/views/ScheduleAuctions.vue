@@ -10,7 +10,7 @@
     <div class="container mt-3"
          v-else>
          <!-- Title -->
-         <div class="text-center text-card-auction fw-bold fs-32px">
+         <div class="text-center fw-bold fs-32px">
            <p>Schedule auctions</p>
          </div>
 
@@ -19,7 +19,7 @@
            <div class="col-12 col-lg-6">
              <div class="card card-detail"
                   style="width: 100%">
-                  <div class="card-header card-header-detail text-card-auction">
+                  <div class="card-header card-header-detail">
                     <i class="fa-solid fa-calendar-plus fs-24px me-2"></i>
                     <span class="fw-bold fs-18px">Create a new auction</span>
                   </div>
@@ -37,8 +37,7 @@
            <div class="table-responsive text-nowrap mt-5">
              <table class="table table-hover caption-top text-card-auction">
                <caption>
-                 <i class="fa-solid fa-database fs-20px me-2"></i>
-                 <span>Scheduled auctions</span>
+                 <i class="fa-solid fa-database fs-20px me-2"></i><span>Scheduled auctions</span>
                </caption>
                <thead>
                  <tr>
@@ -80,7 +79,7 @@
                        @click="getAuctions('previous')"
                        ><i class="fa-solid fa-angle-left"></i>
                </button>
-               <p class="position-absolute top-50 start-50 translate-middle text-card-auction">
+               <p class="position-absolute top-50 start-50 translate-middle">
                  <i class="fa-regular fa-file-lines me-2"></i>{{ currentPage }}/{{ pages }}
                </p>
                <button class="position-absolute top-50 end-0 translate-middle-y btn btn-violet rounded-pill me-5"

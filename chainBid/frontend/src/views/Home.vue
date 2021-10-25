@@ -10,7 +10,7 @@
     <div class="container mt-3"
          v-else>
          <!-- Title -->
-         <div class="text-center text-card-auction fw-bold fs-32px">
+         <div class="text-center fw-bold fs-32px">
            <p>Live auctions</p>
          </div>
 
@@ -22,11 +22,11 @@
                    :key="index">
                    <!-- Card -->
                    <router-link :to="{ name: 'auction', params: { id: auction.id } }">
-                     <div class="card card-auction position-relative mb-4 mx-auto"
+                     <div class="card card-auction position-relative text-card-auction mb-4 mx-auto"
                           style="width: 18rem; height: 21rem;">
                           <div class="card-body text-center">
                             <!-- Card title -->
-                            <p class="text-card-auction text-truncate fw-bold fs-24px mb-2">{{ auction.title }}</p>
+                            <p class="text-truncate fw-bold fs-24px mb-2">{{ auction.title }}</p>
 
                             <!-- Card image -->
                             <div class="card-img-wrap-auction">
@@ -36,19 +36,21 @@
                             </div>
 
                             <!-- Card body -->
-                            <p class="text-card-auction fs-20px mt-3 mb-1">{{ auction.last_price }} €</p>
-                            <template v-if="auction.remaining_time">
-                              <p class="text-danger fs-17px">Started</p>
-                            </template>
-                            <template v-else>
-                              <p class="text-muted fs-17px">No bids yet</p>
-                            </template>
+                            <p class="fs-20px mt-3 mb-1">{{ auction.last_price }} €</p>
+                            <p class="text-danger fs-17px"
+                               v-if="auction.remaining_time"
+                               >Started
+                            </p>
+                            <p class="text-muted fs-17px"
+                               v-else
+                               >No bids yet
+                            </p>
                           </div>
 
                           <!-- Card footer -->
                           <div class="position-absolute bottom-0 start-50 translate-middle-x text-center"
                                style="width: 90%">
-                               <hr class="text-card-auction mb-1">
+                               <hr class="mb-1">
                                <p class="text-muted fs-14px mb-1">{{ getDateFromNow(auction.opened_at) }}</p>
                           </div>
                      </div>

@@ -12,7 +12,7 @@
          <div class="row">
            <!-- Title mobile formats -->
            <div class="col-12 d-lg-none">
-             <p class="text-card-auction text-truncate fw-bold fs-32px mb-2 ms-2">{{ auction.title }}</p>
+             <p class="text-truncate fw-bold fs-32px mb-2 ms-2">{{ auction.title }}</p>
            </div>
 
            <!-- Image and description -->
@@ -30,7 +30,7 @@
              <div class="col-12 d-none d-lg-block">
                <div class="card card-detail"
                     style="width: 100%">
-                    <div class="card-header card-header-detail text-card-auction">
+                    <div class="card-header card-header-detail">
                       <i class="fa-solid fa-align-left me-2"></i><span class="fs-18px fw-bold">Description</span>
                     </div>
                     <div class="card-body card-body-detail">
@@ -38,7 +38,7 @@
                          v-if="!auction.description"
                          >No description provided
                       </p>
-                      <p class="text-card-auction my-2"
+                      <p class="my-2"
                          v-else
                          >{{ auction.description }}
                       </p>
@@ -50,13 +50,13 @@
            <!-- Info -->
            <div class="col-12 col-lg-7 mb-2">
              <!-- Title desktop formats -->
-             <p class="text-card-auction text-truncate fs-32px fw-bold d-none d-lg-block mb-3 ms-2">{{ auction.title }}</p>
+             <p class="text-truncate fs-32px fw-bold d-none d-lg-block mb-3 ms-2">{{ auction.title }}</p>
 
              <!-- Card -->
              <div class="card card-detail">
                <div class="card-body card-body-detail">
                  <!-- Winner -->
-                 <p class="text-card-auction fs-20px"
+                 <p class="fs-20px"
                     v-if="auction.winner"
                     ><span class="fw-bold">Winner</span>: @{{ auction.winner }}
                  </p>
@@ -101,8 +101,8 @@
                  </div>
 
                  <!-- Hash -->
-                 <p class="text-card-auction fw-bold mb-1 mt-2">SHA256:</p>
-                 <div class="container text-card-auction box-icon rounded pe-1">
+                 <p class="fw-bold mb-1 mt-2">SHA256:</p>
+                 <div class="container box-icon rounded pe-1">
                    <div class="row">
                      <div class="col-9 col-sm-10 col-xxl-11">
                        <p class="mt-3"
@@ -121,8 +121,8 @@
                  </div>
 
                  <!-- Transaction ID -->
-                 <p class="text-card-auction fw-bold mb-1 mt-2">Transaction ID:</p>
-                 <div class="container text-card-auction box-icon rounded pe-1">
+                 <p class="fw-bold mb-1 mt-2">Transaction ID:</p>
+                 <div class="container box-icon rounded pe-1">
                    <div class="row">
                      <div class="col-9 col-sm-10 col-xxl-11">
                        <p class="mt-3"
@@ -158,7 +158,7 @@
            <div class="col-12 col-lg-5">
              <div class="card card-detail mt-3"
                   style="width: 100%">
-                  <div class="card-header card-header-detail text-card-auction">
+                  <div class="card-header card-header-detail">
                     <i class="fa-solid fa-align-left me-2"></i><span class="fs-18px fw-bold">Description</span>
                   </div>
                   <div class="card-body card-body-detail">
@@ -166,7 +166,7 @@
                        v-if="!auction.description"
                        >No description provided
                     </p>
-                    <p class="text-card-auction my-2"
+                    <p class="my-2"
                        v-else
                        >{{ auction.description }}
                     </p>
@@ -186,14 +186,14 @@
 
   export default {
     name: "Auction",
+    components: {
+      Error404Component
+    },
     props: {
       id: {
         type: Number,
         required: true
       }
-    },
-    components: {
-      Error404Component
     },
     data() {
       return {

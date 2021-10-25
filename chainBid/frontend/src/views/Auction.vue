@@ -12,7 +12,7 @@
          <div class="row">
            <!-- Title mobile formats -->
            <div class="col-12 d-lg-none">
-             <p class="text-card-auction text-truncate fw-bold fs-32px mb-2 ms-2">{{ auction.title }}</p>
+             <p class="text-truncate fw-bold fs-32px mb-2 ms-2">{{ auction.title }}</p>
            </div>
 
            <!-- Image and description -->
@@ -30,7 +30,7 @@
              <div class="col-12 d-none d-lg-block">
                <div class="card card-detail"
                     style="width: 100%">
-                    <div class="card-header card-header-detail text-card-auction">
+                    <div class="card-header card-header-detail">
                       <i class="fa-solid fa-align-left me-2"></i><span class="fs-18px fw-bold">Description</span>
                     </div>
                     <div class="card-body card-body-detail pb-1">
@@ -38,7 +38,7 @@
                          v-if="!auction.description"
                          >No description provided
                       </p>
-                      <p class="text-card-auction mb-2"
+                      <p class="mb-2"
                          v-else
                          >{{ auction.description }}
                       </p>
@@ -52,34 +52,35 @@
            <!-- Bid -->
            <div class="col-12 col-lg-7 mb-2">
              <!-- Title desktop formats -->
-             <p class="text-card-auction text-truncate fs-32px fw-bold d-none d-lg-block mb-3 ms-2">{{ auction.title }}</p>
+             <p class="text-truncate fs-32px fw-bold d-none d-lg-block mb-3 ms-2">{{ auction.title }}</p>
 
              <!-- Card -->
              <div class="card card-detail">
                <div class="card-body card-body-detail">
                  <div class="row mb-4">
-                   <template v-if="auctionClosed">
-                     <div class="col-12 text-danger fs-20px fw-bold">
-                       <p>Auction closed</p>
-                     </div>
-                   </template>
+                   <div class="col-12 text-danger fs-20px fw-bold"
+                        v-if="auctionClosed"
+                        ><p>Auction closed</p>
+                   </div>
 
                    <template v-else>
                      <!-- Current price -->
                      <div class="col-auto">
                        <p class="text-muted fs-15px fw-bold mb-0">Current price</p>
-                       <p class="text-card-auction fs-20px mb-0">{{ lastPrice }} €</p>
+                       <p class="fs-20px mb-0">{{ lastPrice }} €</p>
                      </div>
 
                      <!-- Remaining time -->
                      <div class="col-auto">
                        <p class="text-muted fs-15px fw-bold mb-0">Closing in</p>
-                       <template v-if="remainingTime !== null">
-                         <p class="text-danger fs-20px mb-0">{{ getRemainingTime }}</p>
-                       </template>
-                       <template v-else>
-                         <p class="text-card-auction fs-20px mb-0">Less than 24 hours</p>
-                       </template>
+                       <p class="text-danger fs-20px mb-0"
+                          v-if="remainingTime !== null"
+                          >{{ getRemainingTime }}
+                       </p>
+                       <p class="fs-20px mb-0"
+                          v-else
+                          >Less than 24 hours
+                       </p>
                      </div>
                    </template>
                  </div>
@@ -98,7 +99,7 @@
            <div class="col-12">
              <div class="card card-detail mt-3"
                   style="width: 100%">
-                  <div class="card-header card-header-detail text-card-auction">
+                  <div class="card-header card-header-detail">
                     <i class="fa-solid fa-align-left me-2"></i><span class="fs-18px fw-bold">Description</span>
                   </div>
                   <div class="card-body card-body-detail pb-1">
@@ -106,7 +107,7 @@
                        v-if="!auction.description"
                        >No description provided
                     </p>
-                    <p class="text-card-auction mb-2"
+                    <p class="mb-2"
                        v-else
                        >{{ auction.description }}
                     </p>
@@ -125,26 +126,25 @@
   import { apiService } from "@/common/api.service.js";
   import BidFormComponent from "@/components/BidForm.vue";
   import Error404Component from "@/components/Error404.vue";
-  import moment from 'moment';
   import * as ReconnectingWebSocket from "../../../static-storage/js/reconnecting-websocket.min.js";
+  import moment from 'moment';
 
   export default {
     name: "Auction",
+    components: {
+      BidFormComponent,
+      Error404Component
+    },
     props: {
       id: {
         type: Number,
         required: true
       }
     },
-    components: {
-      BidFormComponent,
-      Error404Component
-    },
     data() {
       return {
         auction: {},
         auctionClosed: false,
-        requestUser: null,
         isLastUser: false,
         lastPrice: null,
         remainingTime: null,
@@ -173,9 +173,6 @@
       }
     },
     methods: {
-      setRequestUser() {
-        this.requestUser = window.localStorage.getItem("username");
-      },
       async getAuctionData() {
         /*
           Retrieve auction's data and set the page title.
@@ -244,7 +241,6 @@
     created() {
       this.createBidSocket();
       this.getAuctionData();
-      this.setRequestUser();
     },
     beforeDestroy() {
       clearInterval(this.timerDisplay);

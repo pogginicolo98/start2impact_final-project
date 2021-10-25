@@ -4,9 +4,9 @@
           @submit.prevent="onSubmit">
           <div class="row">
             <!-- Input -->
-            <div class="col-12 col-sm-5 col-md-4 col-lg-5 col-xl-4 col-xxl-4 pe-sm-0">
+            <div class="col-12 col-sm-5 col-md-4 col-lg-5 col-xl-4 pe-sm-0">
               <label class="position-relative d-block">
-                <i class="fa-solid fa-euro-sign position-absolute top-50 start-0 translate-middle text-muted ms-3"></i>
+                <i class="fa-solid fa-euro-sign text-muted position-absolute top-50 start-0 translate-middle ms-3"></i>
                 <input aria-describedby="bidFormFeedback"
                        class="form-control rounded-pill"
                        placeholder="Price"
@@ -57,7 +57,7 @@
       },
       bidSocket: {
         type: Object,
-        required: false
+        required: true
       },
       enabled: {
         type: Boolean,
@@ -89,24 +89,24 @@
             3) Higher than last_price.
         */
 
-        let formIsValid = true;
+        let formValid = true;
         // Price validation
         this.newPrice.errors = [];
         if (this.newPrice.value > this.auction.last_price) {
           let decimals = countDecimalPlaces(this.newPrice.value)
           if (this.newPrice.value > 999999999.99) {
             this.newPrice.errors.push("Maximum allowed: 9999999999.99 €");
-            formIsValid = false;
+            formValid = false;
           }
           if (decimals > 2) {
             this.newPrice.errors.push("Please enter no more than 2 decimals.");
-            formIsValid = false;
+            formValid = false;
           }
         } else {
           this.newPrice.errors.push("Please enter a price higher than the current price.");
-          formIsValid = false;
+          formValid = false;
         }
-        return formIsValid;
+        return formValid;
       },
       async onSubmit() {
         /*

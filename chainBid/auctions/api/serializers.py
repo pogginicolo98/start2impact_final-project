@@ -134,7 +134,9 @@ class AuctionClosedSerializer(serializers.ModelSerializer):
         exclude = ['status']
 
     def get_winner(self, instance):
-        return str(instance.winner)
+        if instance.winner is not None:
+            return instance.winner.username
+        return None
 
     def get_json_file(self, instance):
         request = self.context.get("request")
