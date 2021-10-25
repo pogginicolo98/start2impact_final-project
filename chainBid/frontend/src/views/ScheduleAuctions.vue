@@ -37,8 +37,7 @@
            <div class="table-responsive text-nowrap mt-5">
              <table class="table table-hover caption-top text-card-auction">
                <caption>
-                 <i class="fa-solid fa-database fs-20px me-2"></i>
-                 <span>Scheduled auctions</span>
+                 <i class="fa-solid fa-database fs-20px me-2"></i><span>Scheduled auctions</span>
                </caption>
                <thead>
                  <tr>

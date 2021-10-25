@@ -36,13 +36,13 @@
                             </div>
 
                             <!-- Card body -->
-                            <template v-if="!isCanceled(auction)">
+                            <template v-if="auction.winner">
                               <p class="text-card-auction fs-20px mt-3 mb-1">Won by @{{ auction.winner }}</p>
                               <p class="text-card-auction fs-17px">{{ auction.final_price }} €</p>
                             </template>
-                            <template v-else>
-                              <p class="text-danger fs-17px mt-4"><i class="fa-solid fa-ban me-2"></i>Canceled</p>
-                            </template>
+                            <p class="text-danger fs-17px mt-4"
+                               v-else
+                               ><i class="fa-solid fa-ban me-2"></i>Canceled</p>
                           </div>
 
                           <!-- Card footer -->
@@ -132,12 +132,6 @@
       },
       getDateFromNow(date) {
         return moment(date).fromNow();
-      },
-      isCanceled(auction) {
-        if (auction.winner === "None") {
-          return true;
-        }
-        return false;
       },
       getNextAuctions() {
         /*

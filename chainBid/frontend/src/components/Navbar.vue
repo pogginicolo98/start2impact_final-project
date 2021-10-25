@@ -3,10 +3,10 @@
     <div class="container">
       <!-- Brand and logo -->
       <router-link class="navbar-brand"
-                   :to="{ name: 'home' }">
-        <img alt="logo"
-             class="d-inline-block mb-2"
-             src="../../../static-storage/assets/logo-200x32-orig.png">
+                   :to="{ name: 'home' }"
+                   ><img alt="logo"
+                         class="d-inline-block mb-2"
+                         src="../../../static-storage/assets/logo-200x32-orig.png">
       </router-link>
 
       <!-- Collapsed menu button -->
@@ -68,21 +68,25 @@
                <!-- Dropdown elements -->
                <ul aria-labelledby="navbarDarkDropdownMenuLink"
                    class="dropdown-menu dropdown-menu-dark">
-                   <li><h6 class="dropdown-header"
-                     >{{ requestUser }}
-                   </h6></li>
-                   <li><a class="dropdown-item"
+                   <li><h6 class="dropdown-header">{{ requestUser }}</h6></li>
+                   <li>
+                     <a class="dropdown-item"
                           href="#"
                           >Profile
-                   </a></li>
-                   <li><a class="dropdown-item"
+                     </a>
+                   </li>
+                   <li>
+                     <a class="dropdown-item"
                           href="#"
                           >Change password
-                   </a></li>
-                   <li><a class="dropdown-item"
-                          href="/accounts/logout/">
-                          Log out<i class="fa-solid fa-right-from-bracket fs-14px ms-2"></i>
-                   </a></li>
+                     </a>
+                   </li>
+                   <li>
+                     <a class="dropdown-item"
+                          href="/accounts/logout/"
+                          >Log out<i class="fa-solid fa-right-from-bracket fs-14px ms-2"></i>
+                     </a>
+                   </li>
                </ul>
              </li>
            </ul>

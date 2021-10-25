@@ -58,11 +58,10 @@
              <div class="card card-detail">
                <div class="card-body card-body-detail">
                  <div class="row mb-4">
-                   <template v-if="auctionClosed">
-                     <div class="col-12 text-danger fs-20px fw-bold">
-                       <p>Auction closed</p>
-                     </div>
-                   </template>
+                   <div class="col-12 text-danger fs-20px fw-bold"
+                        v-if="auctionClosed"
+                        ><p>Auction closed</p>
+                   </div>
 
                    <template v-else>
                      <!-- Current price -->
@@ -74,12 +73,14 @@
                      <!-- Remaining time -->
                      <div class="col-auto">
                        <p class="text-muted fs-15px fw-bold mb-0">Closing in</p>
-                       <template v-if="remainingTime !== null">
-                         <p class="text-danger fs-20px mb-0">{{ getRemainingTime }}</p>
-                       </template>
-                       <template v-else>
-                         <p class="text-card-auction fs-20px mb-0">Less than 24 hours</p>
-                       </template>
+                       <p class="text-danger fs-20px mb-0"
+                          v-if="remainingTime !== null"
+                          >{{ getRemainingTime }}
+                       </p>
+                       <p class="text-card-auction fs-20px mb-0"
+                          v-else
+                          >Less than 24 hours
+                       </p>
                      </div>
                    </template>
                  </div>
@@ -125,26 +126,25 @@
   import { apiService } from "@/common/api.service.js";
   import BidFormComponent from "@/components/BidForm.vue";
   import Error404Component from "@/components/Error404.vue";
-  import moment from 'moment';
   import * as ReconnectingWebSocket from "../../../static-storage/js/reconnecting-websocket.min.js";
+  import moment from 'moment';
 
   export default {
     name: "Auction",
+    components: {
+      BidFormComponent,
+      Error404Component
+    },
     props: {
       id: {
         type: Number,
         required: true
       }
     },
-    components: {
-      BidFormComponent,
-      Error404Component
-    },
     data() {
       return {
         auction: {},
         auctionClosed: false,
-        requestUser: null,
         isLastUser: false,
         lastPrice: null,
         remainingTime: null,
@@ -173,9 +173,6 @@
       }
     },
     methods: {
-      setRequestUser() {
-        this.requestUser = window.localStorage.getItem("username");
-      },
       async getAuctionData() {
         /*
           Retrieve auction's data and set the page title.
@@ -244,7 +241,6 @@
     created() {
       this.createBidSocket();
       this.getAuctionData();
-      this.setRequestUser();
     },
     beforeDestroy() {
       clearInterval(this.timerDisplay);

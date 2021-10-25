@@ -37,12 +37,14 @@
 
                             <!-- Card body -->
                             <p class="text-card-auction fs-20px mt-3 mb-1">{{ auction.last_price }} €</p>
-                            <template v-if="auction.remaining_time">
-                              <p class="text-danger fs-17px">Started</p>
-                            </template>
-                            <template v-else>
-                              <p class="text-muted fs-17px">No bids yet</p>
-                            </template>
+                            <p class="text-danger fs-17px"
+                               v-if="auction.remaining_time"
+                               >Started
+                            </p>
+                            <p class="text-muted fs-17px"
+                               v-else
+                               >No bids yet
+                            </p>
                           </div>
 
                           <!-- Card footer -->

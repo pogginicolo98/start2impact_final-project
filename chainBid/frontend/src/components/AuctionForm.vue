@@ -42,9 +42,9 @@
                         :class="{'is-invalid': isDescriptionInvalid}"
                         :disabled="!enableEdit">
               </textarea>
-              <p class="mt-1 text-end small mb-0 mb-xxl-2"
-                 :class="{'text-muted': descriptionCharsValid,
-                          'text-danger': !descriptionCharsValid}"
+              <p class="small text-end mt-1 mb-0 mb-xxl-2"
+                 :class="{'text-danger': isDescriptionCharsInvalid,
+                          'text-muted': !isDescriptionCharsInvalid}"
                  >{{ countDescriptionChars }}/240
               </p>
               <div class="invalid-feedback mt-0">
@@ -66,7 +66,7 @@
             </label>
             <div class="col-xxl-9">
               <label class="position-relative d-block">
-                <i class="fa-solid fa-euro-sign position-absolute top-50 start-0 translate-middle text-muted ms-3"></i>
+                <i class="fa-solid fa-euro-sign text-muted position-absolute top-50 start-0 translate-middle ms-3"></i>
                 <input aria-describedby="bidFormFeedback"
                        class="form-control"
                        id="initial-price"
@@ -105,10 +105,10 @@
           </div>
 
           <!-- Submit button -->
-          <div class="col-sm-3 col-md-2 col-lg-3 col-xxl-2 d-grid d-block ms-auto mt-3">
+          <div class="col-sm-3 col-md-2 col-lg-3 col-xxl-2 d-grid d-block mt-3 ms-auto">
             <button class="btn btn-violet rounded-pill"
                     type="submit"
-                    v-html="createUpdateMessage"
+                    v-html="submitButtonMessage"
                     :class="{'disabled': !enableEdit}">
             </button>
           </div>
@@ -151,7 +151,7 @@
         openedAt: {
           value: null
         },
-        createUpdateMessage: null
+        submitButtonMessage: null
       };
     },
     computed: {
@@ -161,11 +161,11 @@
         }
         return 0;
       },
-      descriptionCharsValid() {
+      isDescriptionCharsInvalid() {
         if (this.description.value) {
-          return this.description.value.length <= 240;
+          return this.description.value.length > 240;
         }
-        return true;
+        return false;
       },
       isTitleInvalid() {
         return this.title.errors.length != 0;
@@ -186,9 +186,9 @@
           if (this.auction.opened_at) {
             this.openedAt.value = moment.utc(this.auction.opened_at, 'YYYY-MM-DDTHH:mm').format('YYYY-MM-DDTHH:mm');
           }
-          this.createUpdateMessage = "Save<i class='fa-solid fa-floppy-disk ms-2'></i>";
+          this.submitButtonMessage = "Save<i class='fa-solid fa-floppy-disk ms-2'></i>";
         } else {
-          this.createUpdateMessage = "Create<i class='fa-solid fa-plus ms-2'></i>";
+          this.submitButtonMessage = "Create<i class='fa-solid fa-plus ms-2'></i>";
         }
       },
       validateForm() {

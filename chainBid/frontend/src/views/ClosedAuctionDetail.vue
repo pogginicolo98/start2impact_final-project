@@ -186,14 +186,14 @@
 
   export default {
     name: "Auction",
+    components: {
+      Error404Component
+    },
     props: {
       id: {
         type: Number,
         required: true
       }
-    },
-    components: {
-      Error404Component
     },
     data() {
       return {

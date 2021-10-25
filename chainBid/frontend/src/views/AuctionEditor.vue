@@ -41,7 +41,7 @@
                       <input accept="image/*"
                              class="form-control"
                              type="file"
-                             :class="{'is-invalid': imageIsInvalid}"
+                             :class="{'is-invalid': isImageInvalid}"
                              :disabled="!editImage"
                              @change="onImageSelected">
                       <div class="invalid-feedback">{{ image.error }}</div>
@@ -153,23 +153,6 @@
         required: false
       }
     },
-    async beforeRouteEnter(to, from, next) {
-      /*
-        Retrieve a specific auction's data before entering in the page,
-        in order to pass auction's data to the component and fill the fields
-        before rendering the page.
-      */
-
-      let endpoint = `/api/schedule-auctions/${to.params.id}/`;
-      await apiService(endpoint)
-        .then(response => {
-          to.params.auction = response;
-        })
-        .catch(error => {
-          console.log(error);
-        });
-      return next();
-    },
     data() {
       return {
         modifiedAuction: this.auction,
@@ -190,7 +173,7 @@
         }
         return this.modifiedAuction.image;
       },
-      imageIsInvalid(){
+      isImageInvalid(){
         return this.image.error != null;
       }
     },
@@ -299,6 +282,23 @@
         setNotFound() {
           this.notFound = true;
         }
+    },
+    async beforeRouteEnter(to, from, next) {
+      /*
+        Retrieve a specific auction's data before entering in the page,
+        in order to pass auction's data to the component and fill the fields
+        before rendering the page.
+      */
+
+      let endpoint = `/api/schedule-auctions/${to.params.id}/`;
+      await apiService(endpoint)
+        .then(response => {
+          to.params.auction = response;
+        })
+        .catch(error => {
+          console.log(error);
+        });
+      return next();
     },
     created() {
       if (this.auction.detail) {
