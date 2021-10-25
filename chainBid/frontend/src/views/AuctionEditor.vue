@@ -10,7 +10,7 @@
     <div class="container mt-3"
          v-else>
          <!-- Title -->
-         <div class="text-center text-card-auction fw-bold fs-32px">
+         <div class="text-center fw-bold fs-32px">
            <p>{{ modifiedAuction.title }}</p>
          </div>
 
@@ -19,7 +19,7 @@
            <div class="col-12 col-lg-5">
              <div class="card card-detail"
                   style="width: 100%">
-                  <div class="card-header card-header-detail text-card-auction">
+                  <div class="card-header card-header-detail">
                     <div class="row justify-content-between">
                       <div class="col-auto">
                         <span class="fw-bold fs-18px">Image</span>
@@ -62,7 +62,7 @@
            <div class="col-12 col-lg-7 mt-4 mt-lg-0">
              <div class="card card-detail"
                   style="width: 100%">
-                  <div class="card-header card-header-detail text-card-auction">
+                  <div class="card-header card-header-detail">
                     <div class="row justify-content-between">
                       <div class="col-auto">
                         <span class="fw-bold fs-18px">Data</span>
@@ -101,11 +101,11 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-body text-center">
-                    <p class="text-card-auction fw-bold fs-20px"
+                    <p class="fw-bold fs-20px"
                        id="deleteAuctionModalLabel"
                        >Do you want to delete the following auction?
                     </p>
-                    <p class="text-card-auction fs-18px">{{ auction.title }}</p>
+                    <p class="fs-18px">{{ auction.title }}</p>
                     <div class="row justify-content-between mt-4">
                       <div class="col-auto">
                         <button class="btn btn-secondary rounded-pill"

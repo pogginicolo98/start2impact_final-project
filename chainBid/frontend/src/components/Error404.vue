@@ -4,7 +4,7 @@
         <img alt="auction-not-available"
              class="img-fluid"
              src="../../../static-storage/assets/clock.png">
-        <p class="text-card-auction fs-32px fw-bold mt-3">Auction no more available...</p>
+        <p class="fs-32px fw-bold mt-3">Auction no more available...</p>
       </div>
       <div v-else>
         <img alt="page-not-found"

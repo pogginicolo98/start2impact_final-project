@@ -12,7 +12,7 @@
          <div class="row">
            <!-- Title mobile formats -->
            <div class="col-12 d-lg-none">
-             <p class="text-card-auction text-truncate fw-bold fs-32px mb-2 ms-2">{{ auction.title }}</p>
+             <p class="text-truncate fw-bold fs-32px mb-2 ms-2">{{ auction.title }}</p>
            </div>
 
            <!-- Image and description -->
@@ -30,7 +30,7 @@
              <div class="col-12 d-none d-lg-block">
                <div class="card card-detail"
                     style="width: 100%">
-                    <div class="card-header card-header-detail text-card-auction">
+                    <div class="card-header card-header-detail">
                       <i class="fa-solid fa-align-left me-2"></i><span class="fs-18px fw-bold">Description</span>
                     </div>
                     <div class="card-body card-body-detail pb-1">
@@ -38,7 +38,7 @@
                          v-if="!auction.description"
                          >No description provided
                       </p>
-                      <p class="text-card-auction mb-2"
+                      <p class="mb-2"
                          v-else
                          >{{ auction.description }}
                       </p>
@@ -52,7 +52,7 @@
            <!-- Bid -->
            <div class="col-12 col-lg-7 mb-2">
              <!-- Title desktop formats -->
-             <p class="text-card-auction text-truncate fs-32px fw-bold d-none d-lg-block mb-3 ms-2">{{ auction.title }}</p>
+             <p class="text-truncate fs-32px fw-bold d-none d-lg-block mb-3 ms-2">{{ auction.title }}</p>
 
              <!-- Card -->
              <div class="card card-detail">
@@ -67,7 +67,7 @@
                      <!-- Current price -->
                      <div class="col-auto">
                        <p class="text-muted fs-15px fw-bold mb-0">Current price</p>
-                       <p class="text-card-auction fs-20px mb-0">{{ lastPrice }} €</p>
+                       <p class="fs-20px mb-0">{{ lastPrice }} €</p>
                      </div>
 
                      <!-- Remaining time -->
@@ -77,7 +77,7 @@
                           v-if="remainingTime !== null"
                           >{{ getRemainingTime }}
                        </p>
-                       <p class="text-card-auction fs-20px mb-0"
+                       <p class="fs-20px mb-0"
                           v-else
                           >Less than 24 hours
                        </p>
@@ -99,7 +99,7 @@
            <div class="col-12">
              <div class="card card-detail mt-3"
                   style="width: 100%">
-                  <div class="card-header card-header-detail text-card-auction">
+                  <div class="card-header card-header-detail">
                     <i class="fa-solid fa-align-left me-2"></i><span class="fs-18px fw-bold">Description</span>
                   </div>
                   <div class="card-body card-body-detail pb-1">
@@ -107,7 +107,7 @@
                        v-if="!auction.description"
                        >No description provided
                     </p>
-                    <p class="text-card-auction mb-2"
+                    <p class="mb-2"
                        v-else
                        >{{ auction.description }}
                     </p>

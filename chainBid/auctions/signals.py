@@ -22,8 +22,8 @@ def open_auction_handler(sender, instance, created, **kwargs):
                 if previous_task is not None:
                     if previous_task.get('task_id', None):
                         app.control.revoke(previous_task['task_id'], terminate=True, signal='SIGKILL')
-            min_duration = instance.opened_at + timezone.timedelta(seconds=20)
-            max_duration = instance.opened_at + timezone.timedelta(seconds=24)
+            min_duration = instance.opened_at + timezone.timedelta(hours=20)
+            max_duration = instance.opened_at + timezone.timedelta(hours=24)
             max_closing_date = random_date(start=min_duration, end=max_duration)
             open_auction_task = open_auction.apply_async((instance.pk, max_closing_date), eta=instance.opened_at).id
             record_object_on_redis(auction=instance.pk, task_id=open_auction_task)
