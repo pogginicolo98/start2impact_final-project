@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'webpack_loader',
 
+    'accounts',
     'auctions',
     'core',
     'users',

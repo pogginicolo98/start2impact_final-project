@@ -18,8 +18,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path, re_path
-from django_registration.backends.one_step.views import RegistrationView
-from users.forms import CustomUserForm
 
 # https://django-registration.readthedocs.io/en/3.2/
 # https://django-registration.readthedocs.io/en/3.2/custom-user.html
@@ -35,11 +33,7 @@ urlpatterns += [
     path('admin/', admin.site.urls),
 
     # Session authentication
-    path('accounts/register/',
-         RegistrationView.as_view(
-             form_class=CustomUserForm,
-             success_url='/'
-         ), name='django_registration_register'),
+    path('accounts/', include('accounts.urls')),
     path('accounts/', include('django_registration.backends.one_step.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 

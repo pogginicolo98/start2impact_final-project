@@ -6,7 +6,15 @@
   <style>
     html, body {
       height: 100%;
-      font-family: 'Titillium Web', sans-serif;
+    }
+
+    body {
+      background-image: linear-gradient(to bottom right, #22223B, #4A4E69);
+      color: #37251B;
+    }
+
+    a {
+      text-decoration: none;
     }
 
     .asteriskField {
@@ -17,37 +25,43 @@
       box-shadow: none !important;
     }
 
+    .btn-violet {
+      background-color: #4A4E69;
+      border-color: #4A4E69;
+      color: #FFF;
+      transition: 0.5s;
+    }
+
+    .btn-violet:hover {
+      background-color: #52528E;
+      border-color: #4A4E69;
+      color: #FFF;
+    }
+
+    .btn-outline-violet {
+      background-color: #F2E9E4;
+      border-color: #4A4E69;
+      color: #37251B;
+    }
+
+    .btn-outline-violet:hover {
+      background-color: #4A4E69;
+      border-color: #4A4E69;
+      color: #FFF;
+    }
+
     .auth-box {
-      border: 3px solid lightgrey;
+      border: 3px solid #C9ADA7;
       border-radius: 10px;
-      padding-top: 25px;
-      padding-bottom: 25px;
-      width: 550px;
       margin: auto;
-      background-color: white;
-    }
-
-    .login-form-container {
-      padding-top: 5px;
-      width: 300px;
-      margin: auto;
-    }
-
-    .registration-form-container {
-      padding-top: 5px;
-      width: 300px;
-      margin: auto;
-    }
-
-    .outer-area {
-      margin-top: 75px;
+      background-color: #F2E9E4;
     }
   </style>
 {% endblock %}
 
 {% block content %}
-  <div class="outer-area">
-    <div class="auth-box text-center">
+  <div class="container position-absolute top-50 start-50 translate-middle text-center">
+    <div class="col-12 col-md-8 col-lg-6 col-xxl-5 auth-box p-3 p-md-5">
       {% block auth %}
       {% endblock %}
     </div>
