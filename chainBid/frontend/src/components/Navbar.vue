@@ -71,13 +71,7 @@
                    <li><h6 class="dropdown-header">{{ requestUser }}</h6></li>
                    <li>
                      <a class="dropdown-item"
-                          href="#"
-                          >Profile
-                     </a>
-                   </li>
-                   <li>
-                     <a class="dropdown-item"
-                          href="#"
+                          href="/accounts/password_change/"
                           >Change password
                      </a>
                    </li>

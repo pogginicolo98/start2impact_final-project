@@ -3,6 +3,9 @@
 {% extends "auth_layout.html" %}
 {% load crispy_forms_tags %}
 
+<!-- Dynamic title -->
+{% block title %}Log In | {{ block.super }}{% endblock %}
+
 {% block auth %}
     <h1>ChainBid</h1>
     <p class="lead text-muted">Auction platform powered by blockchain</p>

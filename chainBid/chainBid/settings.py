@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'rest_auth.registration',
 
     'crispy_forms',
+    'crispy_bootstrap5',
     'webpack_loader',
 
     'auctions',
@@ -163,7 +164,8 @@ AUTH_USER_MODEL = 'users.CustomUser'
 
 # 'django-crispy-forms' app settings
 # https://django-crispy-forms.readthedocs.io/en/latest/
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 
 # Authentication settings
