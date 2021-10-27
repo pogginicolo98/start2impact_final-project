@@ -1,91 +1,116 @@
 <template lang="html">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-violet sticky-top shadow">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-violet-navbar sticky-top shadow">
     <div class="container">
-      <!-- Brand and logo -->
-      <router-link class="navbar-brand"
-                   :to="{ name: 'home' }"
-                   ><img alt="logo"
-                         class="d-inline-block mb-2"
-                         src="../../../static-storage/assets/logo-200x32-orig.png">
-      </router-link>
+        <div class="col-8 col-lg-2">
+          <!-- Brand and logo -->
+          <router-link class="navbar-brand"
+                       :to="{ name: 'home' }"
+                       ><img alt="logo"
+                             class="d-inline-block mb-2"
+                             src="../../../static-storage/assets/favicon x32.png">
+                        ChainBid
+          </router-link>
+        </div>
+        <div class="col-4 col-lg-8">
+          <!-- Collapsed menu button -->
+          <div class="text-end">
+            <button aria-controls="offcanvasNavbar"
+                    class="navbar-toggler"
+                    data-bs-target="#offcanvasNavbar"
+                    data-bs-toggle="offcanvas"
+                    type="button"
+                    ><span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
 
-      <!-- Collapsed menu button -->
-      <button aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              class="navbar-toggler"
-              data-bs-target="#navbarSupportedContent"
-              data-bs-toggle="collapse"
-              type="button">
-              <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Navbar elements -->
-      <div class="collapse navbar-collapse"
-           id="navbarSupportedContent">
-           <!-- Links -->
-           <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-             <li class="nav-item">
-               <router-link class="nav-link"
-                            exact
-                            :to="{ name: 'home' }"
-                            >Live acutions
-               </router-link>
-             </li>
-             <li class="nav-item">
-               <router-link class="nav-link"
-                            :to="{ name: 'closed auctions' }"
-                            >Closed auctions
-               </router-link>
-             </li>
-             <li class="nav-item" v-if="isStaffUser">
-               <router-link class="nav-link"
-                            :to="{ name: 'schedule auctions' }"
-                            >Schedule auctions
-               </router-link>
-             </li>
-             <li class="nav-item">
-               <a class="nav-link"
-                  href="#"
-                  >How it works
-               </a>
-             </li>
-           </ul>
-
-           <!-- Dropdown menu -->
-           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-             <!-- Dropdown button -->
-             <li class="nav-item dropdown">
-               <a aria-expanded="false"
-                  class="nav-link"
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  id="navbarDarkDropdownMenuLink"
-                  role="button">
-                  <i class="fa-solid fa-user-gear fs-24px"></i>
-               </a>
-
-               <!-- Dropdown elements -->
-               <ul aria-labelledby="navbarDarkDropdownMenuLink"
-                   class="dropdown-menu dropdown-menu-dark">
-                   <li><h6 class="dropdown-header">{{ requestUser }}</h6></li>
-                   <li>
-                     <a class="dropdown-item"
-                          href="/accounts/password_change/"
-                          >Change password
+          <div aria-labelledby="offcanvasNavbarLabel"
+               class="offcanvas offcanvas-end mx-auto"
+               id="offcanvasNavbar"
+               tabindex="-1">
+               <div class="offcanvas-header">
+                 <!-- Brand and logo -->
+                 <router-link class="navbar-brand"
+                              :to="{ name: 'home' }"
+                              ><img alt="logo"
+                                    class="d-inline-block mb-2"
+                                    src="../../../static-storage/assets/favicon x32.png">
+                              ChainBid
+                 </router-link>
+                 <button aria-label="Close"
+                         class="fa-solid fa-xmark btn-menu text-muted fs-32px"
+                         data-bs-dismiss="offcanvas"
+                         type="button">
+                 </button>
+               </div>
+               <div class="offcanvas-body mx-lg-auto">
+                 <ul class="navbar-nav">
+                   <li class="nav-item">
+                     <router-link class="nav-link"
+                                  exact
+                                  :to="{ name: 'home' }"
+                                  >Live acutions
+                     </router-link>
+                   </li>
+                   <li class="nav-item">
+                     <router-link class="nav-link"
+                                  :to="{ name: 'closed auctions' }"
+                                  >Closed auctions
+                     </router-link>
+                   </li>
+                   <li class="nav-item" v-if="isStaffUser">
+                     <router-link class="nav-link"
+                                  :to="{ name: 'schedule auctions' }"
+                                  >Schedule auctions
+                     </router-link>
+                   </li>
+                   <li class="nav-item">
+                     <a class="nav-link"
+                        href="#"
+                        >How it works
                      </a>
                    </li>
-                   <li>
-                     <a class="dropdown-item"
-                          href="/accounts/logout/"
-                          >Log out<i class="fa-solid fa-right-from-bracket fs-14px ms-2"></i>
-                     </a>
-                   </li>
-               </ul>
-             </li>
-           </ul>
-      </div> <!-- Navbar elements -->
-    </div> <!-- Container -->
+                 </ul>
+               </div>
+          </div>
+        </div>
+
+        <div class="col-2 d-none d-lg-block">
+          <div class="d-flex justify-content-end">
+            <!-- Dropdown menu -->
+            <ul class="navbar-nav">
+              <!-- Dropdown button -->
+              <li class="nav-item dropdown">
+                <a aria-expanded="false"
+                   class="nav-link"
+                   data-bs-toggle="dropdown"
+                   href="#"
+                   id="navbarDarkDropdownMenuLink"
+                   role="button">
+                   <i class="fa-solid fa-user-gear fs-24px"></i>
+                </a>
+
+                <!-- Dropdown elements -->
+                <ul aria-labelledby="navbarDarkDropdownMenuLink"
+                    class="dropdown-menu dropdown-menu-dark">
+                    <li><h6 class="dropdown-header">{{ requestUser }}</h6></li>
+                    <li>
+                      <a class="dropdown-item"
+                           href="/accounts/password_change/"
+                           >Change password
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item"
+                           href="/accounts/logout/"
+                           ><i class="fa-solid fa-right-from-bracket fs-14px me-2"></i>Log out
+                      </a>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
   </nav>
 </template>
 
@@ -143,5 +168,26 @@
 
   .router-link-active {
     color: #f5c8bd !important;
+  }
+
+  .btn-menu {
+    background: rgba(0, 0, 0, 0.01);
+    border: 0px;
+  }
+
+  @media screen and (max-width: 992px) {
+    .offcanvas {
+      background-image: linear-gradient(to bottom, #22223B, #4A4E69) !important;
+    }
+
+    .offcanvas-end {
+      width: 300px;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .offcanvas-end {
+      width: 600px;
+    }
   }
 </style>
