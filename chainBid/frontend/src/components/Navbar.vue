@@ -42,8 +42,29 @@
                          type="button">
                  </button>
                </div>
-               <div class="offcanvas-body mx-lg-auto">
+               <div class="offcanvas-body mx-lg-auto pt-0 pt-lg-0">
                  <ul class="navbar-nav">
+                   <li class="nav-item d-lg-none">
+                     <p class="text-muted text-center fs-18px fw-bold">{{ requestUser }}</p>
+                   </li>
+                   <li class="nav-item d-lg-none">
+                     <div class="row justify-content-between">
+                       <div class="col-auto ms-3">
+                         <a class="btn btn-violet rounded-pill">
+                           <i class="fa-solid fa-user me-2"></i>Profile
+                         </a>
+                       </div>
+                       <div class="col-auto me-3">
+                         <a class="btn btn-violet rounded-pill"
+                            href="/accounts/logout/"
+                            ><i class="fa-solid fa-right-from-bracket me-2"></i>Log out
+                         </a>
+                       </div>
+                     </div>
+                   </li>
+                   <li class="nav-item d-lg-none">
+                     <hr class="text-muted">
+                   </li>
                    <li class="nav-item">
                      <router-link class="nav-link"
                                   exact
@@ -69,6 +90,8 @@
                         >How it works
                      </a>
                    </li>
+
+
                  </ul>
                </div>
           </div>
@@ -80,32 +103,38 @@
             <ul class="navbar-nav">
               <!-- Dropdown button -->
               <li class="nav-item dropdown">
-                <a aria-expanded="false"
-                   class="nav-link"
-                   data-bs-toggle="dropdown"
-                   href="#"
-                   id="navbarDarkDropdownMenuLink"
-                   role="button">
-                   <i class="fa-solid fa-user-gear fs-24px"></i>
-                </a>
 
-                <!-- Dropdown elements -->
-                <ul aria-labelledby="navbarDarkDropdownMenuLink"
-                    class="dropdown-menu dropdown-menu-dark">
-                    <li><h6 class="dropdown-header">{{ requestUser }}</h6></li>
-                    <li>
-                      <a class="dropdown-item"
-                           href="/accounts/password_change/"
-                           >Change password
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item"
-                           href="/accounts/logout/"
-                           ><i class="fa-solid fa-right-from-bracket fs-14px me-2"></i>Log out
-                      </a>
-                    </li>
-                </ul>
+                <div class="btn-group">
+                  <a class="nav-link btn-menu"
+                          href="#"
+                          ><i class="fa-solid fa-user fs-20px"></i>
+                  </a>
+                  <button aria-expanded="false"
+                          class="nav-link btn-menu"
+                          data-bs-toggle="dropdown"
+                          data-bs-display="static"
+                          type="button"
+                          ><i class="fa-solid fa-chevron-down"></i><span class="visually-hidden">Toggle Dropdown</span>
+
+                  </button>
+                  <!-- Dropdown elements -->
+                  <ul aria-labelledby="navbarDarkDropdownMenuLink"
+                      class="dropdown-menu dropdown-menu-dark dropdown-menu-lg-end">
+                      <li><h6 class="dropdown-header text-center">{{ requestUser }}</h6></li>
+                      <li>
+                        <a class="dropdown-item"
+                             href="/accounts/password_change/"
+                             >Change password
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item"
+                             href="/accounts/logout/"
+                             ><i class="fa-solid fa-right-from-bracket fs-14px me-2"></i>Log out
+                        </a>
+                      </li>
+                  </ul>
+                </div>
               </li>
             </ul>
           </div>
@@ -153,7 +182,7 @@
   }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
   .nav-icon {
     color: #ffe3b0;
   }
