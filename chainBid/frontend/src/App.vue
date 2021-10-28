@@ -106,8 +106,12 @@
     color: #37251B;
   }
 
-  .bg-gradient-violet {
+  .bg-gradient-violet-navbar {
     background-image: linear-gradient(to bottom right, #22223B, #4A4E69);
+  }
+
+  .bg-gradient-violet-offcanvas {
+    background-image: linear-gradient(to bottom, #22223B, #4A4E69);
   }
 
   .text-violet {

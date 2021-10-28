@@ -23,12 +23,12 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon"
-          href="{% static 'assets/favicon-32x32.png' %}">
+          href="{% static 'assets/favicon x32.png' %}">
 
     {% block style %}
     {% endblock %}
 
-    <title>ChainBid</title>
+    <title>{% block title %}{% endblock %}ChainBid</title>
   </head>
   <body>
     {% block content %}
