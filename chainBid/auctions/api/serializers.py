@@ -153,3 +153,31 @@ class AuctionClosedSerializer(serializers.ModelSerializer):
         if instance.report.tx_id:
             return instance.report.tx_id
         return None
+
+
+class UserAuctionClosedSerializer(serializers.ModelSerializer):
+    """
+    Auction serializer for AuctionClosedListRetrieveAPIView.
+
+    :fields
+    - title
+    - description
+    - image
+    - final_price
+    - closed_at
+    - json_file
+
+    * format: JSON.
+    """
+
+    json_file = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = Auction
+        fields = ['id', 'title', 'description', 'image', 'final_price', 'closed_at', 'json_file']
+
+    def get_json_file(self, instance):
+        request = self.context.get("request")
+        if instance.report.json_file:
+            return request.build_absolute_uri(instance.report.json_file.url)
+        return None

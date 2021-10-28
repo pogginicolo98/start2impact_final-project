@@ -1,9 +1,10 @@
 from auctions.api.serializers import (AuctionClosedSerializer,
                                       AuctionImageSerializer,
                                       AuctionScheduleSerializer,
-                                      AuctionSerializer)
+                                      AuctionSerializer,
+                                      UserAuctionClosedSerializer)
 from auctions.models import Auction
-from rest_framework.generics import UpdateAPIView
+from rest_framework.generics import ListAPIView, UpdateAPIView
 from rest_framework.mixins import ListModelMixin, RetrieveModelMixin
 from rest_framework.permissions import IsAdminUser, IsAuthenticated
 from rest_framework.viewsets import GenericViewSet, ModelViewSet
@@ -12,6 +13,7 @@ from rest_framework.viewsets import GenericViewSet, ModelViewSet
 class AuctionScheduleViewSet(ModelViewSet):
     """
     Auction schedule CRUD ViewSet.
+    Manage scheduled auctions.
 
     :actions
     - list
@@ -31,6 +33,7 @@ class AuctionScheduleViewSet(ModelViewSet):
 class AuctionImageUpdateAPIView(UpdateAPIView):
     """
     Auction image UpdateAPIView.
+    Update the image of a specific auction.
 
     :actions
     - update
@@ -48,6 +51,7 @@ class AuctionListRetrieveAPIView(ListModelMixin,
                                  GenericViewSet):
     """
     Auction ViewSet.
+    Retrieve all live auctions.
 
     :actions
     - list
@@ -66,6 +70,7 @@ class AuctionClosedListRetrieveAPIView(ListModelMixin,
                                        GenericViewSet):
     """
     Auction ViewSet.
+    Retrieve all closed auctions.
 
     :actions
     - list
@@ -77,3 +82,21 @@ class AuctionClosedListRetrieveAPIView(ListModelMixin,
     queryset = Auction.objects.filter(status=False).exclude(closed_at=None)
     serializer_class = AuctionClosedSerializer
     permission_classes = [IsAuthenticated]
+
+
+class UserAuctionClosedListAPIView(ListAPIView):
+    """
+    Auction ViewSet.
+    Retrieve all auctions won by a specific user.
+
+    :actions
+    - retrieve
+
+    * Only authenticated users can access to this endpoint.
+    """
+
+    serializer_class = UserAuctionClosedSerializer
+    permission_classes = [IsAuthenticated]
+
+    def get_queryset(self):
+        return Auction.objects.filter(status=False, winner=self.request.user)

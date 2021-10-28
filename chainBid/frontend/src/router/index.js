@@ -6,6 +6,7 @@ import ScheduleAuctions from "@/views/ScheduleAuctions.vue";
 import AuctionEditor from "@/views/AuctionEditor.vue";
 import ClosedAuctions from "@/views/ClosedAuctions.vue";
 import ClosedAuctionDetail from "@/views/ClosedAuctionDetail.vue";
+import Profile from "@/views/Profile.vue";
 import NotFound from "@/views/NotFound.vue";
 
 Vue.use(VueRouter);
@@ -43,6 +44,11 @@ const routes = [
     name: "closed auction detail",
     component: ClosedAuctionDetail,
     props: true
+  },
+  {
+    path: "/profile",
+    name: "profile",
+    component: Profile
   },
   {
     path: "*",

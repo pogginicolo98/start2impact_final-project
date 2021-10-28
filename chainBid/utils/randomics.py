@@ -4,7 +4,7 @@ from django.utils.timezone import timedelta
 
 def random_date(start, end):
     """
-    This function will return a random datetime between two datetime objects.
+    Return a random datetime between two datetime objects.
     """
 
     delta = end - start

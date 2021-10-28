@@ -1,67 +1,69 @@
-<template>
-  <div class="home">
+<template lang="html">
+  <div class="profile">
     <!-- Error 404 -->
     <div class="not-found"
          v-if="notFound">
          <Error404Component/>
     </div>
 
-    <!-- Homepage -->
+    <!-- Profile -->
     <div class="container mt-3"
          v-else>
          <!-- Title -->
          <div class="text-center fw-bold fs-32px">
-           <p>Live auctions</p>
+           <p>Auctions won</p>
          </div>
 
-         <!-- Auctions -->
+         <!-- Auctions won -->
          <div class="row justify-content-start mt-4"
               v-if="auctions.length > 0">
-              <div class="col-12 col-md-6 col-lg-4 col-xxl-3"
+              <div class="col-12"
                    v-for="(auction, index) in auctions"
                    :key="index">
                    <!-- Card -->
-                   <router-link :to="{ name: 'auction', params: { id: auction.id } }">
-                     <div class="card card-auction position-relative text-card-auction mb-4 mx-auto"
-                          style="width: 18rem; height: 21rem;">
-                          <div class="card-body text-center">
-                            <!-- Card title -->
-                            <p class="text-truncate fw-bold fs-24px mb-2">{{ auction.title }}</p>
-
-                            <!-- Card image -->
-                            <div class="card-img-wrap-auction">
-                              <img alt="product image"
-                                   class="card-img-auction"
-                                   :src="auction.image">
+                   <router-link :to="{ name: 'closed auction detail', params: { id: auction.id } }">
+                     <div class="card card-auction position-relative text-card-auction mb-3"
+                          style="width: 100%; height: 7rem;">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-2">
+                                <!-- Card image -->
+                                  <img alt="product image"
+                                       class="img-fluid"
+                                       :src="auction.image">
+                              </div>
+                              <div class="col-6">
+                                <!-- Card title -->
+                                <p class="text-truncate fw-bold fs-24px mb-2">{{ auction.title }}</p>
+                                <p class="text-muted text-truncate fs-14px" v-if="!auction.description">No description provided</p>
+                                <p class="text-muted text-truncate fs-14px" v-else>{{ auction.description }}</p>
+                              </div>
+                              <div class="col-2">
+                                <!-- Card body -->
+                                <p class="fs-20px">{{ auction.final_price }} €</p>
+                                <!-- Card footer -->
+                                <p class="text-muted fs-14px">{{ getDate(auction.closed_at) }}</p>
+                              </div>
+                              <div class="col-2 d-flex align-items-end">
+                                <div class="ms-auto">
+                                  <a class="btn btn-violet rounded-pill"
+                                     download
+                                     :href="auction.json_file"
+                                     >Download<i class="fa-solid fa-file-arrow-down ms-2"></i>
+                                  </a>
+                                </div>
+                              </div>
                             </div>
-
-                            <!-- Card body -->
-                            <p class="fs-20px mt-3 mb-1">{{ auction.last_price }} €</p>
-                            <p class="text-danger fs-17px"
-                               v-if="auction.remaining_time"
-                               >Started
-                            </p>
-                            <p class="text-muted fs-17px"
-                               v-else
-                               >No bids yet
-                            </p>
-                          </div>
-
-                          <!-- Card footer -->
-                          <div class="position-absolute bottom-0 start-50 translate-middle-x text-center"
-                               style="width: 90%">
-                               <hr class="mb-1">
-                               <p class="text-muted fs-14px mb-1">{{ getDateFromNow(auction.opened_at) }}</p>
                           </div>
                      </div>
                    </router-link> <!-- Card -->
               </div> <!-- Col -->
-         </div> <!-- Auctions -->
+         </div> <!-- Auctions won -->
 
-         <!-- No live auctions -->
+         <!-- No auction won -->
          <div class="text-center mt-5"
               v-else>
-              <p class="fs-20px fw-blod text-muted">We are sorry but there are no live auctions at the moment...</p>
+              <p class="fs-20px fw-blod text-muted">No auction won</p>
          </div>
 
          <!-- Pagination -->
@@ -74,7 +76,7 @@
              </div>
            </div>
          </div>
-    </div> <!-- Container -->
+    </div>
   </div>
 </template>
 
@@ -85,7 +87,7 @@
   import moment from 'moment';
 
   export default {
-    name: "Home",
+    name: "Profile",
     components: {
       Error404Component
     },
@@ -104,7 +106,7 @@
           Retrieve active auctions according to pagination.
         */
 
-        let endpoint = "/api/auctions/";
+        let endpoint = "/api/user-closed-auctions/";
         if (this.next) {
           endpoint = this.next;
         }
@@ -132,8 +134,8 @@
             this.notFound = true;
           });
       },
-      getDateFromNow(date) {
-        return moment(date).fromNow();
+      getDate(date) {
+        return moment.utc(date, 'YYYY/MM/DD - HH:mm:ss').format('YYYY/MM/DD - HH:mm:ss');
       },
       getNextAuctions() {
         /*
@@ -151,11 +153,11 @@
       }
     },
     created() {
-      document.title = "Live auctions | ChainBid";
+      document.title = "Profile | ChainBid";
       this.getAuctions();
       this.getNextAuctions();
     }
-  };
+  }
 </script>
 
 <style lang="css" scoped>

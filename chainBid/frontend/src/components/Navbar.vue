@@ -50,9 +50,10 @@
                    <li class="nav-item d-lg-none">
                      <div class="row justify-content-between">
                        <div class="col-auto ms-3">
-                         <a class="btn btn-violet rounded-pill">
-                           <i class="fa-solid fa-user me-2"></i>Profile
-                         </a>
+                         <router-link class="btn btn-violet rounded-pill"
+                                      :to="{ name: 'profile' }"
+                                      ><i class="fa-solid fa-user me-2"></i>Profile
+                         </router-link>
                        </div>
                        <div class="col-auto me-3">
                          <a class="btn btn-violet rounded-pill"
@@ -105,10 +106,10 @@
               <li class="nav-item dropdown">
 
                 <div class="btn-group">
-                  <a class="nav-link btn-menu"
-                          href="#"
-                          ><i class="fa-solid fa-user fs-20px"></i>
-                  </a>
+                  <router-link class="nav-link btn-menu"
+                               :to="{ name: 'profile' }"
+                               ><i class="fa-solid fa-user fs-20px"></i>
+                  </router-link>
                   <button aria-expanded="false"
                           class="nav-link btn-menu"
                           data-bs-toggle="dropdown"
