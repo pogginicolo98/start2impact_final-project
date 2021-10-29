@@ -58,7 +58,8 @@
                  <!-- Winner -->
                  <p class="fs-20px"
                     v-if="auction.winner"
-                    ><span class="fw-bold">Winner</span>: @{{ auction.winner }}
+                    ><span class="fw-bold">Winner: </span>
+                    <router-link :to="{ name: 'profile', params: { slug: auction.winner_slug } }">@{{ auction.winner }}</router-link>
                  </p>
                  <p class="text-danger fw-bold fs-20px"
                     v-else
@@ -100,52 +101,62 @@
                    </table>
                  </div>
 
-                 <!-- Hash -->
-                 <p class="fw-bold mb-1 mt-2">SHA256:</p>
-                 <div class="container box-icon rounded pe-1">
-                   <div class="row">
-                     <div class="col-9 col-sm-10 col-xxl-11">
-                       <p class="mt-3"
-                          id="text-hash"
-                          >{{ auction.hash }}
-                       </p>
-                     </div>
-                     <div class="col-3 col-sm-2 col-xxl-1 text-end ps-0">
-                       <button class="btn btn-icon my-1"
+                 <div class="mt-2"
+                      v-if="auction.tx_id">
+                      <!-- Hash -->
+                      <p class="fw-bold mb-1">SHA256:</p>
+                      <div class="container box-icon rounded pe-1">
+                        <div class="row">
+                          <div class="col-9 col-sm-10 col-xxl-11">
+                            <p class="mt-3"
+                               id="text-hash"
+                               >{{ auction.hash }}
+                            </p>
+                          </div>
+                          <div class="col-3 col-sm-2 col-xxl-1 text-end ps-0">
+                            <button class="btn btn-icon my-1"
+                                    style="width: 46px; height: 38px;"
+                                    v-html="copyToClipboardMessage"
+                                    @click="copyToClipboard(auction.hash)">
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Transaction ID -->
+                      <p class="fw-bold mb-1 mt-2">Transaction ID:</p>
+                      <div class="container box-icon rounded pe-1">
+                        <div class="row">
+                          <div class="col-9 col-sm-10 col-xxl-11">
+                            <p class="mt-3"
+                               id="text-hash"
+                               >{{ auction.tx_id }}
+                            </p>
+                          </div>
+                          <div class="col-3 col-sm-2 col-xxl-1 text-end ps-0">
+                            <a class="btn btn-icon my-1"
                                style="width: 46px; height: 38px;"
-                               v-html="copyToClipboardMessage"
-                               @click="copyToClipboard(auction.hash)">
-                       </button>
-                     </div>
-                   </div>
+                               :href="txIdLink"
+                               ><i class="fa-solid fa-link"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                  </div>
 
-                 <!-- Transaction ID -->
-                 <p class="fw-bold mb-1 mt-2">Transaction ID:</p>
-                 <div class="container box-icon rounded pe-1">
-                   <div class="row">
-                     <div class="col-9 col-sm-10 col-xxl-11">
-                       <p class="mt-3"
-                          id="text-hash"
-                          >{{ auction.tx_id }}
-                       </p>
-                     </div>
-                     <div class="col-3 col-sm-2 col-xxl-1 text-end ps-0">
-                       <a class="btn btn-icon my-1"
-                          style="width: 46px; height: 38px;"
-                          :href="txIdLink"
-                          ><i class="fa-solid fa-link"></i>
-                       </a>
-                     </div>
-                   </div>
+                 <div class="text-danger mt-2"
+                      v-else>
+                      <p class="mb-0">Something went wrong and the auction results were not recorded on the blockchain.</p>
+                      <p>Please contact the support for more information.</p>
                  </div>
 
                  <!-- Download -->
                  <div class="d-grid d-sm-block text-end mt-3">
                    <a class="btn btn-violet rounded-pill"
                       download
+                      v-if="auction.json_file"
                       :href="auction.json_file"
-                      >Download<i class="fa-solid fa-file-arrow-down ms-2"></i>
+                      ><i class="fa-solid fa-file-arrow-down me-2"></i>Download
                    </a>
                  </div>
                </div>

@@ -117,6 +117,7 @@ class AuctionClosedSerializer(serializers.ModelSerializer):
     - initial_price
     - final_price
     - winner
+    - winner_slug
     - opened_at
     - closed_at
     - json_file
@@ -125,6 +126,7 @@ class AuctionClosedSerializer(serializers.ModelSerializer):
     """
 
     winner = serializers.SerializerMethodField(read_only=True)
+    winner_slug = serializers.SerializerMethodField(read_only=True)
     json_file = serializers.SerializerMethodField(read_only=True)
     hash = serializers.SerializerMethodField(read_only=True)
     tx_id = serializers.SerializerMethodField(read_only=True)
@@ -136,6 +138,11 @@ class AuctionClosedSerializer(serializers.ModelSerializer):
     def get_winner(self, instance):
         if instance.winner is not None:
             return instance.winner.username
+        return None
+
+    def get_winner_slug(self, instance):
+        if instance.winner is not None:
+            return instance.winner.slug
         return None
 
     def get_json_file(self, instance):

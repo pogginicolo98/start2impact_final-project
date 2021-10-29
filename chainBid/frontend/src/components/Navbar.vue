@@ -45,7 +45,7 @@
                <div class="offcanvas-body mx-lg-auto pt-0 pt-lg-0">
                  <ul class="navbar-nav">
                    <li class="nav-item d-lg-none">
-                     <p class="text-muted text-center fs-18px fw-bold">{{ requestUser }}</p>
+                     <p class="text-muted text-center fs-18px fw-bold">{{ requestUser.username }}</p>
                    </li>
                    <li class="nav-item d-lg-none">
                      <div class="row justify-content-between">
@@ -79,7 +79,7 @@
                                   >Closed auctions
                      </router-link>
                    </li>
-                   <li class="nav-item" v-if="isStaffUser">
+                   <li class="nav-item" v-if="requestUser.is_staff">
                      <router-link class="nav-link"
                                   :to="{ name: 'schedule auctions' }"
                                   >Schedule auctions
@@ -107,7 +107,7 @@
 
                 <div class="btn-group">
                   <router-link class="nav-link btn-menu"
-                               :to="{ name: 'profile' }"
+                               :to="{ name: 'profile', params: { slug: requestUser.slug } }"
                                ><i class="fa-solid fa-user fs-20px"></i>
                   </router-link>
                   <button aria-expanded="false"
@@ -121,7 +121,12 @@
                   <!-- Dropdown elements -->
                   <ul aria-labelledby="navbarDarkDropdownMenuLink"
                       class="dropdown-menu dropdown-menu-dark dropdown-menu-lg-end">
-                      <li><h6 class="dropdown-header text-center">{{ requestUser }}</h6></li>
+                      <li>
+                        <router-link class="dropdown-item"
+                                     :to="{ name: 'profile', params: { slug: requestUser.slug } }"
+                                     >{{ requestUser.username }}
+                        </router-link>
+                      </li>
                       <li>
                         <a class="dropdown-item"
                              href="/accounts/password_change/"
@@ -152,8 +157,7 @@
     name: "NavbarComponent",
     data() {
       return {
-        requestUser: null,
-        isStaffUser: null
+        requestUser: {}
       };
     },
     methods: {
@@ -170,9 +174,8 @@
               console.log(response);
               this.$router.push({name: "not found"});
             } else {
-              this.requestUser = response.username;
-              this.isStaffUser = response.is_staff;
-              window.localStorage.setItem("username", this.requestUser);
+              this.requestUser = response;
+              window.localStorage.setItem("requestUser", response.username);
             }
           });
       }

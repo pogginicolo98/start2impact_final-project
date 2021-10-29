@@ -46,9 +46,10 @@ const routes = [
     props: true
   },
   {
-    path: "/profile",
+    path: "/profile/:slug",
     name: "profile",
-    component: Profile
+    component: Profile,
+    props: true
   },
   {
     path: "*",

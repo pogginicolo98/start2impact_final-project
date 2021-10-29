@@ -51,7 +51,7 @@
                               type="submit"
                               :class="{'disabled': !editImage}"
                               @click="onUpload"
-                              >Upload<i class="fa-solid fa-upload ms-2"></i>
+                              ><i class="fa-solid fa-upload me-2"></i>Upload
                       </button>
                     </div>
                   </div>

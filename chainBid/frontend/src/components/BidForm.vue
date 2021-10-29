@@ -36,7 +36,7 @@
                       :class="{'btn-danger': enabled,
                                'btn-violet': !enabled}"
                       :disabled="enabled"
-                      >Bid<i class="fa-solid fa-hand ms-2"></i>
+                      ><i class="fa-solid fa-hand-holding-dollar me-2"></i>Bid
               </button>
             </div>
           </div>

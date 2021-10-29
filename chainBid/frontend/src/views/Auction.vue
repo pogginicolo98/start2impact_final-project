@@ -42,8 +42,8 @@
                          v-else
                          >{{ auction.description }}
                       </p>
-                      <p class="text-muted fs-14px mb-0"><strong>Initial price</strong>: {{ auction.initial_price }} €</p>
-                      <p class="text-muted fs-14px mb-0"><strong>Opened</strong>: {{ getOpenedAtFromNow }}</p>
+                      <p class="text-muted fs-14px mb-0"><strong>Initial price: </strong>{{ auction.initial_price }} €</p>
+                      <p class="text-muted fs-14px mb-0"><strong>Opened: </strong>{{ getOpenedAtFromNow }}</p>
                     </div>
                </div>
              </div>
