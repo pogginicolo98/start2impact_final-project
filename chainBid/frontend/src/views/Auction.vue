@@ -126,7 +126,7 @@
   import { apiService } from "@/common/api.service.js";
   import BidFormComponent from "@/components/BidForm.vue";
   import Error404Component from "@/components/Error404.vue";
-  import * as ReconnectingWebSocket from "../../../static-storage/js/reconnecting-websocket.min.js";
+  import * as ReconnectingWebSocket from "@/assets/js/reconnecting-websocket.min.js";
   import moment from 'moment';
 
   export default {

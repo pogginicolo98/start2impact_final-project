@@ -144,8 +144,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = Path(BASE_DIR).resolve().parent / 'static-serve'
 STATICFILES_DIRS = [
     BASE_DIR / 'static-storage',
-    BASE_DIR / 'assets',
-    BASE_DIR / 'front-end' / 'dist',
+    BASE_DIR / 'frontend' / 'dist',
 ]
 
 MEDIA_URL = '/media/'

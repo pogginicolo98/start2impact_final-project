@@ -4,13 +4,17 @@
 # Envirnments
 venv
 
+# Serve dirs
+media-serve
+static-serve
+
 # Secret files
 *password.py
 
 # Vue.js
 .DS_Store
 node_modules
-/dist
+dist
 
 # Log files
 npm-debug.log*
