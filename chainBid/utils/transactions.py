@@ -7,7 +7,7 @@ def write_message_on_chain(message):
     """
      Create a new Ethereum transaction and send it on chain.
 
-     * EIP 1559-style transaction
+     * EIP-1559 style transaction
     """
 
     w3 = Web3(Web3.HTTPProvider(password.network_url))
@@ -23,7 +23,7 @@ def write_message_on_chain(message):
     estimated_gas = w3.eth.estimate_gas(basic_tx)
     max_priority_fee = w3.eth.max_priority_fee
     max_fee = estimated_gas + max_priority_fee
-    nonce = w3.eth.get_transaction_count(address)
+    nonce = w3.eth.get_transaction_count(address, 'pending')
     chain_id = w3.eth.chain_id
 
     signed_tx = w3.eth.account.sign_transaction(dict(
