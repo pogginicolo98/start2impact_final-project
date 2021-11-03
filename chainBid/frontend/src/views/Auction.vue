@@ -42,8 +42,8 @@
                          v-else
                          >{{ auction.description }}
                       </p>
-                      <p class="text-muted fs-14px mb-0"><strong>Initial price</strong>: {{ auction.initial_price }} €</p>
-                      <p class="text-muted fs-14px mb-0"><strong>Opened</strong>: {{ getOpenedAtFromNow }}</p>
+                      <p class="text-muted fs-14px mb-0"><strong>Initial price: </strong>{{ auction.initial_price }} €</p>
+                      <p class="text-muted fs-14px mb-0"><strong>Opened: </strong>{{ getOpenedAtFromNow }}</p>
                     </div>
                </div>
              </div>
@@ -136,8 +136,8 @@
       Error404Component
     },
     props: {
-      id: {
-        type: Number,
+      slug: {
+        type: String,
         required: true
       }
     },
@@ -178,7 +178,7 @@
           Retrieve auction's data and set the page title.
         */
 
-        let endpoint = `/api/auctions/${this.id}/`;
+        let endpoint = `/api/auctions/${this.slug}/`;
         await apiService(endpoint)
           .then(response => {
             if (response.detail) {
@@ -211,7 +211,7 @@
             'ws://'
             + window.location.host
             + '/ws/auctions/'
-            + this.id
+            + this.slug
             + '/bid/'
         );
         this.bidSocket.onmessage = e => {

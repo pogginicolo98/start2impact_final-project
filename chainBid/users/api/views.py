@@ -1,10 +1,12 @@
+from django.contrib.auth import get_user_model
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from users.api.serializers import UserDisplaySerializer
+from rest_framework.generics import RetrieveAPIView
+from users.api.serializers import RequestUserSerializer, UserProfileSerializer
+
+UserModel = get_user_model()
 
 
-class CurrentUserAPIView(APIView):
+class RequestUserAPIView(RetrieveAPIView):
     """
     An APIView that provides 'retrieve()' action.
     Retrieve the username of the current user.
@@ -12,8 +14,23 @@ class CurrentUserAPIView(APIView):
     * Only authenticated user can access this endpoint.
     """
 
+    serializer_class = RequestUserSerializer
     permission_classes = [IsAuthenticated]
 
-    def get(self, response):
-        serializer = UserDisplaySerializer(response.user)
-        return Response(serializer.data)
+    def get_object(self):
+        serializer = self.serializer_class(self.request.user)
+        return serializer.data
+
+
+class UserProfileAPIView(RetrieveAPIView):
+    """
+    An APIView that provides 'retrieve()' action.
+    Retrieve the username of the current user.
+
+    * Only authenticated user can access this endpoint.
+    """
+
+    queryset = UserModel.objects.all()
+    lookup_field = "slug"
+    serializer_class = UserProfileSerializer
+    permission_classes = [IsAuthenticated]

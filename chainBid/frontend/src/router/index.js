@@ -6,6 +6,7 @@ import ScheduleAuctions from "@/views/ScheduleAuctions.vue";
 import AuctionEditor from "@/views/AuctionEditor.vue";
 import ClosedAuctions from "@/views/ClosedAuctions.vue";
 import ClosedAuctionDetail from "@/views/ClosedAuctionDetail.vue";
+import Profile from "@/views/Profile.vue";
 import NotFound from "@/views/NotFound.vue";
 
 Vue.use(VueRouter);
@@ -17,7 +18,7 @@ const routes = [
     component: Home
   },
   {
-    path: "/auction/:id",
+    path: "/auction/:slug",
     name: "auction",
     component: Auction,
     props: true
@@ -28,7 +29,7 @@ const routes = [
     component: ScheduleAuctions
   },
   {
-    path: "/schedule-auctions/:id",
+    path: "/schedule-auctions/:slug",
     name: "auction editor",
     component: AuctionEditor,
     props: true
@@ -39,9 +40,15 @@ const routes = [
     component: ClosedAuctions
   },
   {
-    path: "/closed-auctions/:id",
+    path: "/closed-auctions/:slug",
     name: "closed auction detail",
     component: ClosedAuctionDetail,
+    props: true
+  },
+  {
+    path: "/profile/:slug",
+    name: "profile",
+    component: Profile,
     props: true
   },
   {

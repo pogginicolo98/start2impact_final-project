@@ -14,15 +14,17 @@ class AuctionScheduleSerializer(serializers.ModelSerializer):
     - image
     - initial_price
     - opened_at
+    - slug
 
     * format: JSON.
     """
 
     image = serializers.ImageField(read_only=True)
+    slug = serializers.SlugField(read_only=True)
 
     class Meta:
         model = Auction
-        fields = ['id', 'title', 'description', 'image', 'initial_price', 'opened_at']
+        exclude = ['final_price', 'closed_at', 'winner', 'status']
 
     def validate_initial_price(self, value):
         if value == 0:
@@ -56,6 +58,7 @@ class AuctionSerializer(serializers.ModelSerializer):
     - last_price
     - opened_at
     - remaining_time
+    - slug
 
     * format: JSON.
     """
@@ -65,16 +68,16 @@ class AuctionSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Auction
-        fields = ['id', 'title', 'description', 'image', 'opened_at', 'initial_price', 'last_price', 'remaining_time']
+        exclude = ['final_price', 'closed_at', 'winner', 'status']
 
     def get_last_price(self, instance):
-        latest_bid = get_latest_object_on_redis(auction=instance.pk, type_obj=BIDS_KEY)
+        latest_bid = get_latest_object_on_redis(auction=instance.slug, type_obj=BIDS_KEY)
         if latest_bid is not None:
             return latest_bid['price']
         return instance.initial_price
 
     def get_remaining_time(self, instance):
-        latest_bid = get_latest_object_on_redis(auction=instance.pk, type_obj=BIDS_KEY)
+        latest_bid = get_latest_object_on_redis(auction=instance.slug, type_obj=BIDS_KEY)
         if latest_bid is not None:
             if latest_bid.get('eta', None) is not None:
                 delta = latest_bid['eta'] - timezone.now()
@@ -94,9 +97,9 @@ class AuctionBidSerializer(serializers.Serializer):
 
     def validate(self, data):
         user = self.context.get('user')
-        auction_pk = self.context.get('auction')
-        if auction_started(auction=auction_pk):
-            latest_bid = get_latest_object_on_redis(auction=auction_pk, type_obj=BIDS_KEY)
+        auction_slug = self.context.get('auction')
+        if auction_started(auction=auction_slug):
+            latest_bid = get_latest_object_on_redis(auction=auction_slug, type_obj=BIDS_KEY)
             if user == latest_bid['user']:
                 raise serializers.ValidationError('Your previous bid is still active.')
             if data['price'] <= latest_bid['price'] or data['price'] <= 0:
@@ -117,14 +120,17 @@ class AuctionClosedSerializer(serializers.ModelSerializer):
     - initial_price
     - final_price
     - winner
+    - winner_slug
     - opened_at
     - closed_at
+    - slug
     - json_file
 
     * format: JSON.
     """
 
     winner = serializers.SerializerMethodField(read_only=True)
+    winner_slug = serializers.SerializerMethodField(read_only=True)
     json_file = serializers.SerializerMethodField(read_only=True)
     hash = serializers.SerializerMethodField(read_only=True)
     tx_id = serializers.SerializerMethodField(read_only=True)
@@ -136,6 +142,11 @@ class AuctionClosedSerializer(serializers.ModelSerializer):
     def get_winner(self, instance):
         if instance.winner is not None:
             return instance.winner.username
+        return None
+
+    def get_winner_slug(self, instance):
+        if instance.winner is not None:
+            return instance.winner.slug
         return None
 
     def get_json_file(self, instance):
@@ -152,4 +163,33 @@ class AuctionClosedSerializer(serializers.ModelSerializer):
     def get_tx_id(self, instance):
         if instance.report.tx_id:
             return instance.report.tx_id
+        return None
+
+
+class UserAuctionClosedSerializer(serializers.ModelSerializer):
+    """
+    Auction serializer for AuctionClosedListRetrieveAPIView.
+
+    :fields
+    - title
+    - description
+    - image
+    - final_price
+    - closed_at
+    - slug
+    - json_file
+
+    * format: JSON.
+    """
+
+    json_file = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = Auction
+        exclude = ['initial_price', 'opened_at', 'winner', 'status']
+
+    def get_json_file(self, instance):
+        request = self.context.get("request")
+        if instance.report.json_file:
+            return request.build_absolute_uri(instance.report.json_file.url)
         return None

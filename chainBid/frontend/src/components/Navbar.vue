@@ -45,14 +45,15 @@
                <div class="offcanvas-body mx-lg-auto pt-0 pt-lg-0">
                  <ul class="navbar-nav">
                    <li class="nav-item d-lg-none">
-                     <p class="text-muted text-center fs-18px fw-bold">{{ requestUser }}</p>
+                     <p class="text-muted text-center fs-18px fw-bold">{{ user.username }}</p>
                    </li>
                    <li class="nav-item d-lg-none">
                      <div class="row justify-content-between">
                        <div class="col-auto ms-3">
-                         <a class="btn btn-violet rounded-pill">
-                           <i class="fa-solid fa-user me-2"></i>Profile
-                         </a>
+                         <router-link class="btn btn-violet rounded-pill"
+                                      :to="{ name: 'profile', params: { slug: user.slug } }"
+                                      ><i class="fa-solid fa-user me-2"></i>Profile
+                         </router-link>
                        </div>
                        <div class="col-auto me-3">
                          <a class="btn btn-violet rounded-pill"
@@ -78,7 +79,7 @@
                                   >Closed auctions
                      </router-link>
                    </li>
-                   <li class="nav-item" v-if="isStaffUser">
+                   <li class="nav-item" v-if="user.is_staff">
                      <router-link class="nav-link"
                                   :to="{ name: 'schedule auctions' }"
                                   >Schedule auctions
@@ -105,10 +106,10 @@
               <li class="nav-item dropdown">
 
                 <div class="btn-group">
-                  <a class="nav-link btn-menu"
-                          href="#"
-                          ><i class="fa-solid fa-user fs-20px"></i>
-                  </a>
+                  <router-link class="nav-link btn-menu"
+                               :to="{ name: 'profile', params: { slug: user.slug } }"
+                               ><i class="fa-solid fa-user fs-20px"></i>
+                  </router-link>
                   <button aria-expanded="false"
                           class="nav-link btn-menu"
                           data-bs-toggle="dropdown"
@@ -120,7 +121,12 @@
                   <!-- Dropdown elements -->
                   <ul aria-labelledby="navbarDarkDropdownMenuLink"
                       class="dropdown-menu dropdown-menu-dark dropdown-menu-lg-end">
-                      <li><h6 class="dropdown-header text-center">{{ requestUser }}</h6></li>
+                      <li>
+                        <router-link class="dropdown-item"
+                                     :to="{ name: 'profile', params: { slug: user.slug } }"
+                                     >{{ user.username }}
+                        </router-link>
+                      </li>
                       <li>
                         <a class="dropdown-item"
                              href="/accounts/password_change/"
@@ -144,40 +150,18 @@
 </template>
 
 <script>
-  // @ is an alias to /src
-  import { apiService } from "@/common/api.service.js";
-
   export default {
     name: "NavbarComponent",
-    data() {
-      return {
-        requestUser: null,
-        isStaffUser: null
-      };
-    },
-    methods: {
-      async setUserInfo() {
-        /*
-          Retrieve the username of the request user and
-          store it in the local storage.
-        */
-
-        let endpoint = "/api/user/";
-        await apiService(endpoint)
-          .then(response => {
-            if (response.detail) {
-              console.log(response);
-              this.$router.push({name: "not found"});
-            } else {
-              this.requestUser = response.username;
-              this.isStaffUser = response.is_staff;
-              window.localStorage.setItem("username", this.requestUser);
-            }
-          });
+    props: {
+      requestUser: {
+        type: Object,
+        required: true
       }
     },
-    created() {
-      this.setUserInfo();
+    data() {
+      return {
+        user: this.requestUser
+      };
     }
   }
 </script>

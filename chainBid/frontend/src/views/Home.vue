@@ -21,7 +21,7 @@
                    v-for="(auction, index) in auctions"
                    :key="index">
                    <!-- Card -->
-                   <router-link :to="{ name: 'auction', params: { id: auction.id } }">
+                   <router-link :to="{ name: 'auction', params: { slug: auction.slug } }">
                      <div class="card card-auction position-relative text-card-auction mb-4 mx-auto"
                           style="width: 18rem; height: 21rem;">
                           <div class="card-body text-center">
@@ -56,25 +56,25 @@
                      </div>
                    </router-link> <!-- Card -->
               </div> <!-- Col -->
-      </div> <!-- Auctions -->
+         </div> <!-- Auctions -->
 
-      <!-- No live auctions -->
-      <div class="text-center mt-5"
-           v-else>
-           <p class="fs-20px fw-blod text-muted">We are sorry but there are no live auctions at the moment...</p>
-      </div>
+         <!-- No live auctions -->
+         <div class="text-center mt-5"
+              v-if="!loadingAuctions && auctions.length === 0">
+              <p class="fs-20px fw-blod text-muted">We are sorry but there are no live auctions at the moment...</p>
+         </div>
 
-      <!-- Pagination -->
-      <div :class="{'position-absolute top-50 start-50 translate-middle': firstLoading,
-                    'mb-5 mt-2 text-center': !firstLoading}">
-        <div v-show="loadingAuctions">
-          <div class="spinner-grow text-violet"
-               role="status"
-               style="width: 3rem; height: 3rem;">
-          </div>
-        </div>
-      </div>
-    </div> <!-- Container -->
+         <!-- Pagination -->
+         <div :class="{'position-absolute top-50 start-50 translate-middle': firstLoading,
+                       'mb-5 mt-2 text-center': !firstLoading}">
+           <div v-show="loadingAuctions">
+             <div class="spinner-grow text-violet"
+                  role="status"
+                  style="width: 3rem; height: 3rem;">
+             </div>
+           </div>
+         </div>
+    </div> <!-- Homepage -->
   </div>
 </template>
 

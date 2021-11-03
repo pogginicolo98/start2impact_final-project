@@ -56,7 +56,7 @@
                        </button>
                      </td>
                      <td>
-                       <router-link :to="{ name: 'auction editor', params: { id: auction.id } }">
+                       <router-link :to="{ name: 'auction editor', params: { slug: auction.slug } }">
                          <i class="fa-solid fa-pen-to-square me-1"></i>{{ auction.title }}
                        </router-link>
                      </td>
@@ -203,7 +203,7 @@
           Delete auction and redirect to the schedule auctions page.
         */
 
-        let endpoint = `/api/schedule-auctions/${auction.id}/`;
+        let endpoint = `/api/schedule-auctions/${auction.slug}/`;
         let method = "DELETE"
         await apiService(endpoint, method)
           .then(response => {

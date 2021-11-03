@@ -186,9 +186,9 @@
           if (this.auction.opened_at) {
             this.openedAt.value = moment.utc(this.auction.opened_at, 'YYYY-MM-DDTHH:mm').format('YYYY-MM-DDTHH:mm');
           }
-          this.submitButtonMessage = "Save<i class='fa-solid fa-floppy-disk ms-2'></i>";
+          this.submitButtonMessage = "<i class='fa-solid fa-floppy-disk me-2'></i>Save";
         } else {
-          this.submitButtonMessage = "Create<i class='fa-solid fa-plus ms-2'></i>";
+          this.submitButtonMessage = "<i class='fa-solid fa-plus me-2'></i>Create";
         }
       },
       validateForm() {
@@ -257,7 +257,7 @@
           let endpoint = "/api/schedule-auctions/";
           let method = "POST";
           if (this.auction) {
-            endpoint += this.auction.id + "/";
+            endpoint += this.auction.slug + "/";
             method = "PUT";
           }
           let data = {
