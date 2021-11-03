@@ -144,8 +144,8 @@
       Error404Component
     },
     props: {
-      id: {
-        type: Number,
+      slug: {
+        type: String,
         required: true
       },
       auction: {
@@ -212,7 +212,7 @@
         */
 
         if (this.validateForm()){
-          let endpoint = `/api/schedule-auctions/${this.id}/upload-image/`;
+          let endpoint = `/api/schedule-auctions/${this.slug}/upload-image/`;
           let method = "PUT";
           let data = new FormData();
           data.append('image', this.image.file);
@@ -241,7 +241,7 @@
             Update auction's data after save.
           */
 
-          let endpoint = `/api/schedule-auctions/${this.modifiedAuction.id}/`;
+          let endpoint = `/api/schedule-auctions/${this.modifiedAuction.slug}/`;
           await apiService(endpoint)
             .then(response => {
               if (response.detail) {
@@ -262,7 +262,7 @@
             Delete auction and redirect to the schedule auctions page.
           */
 
-          let endpoint = `/api/schedule-auctions/${this.modifiedAuction.id}/`;
+          let endpoint = `/api/schedule-auctions/${this.modifiedAuction.slug}/`;
           let method = "DELETE"
           await apiService(endpoint, method)
             .then(response => {
@@ -290,7 +290,7 @@
         before rendering the page.
       */
 
-      let endpoint = `/api/schedule-auctions/${to.params.id}/`;
+      let endpoint = `/api/schedule-auctions/${to.params.slug}/`;
       await apiService(endpoint)
         .then(response => {
           to.params.auction = response;

@@ -20,12 +20,12 @@ def record_object_on_redis(auction, **kwargs):
     key = None
     obj = None
     if kwargs.get('task_id', None) is not None:
-        key = f'auction_{auction}_{TASKS_KEY}'
+        key = f'{auction}_{TASKS_KEY}'
         obj = {
             'task_id': kwargs['task_id']
         }
     elif kwargs.get('price', None) is not None:
-        key = f'auction_{auction}_{BIDS_KEY}'
+        key = f'{auction}_{BIDS_KEY}'
         obj = {
             'user': kwargs.get('user', None),
             'price': kwargs['price'],
@@ -51,7 +51,7 @@ def get_latest_object_on_redis(auction, type_obj):
     """
 
     redis_client = Redis(settings.REDIS_HOST, port=settings.REDIS_PORT)
-    key = f'auction_{auction}_{type_obj}'
+    key = f'{auction}_{type_obj}'
     value = redis_client.lrange(key, 0, 0)
     if value is not None and len(value) > 0:
         return json.loads(value[0], cls=AuctionDecoder)
@@ -68,7 +68,7 @@ def auction_started(auction):
     """
 
     redis_client = Redis(settings.REDIS_HOST, port=settings.REDIS_PORT)
-    key = f'auction_{auction}_{BIDS_KEY}'
+    key = f'{auction}_{BIDS_KEY}'
     value = redis_client.exists(key)
     if value:
         return True
@@ -81,7 +81,7 @@ def clean_db(auction):
     """
 
     redis_client = Redis(settings.REDIS_HOST, port=settings.REDIS_PORT)
-    key1 = f'auction_{auction}_{TASKS_KEY}'
-    key2 = f'auction_{auction}_{BIDS_KEY}'
-    key3 = f'asgi:group:auction_{auction}'
+    key1 = f'{auction}_{TASKS_KEY}'
+    key2 = f'{auction}_{BIDS_KEY}'
+    key3 = f'asgi:group:{auction}'
     redis_client.delete(key1, key2, key3)

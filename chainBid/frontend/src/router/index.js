@@ -18,7 +18,7 @@ const routes = [
     component: Home
   },
   {
-    path: "/auction/:id",
+    path: "/auction/:slug",
     name: "auction",
     component: Auction,
     props: true
@@ -29,7 +29,7 @@ const routes = [
     component: ScheduleAuctions
   },
   {
-    path: "/schedule-auctions/:id",
+    path: "/schedule-auctions/:slug",
     name: "auction editor",
     component: AuctionEditor,
     props: true
@@ -40,7 +40,7 @@ const routes = [
     component: ClosedAuctions
   },
   {
-    path: "/closed-auctions/:id",
+    path: "/closed-auctions/:slug",
     name: "closed auction detail",
     component: ClosedAuctionDetail,
     props: true

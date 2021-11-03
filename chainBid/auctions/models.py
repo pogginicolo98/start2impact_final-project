@@ -39,6 +39,7 @@ class Auction(models.Model):
     closed_at = models.DateTimeField(blank=True, null=True)
     winner = models.ForeignKey(UserModel, on_delete=models.SET_NULL, related_name='auctions', blank=True, null=True)
     status = models.BooleanField(default=False)
+    slug = models.SlugField(max_length=255, unique=True)
 
     class Meta:
         verbose_name = 'Auction'
@@ -57,7 +58,7 @@ class Auction(models.Model):
         """
 
         record_object_on_redis(
-            auction=self.pk,
+            auction=self.slug,
             user=None,
             price=float(self.initial_price)
         )
@@ -74,7 +75,7 @@ class Auction(models.Model):
 
         self.status = False
         self.closed_at = timezone.now()
-        latest_bid = get_latest_object_on_redis(auction=self.pk, type_obj=BIDS_KEY)
+        latest_bid = get_latest_object_on_redis(auction=self.slug, type_obj=BIDS_KEY)
         if latest_bid is not None:
             if latest_bid.get('user', None):
                 self.winner = get_object_or_404(UserModel, username=latest_bid['user'])

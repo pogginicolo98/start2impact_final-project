@@ -21,7 +21,7 @@
                    v-for="(auction, index) in auctions"
                    :key="index">
                    <!-- Card -->
-                   <router-link :to="{ name: 'closed auction detail', params: { id: auction.id } }">
+                   <router-link :to="{ name: 'closed auction detail', params: { slug: auction.slug } }">
                      <div class="card card-auction position-relative text-card-auction mb-4 mx-auto"
                           style="width: 18rem; height: 21rem;">
                           <div class="card-body text-center">
@@ -58,7 +58,7 @@
 
          <!-- No closed auctions -->
          <div class="text-center mt-5"
-              v-else>
+              v-if="!loadingAuctions && auctions.length === 0">
               <p class="fs-20px fw-blod text-muted">We are sorry but there are no closed auctions yet...</p>
          </div>
 

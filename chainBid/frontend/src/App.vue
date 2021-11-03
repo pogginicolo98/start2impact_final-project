@@ -1,17 +1,49 @@
 <template>
   <div id="app">
-    <NavbarComponent />
-    <router-view />
+    <NavbarComponent :requestUser="requestUser"
+                     v-if="!loading"/>
+    <router-view :key="$route.fullPath"
+                 v-if="!loading"/>
   </div>
 </template>
 
 <script>
+  // @ is an alias to /src
+  import { apiService } from "@/common/api.service.js";
   import NavbarComponent from "@/components/Navbar.vue";
 
   export default {
     name: "App",
     components: {
       NavbarComponent
+    },
+    data() {
+      return {
+        requestUser: {},
+        loading: true
+      }
+    },
+    mounted() {
+      /*
+        Retrieve current user informations.
+      */
+
+      let endpoint = "/api/user/";
+      apiService(endpoint)
+        .then(response => {
+          if (response.detail) {
+            console.log(response);
+            this.$router.push({name: "not found"});
+          } else {
+            this.requestUser = response;
+            this.loading = false;
+            window.localStorage.setItem("requestUserUsername", response.username);
+          }
+        })
+        .catch(error => {
+          console.log(error);
+          this.$router.push({name: "not found"});
+        });
     }
   }
 </script>
@@ -172,5 +204,28 @@
     background-color: rgba(74, 78, 105, 0.8);
     border-color: #4A4E69;
     color: #fff;
+  }
+
+  .img-auction-profile {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .img-wrap-auction-profile {
+    height: 65px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    margin-top: 7.5px;
+    margin-left: 7.5px;
+  }
+
+  .card-auction-profile {
+    background-color: #F8F4F1;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    border: 0;
   }
 </style>

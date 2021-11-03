@@ -26,6 +26,7 @@ class AuctionScheduleViewSet(ModelViewSet):
     """
 
     queryset = Auction.objects.filter(closed_at=None).exclude(status=True)
+    lookup_field = "slug"
     serializer_class = AuctionScheduleSerializer
     permission_classes = [IsAuthenticated, IsAdminUser]
 
@@ -42,6 +43,7 @@ class AuctionImageUpdateAPIView(UpdateAPIView):
     """
 
     queryset = Auction.objects.filter(closed_at=None).exclude(status=True)
+    lookup_field = "slug"
     serializer_class = AuctionImageSerializer
     permission_classes = [IsAuthenticated, IsAdminUser]
 
@@ -61,6 +63,7 @@ class AuctionListRetrieveAPIView(ListModelMixin,
     """
 
     queryset = Auction.objects.filter(status=True)
+    lookup_field = "slug"
     serializer_class = AuctionSerializer
     permission_classes = [IsAuthenticated]
 
@@ -80,6 +83,7 @@ class AuctionClosedListRetrieveAPIView(ListModelMixin,
     """
 
     queryset = Auction.objects.filter(status=False).exclude(closed_at=None)
+    lookup_field = "slug"
     serializer_class = AuctionClosedSerializer
     permission_classes = [IsAuthenticated]
 
@@ -99,4 +103,5 @@ class UserAuctionClosedListAPIView(ListAPIView):
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        return Auction.objects.filter(status=False, winner=self.request.user)
+        kwarg_slug_user = self.kwargs.get('slug')
+        return Auction.objects.filter(status=False, winner__slug=kwarg_slug_user)

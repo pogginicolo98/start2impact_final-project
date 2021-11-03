@@ -201,8 +201,8 @@
       Error404Component
     },
     props: {
-      id: {
-        type: Number,
+      slug: {
+        type: String,
         required: true
       }
     },
@@ -225,7 +225,7 @@
           Retrieve a specific auction's data and set page title.
         */
 
-        let endpoint = `/api/closed-auctions/${this.id}/`;
+        let endpoint = `/api/closed-auctions/${this.slug}/`;
         await apiService(endpoint)
           .then(response => {
             if (response.detail) {

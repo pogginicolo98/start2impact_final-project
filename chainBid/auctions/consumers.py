@@ -29,8 +29,8 @@ class BidConsumer(WebsocketConsumer):
 
     def connect(self):
         self.user = async_to_sync(get_user)(self.scope)
-        self.auction = self.scope['url_route']['kwargs']['pk']
-        self.channel_group = f'auction_{self.auction}'
+        self.auction = self.scope['url_route']['kwargs']['slug']
+        self.channel_group = self.auction
         latest_bid = self.get_bid(auction=self.auction)
         if latest_bid is not None:
             async_to_sync(self.channel_layer.group_add)(
@@ -106,7 +106,7 @@ class BidConsumer(WebsocketConsumer):
                 price=float(serializer.data['price']),
                 eta=eta
             )
-            update_close_auction(pk=auction, eta=eta)
+            update_close_auction(slug=auction, eta=eta)
             return None
         else:
             return serializer.errors

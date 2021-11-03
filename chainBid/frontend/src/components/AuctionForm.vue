@@ -257,7 +257,7 @@
           let endpoint = "/api/schedule-auctions/";
           let method = "POST";
           if (this.auction) {
-            endpoint += this.auction.id + "/";
+            endpoint += this.auction.slug + "/";
             method = "PUT";
           }
           let data = {
