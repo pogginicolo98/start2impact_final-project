@@ -49,7 +49,7 @@ class AuctionImageSerializer(serializers.ModelSerializer):
 
 class AuctionSerializer(serializers.ModelSerializer):
     """
-    Auction serializer for AuctionViewSet.
+    Auction serializer for AuctionListRetrieveAPIView.
 
     :fields
     - title
@@ -87,8 +87,8 @@ class AuctionSerializer(serializers.ModelSerializer):
 
 class AuctionBidSerializer(serializers.Serializer):
     """
-    Bid serializer for AuctionBidAPIView.
-    All bids are recorded on Redis, so serializer does not use a Model class.
+    Bid serializer for BidConsumer.
+    All bids are recorded on Redis, so serializer does not need a Model class.
 
     * format: JSON.
     """
@@ -168,7 +168,7 @@ class AuctionClosedSerializer(serializers.ModelSerializer):
 
 class UserAuctionClosedSerializer(serializers.ModelSerializer):
     """
-    Auction serializer for AuctionClosedListRetrieveAPIView.
+    Auction serializer for UserAuctionClosedListAPIView.
 
     :fields
     - title

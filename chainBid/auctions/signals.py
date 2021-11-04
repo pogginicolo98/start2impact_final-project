@@ -10,7 +10,11 @@ from utils.randomics import generate_random_string, random_date
 
 
 @receiver(pre_save, sender=Auction)
-def set_user_slug(sender, instance, *args, **kwargs):
+def set_auction_slug(sender, instance, *args, **kwargs):
+    """
+    Set the auction slug when a new auction is created.
+    """
+
     if instance and not instance.slug:
         slug = slugify(instance.title)
         random_string = generate_random_string()

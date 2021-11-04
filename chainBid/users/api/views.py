@@ -25,7 +25,7 @@ class RequestUserAPIView(RetrieveAPIView):
 class UserProfileAPIView(RetrieveAPIView):
     """
     An APIView that provides 'retrieve()' action.
-    Retrieve the username of the current user.
+    Retrieve the profile information of a specific user.
 
     * Only authenticated user can access this endpoint.
     """

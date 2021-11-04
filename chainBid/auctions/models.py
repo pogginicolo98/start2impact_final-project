@@ -52,9 +52,8 @@ class Auction(models.Model):
     def open(self):
         """
         Perform the following actions:
-        1) Initialize redis in order to accept new bids.
+        1) Initialize bids database.
         2) Enable the auction.
-        3) Set the close_auction() task to run on a random date between 20 to 24 hours after the opening.
         """
 
         record_object_on_redis(
@@ -70,7 +69,6 @@ class Auction(models.Model):
         Perform the following actions:
         1) Disable the auction.
         2) Store the winning bid's data.
-        3) Remove bids data from Redis.
         """
 
         self.status = False

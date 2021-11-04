@@ -52,7 +52,7 @@ class AuctionListRetrieveAPIView(ListModelMixin,
                                  RetrieveModelMixin,
                                  GenericViewSet):
     """
-    Auction ViewSet.
+    Auction ListRetrieveAPIView.
     Retrieve all live auctions.
 
     :actions
@@ -72,7 +72,7 @@ class AuctionClosedListRetrieveAPIView(ListModelMixin,
                                        RetrieveModelMixin,
                                        GenericViewSet):
     """
-    Auction ViewSet.
+    Auction ListRetrieveAPIView.
     Retrieve all closed auctions.
 
     :actions
@@ -90,11 +90,11 @@ class AuctionClosedListRetrieveAPIView(ListModelMixin,
 
 class UserAuctionClosedListAPIView(ListAPIView):
     """
-    Auction ViewSet.
+    Auction ListAPIView.
     Retrieve all auctions won by a specific user.
 
     :actions
-    - retrieve
+    - list
 
     * Only authenticated users can access to this endpoint.
     """

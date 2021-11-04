@@ -85,14 +85,6 @@
                                   >Schedule auctions
                      </router-link>
                    </li>
-                   <li class="nav-item">
-                     <a class="nav-link"
-                        href="#"
-                        >How it works
-                     </a>
-                   </li>
-
-
                  </ul>
                </div>
           </div>
