@@ -8,7 +8,6 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/asgi/
 """
 
 import auctions.routing
-import django
 import os
 
 from channels.auth import AuthMiddlewareStack
@@ -17,10 +16,8 @@ from channels.routing import ProtocolTypeRouter, URLRouter
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'chainBid.settings')
 
-django.setup()
-
 application = ProtocolTypeRouter({
-  # "http": get_asgi_application(),/
+  # "http": get_asgi_application(),
   "websocket": AuthMiddlewareStack(
         URLRouter(
             auctions.routing.websocket_urlpatterns
