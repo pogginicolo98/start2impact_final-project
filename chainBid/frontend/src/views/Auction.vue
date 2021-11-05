@@ -210,7 +210,7 @@
         this.bidSocket = new ReconnectingWebSocket(
             'ws://'
             + window.location.host
-            + '/ws/auctions/'
+            + ':8001/ws/auctions/'
             + this.slug
             + '/bid/'
         );
