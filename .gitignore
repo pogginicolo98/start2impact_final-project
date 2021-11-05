@@ -13,7 +13,6 @@ static-serve
 # Vue.js
 .DS_Store
 node_modules
-dist
 
 # Log files
 npm-debug.log*
