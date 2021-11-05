@@ -7,10 +7,10 @@ For more information on this file, see
 https://docs.djangoproject.com/en/3.2/howto/deployment/asgi/
 """
 
-import auctions.routing
 import os
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'chainBid.settings')
 
+import auctions.routing
 
 from channels.auth import AuthMiddlewareStack
 from channels.routing import ProtocolTypeRouter, URLRouter
