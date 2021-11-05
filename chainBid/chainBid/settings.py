@@ -26,7 +26,7 @@ SECRET_KEY = password.SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["192.168.1.134"]
+ALLOWED_HOSTS = ["192.168.1.141"]
 
 
 # Application definition
