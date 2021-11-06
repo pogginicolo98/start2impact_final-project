@@ -4,37 +4,37 @@
     "img/page-not-found.26af1674.png": {
       "name": "img/page-not-found.26af1674.png",
       "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/img/page-not-found.26af1674.png",
-      "publicPath": "http://0.0.0.0:8080/img/page-not-found.26af1674.png"
+      "publicPath": "http://13.37.247.221/img/page-not-found.26af1674.png"
     },
     "img/clock.7f0c3880.png": {
       "name": "img/clock.7f0c3880.png",
       "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/img/clock.7f0c3880.png",
-      "publicPath": "http://0.0.0.0:8080/img/clock.7f0c3880.png"
+      "publicPath": "http://13.37.247.221/img/clock.7f0c3880.png"
     },
     "bundle.css": {
       "name": "bundle.css",
       "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/bundle.css",
-      "publicPath": "http://0.0.0.0:8080/bundle.css"
+      "publicPath": "http://13.37.247.221/bundle.css"
     },
     "bundle.js": {
       "name": "bundle.js",
       "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/bundle.js",
-      "publicPath": "http://0.0.0.0:8080/bundle.js"
+      "publicPath": "http://13.37.247.221/bundle.js"
     },
     "bundle.js.map": {
       "name": "bundle.js.map",
       "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/bundle.js.map",
-      "publicPath": "http://0.0.0.0:8080/bundle.js.map"
+      "publicPath": "http://13.37.247.221/bundle.js.map"
     },
     "index.html": {
       "name": "index.html",
       "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/index.html",
-      "publicPath": "http://0.0.0.0:8080/index.html"
+      "publicPath": "http://13.37.247.221/index.html"
     },
     "favicon.ico": {
       "name": "favicon.ico",
       "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/favicon.ico",
-      "publicPath": "http://0.0.0.0:8080/favicon.ico"
+      "publicPath": "http://13.37.247.221/favicon.ico"
     }
   },
   "chunks": {
@@ -45,5 +45,5 @@
       "bundle.js.map"
     ]
   },
-  "publicPath": "http://0.0.0.0:8080/"
+  "publicPath": "http://13.37.247.221/"
 }
