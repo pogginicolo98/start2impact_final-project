@@ -7,7 +7,7 @@ const BundleTracker = require("webpack-bundle-tracker");
 
 module.exports = {
     // baseUrl: "http://0.0.0.0:8080/", // da usare con VUE CLI < 3.3 (deprecated)
-    publicPath: "http://0.0.0.0:8080/", // da usare con VUE CLI >= 3.3
+    publicPath: "http://13.37.247.221/", // da usare con VUE CLI >= 3.3
     outputDir: './dist/',
 
     chainWebpack: config => {
