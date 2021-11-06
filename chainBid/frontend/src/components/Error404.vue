@@ -3,13 +3,13 @@
       <div v-if="auctionNotAvailable">
         <img alt="auction-not-available"
              class="img-fluid"
-             src="../../../static-storage/assets/clock.png">
+             src="/static/assets/clock.png">
         <p class="fs-32px fw-bold mt-3">Auction no more available...</p>
       </div>
       <div v-else>
         <img alt="page-not-found"
              class="img-fluid"
-             src="../../../static-storage/assets/page-not-found.png">
+             src="/static/assets/page-not-found.png">
       </div>
       <div>
         <router-link class="btn btn-violet rounded-pill fs-20px"

@@ -1,14 +1,6 @@
 {
   "status": "done",
   "assets": {
-    "img/page-not-found.26af1674.png": {
-      "name": "img/page-not-found.26af1674.png",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/img/page-not-found.26af1674.png"
-    },
-    "img/clock.7f0c3880.png": {
-      "name": "img/clock.7f0c3880.png",
-      "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/img/clock.7f0c3880.png"
-    },
     "bundle.css": {
       "name": "bundle.css",
       "path": "/home/Moltack/Software-Dev/Start2Impact/Progetto finale/start2impact_final-project/chainBid/frontend/dist/bundle.css"
