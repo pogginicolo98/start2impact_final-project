@@ -26,7 +26,7 @@ SECRET_KEY = password.SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["192.168.1.141"]
+ALLOWED_HOSTS = ["13.37.247.221"]
 
 ROOT_URLCONF = 'chainBid.urls'
 
