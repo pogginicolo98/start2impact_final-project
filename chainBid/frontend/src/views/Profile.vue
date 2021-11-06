@@ -215,9 +215,6 @@
               console.log(response.detail);
               this.notFound = true;
             } else {
-              // if (this.auctions.length > 0) {
-              //   this.auctions.splice(0, (this.auctions.length));
-              // }
               this.auctions.push(...response.results);
               this.loadingAuctions = false;
               if (response.next) {
