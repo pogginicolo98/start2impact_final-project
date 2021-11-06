@@ -1,0 +1,18 @@
+server {
+    server_name 13.37.247.221;
+
+    location /static/ {
+        alias   /home/ubuntu/start2impact_final-project/static-serve/;
+    }
+
+    location /media/ {
+        alias   /home/ubuntu/start2impact_final-project/media-serve/;
+    }
+
+     location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+
+
+}
