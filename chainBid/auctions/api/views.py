@@ -104,4 +104,4 @@ class UserAuctionClosedListAPIView(ListAPIView):
 
     def get_queryset(self):
         kwarg_slug_user = self.kwargs.get('slug')
-        return Auction.objects.filter(status=False, winner__slug=kwarg_slug_user).order_by('-closed_At', 'title')
+        return Auction.objects.filter(status=False, winner__slug=kwarg_slug_user).order_by('-closed_at', 'title')
