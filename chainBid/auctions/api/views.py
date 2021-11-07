@@ -25,7 +25,7 @@ class AuctionScheduleViewSet(ModelViewSet):
     * Only staff users can access to this endpoint.
     """
 
-    queryset = Auction.objects.filter(closed_at=None).exclude(status=True)
+    queryset = Auction.objects.filter(closed_at=None).exclude(status=True).order_by('-opened_at', 'title')
     lookup_field = "slug"
     serializer_class = AuctionScheduleSerializer
     permission_classes = [IsAuthenticated, IsAdminUser]
@@ -62,7 +62,7 @@ class AuctionListRetrieveAPIView(ListModelMixin,
     * Only authenticated users can access to this endpoint.
     """
 
-    queryset = Auction.objects.filter(status=True)
+    queryset = Auction.objects.filter(status=True).order_by('-opened_at', 'title')
     lookup_field = "slug"
     serializer_class = AuctionSerializer
     permission_classes = [IsAuthenticated]
@@ -82,7 +82,7 @@ class AuctionClosedListRetrieveAPIView(ListModelMixin,
     * Only authenticated users can access to this endpoint.
     """
 
-    queryset = Auction.objects.filter(status=False).exclude(closed_at=None)
+    queryset = Auction.objects.filter(status=False).exclude(closed_at=None).order_by('-closed_at', 'title')
     lookup_field = "slug"
     serializer_class = AuctionClosedSerializer
     permission_classes = [IsAuthenticated]
@@ -104,4 +104,4 @@ class UserAuctionClosedListAPIView(ListAPIView):
 
     def get_queryset(self):
         kwarg_slug_user = self.kwargs.get('slug')
-        return Auction.objects.filter(status=False, winner__slug=kwarg_slug_user)
+        return Auction.objects.filter(status=False, winner__slug=kwarg_slug_user).order_by('-closed_At', 'title')
