@@ -14,7 +14,7 @@ to check and verify the genuineness of the winning and the reported data.
 
 #### Live demo: [ChainBid](http://13.37.247.221/)
 
-[test](components-and-technologies)
+[test](#Components-and-technologies)
 
 # Features
 
