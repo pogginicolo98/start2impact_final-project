@@ -2,19 +2,19 @@
 Auction platform that records the results of each auction on the Ethereum blockchain (Testnet Ropsten).
 
 When an auction is created if the price and opening date are set properly, the system will automatically open the auction
-and make it available to all users in the "Live auctions" section on the set date.
+and make it available to all users in the "Live auctions" section on the set date.\
 Each auction remains open for a random time between 22 and 24 hours if it does not receive any bids.
-Once the time has expired, the auction will be closed permanently.
-When an auction receives a bid, the system waits 10 minutes before closing it and deciding the winner.
-If within this time another user makes a new bid then the time resets and another 10 minutes must pass before the auction closes.
+Once the time has expired, the auction will be closed permanently.\
+When an auction receives a bid, the system waits 10 minutes before closing the auction (The previous random time is canceled) and decree the winner.
+If within this time another user makes a new bid then the system restart waiting 10 minutes from that moment.\
 When an auction is closed, a report summarizing all the information relating to the auction and the possible winning is generated.
 Finally, the hash (SHA256) of the report is calculated and the result is written to the Ethereum blockchain.
 Through the report provided by the web-app and the hash registered on the blockchain, it is possible 
 to check and verify the genuineness of the winning and the reported data.
 
-#### Live demo: [ChainBid](http://13.37.247.221/)
+**Live demo: [ChainBid](http://13.37.247.221/)**
 
-[test](#Components-and-technologies)
+***
 
 # Features
 
@@ -29,26 +29,28 @@ to check and verify the genuineness of the winning and the reported data.
 * ```/api/rest-auth/registration/```: User registration via token.
 * ```/api/rest-auth/login/```: Authentication via token.
 * ```/api/user/```: Retrieve current user information.
-* ```/api/profile/<user.slug>/```: Retrieve the user profile.
+* ```/api/profile/<user slug>/```: Retrieve the user profile.
 * ```/api/schedule-auctions/```: List scheduled auctions or create a new one.
-* ```/api/schedule-auctions/<auction.slug>/```: Retrieve, update, delete a scheduled auction.
-* ```/api/schedule-auctions/<auction.slug>/upload-image/```: Update scheduled auction's image.
+* ```/api/schedule-auctions/<auction slug>/```: Retrieve, update, delete a scheduled auction.
+* ```/api/schedule-auctions/<auction slug>/upload-image/```: Update scheduled auction's image.
 * ```/api/auctions/```: List live auctions.
-* ```/api/auctions/<auction.slug>/```: Retrieve a live auction.
+* ```/api/auctions/<auction slug>/```: Retrieve a live auction.
 * ```/api/closed-auctions/```: List closed auctions.
-* ```/api/closed-auctions/<auction.slug>/```: Retrieve a closed auction.
-* ```/api/<user.slug>/auctions/```: List auctions won by the user.
+* ```/api/closed-auctions/<auction slug>/```: Retrieve a closed auction.
+* ```/api/<user slug>/auctions/```: List auctions won by the user.
 
+***
 
 # Components and technologies
-#### Back-end
+
+**Back-end**
 * [Django 3.2](https://docs.djangoproject.com/en/3.2/) - Core
 * [Django REST Framework 3.12](https://www.django-rest-framework.org/) - APIs
 * [Django Channels 3.0](https://channels.readthedocs.io/en/stable/index.html) - WebSockets
 * [Web3 5.23](https://web3py.readthedocs.io/en/stable/#) - Interface for Ethereum blockchain
 * [Celery 5.1](https://docs.celeryproject.org/en/v5.1.2/) - Scheduled tasks
 
-#### Front-end
+**Front-end**
 * [Vue.js 2.6](https://vuejs.org/v2/guide/) - Core
 * [Bootstrap 5.1](https://getbootstrap.com/docs/5.1/getting-started/introduction/) - CSS
 * [ReconnectingWebSocket 1.0](https://github.com/joewalnes/reconnecting-websocket) - WebSockets
@@ -57,12 +59,13 @@ to check and verify the genuineness of the winning and the reported data.
 * [V Clipboard 2.2](https://github.com/euvl/v-clipboard#readme) - Copy to clipboard functionality
 * [Moment.js 2.29](https://momentjs.com/docs/) - Date and time display
 
-#### Databases
+**Databases**
 * [SQLite](https://sqlite.org/docs.html) - Storage and web-app structure
 * [Redis](https://redis.io/documentation) - Bidding system
 
 
-## Setup for production
+# Setup for production
+
 #### Clone the repository and install some required packages:
 ```
 $ git clone https://github.com/pogginicolo98/start2impact_social-dex
