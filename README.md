@@ -1,27 +1,5 @@
 # Start2Impact Final project: Auction platform powered by Ethereum blockchain
 Auction platform that records the results of each auction on the Ethereum blockchain (Testnet Ropsten).
-The web-app provides a user interface and API endpoints with the following features:
-
-#### User interface
-1) User registration and authentication.
-2) Schedule new auctions.
-3) Display live auctions and participate via a bidding system.
-4) Display closed auctions and check the results.
-5) User profile.
-
-#### API endpoints
-1) ```/api/rest-auth/registration/```: User registration via token.
-2) ```/api/rest-auth/login/```: Authentication via token.
-3) ```/api/user/```: Retrieve current user information.
-4) ```/api/profile/<user.slug>/```: Retrieve the user profile.
-5) ```/api/schedule-auctions/```: List scheduled auctions or create a new one.
-6) ```/api/schedule-auctions/<auction.slug>/```: Retrieve, update, delete a scheduled auction.
-7) ```/api/schedule-auctions/<auction.slug>/upload-image/```: Update scheduled auction's image.
-8) ```/api/auctions/```: List live auctions.
-9) ```/api/auctions/<auction.slug>/```: Retrieve a live auction.
-10) ```/api/closed-auctions/```: List closed auctions.
-11) ```/api/closed-auctions/<auction.slug>/```: Retrieve a closed auction.
-12) ```/api/<user.slug>/auctions/```: List auctions won by the user.
 
 When an auction is created if the price and opening date are set properly, the system will automatically open the auction
 and make it available to all users in the "Live auctions" section on the set date.
@@ -36,18 +14,53 @@ to check and verify the genuineness of the winning and the reported data.
 
 #### Live demo: [ChainBid](http://13.37.247.221/)
 
-## Frameworks and technologies used:
-#### Frameworks
-- [Django](https://docs.djangoproject.com/en/3.2/) - Back-end
-- [Django REST Framework](https://www.django-rest-framework.org/) - APIs
-- [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - Front-end
+[test](components-and-technologies)
+
+# Features
+
+#### User interface
+* User registration and authentication.
+* Schedule new auctions.
+* Display live auctions and participate via a bidding system.
+* Display closed auctions and check the results.
+* User profile.
+
+#### API endpoints
+* ```/api/rest-auth/registration/```: User registration via token.
+* ```/api/rest-auth/login/```: Authentication via token.
+* ```/api/user/```: Retrieve current user information.
+* ```/api/profile/<user.slug>/```: Retrieve the user profile.
+* ```/api/schedule-auctions/```: List scheduled auctions or create a new one.
+* ```/api/schedule-auctions/<auction.slug>/```: Retrieve, update, delete a scheduled auction.
+* ```/api/schedule-auctions/<auction.slug>/upload-image/```: Update scheduled auction's image.
+* ```/api/auctions/```: List live auctions.
+* ```/api/auctions/<auction.slug>/```: Retrieve a live auction.
+* ```/api/closed-auctions/```: List closed auctions.
+* ```/api/closed-auctions/<auction.slug>/```: Retrieve a closed auction.
+* ```/api/<user.slug>/auctions/```: List auctions won by the user.
+
+
+# Components and technologies
+#### Back-end
+* [Django 3.2](https://docs.djangoproject.com/en/3.2/) - Core
+* [Django REST Framework 3.12](https://www.django-rest-framework.org/) - APIs
+* [Django Channels 3.0](https://channels.readthedocs.io/en/stable/index.html) - WebSockets
+* [Web3 5.23](https://web3py.readthedocs.io/en/stable/#) - Interface for Ethereum blockchain
+* [Celery 5.1](https://docs.celeryproject.org/en/v5.1.2/) - Scheduled tasks
+
+#### Front-end
+* [Vue.js 2.6](https://vuejs.org/v2/guide/) - Core
+* [Bootstrap 5.1](https://getbootstrap.com/docs/5.1/getting-started/introduction/) - CSS
+* [ReconnectingWebSocket 1.0](https://github.com/joewalnes/reconnecting-websocket) - WebSockets
+* [Vue Router 3.5](https://router.vuejs.org/guide/) - Page routing
+* [Vue Toasted 1.1](https://github.com/shakee93/vue-toasted#readme) - Notifications
+* [V Clipboard 2.2](https://github.com/euvl/v-clipboard#readme) - Copy to clipboard functionality
+* [Moment.js 2.29](https://momentjs.com/docs/) - Date and time display
 
 #### Databases
-- [SQLite](https://sqlite.org/docs.html) - Storage and web-app structure
-- [Redis](https://redis.io/documentation) - Temporary logs
+* [SQLite](https://sqlite.org/docs.html) - Storage and web-app structure
+* [Redis](https://redis.io/documentation) - Bidding system
 
-#### Technologies
-- [Celery](https://docs.celeryproject.org/en/stable/#) - Scheduled tasks
 
 ## Setup for production
 #### Clone the repository and install some required packages:
