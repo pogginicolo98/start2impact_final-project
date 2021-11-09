@@ -184,5 +184,4 @@ List of commands useful for debugging possible errors:\
 * redis
 
 ### Reboot
-If everythings is running correctly reboot the system and then the web-app should be available at the address of the server.\
-`$ sudo reboot`
+If everythings is running correctly reboot the system and then the web-app should be available at the address of the server: `$ sudo reboot`
