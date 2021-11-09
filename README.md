@@ -134,6 +134,7 @@ Than initialize the database, create a super user, execute the automated tests a
 ```
 
 ### Gunicorn
+Open `start2impact_final-project/setup/gunicorn.socket` and replace placeholders with production data.\
 Host WSGI application with Gunicorn:
 ```
 start2impact_final-project$ sudo cp setup/gunicorn.socket /etc/systemd/system/
@@ -147,6 +148,7 @@ $ sudo systemctl status gunicorn.socket
 ```
 
 ### Daphne
+Open `start2impact_final-project/setup/daphne.service` and replace placeholders with production data.\
 Host ASGI application with Daphne:
 ```
 start2impact_final-project$ sudo cp setup/daphne.service /etc/systemd/system/
@@ -159,6 +161,7 @@ $ sudo systemctl status daphne.service
 ```
 
 ### Celery
+Open `start2impact_final-project/setup/celery.service` and replace placeholders with production data.\
 Manage scheduled tasks with Celery:
 ```
 start2impact_final-project$ sudo cp setup/celery.service /etc/systemd/system/
@@ -179,9 +182,10 @@ http{
 	client_max_body_size 100M; 
 }
 ```
+Open `start2impact_final-project/setup/PROJECT_NAME` and replace placeholders with production data.\
 Then add the website configuration and update the firewall:
 ```
-start2impact_final-project$ sudo cp setup/chainbid /etc/nginx/sites-available/
+start2impact_final-project$ sudo cp setup/PROJECT_NAME /etc/nginx/sites-available/chainbid
 $ sudo ln -s /etc/nginx/sites-available/chainbid /etc/nginx/sites-enabled/
 $ sudo nginx -t
 $ sudo ufw allow 'Nginx Full'
