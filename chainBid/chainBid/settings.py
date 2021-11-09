@@ -28,6 +28,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+ROOT_URLCONF = 'chainBid.urls'
+
+WSGI_APPLICATION = 'chainBid.wsgi.application'
+
+ASGI_APPLICATION = 'chainBid.asgi.application'
+
 
 # Application definition
 
@@ -72,7 +78,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'chainBid.urls'
 
 TEMPLATES = [
     {
@@ -89,8 +94,6 @@ TEMPLATES = [
         },
     },
 ]
-
-WSGI_APPLICATION = 'chainBid.wsgi.application'
 
 
 # Database
@@ -159,22 +162,26 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Custom user settings
 # https://django-registration.readthedocs.io/en/3.2/custom-user.html
+
 AUTH_USER_MODEL = 'users.CustomUser'
 
 
 # 'django-crispy-forms' app settings
 # https://django-crispy-forms.readthedocs.io/en/latest/
+
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 
 # Authentication settings
+
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
 
 # 'rest_framework' app settings
+
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
@@ -189,25 +196,30 @@ REST_FRAMEWORK = {
 
 
 # 'django.contrib.sites' app settings
+
 SITE_ID = 1
 
 
 # 'django-allauth' app settings
+
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_EMAIL_REQUIRED = (True)
 
 
 # Redis server settings
+
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 
 
 # Celery settings
+
 CELERY_BROKER_URL = f'redis://{REDIS_HOST}:{REDIS_PORT}'
 CELERY_TIMEZONE = TIME_ZONE
 
 
 # Webpack loader settings
+
 WEBPACK_LOADER = {
     'DEFAULT': {
         'BUNDLE_DIR_NAME': 'dist/',
@@ -217,7 +229,7 @@ WEBPACK_LOADER = {
 
 
 # 'django-channels' app settings
-ASGI_APPLICATION = 'chainBid.asgi.application'
+
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
