@@ -3,14 +3,12 @@ Auction platform that records the results of each auction on the Ethereum blockc
 
 When an auction is created if the price and opening date are set properly, the system will automatically open the auction
 and make it available to all users in the "Live auctions" section on the set date.\
-Each auction remains open for a random time between 22 and 24 hours if it does not receive any bids.
-Once the time has expired, the auction will be closed permanently.\
-When an auction receives a bid, the system waits 10 minutes before closing the auction (The previous random time is canceled) and decree the winner.
-If within this time another user makes a new bid then the system restart waiting 10 minutes from that moment.\
-When an auction is closed, a report summarizing all the information relating to the auction and the possible winning is generated.
-Finally, the hash (SHA256) of the report is calculated and the result is written to the Ethereum blockchain.
-Through the report provided by the web-app and the hash registered on the blockchain, it is possible 
-to check and verify the genuineness of the winning and the reported data.
+Each auction remains open for a random time between 20 and 24 hours if no one places a bid.\
+When a user places a bid, the system waits 10 minutes before closing the auction (the previous random time is canceled) and decree the winner.
+If within this time another user places a new bid then the system restart waiting 10 minutes from that moment.\
+When an auction is closed, a report summarizing all the information about it is generated.\
+Lastly the hash (SHA256) of the report is calculated and the result is written on chain.
+Thanks to the downloadable report and the transaction id, it is possible to check the genuineness of the winning and the reported data.
 
 **Live demo: [ChainBid](http://13.37.247.221/)**
 
@@ -116,7 +114,7 @@ Then restart the service:
 $ sudo systemctl restart redis
 $ sudo systemctl enable redis
 ```
-Verify that the service is running correctly:
+Check that the service is running correctly:
 ```
 $ sudo systemctl status redis
 ```
@@ -142,7 +140,7 @@ start2impact_final-project$ sudo cp setup/gunicorn.service /etc/systemd/system/
 $ sudo systemctl start gunicorn.socket
 $ sudo systemctl enable gunicorn.socket
 ```
-Verify that the service is running correctly:
+Check that the service is running correctly:
 ```
 $ sudo systemctl status gunicorn.socket
 ```
@@ -155,7 +153,7 @@ start2impact_final-project$ sudo cp setup/daphne.service /etc/systemd/system/
 $ sudo systemctl start daphne.service
 $ sudo systemctl enable daphne.service
 ```
-Verify that the service is running correctly:
+Check that the service is running correctly:
 ```
 $ sudo systemctl status daphne.service
 ```
@@ -168,7 +166,7 @@ start2impact_final-project$ sudo cp setup/celery.service /etc/systemd/system/
 $ sudo systemctl start celery.service
 $ sudo systemctl enable celery.service
 ```
-Verify that the service is running correctly:
+Check that the service is running correctly:
 ```
 $ sudo systemctl status celery.service
 ```
@@ -192,7 +190,7 @@ $ sudo ufw allow 'Nginx Full'
 $ sudo systemctl restart nginx
 $ sudo systemctl enable nginx
 ```
-Verify that the service is running correctly:
+Check that the service is running correctly:
 ```
 $ sudo systemctl status nginx
 ```
