@@ -20,6 +20,15 @@ The data relating to the winning bid are stored on the SQLite3 database only at 
 
 ***
 
+# Index
+1. [Features](#Features)
+	1. [User interface](####User-interface)
+	2. [API endpoints](####API-endpoints)
+3. [Components and technologies](#Components-and-technologies)
+4. []()
+
+***
+
 # Features
 
 #### User interface
