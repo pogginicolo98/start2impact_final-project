@@ -4,12 +4,12 @@ After=network.target
 
 [Service]
 Type=simple
-User=ubuntu
-WorkingDirectory=/home/ubuntu/start2impact_final-project/chainBid
-ExecStart=/home/ubuntu/start2impact_final-project/venv/bin/daphne \
+User=<USER>
+WorkingDirectory=/home/<USER>/<PROJECT_DIR>/PROJECT_NAME
+ExecStart=/home/<USER>/<PROJECT_DIR>/venv/bin/daphne \
           -b 0.0.0.0 \
           -p 8001 \
-          chainBid.asgi:application
+          PROJECT_NAME.asgi:application
 Restart=on-failure
 
 [Install]

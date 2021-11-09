@@ -1,12 +1,12 @@
 server {
-    server_name 13.37.247.221;
+    server_name <IP_ADDRESS>;
 
     location /static/ {
-        alias   /home/ubuntu/start2impact_final-project/static-serve/;
+        alias   /home/<USER>/<PROJECT_DIR>/static-serve/;
     }
 
     location /media/ {
-        alias   /home/ubuntu/start2impact_final-project/media-serve/;
+        alias   /home/<USER>/<PROJECT_DIR>/media-serve/;
     }
 
      location / {

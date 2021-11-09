@@ -4,10 +4,10 @@ After=network.target
 
 [Service]
 Type=simple
-User=ubuntu
-WorkingDirectory=/home/ubuntu/start2impact_final-project/chainBid
-ExecStart=/home/ubuntu/start2impact_final-project/venv/bin/celery \
-          -A chainBid worker \
+User=<USER>
+WorkingDirectory=/home/<USER>/<PROJECT_DIR>/<PROJECT_NAME>
+ExecStart=/home/<USER>/<PROJECT_DIR>/venv/bin/celery \
+          -A PROJECT_NAME worker \
           --loglevel=INFO \
           --statedb=worker.state
 Restart=on-failure

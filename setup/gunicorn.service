@@ -4,14 +4,14 @@ Requires=gunicorn.socket
 After=network.target
 
 [Service]
-User=ubuntu
+User=<USER>
 Group=www-data
-WorkingDirectory=/home/ubuntu/start2impact_final-project/chainBid
-ExecStart=/home/ubuntu/start2impact_final-project/venv/bin/gunicorn \
+WorkingDirectory=/home/<USER>/<PROJECT_DIR>/<PROJECT_NAME>
+ExecStart=/home/<USER>/<PROJECT_DIR>/venv/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
-          chainBid.wsgi:application
+          PROJECT_NAME.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
