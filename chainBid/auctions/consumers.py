@@ -125,7 +125,7 @@ class BidConsumer(WebsocketConsumer):
         }
         serializer = AuctionBidSerializer(data={'price': price}, context=serializer_context)
         if serializer.is_valid():
-            eta = timezone.now() + timezone.timedelta(seconds=10)
+            eta = timezone.now() + timezone.timedelta(minutes=10)
             record_object_on_redis(
                 auction=auction,
                 user=user,
