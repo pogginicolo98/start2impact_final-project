@@ -5,12 +5,16 @@ When an auction is created if the price and opening date are set properly, the s
 and make it available to all users in the "Live auctions" section on the set date.\
 Each auction remains open for a random time between 22 and 24 hours if it does not receive any bids.
 Once the time has expired, the auction will be closed permanently.\
-When an auction receives a bid, the system waits 10 minutes before closing the auction (The previous random time is canceled) and decree the winner.
+When an auction receives a bid[^1], the system waits 10 minutes before closing the auction (The previous random time is canceled) and decree the winner.
 If within this time another user makes a new bid then the system restart waiting 10 minutes from that moment.\
 When an auction is closed, a report summarizing all the information relating to the auction and the possible winning is generated.
 Finally, the hash (SHA256) of the report is calculated and the result is written to the Ethereum blockchain.
 Through the report provided by the web-app and the hash registered on the blockchain, it is possible 
 to check and verify the genuineness of the winning and the reported data.
+
+[^1]: Redis is required for Django Channels and Celery dependencies, as well as for the web-app's bidding system.\
+For reasons of optimization and scalability, the system registers the bids exclusively on Redis.
+The data relating to the winning bid are stored on the SQLite3 database only at the close of the auction.
 
 **Live demo: [ChainBid](http://13.37.247.221/)**
 
@@ -63,80 +67,118 @@ to check and verify the genuineness of the winning and the reported data.
 * [SQLite](https://sqlite.org/docs.html) - Storage and web-app structure
 * [Redis](https://redis.io/documentation) - Bidding system
 
+***
 
 # Setup for production
 
-#### Clone the repository and install some required packages:
+### First step
+Clone the repository and install the required packages:
 ```
-$ git clone https://github.com/pogginicolo98/start2impact_social-dex
-$ sudo add-apt-repository ppa:deadsnakes/ppa
-$ sudo apt-get update
-$ sudo apt-get install python3.9
-$ sudo apt-get install gcc
-$ sudo apt-get install python3-virtualenv
+$ sudo apt-get update upgrade
+$ sudo apt-get install net-tools python3.9 python3.9-dev python3-virtualenv gcc nginx redis-server
+$ git clone -b production https://github.com/pogginicolo98/start2impact_final-project.git
 ```
 
-#### Configure the virtual environment:
+### Virtual environment
+Create a virtual Python environment and install the project dependencies:
 ```
-start2impact_social-dex$ virtualenv venv -p python3.9
-start2impact_social-dex$ source venv/bin/activate
-(venv) start2impact_social-dex$ pip install -r requirements.txt
-```
-
-#### Install Redis:
-```
-start2impact_social-dex$ wget https://download.redis.io/releases/redis-6.2.5.tar.gz
-start2impact_social-dex$ tar xzf redis-6.2.5.tar.gz
-start2impact_social-dex$ cd redis-6.2.5
-start2impact_social-dex/redis-6.2.5$ sudo make
-start2impact_social-dex/redis-6.2.5$ sudo make test
+start2impact_final-project$ virtualenv venv -p python3.9
+start2impact_final-project$ source venv/bin/activate
+(venv) start2impact_final-project$ pip install -r setup/requirements.txt
 ```
 
-Run Redis in then background using ```$ screen``` then press ```ENTER```, then ```start2impact_social-dex/redis-6.2.5$ src/redis-server```, then press ```CTRL+A``` and finally press ```D```. (These commands must be executed every time the server is restarted)
-
-#### Setup and test django project:
-First of all populate ```start2impact_social-dex/setup/password_empty.py``` with your keys.
+### Redis
+Open the file `/etc/redis/redis.conf` and replace the command `supervised no` with `supervised systemd`\
+Then restart the service:
 ```
-start2impact_social-dex$ mv setup/password_empty.py social_dex/password.py
-(venv) start2impact_social-dex/social_dex$ python manage.py runserver
-(venv) start2impact_social-dex/social_dex$ python manage.py makemigrations
-(venv) start2impact_social-dex/social_dex$ python manage.py migrate
-(venv) start2impact_social-dex/social_dex$ python manage.py test
+sudo systemctl restart redis
+sudo systemctl enable redis
 ```
-
-#### Install and configure Gunicorn:
+Verify that the service is running correctly:
 ```
-(venv) start2impact_social-dex$ pip install gunicorn
-start2impact_social-dex$ mv setup/gunicorn_start.bash .
-start2impact_social-dex$ sudo chmod u+x gunicorn_start.bash
+sudo systemctl status redis
 ```
 
-#### Install and configure Supervisor:
+### Django project
+Open `start2impact_final-project/setup/password_empty.py` and replace placeholders with your secret keys.\
+Than initialize the database, create a super user, execute the automated tests and collect static files as follows:
 ```
-$ sudo apt-get install supervisor
-start2impact_social-dex$ sudo mv setup/social_dex_supervisor.conf /etc/supervisor/conf.d/social_dex.conf
-start2impact_social-dex$ mkdir logs
-start2impact_social-dex$ mv setup/gunicorn_supervisor.log logs/
-$ sudo systemcl restart supervisor
-$ sudo systemcl enable supervisor
+(venv) start2impact_final-project$ cp setup/password_empty.py chainBid/password.py
+(venv) start2impact_final-project/chainBid$ python manage.py makemigrations
+(venv) start2impact_final-project/chainBid$ python manage.py migrate
+(venv) start2impact_final-project/chainBid$ python manage.py createsuperuser
+(venv) start2impact_final-project/chainBid$ python manage.py test
+(venv) start2impact_final-project/chainBid$ python manage.py collectstatic
 ```
-Check if Supervisor is working properly: ```$ sudo supervisorctl status social_dex```
 
-#### Install and configure Nginx:
+### Gunicorn
+Host WSGI application with Gunicorn:
 ```
-$ sudo apt-get install nginx
-start2impact_social-dex$ mkdir static-serve
-$ sudo rm /etc/nginx/sites-available/default
-$ sudo rm /etc/nginx/sites-enabled/default
-start2impact_social-dex$ sudo mv /setup/social_dex_nginx.conf /etc/nginx/sites-available/social_dex.conf
-$ sudo ln -s /etc/nginx/sites-available/social_dex.conf /etc/nginx/sites-enabled/social_dex.conf
-(venv) start2impact_social-dex/social_dex$ python manage.py collectstatic
-$ sudo service nginx start
+start2impact_final-project$ sudo cp setup/gunicorn.socket /etc/systemd/system/
+start2impact_final-project$ sudo cp setup/gunicorn.service /etc/systemd/system/
+sudo systemctl start gunicorn.socket
+sudo systemctl enable gunicorn.socket
 ```
-Check if Nginx is working properly by accessing to the server via browser. You should see a message like this:
-![Nginx web page](.images/nginx.png)
+Verify that the service is running correctly:
+```
+sudo systemctl status gunicorn.socket
+```
 
-If Nginx is working properly restart it with: ```$ sudo service nginx restart```. Now you should see the homepage and the web-app should working properly.
+### Daphne
+Host ASGI application with Daphne:
+```
+start2impact_final-project$ sudo cp setup/daphne.service /etc/systemd/system/
+sudo systemctl start daphne.service
+sudo systemctl enable daphne.service
+```
+Verify that the service is running correctly:
+```
+sudo systemctl status daphne.service
+```
 
-#### Enable scheduled tasks:
-```$ screen``` then press ```ENTER```, then ```(venv) start2impact_social-dex/social_dex$ celery -A social_dex worker -B -l INFO```, then press ```CTRL+A``` and finally press ```D```. (These commands must be executed every time the server is restarted)
+### Celery
+Manage scheduled tasks with Celery:
+```
+start2impact_final-project$ sudo cp setup/celery.service /etc/systemd/system/
+sudo systemctl start celery.service
+sudo systemctl enable celery.service
+```
+Verify that the service is running correctly:
+```
+sudo systemctl status celery.service
+```
+
+### Nginx
+Configure Nginx to Proxy Pass to Gunicorn. It helps to protect the website from attackers.\
+Update `/etc/nginx/nginx.conf` Nginx config file in order to upload large files (images in that case)
+```
+http{
+	...
+	client_max_body_size 100M; 
+}
+```
+Then add the website configuration and update the firewall:
+```
+start2impact_final-project$ sudo cp setup/chainbid /etc/nginx/sites-available/
+sudo ln -s /etc/nginx/sites-available/chainbid /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo ufw allow 'Nginx Full'
+sudo systemctl restart nginx
+sudo systemctl enable nginx
+```
+Verify that the service is running correctly:
+```
+sudo systemctl status nginx
+```
+
+### Debugging
+List of commands useful for debugging possible errors:\
+`sudo journalctl -u <service>`: Service logs\
+`sudo systemctl status <service>`: Service status\
+
+**Services**
+- [] gunicorn.socket
+- [] daphne.service
+- [] celery.service
+- [] nginx
+- [] redis
