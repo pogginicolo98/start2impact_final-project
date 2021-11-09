@@ -91,12 +91,12 @@ start2impact_final-project$ source venv/bin/activate
 Open the file `/etc/redis/redis.conf` and replace the command `supervised no` with `supervised systemd`\
 Then restart the service:
 ```
-sudo systemctl restart redis
-sudo systemctl enable redis
+$ sudo systemctl restart redis
+$ sudo systemctl enable redis
 ```
 Verify that the service is running correctly:
 ```
-sudo systemctl status redis
+$ sudo systemctl status redis
 ```
 
 ### Django project
@@ -116,36 +116,36 @@ Host WSGI application with Gunicorn:
 ```
 start2impact_final-project$ sudo cp setup/gunicorn.socket /etc/systemd/system/
 start2impact_final-project$ sudo cp setup/gunicorn.service /etc/systemd/system/
-sudo systemctl start gunicorn.socket
-sudo systemctl enable gunicorn.socket
+$ sudo systemctl start gunicorn.socket
+$ sudo systemctl enable gunicorn.socket
 ```
 Verify that the service is running correctly:
 ```
-sudo systemctl status gunicorn.socket
+$ sudo systemctl status gunicorn.socket
 ```
 
 ### Daphne
 Host ASGI application with Daphne:
 ```
 start2impact_final-project$ sudo cp setup/daphne.service /etc/systemd/system/
-sudo systemctl start daphne.service
-sudo systemctl enable daphne.service
+$ sudo systemctl start daphne.service
+$ sudo systemctl enable daphne.service
 ```
 Verify that the service is running correctly:
 ```
-sudo systemctl status daphne.service
+$ sudo systemctl status daphne.service
 ```
 
 ### Celery
 Manage scheduled tasks with Celery:
 ```
 start2impact_final-project$ sudo cp setup/celery.service /etc/systemd/system/
-sudo systemctl start celery.service
-sudo systemctl enable celery.service
+$ sudo systemctl start celery.service
+$ sudo systemctl enable celery.service
 ```
 Verify that the service is running correctly:
 ```
-sudo systemctl status celery.service
+$ sudo systemctl status celery.service
 ```
 
 ### Nginx
@@ -160,25 +160,29 @@ http{
 Then add the website configuration and update the firewall:
 ```
 start2impact_final-project$ sudo cp setup/chainbid /etc/nginx/sites-available/
-sudo ln -s /etc/nginx/sites-available/chainbid /etc/nginx/sites-enabled/
-sudo nginx -t
-sudo ufw allow 'Nginx Full'
-sudo systemctl restart nginx
-sudo systemctl enable nginx
+$ sudo ln -s /etc/nginx/sites-available/chainbid /etc/nginx/sites-enabled/
+$ sudo nginx -t
+$ sudo ufw allow 'Nginx Full'
+$ sudo systemctl restart nginx
+$ sudo systemctl enable nginx
 ```
 Verify that the service is running correctly:
 ```
-sudo systemctl status nginx
+$ sudo systemctl status nginx
 ```
 
 ### Debugging
 List of commands useful for debugging possible errors:\
-`sudo journalctl -u <service>`: Service logs\
-`sudo systemctl status <service>`: Service status\
+`$ sudo journalctl -u <service>`: Service logs\
+`$ sudo systemctl status <service>`: Service status
 
 **Services**
-- [] gunicorn.socket
-- [] daphne.service
-- [] celery.service
-- [] nginx
-- [] redis
+* gunicorn.socket
+* daphne.service
+* celery.service
+* nginx
+* redis
+
+### Reboot
+If everythings is running correctly reboot the system and then the web-app should be available at the address of the server.\
+`$ sudo reboot`
