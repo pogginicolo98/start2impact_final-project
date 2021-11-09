@@ -1,0 +1,16 @@
+[Unit]
+Description=Automated tasks Celery Service
+After=network.target
+
+[Service]
+Type=simple
+User=<USER>
+WorkingDirectory=/home/<USER>/<PROJECT_DIR>/<PROJECT_NAME>
+ExecStart=/home/<USER>/<PROJECT_DIR>/venv/bin/celery \
+          -A PROJECT_NAME worker \
+          --loglevel=INFO \
+          --statedb=worker.state
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

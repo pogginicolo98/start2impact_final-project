@@ -1,0 +1,18 @@
+server {
+    server_name <IP_ADDRESS>;
+
+    location /static/ {
+        alias   /home/<USER>/<PROJECT_DIR>/static-serve/;
+    }
+
+    location /media/ {
+        alias   /home/<USER>/<PROJECT_DIR>/media-serve/;
+    }
+
+     location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+
+
+}

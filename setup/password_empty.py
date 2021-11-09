@@ -1,3 +1,7 @@
 # settings.py
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'your_django_secret_key'
+SECRET_KEY = '<DJANGO_SECRET_KEY>'
+
+# wallet.py, transactions.py
+network_url = '<ETHEREUM_API_NETWORK_URL>'
+address = '<ETHEREUM_WALLET_ADDRESS>'
+private_key = '<ETHEREUM_WALLET_PRIVATE_KEY>'

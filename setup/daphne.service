@@ -1,0 +1,16 @@
+[Unit]
+Description=WebSocket Daphne Service
+After=network.target
+
+[Service]
+Type=simple
+User=<USER>
+WorkingDirectory=/home/<USER>/<PROJECT_DIR>/PROJECT_NAME
+ExecStart=/home/<USER>/<PROJECT_DIR>/venv/bin/daphne \
+          -b 0.0.0.0 \
+          -p 8001 \
+          PROJECT_NAME.asgi:application
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
