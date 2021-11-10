@@ -41,9 +41,9 @@ Thanks to the downloadable report and the transaction id (and the hash inside th
 ### User interface
 * User registration and authentication.
 * Schedule new auctions.
-* Display live auctions and participate via a bidding system.
-* Display closed auctions and check the results.
-* User profile.
+* View live auctions and participate via a bidding system.
+* View closed auctions and check the results.
+* View th user profile.
 
 ### API endpoints
 * ```/api/rest-auth/registration/```: User registration via token.
