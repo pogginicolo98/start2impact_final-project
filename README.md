@@ -10,7 +10,7 @@ When an auction is closed, a report summarizing all the information about it is 
 Lastly the hash (SHA256) of the report is calculated and the result is written on chain.
 Thanks to the downloadable report and the transaction id (and the hash inside the transaction message), it is possible to check the authenticity of the winning and the reported data.
 
-**[Project presentation slides](https://github.com/pogginicolo98/start2impact_final-project/blob/f6252fbec2a5c0d103f4663f683b39d397eb60f8/docs/Project%20presentation.pdf)**
+**Docs: [Project presentation slides](https://github.com/pogginicolo98/start2impact_final-project/blob/f6252fbec2a5c0d103f4663f683b39d397eb60f8/docs/Project%20presentation.pdf)**\
 **Live demo: [ChainBid](http://13.37.247.221/)**
 
 ***
