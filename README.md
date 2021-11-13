@@ -8,7 +8,7 @@ When a user places a bid, the system waits 10 minutes before closing the auction
 If within this time another user places a new bid then the system restart waiting 10 minutes from that moment.\
 When an auction is closed, a report summarizing all the information about it is generated.\
 Lastly the hash (SHA256) of the report is calculated and the result is written on chain.
-Thanks to the downloadable report and the transaction id (and the hash inside the transaction message), it is possible to check the authenticity of the winning and the reported data
+Thanks to the downloadable report and the transaction id (and the hash inside the transaction message), it is possible to check the authenticity of the winning and the reported data.
 
 **Docs: [Project presentation slides](https://github.com/pogginicolo98/start2impact_final-project/blob/f6252fbec2a5c0d103f4663f683b39d397eb60f8/docs/Project%20presentation.pdf)**\
 **Live demo: [ChainBid](http://13.37.247.221/)**
