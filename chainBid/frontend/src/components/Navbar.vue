@@ -70,7 +70,7 @@
                      <router-link class="nav-link"
                                   exact
                                   :to="{ name: 'home' }"
-                                  >Live acutions
+                                  >Live auctions
                      </router-link>
                    </li>
                    <li class="nav-item">
