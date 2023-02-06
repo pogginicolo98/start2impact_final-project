@@ -55,7 +55,7 @@ msgpack==1.0.2
 multiaddr==0.0.9
 multidict==5.1.0
 netaddr==0.8.0
-oauthlib==3.1.1
+oauthlib==3.2.2
 parsimonious==0.8.1
 Pillow==8.3.2
 prompt-toolkit==3.0.20
